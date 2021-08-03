@@ -1,0 +1,45 @@
+<?php
+/**
+*
+* @package Cariera
+*
+* @since 1.4.5
+* 
+* ========================
+* HEADER EMPTY TEMPLATE
+* ========================
+*     
+**/
+?>
+
+
+
+<!DOCTYPE html>
+<html <?php get_language_attributes(); ?> >
+
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+
+    <!-- Mobile viewport optimized -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+    <?php wp_head(); ?>
+</head>  
+    
+
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
+    <?php do_action( 'cariera_body_start' ) ?>
+
+    <!-- Start Website wrapper -->
+    <?php $layout = cariera_get_option( 'cariera_body_style' ); ?>
+    <div class="wrapper <?php echo esc_attr($layout); ?>">
+    
+        <?php 
+        if (cariera_get_option( 'cariera_preloader' )) {
+            // If "cariera_preloader" is enabled load preloader template
+            get_template_part( 'templates/extra/preloader' ); 
+        }

@@ -1,0 +1,813 @@
+/*
+	Theme Name: Cariera
+    Theme URI: http://themeforest.net/user/gnodesign/portfolio/
+    Description: Cariera is a Clean and Professional Job Board Theme which will fit the needs to all Job Seekers and Employers. 
+    Author: Gnodesign
+	Author URI: http://themeforest.net/user/gnodesign/
+    Version: 1.5.1
+	License: ThemeForest
+    License URI: http://themeforest.net/licenses
+    Text Domain: cariera
+    Domain Path: /lang/
+*/
+
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+1.  DEFAULT TYPOGRAPHY
+2.  GENERAL TAG STYLES
+3.  ALIGNMENTS
+4.  CAPTIONS
+5.  GALLERIES
+6.  WIDGETS
+
+-------------------------------------------------------------------*/
+
+
+/* --------------------------------------
+    1. Default Typography
+-------------------------------------- */
+h1.logo {
+    margin: 0;
+}
+
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.h4,
+.h5,
+.h6,
+h4,
+h5,
+h6 {
+    margin: 10px 0;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    font-family: inherit;
+}
+
+a:hover h1,
+a:hover h2,
+a:hover h3,
+a:hover h4,
+a:hover h5,
+a:hover h6 {
+    color: inherit;
+}
+
+a h1,
+a h2,
+a h3,
+a h4,
+a h5,
+a h6 {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+a:hover,
+a:focus,
+a:visited {
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+label {
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 1.7em;
+    margin-top: 0;
+}
+
+
+/* --------------------------------------
+    2. General Tag Styles
+-------------------------------------- */
+* {
+    outline: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0 !important;
+}
+
+body {
+    overflow-x: hidden;
+    color: #948a99;
+}
+
+body.mfp-zoom-out-cur {
+    overflow: hidden;
+}
+
+body > .wrapper {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+body > .wrapper.boxed {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+body.page-template-user-dashboard > .wrapper.boxed {
+    max-width: 100%;
+}
+
+body.general_search_form_open {
+    position: fixed;
+}
+
+main,
+section {
+    position: relative;
+}
+
+a {
+    color: inherit;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+a:hover,
+a:focus,
+a:visited {
+    text-decoration: none !important;
+    outline: none !important;
+    /*color: #666;*/
+}
+
+a,
+button,
+input {
+    outline: none !important;
+}
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="phone"],
+input[type="url"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px 20px;
+    color: #666;
+    border: 1px solid #e3e3e3;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    height: auto;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+}
+
+select {
+    background: #fff;
+    background: linear-gradient(45deg, transparent 50%, #948a99 50%), linear-gradient(135deg, #948a99 50%, transparent 50%), #fff;
+    background-position: calc(100% - 19px) calc(1em + 5px), calc(100% - 15px) calc(1em + 5px), 100% 0;
+    background-size: 5px 5px, 5px 5px, 0;
+    background-repeat: no-repeat;
+}
+
+textarea {
+    max-width: 100%;
+    min-height: 200px;
+}
+
+::-webkit-input-placeholder {
+    opacity: 1;
+    color: #948a99;
+}
+
+::-moz-placeholder {
+    opacity: 1;
+    color: #948a99;
+}
+
+:-ms-input-placeholder {
+    opacity: 1;
+    color: #948a99;
+}
+
+:-moz-placeholder {
+    opacity: 1;
+    color: #948a99;
+}
+
+::-webkit-file-upload-button {
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    -moz-user-select: none;
+    /* These user-select properties are inheritable, used to prevent text selection */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    /* From IE10 only */
+    -webkit-user-drag: none;
+    /* Prevents dragging of images/divs etc */
+    user-drag: none;
+}
+
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+}
+
+caption,
+td,
+th {
+    padding: 0;
+    font-weight: normal;
+    text-align: left;
+}
+
+table,
+th,
+td {
+    border: 1px solid #e3e3e3;
+}
+
+th {
+    border-width: 0 1px 1px 0;
+    font-weight: 700;
+}
+
+td {
+    border-width: 0 1px 1px 0;
+}
+
+th,
+td {
+    padding: 0.4375em;
+}
+
+dl {
+    margin: 0 0 1.75em;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin: 0 0 1.75em;
+}
+
+blockquote {
+    padding: 10px 80px;
+    border-left: 4px solid;
+    color: #333;
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 1.7em;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+pre {
+    font-size: 14px;
+    margin: 20px 0;
+    padding: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Protected post - button */
+form.post-password-form input[type=submit] {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 15px;
+    position: relative;
+    line-height: 44px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f6f6f6 !important;
+    border: 0;
+    text-transform: uppercase;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+form.post-password-form input[type=submit]:hover {
+    -webkit-filter: brightness(113%);
+    filter: brightness(113%);
+}
+
+/* --------------------------------------
+    3. Alignments
+-------------------------------------- */
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Gutenber Support for alignfull */
+
+.alignfull {
+    max-width: 100vw;
+    width: 100vw;
+    position: relative;
+    left: -50vw;
+    right: -50vw;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    text-align: center;
+}
+
+.alignfull img {
+    width: 100%;
+}
+
+/* --------------------------------------
+    4. Captions
+-------------------------------------- */
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption .wp-caption-text,
+figure.image-right figcaption,
+figure.image-left figcaption,
+.wp-caption-text {
+    background-color: #f4f4f4;
+    font-weight: 600;
+    font-size: 15px;
+    color: #888;
+    padding: 10px 20px;
+}
+
+.wp-caption-text {
+    background-color: #fff;
+    margin: 0 !important;
+}
+
+/* --------------------------------------
+    5. Galleries
+-------------------------------------- */
+.gallery {
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+}
+
+.gallery:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.gallery-item {
+    margin: 0;
+    float: left;
+    padding: 5px;
+    position: relative;
+}
+
+.gallery-item img {
+    width: auto;
+}
+
+.gallery-columns-1 .gallery-item {
+    width: 100%;
+    float: none;
+}
+
+.gallery-columns-2 .gallery-item {
+    width: 50%
+}
+
+.gallery-columns-3 .gallery-item {
+    width: 33.3333%
+}
+
+.gallery-columns-4 .gallery-item {
+    width: 25%
+}
+
+.gallery-columns-5 .gallery-item {
+    width: 20%
+}
+
+.gallery-columns-6 .gallery-item {
+    width: 16.6667%
+}
+
+.gallery-columns-7 .gallery-item {
+    width: 14.2857%
+}
+
+.gallery-columns-8 .gallery-item {
+    width: 12.5%
+}
+
+.gallery-columns-9 .gallery-item {
+    width: 11.1111%
+}
+
+.gallery-columns-2 .gallery-item:nth-child(2n+1),
+.gallery-columns-3 .gallery-item:nth-child(3n+1),
+.gallery-columns-4 .gallery-item:nth-child(4n+1),
+.gallery-columns-5 .gallery-item:nth-child(5n+1),
+.gallery-columns-6 .gallery-item:nth-child(6n+1),
+.gallery-columns-7 .gallery-item:nth-child(7n+1),
+.gallery-columns-8 .gallery-item:nth-child(8n+1),
+.gallery-columns-9 .gallery-item:nth-child(9n+1) {
+    clear: left;
+}
+
+.gallery-item .gallery-caption {
+    position: absolute;
+    display: block;
+    font-weight: 400;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    max-height: 50%;
+    text-align: left;
+    opacity: 0;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+}
+
+
+/* --------------------------------------
+    6. Widgets
+-------------------------------------- */
+.widget ul {
+    padding: 0;
+    list-style: none;
+}
+
+.widget_archive li a,
+.widget_categories li a,
+.widget_product_categories li a,
+.widget_recent_entries a,
+.widget_recent_entries li a,
+.widget_recent_comments li a,
+.widget_pages li a,
+.widget_nav_menu li a,
+.widget_nav_menu .menu ul>li>a,
+.widget_meta li a {
+    text-transform: capitalize;
+    color: inherit;
+}
+
+.widget_archive li a:hover,
+.widget_categories li a:hover,
+.widget_product_categories li a:hover,
+.widget_recent_comments li a:hover,
+.widget_pages li a:hover,
+.widget_nav_menu li a:hover,
+.widget_nav_menu .menu ul>li>a:hover,
+.widget_meta li a:hover {
+    padding-left: 10px;
+}
+
+.widget_archive li,
+.widget_categories li,
+.widget_product_categories li,
+.widget_recent_entries li,
+.widget_recent_comments li,
+.widget_pages li,
+.widget_meta li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e3e3e3;
+    margin: 0;
+}
+
+.widget_archive li:last-child,
+.widget_categories li:last-child,
+.widget_product_categories li a:last-child,
+.widget_recent_entries li:last-child,
+.widget_recent_comments li:last-child,
+.widget_pages li:last-child,
+.widget_meta li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+/* Recent Posts Widget */
+.widget_recent_entries .widget-blog-post {
+    clear: both;
+    border: 0;
+    padding: 0;
+}
+
+.widget_recent_entries .widget-blog-post .post-thumbnail {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.widget_recent_entries .widget-blog-post .post-thumbnail img {
+    max-width: none;
+    width: auto;
+    height: 100%;
+    position: absolute;
+    left: -50%;
+    -webkit-transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -ms-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease;
+}
+
+.widget_recent_entries .widget-blog-post .post-thumbnail img.post-no-thumb {
+    left: 0;
+}
+
+.widget_recent_entries .widget-blog-post .post-thumbnail img:hover {
+    opacity: .5;
+}
+
+.widget_recent_entries .widget-blog-post .post-info {
+    padding-top: 10px;
+}
+
+.widget_recent_entries .widget-blog-post .post-info a {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+}
+
+.widget_recent_entries .widget-blog-post .post-info span {
+    font-size: .85em;
+}
+
+/* Tag Cloud Widget */
+.widget_tag_cloud .tagcloud a,
+.widget_product_tag_cloud .tagcloud a {
+    color: inherit;
+    font-size: 14px !important;
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    line-height: 50px;
+    text-transform: capitalize;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+
+.widget_tag_cloud .tagcloud a:hover,
+.widget_product_tag_cloud .tagcloud a:hover {
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+/* Calendar Widget */
+.widget_calendar table#wp-calendar {
+    width: 100%;
+}
+
+.widget_calendar table#wp-calendar caption {
+    margin-bottom: 10px;
+}
+
+.widget_calendar table#wp-calendar th,
+.widget_calendar table#wp-calendar td {
+    text-align: center;
+}
+
+.widget_calendar table#wp-calendar th {
+    color: #999;
+}
+
+.widget_calendar table#wp-calendar td {
+    color: #777;
+}
+
+/* Mailchimp - Newsletter Widget */
+.widget_mc4wp_form_widget form button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/********** Featured Job & Resume Widgets **********/
+.widget ul.job_listings,
+.widget ul.resumes {
+    margin: 0;
+    border: 0;
+}
+
+.widget ul.job_listings li.job_listing,
+.widget ul.resumes li.resume {
+    position: relative;
+    background: none;
+    border: 0;
+    margin: 0;
+    border-bottom: 1px solid #e3e3e3;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.widget ul.job_listings li.job_listing:last-child,
+.widget ul.resumes li.resume:last-child {
+    border: 0;
+}
+
+.widget ul.job_listings li.job_listing:before,
+.widget ul.job_listings li.job_listing:after,
+.widget ul.resumes li.resume:before,
+.widget ul.resumes li.resume:after {
+    display: none;
+}
+
+.widget ul.job_listings li.job_listing:hover,
+.widget ul.resumes li.resume:hover,
+.widget ul.job_listings li.job_listing > a:hover,
+.widget ul.resumes li.resume > a:hover {
+    background: none;
+}
+
+.widget ul.job_listings li.job_listing a,
+.widget ul.resumes li.resume a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;    
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px 10px;
+    background: none;
+    color: inherit;
+}
+
+footer .widget ul.job_listings li.job_listing:first-child a,
+footer .widget ul.resumes li.resume:first-child a {
+    padding-top: 0;
+}
+
+.widget ul.job_listings li.job_listing .image {
+    margin-bottom: 20px;
+}
+
+.widget ul.job_listings li.job_listing .image img {
+    width: 80px;
+    border: 1px solid #e3e3e3;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.widget ul.job_listings li.job_listing .content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.widget ul.job_listings li.job_listing .position h3,
+.widget ul.resumes li.resume .candidate h3 {
+    font-size: 1.2em;
+    margin: 0 0 5px 0;
+}
+
+.widget ul.job_listings .job-manager-applications-applied-notice { 
+    font-size: 10px;
+}
+
+.widget ul.job_listings .job-manager-applications-applied-notice:before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free' !important;
+    font-size: inherit;
+    font-weight: 600;
+    width: auto;
+    height: auto;
+}
+
+.widget ul.resumes li.resume .candidate,
+.widget ul.resumes li.resume ul.meta {
+    width: 100%;
+}
+
+.widget ul.resumes li.resume ul.meta li {
+    display: block;
+}
+
+.widget ul.resumes li.resume ul.meta li:after {
+    display: none;
+}
+
+.widget ul.job_listings > li.job_listing .meta > li,
+.widget ul.resumes > li.resume .meta > li {
+    font-size: 13px;
+    padding: 0;
+}
+
+.widget ul.job_listings li.job_listing ul.meta li.job-type {
+    padding: 2px 5px;
+    display: inline-block;
+    color: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+/* In Footer */
+.footer1 .widget ul.job_listings li.job_listing a div.position h3,
+.footer1 .widget ul.resumes li.resume .candidate h3,
+.footer2 .widget ul.job_listings li.job_listing a div.position h3,
+.footer2 .widget ul.resumes li.resume .candidate h3 {
+    color: #fff;
+}

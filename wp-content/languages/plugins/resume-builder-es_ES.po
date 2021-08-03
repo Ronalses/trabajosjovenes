@@ -1,0 +1,170 @@
+# Translation of Plugins - Resume Builder - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Resume Builder - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-04-30 18:16:37+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Resume Builder - Stable (latest release)\n"
+
+#: templates/admin/welcome.php:14
+msgid "create a resume"
+msgstr "crear un currículum"
+
+#. Description of the plugin
+msgid "Create beautiful resumes with ease."
+msgstr "Crear bonitos curriculums fácilmente"
+
+#: templates/admin/welcome.php:29
+#: includes/class.resume-builder-admin-enqueues.php:98
+msgid "Create a Resume"
+msgstr "Crear un curriculum"
+
+#: templates/admin/welcome.php:20
+msgid "Quick Links"
+msgstr "Enlaces rápidos"
+
+#: templates/admin/welcome.php:12
+msgid "Thanks for using %s."
+msgstr "Gracias por usar %s."
+
+#: includes/widgets/resume.php:77
+msgid "Normal"
+msgstr "Normal"
+
+#: includes/widgets/resume.php:76
+msgid "Compact"
+msgstr "Compacto"
+
+#: includes/widgets/resume.php:74
+msgid "Style:"
+msgstr "Estilo:"
+
+#: includes/widgets/resume.php:62
+msgid "Section(s):"
+msgstr "Sección(es):"
+
+#: includes/widgets/resume.php:49
+msgid "Resume:"
+msgstr "Curriculum:"
+
+#: includes/widgets/resume.php:37
+msgid "Title (optional):"
+msgstr "Título (opcional):"
+
+#: includes/class.resume-builder-admin-enqueues.php:56
+msgid "Stars"
+msgstr "Estrellas"
+
+#: includes/class.resume-builder-post-type.php:58
+msgid "No Resumes found in Trash."
+msgstr "No se encontraron currículums en la papelera"
+
+#: includes/class.resume-builder-post-type.php:57
+msgid "No Resumes found."
+msgstr "No se encontraron currículums."
+
+#: templates/admin/resumes.php:28
+#: includes/class.resume-builder-post-type.php:56
+msgid "Search Resumes"
+msgstr "Buscar currículums."
+
+#: includes/class.resume-builder-post-type.php:55
+msgid "All Resumes"
+msgstr "Todos los currículums"
+
+#: includes/class.resume-builder-post-type.php:54
+msgid "View Resume"
+msgstr "Ver currículum"
+
+#: includes/class.resume-builder-post-type.php:53
+msgid "Edit Resume"
+msgstr "Editar currículum"
+
+#: includes/class.resume-builder-post-type.php:52
+msgid "New Resume"
+msgstr "Nuevo currículum"
+
+#: includes/class.resume-builder-post-type.php:51
+msgid "Add New Resume"
+msgstr "Añadir nuevo currículum"
+
+#: includes/class.resume-builder-post-type.php:47
+#: includes/class.resume-builder-post-type.php:49
+msgid "Resume"
+msgstr "Currículum"
+
+#: includes/class.resume-builder-admin-enqueues.php:91
+msgid "Website"
+msgstr "Web"
+
+#: includes/class.resume-builder-admin-enqueues.php:90
+msgid "Phone"
+msgstr "Teléfono"
+
+#: includes/class.resume-builder-admin-enqueues.php:89
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: includes/widgets/resume.php:69
+#: includes/class.resume-builder-admin-enqueues.php:51
+msgid "Skills"
+msgstr "Habilidades"
+
+#: includes/widgets/resume.php:67
+#: includes/class.resume-builder-admin-enqueues.php:45
+msgid "Introduction"
+msgstr "Introducción"
+
+#: includes/widgets/resume.php:64
+msgid "Full Resume"
+msgstr "Currículum completo"
+
+#: includes/class.resume-builder-functions.php:37
+msgid "What's new?"
+msgstr "¿Qué hay nuevo?"
+
+#: includes/class.resume-builder-admin-menus.php:33
+#: includes/class.resume-builder-admin-menus.php:42
+msgid "You do not have sufficient permissions to access this page."
+msgstr "No tienes permisos suficientes para acceder a esta página"
+
+#: includes/class.resume-builder-admin-menus.php:26
+msgid "What's New?"
+msgstr "¿Qué hay nuevo?"
+
+#: includes/widgets/resume.php:68
+msgid "Education & Experience"
+msgstr "Educación y experiencia"
+
+#: includes/class.resume-builder-admin-enqueues.php:57
+msgid "Company/School"
+msgstr "Empresa / universidad"
+
+#: includes/widgets/resume.php:66
+msgid "Contact Information"
+msgstr "Información de contacto"
+
+#: includes/class.resume-builder-post-type.php:50
+msgid "Add New"
+msgstr "Añadir nuevo"
+
+#: templates/admin/resumes.php:5 includes/class.resume-builder-post-type.php:46
+#: includes/class.resume-builder-post-type.php:48
+#: includes/class.resume-builder-post-type.php:60
+#: includes/class.resume-builder-admin-menus.php:24
+#: includes/class.resume-builder-admin-menus.php:25
+msgid "Resumes"
+msgstr "Currículums"
+
+#. Plugin Name of the plugin
+msgid "Resume Builder"
+msgstr "Resume Builder"
+
+#: includes/class.resume-builder-admin-enqueues.php:47
+msgid "Heading"
+msgstr "Encabezado"
