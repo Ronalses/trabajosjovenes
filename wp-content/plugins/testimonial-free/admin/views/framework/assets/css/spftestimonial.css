@@ -141,34 +141,7 @@
 
 /**
  * 01. 03. Header Buttons
- *//*
-.spftestimonial-buttons {
-  float: right;
-  -moz-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-}
-.spftestimonial-buttons .button {
-  margin: 0 2px;
-  line-height: 26px;
-}
-.spftestimonial-buttons .button:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-.spftestimonial-buttons .spftestimonial-save {
-  min-width: 72px;
-}
-
-.spftestimonial-header-left {
-  float: left;
-}
-
-.spftestimonial-header-right {
-  float: right;
-}*/
-
+ */
 .spftestimonial-header-left {
   float: left;
 }
@@ -861,7 +834,7 @@
 }
 .spftestimonial-field-column .spftestimonial--input input,
 .spftestimonial-field-custom_size .spftestimonial--input input {
-   border-radius: 0 2px 2px 0;
+   border-radius: 0 4px 4px 0;
 }
 .spftestimonial-field-column .spftestimonial--input {
   float: left;
@@ -901,7 +874,7 @@
   min-height: 30px;
   min-width: 20px;
   border-right: 0;
-  border-radius: 2px 0 0 2px;
+  border-radius: 4px 0 0 4px;
 }
 
 /**
@@ -2118,88 +2091,6 @@
   max-width: 100%;
   min-height: 125px;
 }
-
-/**
- * 03. 31. Field: typography
- */
-/* .spftestimonial-field-typography textarea,
-.spftestimonial-field-typography select {
-  min-width: 100%;
-  margin: 0;
-}
-.spftestimonial-field-typography .spftestimonial--title {
-  color: #777;
-  margin: 0 0 2px 0;
-  font-size: 12px;
-}
-.spftestimonial-field-typography .spftestimonial--title small {
-  vertical-align: top;
-}
-.spftestimonial-field-typography .spftestimonial--blocks {
-  display: flex;
-  flex-wrap: wrap;
-}
-.spftestimonial-field-typography .spftestimonial--block {
-  flex: 1;
-  padding-right: 6px;
-  padding-bottom: 6px;
-}
-.spftestimonial-field-typography .spftestimonial--input {
-  margin: 0;
-  min-width: 100%;
-}
-.spftestimonial-field-typography .spftestimonial--input-wrap {
-  position: relative;
-}
-.spftestimonial-field-typography .spftestimonial--unit {
-  position: absolute;
-  z-index: 1;
-  right: 4px;
-  top: 4px;
-  bottom: 4px;
-  padding: 2px 6px;
-  color: #666;
-  font-size: 11px;
-  line-height: 1;
-  border-radius: 2px;
-  background: #eee;
-  user-select: none;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.spftestimonial-field-typography .spftestimonial--preview {
-  font-size: 16px;
-  line-height: 20px;
-  padding: 20px;
-  color: #222;
-  border: 1px solid #eee;
-  background-color: #fff;
-  border-radius: 2.5px;
-  user-select: none;
-  -webkit-user-select: none;
-  transition: background-color .2s, border-color .2s;
-}
-.spftestimonial-field-typography .spftestimonial--block-preview {
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  margin-top: 10px;
-  max-width: 100%;
-}
-.spftestimonial-field-typography .spftestimonial--black-background {
-  border-color: #000;
-  background-color: #000;
-}
-.spftestimonial-field-typography .spftestimonial--toggle {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  color: #999;
-}
-.spftestimonial-field-typography .spftestimonial--block-extra-styles {
-  margin-top: 5px;
-} */
 
 /**
  * 03. 30. Field: typography
@@ -3705,11 +3596,11 @@ span.spftestimonial-shortcode-selectable ~ button {
   padding: 0;
 }
 
-.chosen-container-multi .chosen-drop .result-selected {
+/* .chosen-container-multi .chosen-drop .result-selected {
   display: list-item;
   color: #ccc;
   cursor: default;
-}
+} */
 
 .chosen-container-active .chosen-single {
   border: 1px solid #5897fb;
@@ -4107,4 +3998,113 @@ div#spftestimonial-section-sp_tpro_form_elements_options_1 .spftestimonial-field
   .spftestimonial-field-text
   input {
   max-width: 400px;
+}
+
+
+/* Import export css */
+.spftestimonial-field.spftestimonial-field-button_set.spt_export {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.spftestimonial-field-button_set.spt_export .spftestimonial--button:hover,
+.spftestimonial-field.spftestimonial-field-custom_import.spt_import button:hover {
+  background: #135e96;
+  border-color: #135e96;
+  color: #fff;
+}
+
+.spftestimonial-field.spftestimonial-field-custom_import.spt_import button,
+.spftestimonial-field-button_set.spt_export .spftestimonial--button {
+  background: #2271b1;
+  border-color: #2271b1;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: none;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 2.15384615;
+  min-height: 30px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-appearance: none;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.sp-lcp-options .spftestimonial-field-select .spftestimonial-fieldset {
+  position: relative;
+}
+
+.spftestimonial-field.spftestimonial-field-custom_import.spt_import .spftestimonial-fieldset {
+  position: relative;
+}
+
+.spftestimonial-field.spftestimonial-field-custom_import.spt_import p {
+  padding-bottom: 0;
+  margin-bottom: 1px;
+}
+
+.spftestimonial-field.spftestimonial-field-custom_import.spt_import button {
+  margin-top: 10px;
+  padding-bottom: 0px;
+}
+
+.spftestimonial-field.spftestimonial-field-custom_import.spt_import .spftestimonial-help {
+  cursor: help;
+  position: absolute;
+  top: 80%;
+  transform: translateY(-50%);
+  padding: 5px;
+  font-size: 14px;
+  color: #aaa;
+  width: 15px;
+  left: 64px;
+}
+
+.spftestimonial-field.spftestimonial-field-select.spt_post_forms_id .chosen-container .chosen-drop,
+.spftestimonial-field.spftestimonial-field-select.spt_post_id .chosen-container .chosen-drop {
+  max-width: 400px;
+}
+
+.spftestimonial-field.spftestimonial-field-select.spt_post_forms_id .chosen-container,
+.spftestimonial-field.spftestimonial-field-select.spt_post_id .chosen-container {
+  max-width: 400px;
+}
+
+.spftestimonial-field.spftestimonial-field-select.spt_post_forms_id,
+.spftestimonial-field.spftestimonial-field-select.spt_post_id {
+  padding-top: 0;
+}
+
+.spftestimonial_tools .spftestimonial-header-inner h1.export-import img {
+  height: 24px;
+}
+
+.spftestimonial_tools .spftestimonial-nav-options li:nth-child(1) a {
+  background-image: url(../images/export-icon.svg);
+}
+
+.spftestimonial_tools .spftestimonial-nav-options li:nth-child(2) a {
+  background-image: url(../images/import.svg);
+}
+
+.spftestimonial_tools .spftestimonial-nav-options li:nth-child(1) a.spftestimonial-section-active {
+  background-image: url(../images/file-export-icon1.svg);
+}
+
+.spftestimonial_tools .spftestimonial-nav-options li:nth-child(2) a.spftestimonial-section-active {
+  background-image: url(../images/file-import-icon1.svg);
+}
+
+.spt-main-class.spftestimonial-theme-light.spftestimonial_tools .spftestimonial-nav-options ul li a {
+  padding: 15px 30px;
+  background-size: 14px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
 }

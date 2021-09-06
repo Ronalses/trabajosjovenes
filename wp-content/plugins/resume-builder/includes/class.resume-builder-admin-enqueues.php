@@ -106,6 +106,12 @@ class Resume_Builder_Admin_Enqueues
                 'i18n_copy_shortcode' => __('Copy Shortcode', 'resume-builder'),
                 'i18n_confirm_delete_resume' => __('Are you sure you want to permanently delete this resume? It cannot be undone.', 'resume-builder'),
                 'i18n_yes_delete_it' => __('Yes, delete it', 'resume-builder'),
+                'i18n_use_this_photo' => __( 'Use this Photo', 'resume-builder' ),
+                'i18n_select_photo' => __( 'Select or Upload a photo for this resume', 'resume-builder' ),
+                'i18n_attachment' => __( 'Attachment', 'resume-builder' ),
+                'i18n_add_attachment' => __( 'Add Attachment', 'resume-builder' ),
+                'i18n_select_attachment' => __( 'Select or Upload a file attachment for this resume', 'resume-builder' ),
+                'i18n_attachment_button_text' => __( 'Attachment Button Text', 'resume-builder' ),
             );
             
             wp_enqueue_script('jquery');

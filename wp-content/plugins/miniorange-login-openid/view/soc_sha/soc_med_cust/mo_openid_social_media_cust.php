@@ -92,7 +92,7 @@ function Cursor_icon_hover() {
   $hovericon = "<section class='social'>";
  
           foreach($apparr as $x => $y) {
-                  if(1==1){ $hovericon.= "<a class='icon ".$x."'><img src=".plugin_url ."".$x."s.png  width='30px' height:'30px' style='margin-top: 5px;'></a>"; 
+                  if(1==1){ $hovericon.= "<a class='icon ".$x."'><i class='fab fa-".$x."'  width='30px' height:'30px' style='margin-top: 5px;'></i></a>";
 
                   $hovericon.= '<style>
                         .social .'.$x.' {

@@ -153,7 +153,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">1</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/amazon.png" alt="amazon" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-amazon" style="margin-bottom: 5px; font-size: 3.5em;color: black"></i>
                                     <br>Amazon
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/configure-amazon-with-social-login-in-wordpress" target="_blank">Amazon Login Setup Guide</a></div>
@@ -164,7 +164,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">2</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/facebook.png" alt="facebook" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-facebook" style="margin-bottom: 5px; font-size: 3.5em;color: #1877F2"></i>
                                     <br>Facebook
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-facebook-social-login-in-wordpress" target="_blank">Facebook Login Setup Guide</a></div>
@@ -174,7 +174,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">3</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/g.png" alt="google" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-google" style="margin-bottom: 5px; font-size: 3.5em;color: #DB4437"></i>
                                     <br>Google
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/login-with-google-using-wordpress-social-login" target="_blank">Google Login Setup Guide</a></div>
@@ -184,7 +184,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">4</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/linkedin.png" alt="linkedin" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-linkedin" style="margin-bottom: 5px; font-size: 3.5em;color: #007bb6"></i>
                                     <br>LinkedIn</div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/configure-linkedin-with-social-login-in-wordpress" target="_blank">LinkedIn Login Setup Guide</a></div>
                                 <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming soon!</p></div>
@@ -193,7 +193,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">5</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/twitter.png" alt="twitter" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-twitter" style="margin-bottom: 5px; font-size: 3.5em;color: #2795e9"></i>
                                     <br>Twitter
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-twitter-with-social-login-in-wordpress" target="_blank">Twitter Login Setup Guide</a></div>
@@ -203,7 +203,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">6</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/windowslive.png" alt="windows" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-windows" style="margin-bottom: 5px; font-size: 3.5em;color: #2672ec"></i>
                                     <br>Windows
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-windowslive-with-social-login-in-wordpress" target="_blank">Windows Login Setup Guide</a></div>
@@ -213,7 +213,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">7</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/yahoo.png" alt="yahoo" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-yahoo" style="margin-bottom: 5px; font-size: 3.5em;color: #430297"></i>
                                     <br>Yahoo</div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/guide-to-configure-yahoo-social-login-in-wordpress" target="_blank">Yahoo Login Setup Guide</a></div>
                                 <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming soon!</p></div>
@@ -224,7 +224,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">8</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/apple.png" alt="apple" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-apple" style="margin-bottom: 5px; font-size: 3.5em;color: black"></i>
                                     <br>Apple
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-apple-with-social-login-in-wordpress" target="_blank">Apple Login Setup Guide</a></div>
@@ -234,7 +234,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">9</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/discord.png" alt="discord" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-discord" style="margin-bottom: 5px; font-size: 3.5em;color: #7289da"></i>
                                     <br>Discord
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-discord-with-social-login-in-wordpress" target="_blank">Discord Login Setup Guide</a></div>
@@ -254,7 +254,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">11</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/dribbble.png" alt="disqus" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-dribbble" style="margin-bottom: 5px; font-size: 3.5em;color: #ee66aa"></i>
                                     <br>Dribble
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-dribbble-with-social-login-in-wordpress" target="_blank">Dribble Login Setup Guide</a></div>
@@ -264,7 +264,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">12</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/flickr.png" alt="flickr" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-flickr" style="margin-bottom: 5px; font-size: 3.5em;color: #ff0084"></i>
                                     <br>Flickr
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-flickr-with-social-login-in-wordpress" target="_blank">Flickr Login Setup Guide</a></div>
@@ -274,7 +274,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">13</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/foursquare.png" alt="foursquare" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-foursquare" style="margin-bottom: 5px; font-size: 3.5em;color: #f94877"></i>
                                     <br>Foursquare
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-to-foursquare-with-social-login-in-wordpress" target="_blank">Foursquare Login Setup Guide</a></div>
@@ -294,7 +294,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">15</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/line.png" alt="line" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-line" style="margin-bottom: 5px; font-size: 3.5em;color: #00c300"></i>
                                     <br>Line
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-line-with-social-login-in-wordpress" target="_blank">Line Login Setup Guide</a></div>
@@ -304,7 +304,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">16</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/meetup.png" alt="meetup" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-meetup" style="margin-bottom: 5px; font-size: 3.5em;color: #e51937"></i>
                                     <br>Meetup
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/configure-meetup-with-social-login-in-wordpress" target="_blank">Meetup Login Setup Guide</a></div>
@@ -324,7 +324,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">18</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/odnoklassniki.png" alt="odnoklassniki" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-odnoklassniki" style="margin-bottom: 5px; font-size: 3.5em;color: #f97400"></i>
                                     <br>Odnoklassniki
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-odnoklassniki-with-social-login-in-wordpress" target="_blank">Odnoklassniki Login Setup Guide</a></div>
@@ -334,7 +334,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">19</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/paypal.png" alt="paypal" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-paypal" style="margin-bottom: 5px; font-size: 3.5em;color: #0d127a"></i>
                                     <br>Paypal
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/login-with-paypal-using-wordpress-social-login" target="_blank">Paypal Login Setup Guide</a></div>
@@ -344,7 +344,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">20</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/pinterest.png" alt="pinterest" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-pinterest" style="margin-bottom: 5px; font-size: 3.5em;color: #cb2027"></i>
                                     <br>Pinterest
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-pinterest-with-social-login-in-wordpress" target="_blank">Pinterest Login Setup Guide</a></div>
@@ -354,7 +354,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">21</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/reddit.png" alt="reddit" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-reddit" style="margin-bottom: 5px; font-size: 3.5em;color: #ff4301"></i>
                                     <br>Reddit
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-reddit-with-social-login-in-wordpress" target="_blank">Reddit Login Setup Guide</a></div>
@@ -364,7 +364,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">22</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/snapchat.png" alt="snapchat" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-snapchat" style="margin-bottom: 5px; font-size: 3.5em;color: #fffc00"></i>
                                     <br>Snapchat
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-snapchat-with-social-login-in-wordpress" target="_blank">Snapchat Login Setup Guide</a></div>
@@ -374,7 +374,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">23</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/spotify.png" alt="spotify" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-spotify" style="margin-bottom: 5px; font-size: 3.5em;color: #19bf61"></i>
                                     <br>Spotify
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/configure-spotify-with-social-login-in-wordpress" target="_blank">Spotify Login Setup Guide</a></div>
@@ -384,7 +384,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">24</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/stackexchange.png" alt="stackexchange" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-stack-exchange" style="margin-bottom: 5px; font-size: 3.5em;color: #0000ff"></i>
                                     <br>Stackexchange
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-stackexchange-with-social-login-in-wordpress" target="_blank">Stackexchange Login Setup Guide</a></div>
@@ -404,7 +404,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">26</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/tumblr.png" alt="tumblr" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-tumblr" style="margin-bottom: 5px; font-size: 3.5em;color: #2c4762"></i>
                                     <br>Tumblr
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-tumblr-with-social-login-in-wordpress" target="_blank">Tumblr Login Setup Guide</a></div>
@@ -414,7 +414,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">27</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/twitch.png" alt="twitch" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-twitch" style="margin-bottom: 5px; font-size: 3.5em;color: #720e9e"></i>
                                     <br>Twitch
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/configure-twitch-with-social-login-in-wordpress" target="_blank">Twitch Login Setup Guide</a></div>
@@ -426,7 +426,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">28</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/vimeo.png" alt="vimeo" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-vimeo" style="margin-bottom: 5px; font-size: 3.5em;color: #1ab7ea"></i>
                                     <br>Vimeo
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-vimeo-with-social-login-in-wordpress" target="_blank">Vimeo Login Setup Guide</a></div>
@@ -436,7 +436,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">29</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/vkontakte.png" alt="vkontakte" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-vk" style="margin-bottom: 5px; font-size: 3.5em;color: #466482"></i>
                                     <br>Vkontakte
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/configure-vkontakte-with-social-login-in-wordpress" target="_blank">Vkontakte Login Setup Guide</a></div>
@@ -446,7 +446,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">30</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/wechat.png" alt="Wechat" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-weixin" style="margin-bottom: 5px; font-size: 3.5em;color: #00c300"></i>
                                     <br>Wechat
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/setup-wechat-social-login-to-your-wordpress-website" target="_blank">Wechat Login Setup Guide</a></div>
@@ -456,7 +456,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">31</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/wordpress.png" alt="WordPress" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-wordpress" style="margin-bottom: 5px; font-size: 3.5em;color: #587ea3"></i>
                                     <br>WordPress
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-wordpress-with-social-login-wordpress" target="_blank">WordPress Login Setup Guide</a></div>
@@ -466,7 +466,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">32</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/yandex.png" alt="Yandex" style="margin-bottom: 5px"/>
+                                    <i class="fab fa-yandex" style="margin-bottom: 5px; font-size: 3.5em;color: #2795e9"></i>
                                     <br>Yandex
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/login-with-yandex-using-wordpress-social-login" target="_blank">Yandex Login Setup Guide</a></div>

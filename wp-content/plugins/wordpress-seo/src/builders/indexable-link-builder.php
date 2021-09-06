@@ -280,7 +280,7 @@ class Indexable_Link_Builder {
 			$permalink = $this->get_permalink( $url, $home_url );
 			if ( $this->url_helper->is_relative( $permalink ) ) {
 				// Make sure we're checking against the absolute URL, and add a trailing slash if the site has a trailing slash in its permalink settings.
-				$permalink = $this->url_helper->ensure_absolute_url( user_trailingslashit( $permalink ) );
+				$permalink = $this->url_helper->ensure_absolute_url( \user_trailingslashit( $permalink ) );
 			}
 			$target = $this->indexable_repository->find_by_permalink( $permalink );
 
@@ -303,11 +303,19 @@ class Indexable_Link_Builder {
 		}
 
 		if ( $is_image && $model->target_post_id ) {
-			list( , $width, $height ) = \wp_get_attachment_image_src( $model->target_post_id, 'full' );
+			$file = \get_attached_file( $model->target_post_id );
+			if ( $file ) {
+				list( , $width, $height ) = \wp_get_attachment_image_src( $model->target_post_id, 'full' );
 
-			$model->width  = $width;
-			$model->height = $height;
-			$model->size   = \filesize( \get_attached_file( $model->target_post_id ) );
+				$model->width  = $width;
+				$model->height = $height;
+				$model->size   = \filesize( $file );
+			}
+			else {
+				$model->width  = 0;
+				$model->height = 0;
+				$model->size   = 0;
+			}
 		}
 
 		if ( $model->target_indexable_id ) {
@@ -324,7 +332,7 @@ class Indexable_Link_Builder {
 	 * @param SEO_Links $link        The link.
 	 * @param array     $current_url The url of the page the link is on, as parsed by wp_parse_url.
 	 *
-	 * @return bool. Whether or not the link should be filtered.
+	 * @return bool Whether or not the link should be filtered.
 	 */
 	protected function filter_link( SEO_Links $link, $current_url ) {
 		$url = $link->parsed_url;

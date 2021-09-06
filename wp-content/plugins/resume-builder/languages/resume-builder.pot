@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Resume Builder\n"
-"POT-Creation-Date: 2021-04-30 11:44-0400\n"
+"POT-Creation-Date: 2021-05-26 15:39-0400\n"
 "PO-Revision-Date: 2018-01-19 15:22-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: resume-builder.php\n"
@@ -20,6 +20,11 @@ msgstr ""
 "_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/api.php:76 includes/class.resume-builder-resumes.php:37
+#: templates/front/parts/header.php:38
+msgid "Download Attachment"
+msgstr ""
 
 #: includes/class.resume-builder-admin-enqueues.php:42
 msgid "Save Resume"
@@ -250,7 +255,7 @@ msgid "Okay"
 msgstr ""
 
 #: includes/class.resume-builder-admin-enqueues.php:98
-#: templates/admin/welcome.php:22
+#: templates/admin/welcome.php:29
 msgid "Create a Resume"
 msgstr ""
 
@@ -294,6 +299,30 @@ msgstr ""
 
 #: includes/class.resume-builder-admin-enqueues.php:108
 msgid "Yes, delete it"
+msgstr ""
+
+#: includes/class.resume-builder-admin-enqueues.php:109
+msgid "Use this Photo"
+msgstr ""
+
+#: includes/class.resume-builder-admin-enqueues.php:110
+msgid "Select or Upload a photo for this resume"
+msgstr ""
+
+#: includes/class.resume-builder-admin-enqueues.php:111
+msgid "Attachment"
+msgstr ""
+
+#: includes/class.resume-builder-admin-enqueues.php:112
+msgid "Add Attachment"
+msgstr ""
+
+#: includes/class.resume-builder-admin-enqueues.php:113
+msgid "Select or Upload a file attachment for this resume"
+msgstr ""
+
+#: includes/class.resume-builder-admin-enqueues.php:114
+msgid "Attachment Button Text"
 msgstr ""
 
 #: includes/class.resume-builder-admin-menus.php:24
@@ -352,7 +381,7 @@ msgid "All Resumes"
 msgstr ""
 
 #: includes/class.resume-builder-post-type.php:56
-#: templates/admin/resumes.php:16
+#: templates/admin/resumes.php:28
 msgid "Search Resumes"
 msgstr ""
 
@@ -404,7 +433,11 @@ msgstr ""
 msgid "Normal"
 msgstr ""
 
-#: templates/admin/resumes.php:5 templates/admin/resumes.php:9
+#: templates/admin/resumes.php:5
+msgid "Search"
+msgstr ""
+
+#: templates/admin/resumes.php:5 templates/admin/resumes.php:14
 msgid "Published"
 msgstr ""
 
@@ -412,7 +445,7 @@ msgstr ""
 msgid "Trashed"
 msgstr ""
 
-#: templates/admin/resumes.php:12
+#: templates/admin/resumes.php:23
 msgid "Trash"
 msgstr ""
 
@@ -440,7 +473,7 @@ msgstr ""
 msgid "Quick Links"
 msgstr ""
 
-#: templates/admin/welcome.php:23
+#: templates/admin/welcome.php:36
 msgid "Resume Examples"
 msgstr ""
 

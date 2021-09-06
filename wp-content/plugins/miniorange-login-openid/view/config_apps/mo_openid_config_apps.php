@@ -17,6 +17,18 @@ function mo_openid_show_apps()
                     <?php
                     foreach ($selected_applications as $apps)
                     {
+                        $icons=$apps;
+                        if($apps=='windowslive'){
+                            $icons='windows';
+                        }elseif ($apps=='vkontakte'){
+                            $icons='vk';
+                        }elseif ($apps=='stackexchange'){
+                            $icons='stack-exchange';
+                        }elseif($apps=='wiebo'){
+                            $icons='weibo';
+                        }elseif ($apps=='mailru'){
+                            $icons='at';
+                        }
                         if(get_option('mo_openid_'.$apps.'_enable')==1)
                             $checked='checked';
                         else
@@ -32,8 +44,8 @@ function mo_openid_show_apps()
                                 <div style="position: absolute;right: 5px;top: 5px;<?php if($checked!='checked') { ?> display: none; <?php } ?>" id="mo_openid_<?php echo $apps?>_active_div">
                                     <span style="font-size: 10px;background: #FFA335;color: white;font-weight: 600;padding: 1px 4px;border-radius: 4px;font-family: monospace;"><?php echo mo_sl('Active');?></span>
                                 </div>
-                                <img style="float: right" src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/<?php echo $apps?>.png" height="60px" width="60px"
-                                     alt="<?php echo $apps?>"/>
+                                    <i class="fab fa-<?php echo $icons;?>" style="font-size: 60px;color:white"></i>
+
                             </div>
                             <div class="mo-openid-capp-sett" id="mo-openid-hover-app-sett-show">
                                 <div style="display: inline-block; padding-left: 3%; text-align: left;width: 75%;position: absolute;font-size: 13px;"><span style="color:black"><?php echo strtoupper($apps)?></span></div>
@@ -53,7 +65,7 @@ function mo_openid_show_apps()
                 <br/>
             </td>
             <div>
-                <label style="cursor: auto; margin-left: 3%;" class="mo_openid_note_style">Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fa fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fa fa-apple"><b> iOS</b></i> app? <a style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade and <a style="cursor: pointer" href=<?php echo site_url()."/wp-admin/admin.php?page=mo_openid_general_settings&tab=rest_api_page"; ?>>Click here</a> for more details.</label>
+                <label style="cursor: auto; margin-left: 3%;" class="mo_openid_note_style">Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fab fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fab fa-apple"><b> iOS</b></i> app? <a style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade and <a style="cursor: pointer" href=<?php echo site_url()."/wp-admin/admin.php?page=mo_openid_general_settings&tab=rest_api_page"; ?>>Click here</a> for more details.</label>
             </div>
         </tr>
         <tr>
@@ -69,6 +81,23 @@ function mo_openid_show_apps()
                     <?php
                     foreach ($selected_applications_premium as $apps)
                     {
+                        $icons=$apps;
+                        if($apps=='windowslive'){
+                            $icons='windows';
+                        }elseif ($apps=='vkontakte'){
+                            $icons='vk';
+                        }elseif ($apps=='stackexchange'){
+                            $icons='stack-exchange';
+                        }elseif($apps=='wiebo'){
+                            $icons='weibo';
+                        }elseif ($apps=='mailru'){
+                            $icons='at';
+                        }
+                        elseif ($apps=='wechat'){
+                            $icons='weixin';
+                        }elseif ($apps=='mailru'){
+                            $icons='at';
+                        }
                         $dir=dirname(dirname(dirname( __FILE__ )));
                         include_once($dir.'/social_apps/'.$apps.'.php');
                         $mo_appname='mo_'.$apps;
@@ -77,8 +106,13 @@ function mo_openid_show_apps()
                         ?>
                         <div class="mo-openid-sort-apps-div mo-openid-hover-div-sett">
                             <div class="mo-openid-sort-apps-i-div" style="background-color:<?php echo $blcolor?>;">
-                                <img style="float: right" src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/<?php echo $apps?>.png" height="60px" width="60px"
-                                     alt="<?php echo $apps?>"/>
+                                <?php if($apps=='naver'||$apps=='disqus'||$apps=='teamsnap'||$apps=='livejournal'||$apps=='kakao'||$apps=='baidu'||$apps=='mailru'){ ?>
+                                    <img style="float: right" src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/<?php echo $apps?>.png" height="60px" width="60px"
+                                         alt="<?php echo $apps?>"/>
+                                <?php }
+                                else{ ?>
+                                    <i class="fab fa-<?php echo $icons;?>" style="font-size: 60px;color:white"></i>
+                                <?php } ?>
                             </div>
                             <div id="mo-openid-hover-app-sett-show" style="display: block">
                                 <div style="display: inline-block; text-align: center;width: 100%;position: absolute;font-size: 13px;"><span style="color:black"><?php if($apps == 'mailru') $apps='mail.ru'; echo strtoupper($apps)?></span></div>
@@ -119,7 +153,7 @@ function mo_openid_show_apps()
                     // if (result.status) {
                     if (true) {
                         if (a.checked == true) {
-                            if (app_name == 'facebook' || app_name == 'twitter' || app_name == 'instagram') {
+                            if (app_name == 'facebook' || app_name == 'twitter' || app_name == 'instagram' || app_name == 'snapchat' || app_name == 'dribbble') {
                                 jQuery.ajax({
                                     type: 'POST',
                                     url: '<?php echo admin_url("admin-ajax.php"); ?>',
@@ -219,7 +253,7 @@ function mo_openid_show_apps()
                                             });
                                         } else {
                                             jQuery("#mo_apps_".concat(app_name)).prop('checked', false);
-                                            if(app_name=='facebook' || app_name == 'twitter' || app_name == 'instagram')
+                                            if(app_name=='facebook' || app_name == 'twitter' || app_name == 'instagram' || app_name == 'snapchat' || app_name == 'dribbble')
                                             {
                                                 jQuery ("#mo_facebook_notice").show();
                                                 jQuery( "#mo_register_customer_toggle").hide();
@@ -316,11 +350,12 @@ function mo_openid_show_apps()
 
         //for custom app pop-up
         jQuery(function() {
-            var popup = '<div class="mo_openid_popup" popup-name="popup-1" border="1" id = "custom_app_div" style="display:none; float: left; width: 100%; overflow: hidden">' +
+            var popup =
+                '<div class="mo_openid_popup" popup-name="popup-1" border="1" id = "custom_app_div" style="display:none; float: left; width: 100%; overflow: hidden">' +
                         '<div id="mo_openid_ajax_wait_fade"></div>'+
                         '<div id="mo_openid_ajax_wait_img"><img id="loader" src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/wait.gif" /></div>'+
                         '<div class="mo_openid_popup-content">'+
-                            '<div style="margin-bottom: 2px"><center><img style="margin-left:40%; border-radius:4px; display: inline; height:25px; width:28px" id="custom_app_name_image">&nbsp;<h1 style="display: inline" id="custom_app_name"></h1></center></div>'+
+                            '<div style="margin-bottom: 2px"><center><i style="margin-left:40%;color: white; border-radius:4px; display: inline; font-size:1.7em;padding:3px;" id="custom_app_name_image"></i>&nbsp;<h1 style="display: inline" id="custom_app_name"></h1></center></div>'+
                                 '<div style="width: 40%; float: left; display: inline">' +
                                     '<div id="mo_set_pre_config_app" style="overflow: auto; margin-left:20%; padding-top:2%">' +
                                         '<div style="width: 65%; float: left; display: inline"><i class="fa fa-info-circle mo_copytooltip" title="miniOrange take care of creating applications for you so that you don’t have to worry about creating applications in each social network."></i><label style="display: contents;"><b> Pre configured miniOrange App</b></label></div>' +
@@ -793,7 +828,7 @@ function mo_openid_show_apps()
 
         jQuery(".mo-openid-sort-apps-open-settings-div").click(function () {
             let app_name = jQuery(this).parents(".mo-openid-sort-apps-div").attr("id");
-            if(app_name=='facebook' || app_name == 'twitter' || app_name == 'instagram')
+            if(app_name=='facebook' || app_name == 'twitter' || app_name == 'instagram' || app_name == 'snapchat' || app_name == 'dribbble')
             {
                 jQuery("#mo_facebook_notice").text("Please set custom app for "+app_name.charAt(0).toUpperCase()+app_name.substr(1));
                 jQuery ("#mo_facebook_notice").show();
@@ -838,7 +873,7 @@ function mo_openid_show_apps()
             jQuery('#mo_openid_register_new_user').hide();
             jQuery('#mo_openid_register_old_user').hide();
             jQuery("#mo_app_config_notice").text("If you face any issues in setting up " + application_name.charAt(0).toUpperCase() + application_name.substr(1) + " app then please contact us we wil help you out");
-            if(application_name == 'facebook' || application_name == 'twitter' || application_name == 'instagram') {
+            if(application_name == 'facebook' || application_name == 'twitter' || application_name == 'instagram' || application_name == 'snapchat' || application_name == 'dribbble') {
                 jQuery("#mo_set_pre_config_app").hide();
             }
 
@@ -859,9 +894,21 @@ function mo_openid_show_apps()
                 handle_salesforce();
             }
             else if(application_name != null) {
+                var default_color= {'facebook':'#1877F2','google':'#DB4437','vkontakte':'#466482','twitter':'#2795e9','yahoo':'#430297','instagram':'#3f729b','linkedin':'#007bb6','salesforce':'#1ab7ea','windowslive':'#2672ec','dribbble':'#ee66aa','snapchat':'#fffc00'};
+                var icon = application_name ;
+                if(application_name=='vkontakte'){
+                    icon= 'vk';
+                }
+                if (application_name=='windowslive'){
+                    icon= 'windows';
+                }
                 jQuery( "#custom_app_name").text(application_name.charAt(0).toUpperCase()+application_name.substr(1));
                 jQuery( ".mo-openid-app-name").attr('id',application_name);
-                jQuery( "#custom_app_name_image").attr('alt',application_name);
+                // jQuery( "#custom_app_name_image").attr('alt',application_name);
+                jQuery( "#custom_app_name_image").attr('class','fab fa-'+ icon)
+                jQuery( "#custom_app_name_image").css('background', default_color[application_name]);
+
+
                 jQuery( "#custom_app_instructions").text("Instructions to configure "+application_name.charAt(0).toUpperCase()+application_name.substr(1)+":");
                 var mo_openid_app_instructions_nonce = '<?php echo wp_create_nonce("mo-openid-app-instructions"); ?>';
                 jQuery.ajax({
@@ -875,7 +922,6 @@ function mo_openid_show_apps()
                     success: function(data) {
                         jQuery("#custom_app_inst_steps").text('');
                         var ins = data.split("##");
-                        jQuery( "#custom_app_name_image").attr('src',ins[0]);
                         jQuery( "#app_id_value").val(ins[1]);
                         jQuery( "#app_secret_value").val(ins[2]);
                         if(ins[3]=="default")
@@ -896,8 +942,8 @@ function mo_openid_show_apps()
                             jQuery("#custom_app_perma_inst").hide();
                             for (i = 7; i < ins.length; i++)
                                 jQuery("#custom_app_inst_steps").append('<li>' + ins[i] + '</li>');
-                            jQuery("#custom_app_inst_steps").append('<label class="mo_openid_note_style" style="cursor: auto">If you want to display Social Login icons on your login panel then use <code id=\'1\'>[miniorange_social_login]</code><i style= "width: 11px;height: 9px;padding-left:2px;padding-top:3px" class="fa fa-fw fa-lg fa-copy mo_copy mo_copytooltip" onclick="copyToClipboard(this, \'#1\', \'#shortcode_url_copy\')"><span id="shortcode_url_copy" class="mo_copytooltiptext">Copy to Clipboard</span></i> to display social icons or <a style="cursor: pointer" onclick="mo_openid_support_form(\'\')">Contact Us</a></label>');
-                            jQuery("#custom_app_inst_steps").append('<label class="mo_openid_note_style" style="cursor: auto; background:#FFD868;"><span class="dashicons dashicons-info" style="vertical-align: bottom;"></span>Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fa fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fa fa-apple"><b> iOS</b></i> app? <a style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade and <a style="cursor: pointer" href=<?php echo site_url()."/wp-admin/admin.php?page=mo_openid_general_settings&tab=rest_api_page"; ?>>Click here</a> for more details.</label>');
+                            jQuery("#custom_app_inst_steps").append('<label class="mo_openid_note_style" style="cursor: auto">If you want to display Social Login icons on your login panel then use <code id=\'1\'>[miniorange_social_login]</code><i style= "width: 11px;height: 9px;padding-left:2px;padding-top:3px" class="far fa-fw fa-lg fa-copy mo_copy mo_copytooltip" onclick="copyToClipboard(this, \'#1\', \'#shortcode_url_copy\')"><span id="shortcode_url_copy" class="mo_copytooltiptext">Copy to Clipboard</span></i> to display social icons or <a style="cursor: pointer" onclick="mo_openid_support_form(\'\')">Contact Us</a></label>');
+                            jQuery("#custom_app_inst_steps").append('<label class="mo_openid_note_style" style="cursor: auto; background:#FFD868;"><span class="dashicons dashicons-info" style="vertical-align: bottom;"></span>Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fab fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fab fa-apple"><b> iOS</b></i> app? <a style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade and <a style="cursor: pointer" href=<?php echo site_url()."/wp-admin/admin.php?page=mo_openid_general_settings&tab=rest_api_page"; ?>>Click here</a> for more details.</label>');
                         }
                         document.getElementById('mo_openid_ajax_wait_img').style.display = 'none';
                         document.getElementById('mo_openid_ajax_wait_fade').style.display = 'none';

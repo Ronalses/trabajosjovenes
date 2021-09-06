@@ -191,6 +191,7 @@ if ( ! class_exists( 'TFREE_Shortcode_Render' ) ) {
 			$testimonial_title_tag = isset( $shortcode_data['testimonial_title_tag'] ) ? $shortcode_data['testimonial_title_tag'] : 'h3';
 			$testimonial_text      = isset( $shortcode_data['testimonial_text'] ) ? $shortcode_data['testimonial_text'] : '';
 			$reviewer_name         = isset( $shortcode_data['testimonial_client_name'] ) ? $shortcode_data['testimonial_client_name'] : '';
+			$reviewer_name_tag     = ( isset( $shortcode_data['testimonial_name_tag'] ) && $shortcode_data['testimonial_name_tag'] ) ? $shortcode_data['testimonial_name_tag'] : 'h4';
 			$star_rating           = isset( $shortcode_data['testimonial_client_rating'] ) ? $shortcode_data['testimonial_client_rating'] : '';
 			$star_rating_color     = isset( $shortcode_data['testimonial_client_rating_color'] ) ? $shortcode_data['testimonial_client_rating_color'] : '#f3bb00';
 			$reviewer_position     = isset( $shortcode_data['client_designation'] ) ? $shortcode_data['client_designation'] : '';
@@ -209,9 +210,9 @@ if ( ! class_exists( 'TFREE_Shortcode_Render' ) ) {
 			$preloader = isset( $shortcode_data['preloader'] ) ? $shortcode_data['preloader'] : false;
 			// Schema markup.
 			if ( isset( $shortcode_data['schema_markup'] ) ) {
-				$schema_markup = $shortcode_data['schema_markup'];
+				$show_schema_markup = $shortcode_data['schema_markup'];
 			} else {
-				$schema_markup = isset( $setting_options['spt_enable_schema'] ) ? $setting_options['spt_enable_schema'] : false;
+				$show_schema_markup = isset( $setting_options['spt_enable_schema'] ) ? $setting_options['spt_enable_schema'] : false;
 			}
 
 			// Enqueue Script.
@@ -286,7 +287,7 @@ if ( ! class_exists( 'TFREE_Shortcode_Render' ) ) {
 				'post_type'      => 'spt_testimonial',
 				'orderby'        => $order_by,
 				'order'          => $order,
-				'posts_per_page' => $number_of_total_testimonials,
+				'posts_per_page' => empty( $number_of_total_testimonials ) ? '10000' : $number_of_total_testimonials,
 			);
 
 			$post_query = new WP_Query( $args );
@@ -333,16 +334,19 @@ if ( ! class_exists( 'TFREE_Shortcode_Render' ) ) {
 					if ( 'theme-one' === $theme_style ) {
 						include SP_TFREE_PATH . '/public/views/templates/theme-one.php';
 					}
-					$total_rated_testimonials++;
-					$total_rating_count += ( $star_rating && ! empty( $tfree_rating_star ) ) ? $rating_value : 0;
+					if ( ! empty( $rating_value ) ) {
+						$total_rated_testimonials++;
+						$total_rating_count += ( $star_rating && ! empty( $tfree_rating_star ) ) ? $rating_value : 0;
+					}
 					endwhile;
 			} else {
 				$outline .= '<h2 class="sp-not-testimonial-found">' . esc_html__( 'No testimonials found', 'testimonial-free' ) . '</h2>';
 			}
-			$aggregate_rating = round( ( $total_rating_count / $total_rated_testimonials ), 2 );
-
+			if ( $total_rated_testimonials !== 0 ) {
+				$aggregate_rating = round( ( $total_rating_count / $total_rated_testimonials ), 2 );
+			}
 			$outline .= '</div>';
-			if ( $schema_markup ) {
+			if ( $show_schema_markup && $total_rated_testimonials !== 0 ) {
 				include SP_TFREE_PATH . '/public/views/schema.php';
 			}
 			$outline .= '</div>';

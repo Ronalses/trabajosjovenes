@@ -7,14 +7,14 @@ function mo_openid_short_code(){
             <tr>
         <td style="font-size: 15px;">
 
-                <br><br><b><?php echo mo_sl('Horizontal');?></b> --> <code id="1">[miniorange_social_sharing]</code><i style= "width: 11px;height: 9px;padding-left:2px;padding-top:3px" class="fa fa-fw fa-lg fa-copy mo_copy mo_copytooltip" onclick="copyToClipboard(this, '#1', '#shortcode_url1_copy')"><span id="shortcode_url1_copy" class="mo_copytooltiptext">Copy to Clipboard</span></i></b><br><br>
-                <b><?php echo mo_sl('Vertical');?></b> --> <code id="2">[miniorange_social_sharing_vertical]</code><i style= "width: 11px;height: 9px;padding-left:2px;padding-top:3px" class="fa fa-fw fa-lg fa-copy mo_copy mo_copytooltip" onclick="copyToClipboard(this, '#2', '#shortcode_url2_copy')"><span id="shortcode_url2_copy" class="mo_copytooltiptext">Copy to Clipboard</span></i>
+                <br><br><b><?php echo mo_sl('Horizontal');?></b> --> <code id="1">[miniorange_social_sharing]</code><i style= "width: 11px;height: 9px;padding-left:2px;padding-top:3px" class="far fa-fw fa-lg fa-copy mo_copy mo_copytooltip" onclick="copyToClipboard(this, '#1', '#shortcode_url1_copy')"><span id="shortcode_url1_copy" class="mo_copytooltiptext">Copy to Clipboard</span></i></b><br><br>
+                <b><?php echo mo_sl('Vertical');?></b> --> <code id="2">[miniorange_social_sharing_vertical]</code><i style= "width: 11px;height: 9px;padding-left:2px;padding-top:3px" class="far fa-fw fa-lg fa-copy mo_copy mo_copytooltip" onclick="copyToClipboard(this, '#2', '#shortcode_url2_copy')"><span id="shortcode_url2_copy" class="mo_copytooltiptext">Copy to Clipboard</span></i>
                 <!--Use [miniorange_social_sharing] Shortcode in the content of required page/post where you want to display horizontal Social Sharing Icons. Use [miniorange_social_sharing_vertical] shortcode for vertical Social Sharing Icons.--><br>
 
                <br>
                 <h4><?php echo mo_sl('For Sharing Icons');?></h4>
                <?php echo mo_sl(' You can use  different attribute to customize social sharing icons. All attributes are optional');?>.<br>
-                <b><?php echo mo_sl('Example');?>:</b> <code id="3" style="font-size: 14px"> [miniorange_social_sharing  shape="square" heading="Share with" color="#000000" fontcolor="blue" theme="customFont" space="14" size="30" url="https://www.miniorange.com"]</code><i style= "width: 11px;height: 9px;padding-left:2px;padding-top:3px" class="fa fa-fw fa-lg fa-copy mo_copy mo_copytooltip" onclick="copyToClipboard(this, '#3', '#shortcode_url3_copy')"><span id="shortcode_url3_copy" class="mo_copytooltiptext">Copy to Clipboard</span></i>
+                <b><?php echo mo_sl('Example');?>:</b> <code id="3" style="font-size: 14px"> [miniorange_social_sharing  shape="square" heading="Share with" color="#000000" fontcolor="blue" theme="customFont" space="14" size="30" url="https://www.miniorange.com"]</code><i style= "width: 11px;height: 9px;padding-left:2px;padding-top:3px" class="far fa-fw fa-lg fa-copy mo_copy mo_copytooltip" onclick="copyToClipboard(this, '#3', '#shortcode_url3_copy')"><span id="shortcode_url3_copy" class="mo_copytooltiptext">Copy to Clipboard</span></i>
                 <br><br>
 
                 <h4 style="margin-bottom:0 !important"><?php echo mo_sl('Common attributes - Horizontal and Vertical');?></h4>

@@ -207,11 +207,13 @@
   float: left;
   border-right: 0;
   border-radius: 2px 0 0 2px;
+  box-shadow: 0 0 0;
 }
 .spt-main-class .spftestimonial-field-spinner .ui-spinner-up {
   float: right;
   border-left: 0;
   border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 0;
 }
 .spt-main-class .spftestimonial-field-spinner input {
   width: 60px;
@@ -597,25 +599,19 @@
 /* Responsive */
 
 @media (max-width: 1200px) {
-  .sp-tfree-metabox-framework .sp-tfree-mbf {
-      display: block;
-  }
 
-  .sp-tfree-mbf .sp-tfree-col-lg-3,
-  .sp-tfree-element .sp-tfree-input-label,
-  .sp-tfree-element .sp-tfree-input-field {
-      width: 100%;
-  }
-  .sp-tfree-mbf .sp-tfree-col-lg-3 {
-      display: block;
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 15px;
-      border-right: none;
-  }
-  .sp-tfree-mbf .sp-tfree-col-lg-3:last-of-type {
-      border-bottom: none;
-      padding-bottom: 0;
-  }
+  .spftestimonial-metabox .tpro_shortcode{
+    display: block;
+    }
+    .tpro_shortcode .tpro-col-lg-6{
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    border-right: none;
+    }
+    .tpro_shortcode .tpro-col-lg-6:last-child {
+    padding-bottom: 42px;
+    }   
 }
 
 

@@ -107,7 +107,7 @@ SPFTESTIMONIAL::createSection(
 				'id'       => 'number_of_total_testimonials',
 				'type'     => 'spinner',
 				'title'    => __( 'Limit', 'testimonial-free' ),
-				'subtitle' => __( 'Limit number of testimonials to show.', 'testimonial-free' ),
+				'subtitle' => __( 'Limit number of testimonials to show. Leave it empty to show all testimonials.', 'testimonial-free' ),
 				'default'  => '12',
 				'min'      => -1,
 			),
@@ -158,23 +158,25 @@ SPFTESTIMONIAL::createSection(
 				'default'  => 'DESC',
 			),
 			array(
-				'id'       => 'preloader',
-				'type'     => 'switcher',
-				'title'    => __( 'Preloader', 'testimonial-free' ),
-				'subtitle' => __( 'On/off preloader.', 'testimonial-free' ),
-				'default'  => false,
-			),
-			array(
 				'id'         => 'schema_markup',
 				'type'       => 'switcher',
 				'title'      => __( 'Schema Markup', 'testimonial-free' ),
 				'subtitle'   => __( 'Enable/Disable schema markup.', 'testimonial-free' ),
-				'text_on'    => __( 'Enable', 'testimonial-free' ),
-				'text_off'   => __( 'Disable', 'testimonial-free' ),
-				'text_width' => 90,
+				'text_on'    => __( 'Enabled', 'testimonial-free' ),
+				'text_off'   => __( 'Disabled', 'testimonial-free' ),
+				'text_width' => 94,
 				'default'    => false,
 			),
-
+			array(
+				'id'         => 'preloader',
+				'type'       => 'switcher',
+				'title'      => __( 'Preloader', 'testimonial-free' ),
+				'subtitle'   => __( 'Enable/Disable preloader.', 'testimonial-free' ),
+				'text_on'    => __( 'Enabled', 'testimonial-free' ),
+				'text_off'   => __( 'Disabled', 'testimonial-free' ),
+				'text_width' => 94,
+				'default'    => false,
+			),
 		),
 	)
 );
@@ -252,13 +254,13 @@ SPFTESTIMONIAL::createSection(
 				'content' => __( 'Customize Theme', 'testimonial-free' ),
 			),
 			array(
-				'id'         => 'testimonial_margin',
-				'class'      => 'pro_only_field',
-				'type'       => 'spinner',
-				'title'      => __( 'Margin Between Testimonials', 'testimonial-free' ),
-				'subtitle'   => __( 'Set margin between the testimonials.', 'testimonial-free' ),
-				'unit'       => __( 'px', 'testimonial-free' ),
-				'default'    => 0,
+				'id'       => 'testimonial_margin',
+				'class'    => 'pro_only_field',
+				'type'     => 'spinner',
+				'title'    => __( 'Margin Between Testimonials', 'testimonial-free' ),
+				'subtitle' => __( 'Set margin between the testimonials.', 'testimonial-free' ),
+				'unit'     => __( 'px', 'testimonial-free' ),
+				'default'  => 0,
 			),
 			array(
 				'id'         => 'testimonial_border',
@@ -476,6 +478,29 @@ SPFTESTIMONIAL::createSection(
 				'default'    => true,
 			),
 			array(
+				'id'         => 'testimonial_name_tag',
+				'type'       => 'select',
+				'title'      => __( 'HTML Tag', 'testimonial-free' ),
+				'subtitle'   => __( 'Select reviewer name HTML tag.', 'testimonial-free' ),
+				'options'    => array(
+					'h1'   => 'h1',
+					'h2'   => 'h2',
+					'h3'   => 'h3',
+					'h4'   => 'h4',
+					'h5'   => 'h5',
+					'h6'   => 'h6',
+					'p'    => 'p',
+					'span' => 'span',
+					'div'  => 'div',
+				),
+				'default'    => 'h4',
+				'dependency' => array(
+					'testimonial_client_name',
+					'==',
+					'true',
+				),
+			),
+			array(
 				'id'         => 'testimonial_client_rating',
 				'type'       => 'switcher',
 				'title'      => __( 'Rating', 'testimonial-free' ),
@@ -683,6 +708,127 @@ SPFTESTIMONIAL::createSection(
 );
 
 //
+// Image Settings section.
+//
+SPFTESTIMONIAL::createSection(
+	$prefix_shortcode_opts,
+	array(
+		'title'  => __( 'Image Settings', 'testimonial-free' ),
+		'icon'   => 'fa fa-image',
+		'fields' => array(
+
+			array(
+				'id'         => 'client_image',
+				'type'       => 'switcher',
+				'title'      => __( 'Testimonial Image', 'testimonial-free' ),
+				'subtitle'   => __( 'Show/Hide testimonial image.', 'testimonial-free' ),
+				'text_on'    => __( 'Show', 'testimonial-free' ),
+				'text_off'   => __( 'Hide', 'testimonial-free' ),
+				'text_width' => 80,
+				'default'    => true,
+			),
+
+			array(
+				'id'         => 'thumbnail_slider',
+				'type'       => 'checkbox',
+				'class'      => 'pro_only_field',
+				'attributes' => array( 'disabled' => 'disabled' ),
+				'title'      => __( 'Enable Thumbnail Slider', 'testimonial-free' ),
+				'subtitle'   => __( 'Check to enable thumbnail slider. (Pro)', 'testimonial-free' ),
+				'default'    => false,
+			),
+			array(
+				'id'         => 'client_image_style',
+				'class'      => 'client_image_style',
+				'type'       => 'image_select',
+				'title'      => __( 'Image Shape', 'testimonial-free' ),
+				'subtitle'   => __( 'Choose a image shape.', 'testimonial-free' ),
+				'options'    => array(
+					'three' => array(
+						'image' => plugin_dir_url( __FILE__ ) . 'framework/assets/images/image-shape/circle.svg',
+						'name'  => __( 'Circle', 'testimonial-free' ),
+					),
+					'two'   => array(
+						'image' => plugin_dir_url( __FILE__ ) . 'framework/assets/images/image-shape/rounded.svg',
+						'name'  => __( 'Rounded', 'testimonial-free' ),
+						'class' => 'pro-feature',
+					),
+					'one'   => array(
+						'image' => plugin_dir_url( __FILE__ ) . 'framework/assets/images/image-shape/square.svg',
+						'name'  => __( 'Square', 'testimonial-free' ),
+						'class' => 'pro-feature',
+					),
+				),
+				'default'    => 'three',
+				'dependency' => array(
+					'client_image',
+					'==',
+					'true',
+				),
+			),
+			array(
+				'id'         => 'image_sizes',
+				'type'       => 'image_sizes',
+				'title'      => __( 'Testimonial Image Size', 'testimonial-free' ),
+				'subtitle'   => __( 'Select which size image to show with your Testimonials.', 'testimonial-free' ),
+				'default'    => 'tf-client-image-size',
+				'dependency' => array(
+					'client_image',
+					'==',
+					'true',
+				),
+			),
+			array(
+				'id'         => 'image_custom_size',
+				'type'       => 'custom_size',
+				'class'      => 'disabled',
+				'title'      => __( 'Custom Size', 'testimonial-free' ),
+				'subtitle'   => __( 'Set a custom width and height of the image.', 'testimonial-free' ),
+				'default'    => array(
+					'width'  => '120',
+					'height' => '120',
+					'crop'   => 'hard-crop',
+					'unit'   => 'px',
+				),
+				'attributes' => array(
+					'min' => 0,
+				),
+				'dependency' => array(
+					'client_image|image_sizes',
+					'==|==',
+					'true|custom',
+				),
+			),
+			array(
+				'id'       => 'image_grayscale',
+				'type'     => 'select',
+				'title'    => __( 'Image Mode', 'testimonial-free' ),
+				'subtitle' => __( 'Select a image mode.', 'testimonial-free' ),
+				'options'  => array(
+					'none'            => __( 'Normal', 'testimonial-free' ),
+					'normal_on_hover' => __( 'Grayscale and normal on hover (Pro)', 'testimonial-free' ),
+					'on_hover'        => __( 'Grayscale on hover (Pro)', 'testimonial-free' ),
+					'always'          => __( 'Always grayscale (Pro)', 'testimonial-free' ),
+				),
+				'default'  => 'none',
+			),
+			array(
+				'id'         => 'video_icon',
+				'type'       => 'switcher',
+				'class'      => 'pro_switcher',
+				'attributes' => array( 'disabled' => 'disabled' ),
+				'title'      => __( 'Video Testimonial', 'testimonial-free' ),
+				'subtitle'   => __( 'Show/Hide video testimonial.', 'testimonial-free' ),
+				'text_on'    => __( 'Show', 'testimonial-free' ),
+				'text_off'   => __( 'Hide', 'testimonial-free' ),
+				'text_width' => 80,
+				'default'    => false,
+			),
+		),
+	)
+);
+
+//
 // Slider Settings section.
 //
 SPFTESTIMONIAL::createSection(
@@ -722,8 +868,10 @@ SPFTESTIMONIAL::createSection(
 				'type'       => 'spinner',
 				'title'      => __( 'AutoPlay Speed', 'testimonial-free' ),
 				'subtitle'   => __( 'Set auto play speed in a millisecond. Default value 3000ms.', 'testimonial-free' ),
-				'default'    => '3000',
-				'min'        => 1,
+				'max'        => 30000,
+				'min'        => 100,
+				'default'    => 3000,
+				'step'       => 100,
 				'unit'       => __( 'ms', 'testimonial-free' ),
 				'dependency' => array(
 					'slider_auto_play',
@@ -737,15 +885,22 @@ SPFTESTIMONIAL::createSection(
 				'title'    => __( 'Pagination Speed', 'testimonial-free' ),
 				'subtitle' => __( 'Set pagination speed in a millisecond. Default value 600ms.', 'testimonial-free' ),
 				'unit'     => __( 'ms', 'testimonial-free' ),
-				'default'  => '600',
-				'min'      => 1,
+				'max'      => 10000,
+				'min'      => 10,
+				'default'  => 600,
+				'step'     => 10,
 			),
 			array(
-				'id'       => 'slider_pause_on_hover',
-				'type'     => 'switcher',
-				'title'    => __( 'Pause on Hover', 'testimonial-free' ),
-				'subtitle' => __( 'On/Off slider pause on hover.', 'testimonial-free' ),
-				'default'  => true,
+				'id'         => 'slider_pause_on_hover',
+				'type'       => 'switcher',
+				'title'      => __( 'Pause on Hover', 'testimonial-free' ),
+				'subtitle'   => __( 'On/Off slider pause on hover.', 'testimonial-free' ),
+				'default'    => true,
+				'dependency' => array(
+					'slider_auto_play',
+					'any',
+					'true,off_on_mobile',
+				),
 			),
 			array(
 				'id'       => 'slider_infinite',
@@ -906,127 +1061,6 @@ SPFTESTIMONIAL::createSection(
 				'dependency' => array( 'slider_swipe', '==', 'true' ),
 			),
 
-		),
-	)
-);
-
-//
-// Image Settings section.
-//
-SPFTESTIMONIAL::createSection(
-	$prefix_shortcode_opts,
-	array(
-		'title'  => __( 'Image Settings', 'testimonial-free' ),
-		'icon'   => 'fa fa-image',
-		'fields' => array(
-
-			array(
-				'id'         => 'client_image',
-				'type'       => 'switcher',
-				'title'      => __( 'Testimonial Image', 'testimonial-free' ),
-				'subtitle'   => __( 'Show/Hide testimonial image.', 'testimonial-free' ),
-				'text_on'    => __( 'Show', 'testimonial-free' ),
-				'text_off'   => __( 'Hide', 'testimonial-free' ),
-				'text_width' => 80,
-				'default'    => true,
-			),
-
-			array(
-				'id'         => 'thumbnail_slider',
-				'type'       => 'checkbox',
-				'class'      => 'pro_only_field',
-				'attributes' => array( 'disabled' => 'disabled' ),
-				'title'      => __( 'Enable Thumbnail Slider', 'testimonial-free' ),
-				'subtitle'   => __( 'Check to enable thumbnail slider. (Pro)', 'testimonial-free' ),
-				'default'    => false,
-			),
-			array(
-				'id'         => 'client_image_style',
-				'class'      => 'client_image_style',
-				'type'       => 'image_select',
-				'title'      => __( 'Image Shape', 'testimonial-free' ),
-				'subtitle'   => __( 'Choose a image shape.', 'testimonial-free' ),
-				'options'    => array(
-					'three' => array(
-						'image' => plugin_dir_url( __FILE__ ) . 'framework/assets/images/image-shape/circle.svg',
-						'name'  => __( 'Circle', 'testimonial-free' ),
-					),
-					'two'   => array(
-						'image' => plugin_dir_url( __FILE__ ) . 'framework/assets/images/image-shape/rounded.svg',
-						'name'  => __( 'Rounded', 'testimonial-free' ),
-						'class' => 'pro-feature',
-					),
-					'one'   => array(
-						'image' => plugin_dir_url( __FILE__ ) . 'framework/assets/images/image-shape/square.svg',
-						'name'  => __( 'Square', 'testimonial-free' ),
-						'class' => 'pro-feature',
-					),
-				),
-				'default'    => 'three',
-				'dependency' => array(
-					'client_image',
-					'==',
-					'true',
-				),
-			),
-			array(
-				'id'         => 'image_sizes',
-				'type'       => 'image_sizes',
-				'title'      => __( 'Testimonial Image Size', 'testimonial-free' ),
-				'subtitle'   => __( 'Select which size image to show with your Testimonials.', 'testimonial-free' ),
-				'default'    => 'tf-client-image-size',
-				'dependency' => array(
-					'client_image',
-					'==',
-					'true',
-				),
-			),
-			array(
-				'id'         => 'image_custom_size',
-				'type'       => 'custom_size',
-				'class'      => 'disabled',
-				'title'      => __( 'Custom Size', 'testimonial-free' ),
-				'subtitle'   => __( 'Set a custom width and height of the image.', 'testimonial-free' ),
-				'default'    => array(
-					'width'  => '120',
-					'height' => '120',
-					'crop'   => 'hard-crop',
-					'unit'   => 'px',
-				),
-				'attributes' => array(
-					'min' => 0,
-				),
-				'dependency' => array(
-					'client_image|image_sizes',
-					'==|==',
-					'true|custom',
-				),
-			),
-			array(
-				'id'       => 'image_grayscale',
-				'type'     => 'select',
-				'title'    => __( 'Image Mode', 'testimonial-free' ),
-				'subtitle' => __( 'Select a image mode.', 'testimonial-free' ),
-				'options'  => array(
-					'none'            => __( 'Normal', 'testimonial-free' ),
-					'normal_on_hover' => __( 'Grayscale and normal on hover (Pro)', 'testimonial-free' ),
-					'on_hover'        => __( 'Grayscale on hover (Pro)', 'testimonial-free' ),
-					'always'          => __( 'Always grayscale (Pro)', 'testimonial-free' ),
-				),
-				'default'  => 'none',
-			),
-			array(
-				'id'         => 'video_icon',
-				'type'       => 'switcher',
-				'class'      => 'pro_switcher',
-				'attributes' => array( 'disabled' => 'disabled' ),
-				'title'      => __( 'Video Testimonial', 'testimonial-free' ),
-				'subtitle'   => __( 'Show/Hide video testimonial.', 'testimonial-free' ),
-				'text_on'    => __( 'Show', 'testimonial-free' ),
-				'text_off'   => __( 'Hide', 'testimonial-free' ),
-				'text_width' => 80,
-				'default'    => false,
-			),
 		),
 	)
 );

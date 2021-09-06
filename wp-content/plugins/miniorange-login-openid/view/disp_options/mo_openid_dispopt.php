@@ -3,7 +3,7 @@ function mo_openid_disp_opt()
 {
 ?>
     <div>
-        <label style="cursor: auto;" class="mo_openid_note_style">Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fa fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fa fa-apple"><b> iOS</b></i> app? <a style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade and <a style="cursor: pointer" href=<?php echo site_url()."/wp-admin/admin.php?page=mo_openid_general_settings&tab=rest_api_page"; ?>>Click here</a> for more details.</label>
+        <label style="cursor: auto;" class="mo_openid_note_style">Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fab fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fab fa-apple"><b> iOS</b></i> app? <a style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade and <a style="cursor: pointer" href=<?php echo site_url()."/wp-admin/admin.php?page=mo_openid_general_settings&tab=rest_api_page"; ?>>Click here</a> for more details.</label>
     </div>
     <form id="display" name="display" method="post" action="">
         <input type="hidden" name="option" value="mo_openid_enable_display" />
@@ -26,7 +26,7 @@ function mo_openid_disp_opt()
                     <input type="checkbox" id="default_comment_enable" name="mo_openid_default_comment_enable" value="1" <?php checked( get_option('mo_openid_default_comment_enable') == 1 );?> /><br>
                     <span class="mo_openid_checkbox_checkmark"></span>
                 </label>
-                <label class="mo_openid_note_style" style="cursor: auto"><?php echo mo_sl("Don't find your login page in above options use");?> <code id='1'>[miniorange_social_login]</code><i style= "width: 11px;height: 9px;padding-left:2px;padding-top:3px" class="fa fa-fw fa-lg fa-copy mo_copy mo_copytooltip" onclick="copyToClipboard(this, '#1', '#shortcode_url_copy')"><span id="shortcode_url_copy" class="mo_copytooltiptext">Copy to Clipboard</span></i><?php echo mo_sl( 'to display social icons or');?> <a style="cursor: pointer" onclick="mo_openid_support_form('')"><?php echo mo_sl('Contact Us');?></a></label>
+                <label class="mo_openid_note_style" style="cursor: auto"><?php echo mo_sl("Don't find your login page in above options use");?> <code id='1'>[miniorange_social_login]</code><i style= "width: 11px;height: 9px;padding-left:2px;padding-top:3px" class="far fa-fw fa-lg fa-copy mo_copy mo_copytooltip" onclick="copyToClipboard(this, '#1', '#shortcode_url_copy')"><span id="shortcode_url_copy" class="mo_copytooltiptext">Copy to Clipboard</span></i><?php echo mo_sl( 'to display social icons or');?> <a style="cursor: pointer" onclick="mo_openid_support_form('')"><?php echo mo_sl('Contact Us');?></a></label>
                 <br/><br/>
                 <b style="font-size:17px;"><?php echo mo_sl("Ultimate Member display options");?> </b><a style="left: 1%; position: relative; text-decoration: none" class="mo-openid-premium" href="<?php echo add_query_arg( array('tab' => 'licensing_plans'), $_SERVER['REQUEST_URI'] ); ?>"><?php echo mo_sl('PRO');?></a><br><br>
 
@@ -177,7 +177,7 @@ function mo_openid_disp_opt()
                 <h3 id="mo_openid_show_add_login_icons2" onclick="show_add_login_icons2(this.id)"><a   id="openid_comments_shortcode_title"  ><span class="dashicons dashicons-arrow-down" ></span><?php echo mo_sl('Using Shortcode');?></a></h3>
                 <div  id="openid_comments_shortcode" style="font-size:13px !important">
                     <ol>
-                        <p><?php echo mo_sl("You can use this shortcode <code id='2'>[miniorange_social_login]</code><i style= \"width: 11px;height: 9px;padding-left:2px;padding-top:3px\" class=\"fa fa-fw fa-lg fa-copy mo_copy mo_copytooltip\" onclick=\"copyToClipboard(this, '#2', '#shortcode_url2_copy')\"><span id=\"shortcode_url2_copy\" class=\"mo_copytooltiptext\">Copy to Clipboard</span></i> to display social icons on any login page, post, popup and PHP pages.");?></p>
+                        <p><?php echo mo_sl("You can use this shortcode <code id='2'>[miniorange_social_login]</code><i style= \"width: 11px;height: 9px;padding-left:2px;padding-top:3px\" class=\"far fa-fw fa-lg fa-copy mo_copy mo_copytooltip\" onclick=\"copyToClipboard(this, '#2', '#shortcode_url2_copy')\"><span id=\"shortcode_url2_copy\" class=\"mo_copytooltiptext\">Copy to Clipboard</span></i> to display social icons on any login page, post, popup and PHP pages.");?></p>
                         <p><?php echo mo_sl("* Detailed information about how to use shortcode is given in <a href=" . site_url() ."/wp-admin/admin.php?page=mo_openid_general_settings&tab=shortcodes>Shortcode</a> tab");?></p>
                     </ol>
                 </div>

@@ -15,7 +15,7 @@ function mo_openid_rest_api_page(){
         <li>A request has been sent to the miniOrange API / mobile SSO plugin via API.</li>
         <li>mini<span style="color: orangered;font-weight: bold">O</span>range API / Mobile SSO plugin authenticates the user using OAuth/OPenID protocol.</li>
         <li>Using JWT authentication, the plugin sends back the JWT token to the application through webview.</li>
-        <li> Reading the JWT token you can retrieve the user information and get the user loggedin.<i class="fa fa-smile-o fa-2x " style="  transform: translate(0%, 20%);color: orange" aria-hidden="true"></i> </li>
+        <li> Reading the JWT token you can retrieve the user information and get the user loggedin.<i class="far fa-smile-beam fa-2x " style="  transform: translate(0%, 20%);color: orange" aria-hidden="true"></i> </li>
     </ol>
     <br>
     <center>

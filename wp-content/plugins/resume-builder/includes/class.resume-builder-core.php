@@ -100,6 +100,7 @@ class Resume_Builder_Core {
         $resume_id = esc_html( $_POST['resume_id'] );
         $resume_data = json_decode( stripslashes( $_POST['resume_data'] ) );
         $resume_name = ( isset( $resume_data->name ) ? esc_html( $resume_data->name ) : '' );
+        $resume_file = ( isset( $resume_data->resume_file ) ? esc_html( $resume_data->resume_file ) : '' );
         $featured_image = ( isset( $resume_data->featured_image ) ? esc_html( $resume_data->featured_image ) : '' );
         $featured_image_url = ( isset( $resume_data->featured_image_url ) ? esc_html( $resume_data->featured_image_url ) : '' );
         $resume_settings = [
@@ -114,6 +115,12 @@ class Resume_Builder_Core {
                 'address' => ( isset( $resume_data->contact->address ) ? $resume_data->contact->address : '' ),
             ],
         ];
+        
+        if ( $resume_file ){
+            $resume_settings['resume_file'] = $resume_file;
+        } else {
+            $resume_settings['resume_file'] = '';
+        }
         
         if ( isset( $resume_data->display ) ):
             foreach( $resume_data->display as $key => $display_setting ):

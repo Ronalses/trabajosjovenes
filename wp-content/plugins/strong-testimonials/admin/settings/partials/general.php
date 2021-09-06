@@ -210,7 +210,7 @@ $options = get_option( 'wpmtst_options' );
                 <label>
                     <input type="checkbox" name="wpmtst_options[noopener]" <?php checked( $options['noopener'] ); ?>>
 					<?php _e( 'Add <code>rel="noopener"</code> to URL custom fields.', 'strong-testimonials' ); ?>
-                    <?php esc_html_e( 'Off by default.', 'strong-testimonials' ); ?>
+                    <?php esc_html_e( 'On by default.', 'strong-testimonials' ); ?>
                 </label>
             </fieldset>
         </td>
@@ -225,13 +225,13 @@ $options = get_option( 'wpmtst_options' );
                 <label>
                     <input type="checkbox" name="wpmtst_options[noreferrer]" <?php checked( $options['noreferrer'] ); ?>>
 					<?php _e( 'Add <code>rel="noreferrer"</code> to URL custom fields.', 'strong-testimonials' ); ?>
-                    <?php esc_html_e( 'Off by default.', 'strong-testimonials' ); ?>
+                    <?php esc_html_e( 'On by default.', 'strong-testimonials' ); ?>
                 </label>
             </fieldset>
         </td>
     </tr>
 
-    <?php if( !function_exists( 'wp_lazy_loading_enabled' ) || !apply_filters( 'wp_lazy_loading_enabled', true ) ) :  ?>
+    <?php if( !function_exists( 'wp_lazy_loading_enabled' ) || !apply_filters( 'wp_lazy_loading_enabled', true, 'img', 'strong_testimonials_has_lazyload' ) ) :  ?>
         <tr valign="top">
             <th scope="row">
                 <?php esc_html_e( 'Lazy Loading', 'strong-testimonials' ); ?>

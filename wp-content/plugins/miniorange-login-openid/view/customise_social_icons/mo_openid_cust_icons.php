@@ -148,6 +148,8 @@ function mo_openid_customise_social_icons(){
                 <b>Preview : </b><br/>
                 <div style="padding-bottom: 1%; padding-top: 3%">
                     <?php
+                    $default_color= array('facebook'=>'#1877F2','google'=>'#DB4437','vkontakte'=>'#466482','twitter'=>'#2795e9','yahoo'=>'#430297','yandex'=>'#2795e9','instagram'=>'#3f729b','linkedin'=>'#007bb6','amazon'=>'#ff9900','paypal'=>'#0d127a','salesforce'=>'#1ab7ea','windowslive'=>'#2672ec','apple'=>'#000000','steam'=>'#000000','wordpress'=>'#587ea3','pinterest'=>'#cb2027','spotify'=>'#19bf61','tumblr'=>'#2c4762','twitch'=>'#720e9e','github'=>'#000000','dribbble'=>'#ee66aa','flickr'=>'#ff0084','stackexchange'=>'0000ff','snapchat'=>'#fffc00','reddit'=>'#ff4301','odnoklassniki'=>'#f97400','foursquare'=>'#f94877','wechat'=>'#00c300','vimeo'=>'#1ab7ea','line'=>'#00c300','hubspot'=>'#fa7820','discord'=>'#7289da','meetup'=>'#e51937','stackexchange'=>'#0000FF','wiebo'=>'#df2029');
+
                     $app_pos=get_option('app_pos');
                     $app_pos=explode('#',$app_pos);
                     $count_app=0;
@@ -162,7 +164,7 @@ function mo_openid_customise_social_icons(){
                             }
                             elseif ($active_app=='salesforce') {
                                 $class_app = 'vimeo';
-                                $icon = 'cloud';
+                                $icon = 'salesforce';
                             }
                             elseif ($active_app=='amazon') {
                                 $class_app = 'soundcloud';
@@ -171,30 +173,14 @@ function mo_openid_customise_social_icons(){
                                 $class_app='microsoft';
                                 $icon='windows';
                             }
-                            if($active_app=='disqus')
-                                $app_img='disq';
-                            else if($active_app=='kakao')
-                                $app_img='kaka';
-                            if($active_app=='facebook')
-                            {
+                            if($active_app=='google'){
                                 $count_app++;
                                 ?>
-                                <img class="mo_login_icon_preview" id="mo_login_icon_preview_facebook" src="<?php echo plugin_url.'/facebook.png'?>" />
-                                <a id="mo_login_button_preview_facebook" class="mo_btn mo_btn-block mo_btn-defaulttheme mo_btn-social mo_btn-facebook mo_btn-custom-size"> <img class="fa" src="<?php echo plugin_url.'/fb.png'?>"><?php
-                                    echo esc_html(get_option('mo_openid_login_button_customize_text'));?> Facebook</a>
-                                <i class="mo_custom_login_icon_preview fa fa-facebook" id="mo_custom_login_icon_preview_facebook"  style="color:#ffffff;text-align:center;margin-top:5px;"></i>
-                                <a id="mo_custom_login_button_preview_facebook"  class="mo_btn mo_btn-block mo_btn-customtheme mo_btn-social  mo_btn-custom-size"> <i class="fa fa-facebook"></i><?php
-                                    echo esc_html(get_option('mo_openid_login_button_customize_text'));?> Facebook</a>
-                                <?php
-                            }
-                            else if($active_app=='google'){
-                                $count_app++;
-                                ?>
-                                <img class="mo_login_icon_preview" id="mo_login_icon_preview_google" src="<?php echo plugin_url.'/google.png'?>" />
+                                <i class="mo_login_icon_preview <?php echo $extra;?> fab fa-<?php echo $active_app;?>" id="mo_login_icon_preview_facebook" style="background:<?php echo $default_color[$active_app];?> !important;text-align:center;margin-top:5px;color: white" ></i>
                                 <a style="background: rgb(255,255,255)!important; background:linear-gradient(90deg, rgba(255,255,255,1) 38px, rgb(79, 113, 232) 5%) !important;border-color: rgba(79, 113, 232, 1);border-bottom-width: thin;" id="mo_login_button_preview_google" class="mo_btn mo_btn-block mo_btn-defaulttheme mo_btn-social mo_btn-google mo_btn-custom-size"> <img class="fa" src="<?php echo plugin_url.'/g.png'?>"><?php
                                     ?> <span style="color:#ffffff;"><?php echo esc_html(get_option('mo_openid_login_button_customize_text'));?> Google</span></a>
-                                <i class="mo_custom_login_icon_preview fa fa-google" id="mo_custom_login_icon_preview_google"  style="color:#ffffff;text-align:center;margin-top:5px;"></i>
-                                <a id="mo_custom_login_button_preview_google" class="mo_btn mo_btn-block mo_btn-customtheme mo_btn-social   mo_btn-custom-size"> <i class="fa fa-google"></i><?php
+                                <i class="mo_custom_login_icon_preview fab fa-google" id="mo_custom_login_icon_preview_google"  style="color:#ffffff;text-align:center;margin-top:5px;"></i>
+                                <a id="mo_custom_login_button_preview_google" class="mo_btn mo_btn-block mo_btn-customtheme mo_btn-social   mo_btn-custom-size"> <i class="fab fa-google"></i><?php
                                     echo esc_html(get_option('mo_openid_login_button_customize_text'));?> Google</a>
                                 <?php
                             }
@@ -212,11 +198,11 @@ function mo_openid_customise_social_icons(){
                             else{
                                 $count_app++;
                                 ?>
-                                <img class="mo_login_icon_preview" id="mo_login_icon_preview_<?php echo $active_app ?>" src="<?php echo plugin_url.'/'.$active_app.'.png'?>" />
-                                <a id="mo_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_btn-defaulttheme mo_btn-social mo_btn-<?php echo $class_app ?> mo_btn-custom-size"> <i class="fa fa-<?php echo $icon ?>"></i><?php
+                                <i class="mo_login_icon_preview  fab fa-<?php echo $icon;?>" id="mo_login_icon_preview_facebook" style="background:<?php echo $default_color[$active_app];?>;text-align:center;margin-top:5px;color: #FFFFFF" ></i>
+                                <a id="mo_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_btn-defaulttheme mo_btn-social mo_btn-<?php echo $class_app ?> mo_btn-custom-size"> <i class="fab fa-<?php echo $icon ?>"></i><?php
                                     echo esc_html(get_option('mo_openid_login_button_customize_text'));?> <?php echo $active_app?></a>
-                                <i class="mo_custom_login_icon_preview fa fa-<?php echo $icon ?>" id="mo_custom_login_icon_preview_<?php echo $active_app ?>"  style="color:#ffffff;text-align:center;margin-top:5px;"></i>
-                                <a id="mo_custom_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_btn-customtheme mo_btn-social   mo_btn-custom-size"> <i class="fa fa-<?php echo $icon ?>"></i><?php
+                                <i class="mo_custom_login_icon_preview fab fa-<?php echo $icon ?>" id="mo_custom_login_icon_preview_<?php echo $active_app ?>"  style="color:#ffffff;text-align:center;margin-top:5px;"></i>
+                                <a id="mo_custom_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_btn-customtheme mo_btn-social   mo_btn-custom-size"> <i class="fab fa-<?php echo $icon ?>"></i><?php
                                     echo esc_html(get_option('mo_openid_login_button_customize_text'));?> <?php echo $active_app ?></a>
                                 <?php
                             }
@@ -372,16 +358,18 @@ function mo_openid_customise_social_icons(){
                 }else{
                     var a="mo_login_icon_preview";
                     jQuery("."+a).css("margin-left",(n-4)+"px");
+                    jQuery("."+a).css("cursor","pointer");
+                    jQuery("."+a).css({height:t-8,width:t});
+                    jQuery("."+a).css("padding-top","8px");
                     if(r=="circle"){
-                        jQuery("."+a).css({height:t,width:t});
                         jQuery("."+a).css("borderRadius","999px");
                     }else if(r=="oval"){
                         jQuery("."+a).css("borderRadius","5px");
-                        jQuery("."+a).css({height:t,width:t});
                     }else if(r=="square"){
                         jQuery("."+a).css("borderRadius","0px");
-                        jQuery("."+a).css({height:t,width:t});
                     }
+                    jQuery("."+a).css("font-size",(t-16)+"px");
+
                 }
             }
             else if(l == 'custom'){
