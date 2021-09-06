@@ -7,6 +7,7 @@ define( 'GTM4WP_OPTION_ENV_GTM_AUTH', 'gtm-env-gtm-auth' );
 define( 'GTM4WP_OPTION_ENV_GTM_PREVIEW', 'gtm-env-gtm-preview' );
 define( 'GTM4WP_OPTION_DONOTTRACK', 'gtm-browser-do-not-track' );
 define( 'GTM4WP_OPTION_LOADEARLY', 'gtm-load-gtm-early' );
+define( 'GTM4WP_OPTION_GTMDOMAIN', 'gtm-domain-name' );
 
 define( 'GTM4WP_OPTION_INCLUDE_REMARKETING', 'include-remarketing' );
 define( 'GTM4WP_OPTION_INCLUDE_LOGGEDIN', 'include-loggedin' );
@@ -102,11 +103,13 @@ define( 'GTM4WP_OPTION_INTEGRATE_WCEECCARTASFIRSTSTEP', 'integrate-woocommerce-c
 define( 'GTM4WP_OPTION_INTEGRATE_WCEINCLUDECARTINDL',    'integrate-woocommerce-cart-content-in-datalayer' );
 define( 'GTM4WP_OPTION_INTEGRATE_WCEECBRANDTAXONOMY',    'integrate-woocommerce-brand-taxonomy' );
 define( 'GTM4WP_OPTION_INTEGRATE_WCREMARKETING', 'integrate-woocommerce-remarketing' );
+define( 'GTM4WP_OPTION_INTEGRATE_WCBUSINESSVERTICAL', 'integrate-woocommerce-business-vertical' );
 define( 'GTM4WP_OPTION_INTEGRATE_WCUSESKU', 'integrate-woocommerce-remarketing-usesku' );
 define( 'GTM4WP_OPTION_INTEGRATE_WCUSEFULLCATEGORYPATH', 'integrate-woocommerce-use-full-category-path' );
 define( 'GTM4WP_OPTION_INTEGRATE_WCREMPRODIDPREFIX', 'integrate-woocommerce-remarketing-productidprefix' );
 define( 'GTM4WP_OPTION_INTEGRATE_WCCUSTOMERDATA', 'integrate-woocommerce-customer-data' );
 define( 'GTM4WP_OPTION_INTEGRATE_WCORDERDATA', 'integrate-woocommerce-order-data' );
+define( 'GTM4WP_OPTION_INTEGRATE_WCORDERMAXAGE', 'integrate-woocommerce-order-max-age' );
 define( 'GTM4WP_OPTION_INTEGRATE_WCEXCLUDETAX', 'integrate-woocommerce-exclude-tax' );
 define( 'GTM4WP_OPTION_INTEGRATE_WCEXCLUDESHIPPING', 'integrate-woocommerce-exclude-shipping' );
 define( 'GTM4WP_OPTION_INTEGRATE_WCNOORDERTRACKEDFLAG', 'integrate-woocommerce-do-not-use-order-tracked-flag' );
@@ -118,12 +121,14 @@ define( 'GTM4WP_OPTION_INTEGRATE_WPECOMMERCE', 'integrate-wp-e-commerce' );
 
 define( 'GTM4WP_OPTION_INTEGRATE_AMPID', 'integrate-amp-id' );
 
+define( 'GTM4WP_OPTION_INTEGRATE_COOKIEBOT', 'integrate-cookiebot' );
+
 define( 'GTM4WP_PLACEMENT_FOOTER', 0 );
 define( 'GTM4WP_PLACEMENT_BODYOPEN', 1 );
 define( 'GTM4WP_PLACEMENT_BODYOPEN_AUTO', 2 );
 define( 'GTM4WP_PLACEMENT_OFF', 3 );
 
-global $gtm4wp_options, $gtm4wp_defaultoptions, $gtm4wp_entity_ids;
+global $gtm4wp_options, $gtm4wp_defaultoptions, $gtm4wp_entity_ids, $gtm4wp_business_verticals, $gtm4wp_business_verticals_ids;
 
 $gtm4wp_options = array();
 
@@ -135,6 +140,7 @@ $gtm4wp_defaultoptions = array(
 	GTM4WP_OPTION_ENV_GTM_PREVIEW                 => '',
 	GTM4WP_OPTION_DONOTTRACK                      => false,
 	GTM4WP_OPTION_LOADEARLY                       => false,
+	GTM4WP_OPTION_GTMDOMAIN                       => '',
 
 	GTM4WP_OPTION_INCLUDE_REMARKETING             => false,
 	GTM4WP_OPTION_INCLUDE_LOGGEDIN                => false,
@@ -196,11 +202,13 @@ $gtm4wp_defaultoptions = array(
 	GTM4WP_OPTION_INTEGRATE_WCEINCLUDECARTINDL    => false,
 	GTM4WP_OPTION_INTEGRATE_WCEECBRANDTAXONOMY    => '',
 	GTM4WP_OPTION_INTEGRATE_WCREMARKETING         => false,
+	GTM4WP_OPTION_INTEGRATE_WCBUSINESSVERTICAL    => 'retail',
 	GTM4WP_OPTION_INTEGRATE_WCUSESKU              => false,
 	GTM4WP_OPTION_INTEGRATE_WCUSEFULLCATEGORYPATH => false,
 	GTM4WP_OPTION_INTEGRATE_WCREMPRODIDPREFIX     => '',
 	GTM4WP_OPTION_INTEGRATE_WCCUSTOMERDATA        => false,
 	GTM4WP_OPTION_INTEGRATE_WCORDERDATA           => false,
+	GTM4WP_OPTION_INTEGRATE_WCORDERMAXAGE           => 30,
 	GTM4WP_OPTION_INTEGRATE_WCEXCLUDETAX          => false,
 	GTM4WP_OPTION_INTEGRATE_WCEXCLUDESHIPPING     => false,
 	GTM4WP_OPTION_INTEGRATE_WCNOORDERTRACKEDFLAG  => false,
@@ -210,7 +218,26 @@ $gtm4wp_defaultoptions = array(
 
 	GTM4WP_OPTION_INTEGRATE_WPECOMMERCE           => false,
 
-	GTM4WP_OPTION_INTEGRATE_AMPID                 => ''
+	GTM4WP_OPTION_INTEGRATE_AMPID                 => '',
+
+	GTM4WP_OPTION_INTEGRATE_COOKIEBOT             => false
+);
+
+$gtm4wp_business_verticals = array(
+	'retail' => 'Retail',
+	'education' => 'Education',
+	'flights' => 'Flights',
+	'hotel_rental' => 'Hotel rental',
+	'jobs' => 'Jobs',
+	'local' => 'Local deals',
+	'real_estate' => 'Real estate',
+	'travel' => 'Travel',
+	'custom' => 'Custom'
+);
+
+$gtm4wp_business_verticals_ids = array(
+	'flights' => 'destination',
+	'travel' => 'destination'
 );
 
 $gtm4wp_entity_ids = array(
@@ -394,7 +421,7 @@ function gtm4wp_migrate_blacklist_whitelist( $current_options ) {
 }
 
 function gtm4wp_reload_options() {
-	global $gtm4wp_defaultoptions;
+	global $gtm4wp_defaultoptions, $gtm4wp_business_verticals;
 
 	$storedoptions = (array) get_option( GTM4WP_OPTIONS );
 	if ( ! is_array( $gtm4wp_defaultoptions ) ) {
@@ -418,6 +445,10 @@ function gtm4wp_reload_options() {
 
 	if ( defined( 'GTM4WP_HARDCODED_GTM_ENV_PREVIEW' ) ) {
 		$return_options[ GTM4WP_OPTION_ENV_GTM_PREVIEW ] = GTM4WP_HARDCODED_GTM_ENV_PREVIEW;
+	}
+
+	if ( !array_key_exists( $return_options[ GTM4WP_OPTION_INTEGRATE_WCBUSINESSVERTICAL ], $gtm4wp_business_verticals ) ) {
+		$return_options[ GTM4WP_OPTION_INTEGRATE_WCBUSINESSVERTICAL ] = $gtm4wp_defaultoptions[ GTM4WP_OPTION_INTEGRATE_WCBUSINESSVERTICAL ];
 	}
 
 	return $return_options;

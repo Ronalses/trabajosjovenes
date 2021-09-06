@@ -11,6 +11,7 @@
 namespace Google\Site_Kit\Core\Modules;
 
 use Google\Site_Kit\Context;
+use Google\Site_Kit\Core\Assets\Assets;
 use Google\Site_Kit\Core\Permissions\Permissions;
 use Google\Site_Kit\Core\REST_API\REST_Route;
 use Google\Site_Kit\Core\REST_API\REST_Routes;
@@ -18,8 +19,11 @@ use Google\Site_Kit\Core\Storage\Options;
 use Google\Site_Kit\Core\Storage\User_Options;
 use Google\Site_Kit\Core\Authentication\Authentication;
 use Google\Site_Kit\Core\REST_API\Exception\Invalid_Datapoint_Exception;
+use Google\Site_Kit\Core\Util\Feature_Flags;
 use Google\Site_Kit\Modules\AdSense;
 use Google\Site_Kit\Modules\Analytics;
+use Google\Site_Kit\Modules\Analytics_4;
+use Google\Site_Kit\Modules\Idea_Hub;
 use Google\Site_Kit\Modules\Optimize;
 use Google\Site_Kit\Modules\PageSpeed_Insights;
 use Google\Site_Kit\Modules\Search_Console;
@@ -107,6 +111,14 @@ final class Modules {
 	private $registry;
 
 	/**
+	 * Assets API instance.
+	 *
+	 * @since 1.40.0
+	 * @var Assets
+	 */
+	private $assets;
+
+	/**
 	 * Core module class names.
 	 *
 	 * @since 1.21.0
@@ -131,17 +143,27 @@ final class Modules {
 	 * @param Options        $options        Optional. Option API instance. Default is a new instance.
 	 * @param User_Options   $user_options   Optional. User Option API instance. Default is a new instance.
 	 * @param Authentication $authentication Optional. Authentication instance. Default is a new instance.
+	 * @param Assets         $assets  Optional. Assets API instance. Default is a new instance.
 	 */
 	public function __construct(
 		Context $context,
 		Options $options = null,
 		User_Options $user_options = null,
-		Authentication $authentication = null
+		Authentication $authentication = null,
+		Assets $assets = null
 	) {
 		$this->context        = $context;
 		$this->options        = $options ?: new Options( $this->context );
 		$this->user_options   = $user_options ?: new User_Options( $this->context );
 		$this->authentication = $authentication ?: new Authentication( $this->context, $this->options, $this->user_options );
+		$this->assets         = $assets ?: new Assets( $this->context );
+
+		if ( Feature_Flags::enabled( 'ga4setup' ) ) {
+			$this->core_modules[] = Analytics_4::class;
+		}
+		if ( Feature_Flags::enabled( 'ideaHubModule' ) ) {
+			$this->core_modules[] = Idea_Hub::class;
+		}
 	}
 
 	/**
@@ -201,6 +223,10 @@ final class Modules {
 				if ( $module instanceof Module_With_Settings ) {
 					$module->get_settings()->register();
 				}
+
+				if ( $module instanceof Module_With_Persistent_Registration ) {
+					$module->register_persistent();
+				}
 			}
 		);
 
@@ -253,7 +279,7 @@ final class Modules {
 		if ( empty( $this->modules ) ) {
 			$module_classes = $this->get_registry()->get_all();
 			foreach ( $module_classes as $module_class ) {
-				$instance = new $module_class( $this->context, $this->options, $this->user_options, $this->authentication );
+				$instance = new $module_class( $this->context, $this->options, $this->user_options, $this->authentication, $this->assets );
 
 				$this->modules[ $instance->slug ]      = $instance;
 				$this->dependencies[ $instance->slug ] = array();
@@ -423,6 +449,13 @@ final class Modules {
 			return false;
 		}
 
+		// TODO: Remove this hack.
+		if ( Analytics::MODULE_SLUG === $slug ) {
+			// GA4 needs to be handled first to pass conditions below
+			// due to special handling in active modules option.
+			$this->activate_module( Analytics_4::MODULE_SLUG );
+		}
+
 		$option = $this->get_active_modules_option();
 
 		if ( in_array( $slug, $option, true ) ) {
@@ -433,8 +466,8 @@ final class Modules {
 
 		$this->set_active_modules_option( $option );
 
-		if ( is_callable( array( $module, 'on_activation' ) ) ) {
-			call_user_func( array( $module, 'on_activation' ) );
+		if ( $module instanceof Module_With_Activation ) {
+			$module->on_activation();
 		}
 
 		return true;
@@ -455,6 +488,13 @@ final class Modules {
 			return false;
 		}
 
+		// TODO: Remove this hack.
+		if ( Analytics::MODULE_SLUG === $slug ) {
+			// GA4 needs to be handled first to pass conditions below
+			// due to special handling in active modules option.
+			$this->deactivate_module( Analytics_4::MODULE_SLUG );
+		}
+
 		$option = $this->get_active_modules_option();
 
 		$key = array_search( $slug, $option, true );
@@ -471,8 +511,8 @@ final class Modules {
 
 		$this->set_active_modules_option( array_values( $option ) );
 
-		if ( is_callable( array( $module, 'on_deactivation' ) ) ) {
-			call_user_func( array( $module, 'on_deactivation' ) );
+		if ( $module instanceof Module_With_Deactivation ) {
+			$module->on_deactivation();
 		}
 
 		return true;
@@ -962,17 +1002,21 @@ final class Modules {
 	private function get_active_modules_option() {
 		$option = $this->options->get( self::OPTION_ACTIVE_MODULES );
 
-		if ( is_array( $option ) ) {
-			return $option;
+		if ( ! is_array( $option ) ) {
+			$option = $this->options->get( 'googlesitekit-active-modules' );
 		}
 
-		$legacy_option = $this->options->get( 'googlesitekit-active-modules' );
-
-		if ( is_array( $legacy_option ) ) {
-			return $legacy_option;
+		if ( ! is_array( $option ) ) {
+			$option = array();
 		}
 
-		return array();
+		$includes_analytics   = in_array( Analytics::MODULE_SLUG, $option, true );
+		$includes_analytics_4 = in_array( Analytics_4::MODULE_SLUG, $option, true );
+		if ( $includes_analytics && ! $includes_analytics_4 ) {
+			$option[] = Analytics_4::MODULE_SLUG;
+		}
+
+		return $option;
 	}
 
 	/**
@@ -983,6 +1027,11 @@ final class Modules {
 	 * @param array $option List of active module slugs.
 	 */
 	private function set_active_modules_option( array $option ) {
+		if ( in_array( Analytics_4::MODULE_SLUG, $option, true ) ) {
+			unset( $option[ array_search( Analytics_4::MODULE_SLUG, $option, true ) ] );
+		}
+
 		$this->options->set( self::OPTION_ACTIVE_MODULES, $option );
 	}
+
 }

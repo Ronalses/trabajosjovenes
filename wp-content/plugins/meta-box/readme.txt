@@ -4,8 +4,8 @@ Donate link: https://metabox.io/pricing/
 Tags: meta box, custom fields, custom post types, custom taxonomies, cpt, meta boxes, custom field, post type, taxonomy, meta, admin, advanced, custom, edit, field, file, image, magic fields, post types, more fields, post, repeater, simple fields, text, textarea, type, cms, fields post
 Requires at least: 4.3
 Requires PHP: 5.6
-Tested up to: 5.7
-Stable tag: 5.3.9
+Tested up to: 5.7.2
+Stable tag: 5.4.6
 License: GPLv2 or later
 
 Meta Box plugin is a powerful, professional developer toolkit to create custom meta boxes and custom fields for your custom post types in WordPress.
@@ -167,6 +167,48 @@ To getting started with the plugin, please read the [Quick Start Guide](https://
 1. Post Taxonomy Fields
 
 == Changelog ==
+
+= 5.4.6 - 2021-07-08 =
+- Remove debug code
+
+= 5.4.5 - 2021-07-08 =
+- Fix styling issue for heading field and side meta boxes
+
+= 5.4.4 - 2021-07-06 =
+- Improve usability for time picker on mobile by adding +/- buttons
+- Make all input, select, textarea 100% width
+- Export clone functions to the global "rwmb"
+
+= 5.4.3 - 2021-06-30 =
+- Fix trailing comma in function call for PHP < 7.3
+
+= 5.4.2 - 2021-06-29 =
+- Improve style for media fields to reuse style/HTML markup.
+- Make input, select, input group, select2, textarea full width on the side context.
+- Improve style for button group when buttons don't have same width.
+- Set better default options for date time pickers.
+- Allow to output HTML in input prepend/append (ex. icon).
+- Add filter `rwmb_dismiss_dashboard_widget` to dismiss dashboard widget.
+
+= 5.4.1 - 2021-06-01 =
+- Improve style for prepend, append text
+- Improve style for select2 on mobiles
+- Make select_tree extend select_advanced and respect select_advanced options
+
+= 5.4.0 - 2021-05-08 =
+- Shortcode: add `render_shortcodes` attribute (default true) to allow render inner shortcodes.
+- File fields: allow to change uploaded file name when uploading to custom folder via `unique_filename_callback` setting
+- Dashboard: add more video tutorials
+- Image fields: fix actions (edit, delete) not visible on mobile
+- Choice fields: fix not saving value if they contain quotes
+- Datetime fields: fix not saving timestamp via REST API
+
+= 5.3.10 - 2021-04-24 =
+- Disable autocomplete for date/datetime fields
+- Input list field: Fix label not working if contains HTML
+- Fix multiple OSM on the same page
+- Add auto update for solutions
+- Fix various bugs for the wysiwyg editor field (mostly in blocks) and allows to pass tinyMCE/quicktags settings to the editor
 
 = 5.3.9 - 2021-03-10 =
 - Fix taxonomy_advanced doesn't load options in attachment with media_modal set to true.

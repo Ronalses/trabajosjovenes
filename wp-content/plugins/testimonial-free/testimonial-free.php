@@ -12,7 +12,7 @@
  * Plugin Name:     Testimonial
  * Plugin URI:      https://shapedplugin.com/plugin/testimonial-pro/?ref=1
  * Description:     Most Customizable and Powerful Testimonials Showcase Plugin for WordPress that allows you to manage and display Testimonials or Reviews on any page or widget.
- * Version:         2.2.12
+ * Version:         2.2.18
  * Author:          ShapedPlugin
  * Author URI:      https://shapedplugin.com/
  * Text Domain:     testimonial-free
@@ -37,9 +37,11 @@ function is_testimonial_pro() {
 
 if ( is_testimonial_pro() ) {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-testimonial-updates.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-testimonial-import-export.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/views/notices/review.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/views/framework/classes/setup.class.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/views/testimonial-settings.php';
+	require_once plugin_dir_path( __FILE__ ) . 'admin/views/testimonial-tools.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/views/testimonial-metaboxs.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/views/testimonial-form.php';
 }
@@ -57,7 +59,7 @@ if ( ! class_exists( 'SP_Testimonial_FREE' ) ) {
 		 *
 		 * @var string
 		 */
-		public $version = '2.2.12';
+		public $version = '2.2.18';
 
 		/**
 		 * @var SP_TFREE_Testimonial $shortcode
@@ -137,6 +139,12 @@ if ( ! class_exists( 'SP_Testimonial_FREE' ) ) {
 			add_action( 'manage_spt_shortcodes_posts_custom_column', array( $this, 'add_shortcode_form' ), 10, 2 );
 			add_action( 'manage_spt_testimonial_posts_custom_column', array( $this, 'add_testimonial_extra_column' ), 10, 2 );
 			add_action( 'activated_plugin', array( $this, 'redirect_help_page' ) );
+
+			// Import Export.
+			$import_export = new Testimonial_Import_Export( SP_TFREE_NAME, SP_TFREE_VERSION );
+
+			add_action( 'wp_ajax_spt_export_shortcodes', array( $import_export, 'export_shortcodes' ) );
+			add_action( 'wp_ajax_spt_import_shortcodes', array( $import_export, 'import_shortcodes' ) );
 		}
 
 		/**
@@ -145,6 +153,7 @@ if ( ! class_exists( 'SP_Testimonial_FREE' ) ) {
 		 * @since 2.0
 		 */
 		public function define_constants() {
+			$this->define( 'SP_TFREE_NAME', 'Testimonial' );
 			$this->define( 'SP_TFREE_VERSION', $this->version );
 			$this->define( 'SP_TFREE_PATH', plugin_dir_path( __FILE__ ) );
 			$this->define( 'SP_TFREE_URL', plugin_dir_url( __FILE__ ) );
@@ -313,12 +322,12 @@ if ( ! class_exists( 'SP_Testimonial_FREE' ) ) {
 		 */
 		function add_testimonial_column() {
 			$new_columns['cb']     = '<input type="checkbox" />';
-			$new_columns['title']  = __( 'Title', 'testimonial-pro' );
-			$new_columns['image']  = __( 'Image', 'testimonial-pro' );
-			$new_columns['name']   = __( 'Name', 'testimonial-pro' );
-			$new_columns['rating'] = __( 'Rating', 'testimonial-pro' );
+			$new_columns['title']  = __( 'Title', 'testimonial-free' );
+			$new_columns['image']  = __( 'Image', 'testimonial-free' );
+			$new_columns['name']   = __( 'Name', 'testimonial-free' );
+			$new_columns['rating'] = __( 'Rating', 'testimonial-free' );
 			$new_columns['']       = '';
-			$new_columns['date']   = __( 'Date', 'testimonial-pro' );
+			$new_columns['date']   = __( 'Date', 'testimonial-free' );
 
 			return $new_columns;
 		}

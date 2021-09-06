@@ -71,7 +71,7 @@ class mo_openid_login_wid extends WP_Widget {
         }
 
         $selected_theme = esc_attr(get_option('mo_openid_login_theme'));
-        $appsConfigured = get_option('mo_openid_google_enable') | get_option('mo_openid_salesforce_enable') | get_option('mo_openid_facebook_enable') | get_option('mo_openid_linkedin_enable') | get_option('mo_openid_instagram_enable') | get_option('mo_openid_amazon_enable') | get_option('mo_openid_windowslive_enable') | get_option('mo_openid_twitter_enable') | get_option('mo_openid_vkontakte_enable')| get_option('mo_openid_yahoo_enable');
+        $appsConfigured = get_option('mo_openid_google_enable') | get_option('mo_openid_salesforce_enable') | get_option('mo_openid_facebook_enable') | get_option('mo_openid_linkedin_enable') | get_option('mo_openid_instagram_enable') | get_option('mo_openid_amazon_enable') | get_option('mo_openid_windowslive_enable') | get_option('mo_openid_twitter_enable') | get_option('mo_openid_vkontakte_enable') | get_option('mo_openid_yahoo_enable') | get_option('mo_openid_snapchat_enable') | get_option('mo_openid_dribbble_enable');
         $spacebetweenicons = esc_attr(get_option('mo_login_icon_space'));
         $customWidth = esc_attr(get_option('mo_login_icon_custom_width'));
         $customHeight = esc_attr(get_option('mo_login_icon_custom_height'));
@@ -200,7 +200,7 @@ class mo_openid_login_wid extends WP_Widget {
         $selected_theme = isset( $atts['shape'] )? esc_attr($atts['shape']) : esc_attr(get_option('mo_openid_login_theme'));
         $selected_apps = isset( $atts['apps'] )? esc_attr($atts['apps']) : "";
         $application_pos = get_option('app_pos');
-        $appsConfigured = get_option('mo_openid_facebook_enable') | get_option('mo_openid_google_enable') | get_option('mo_openid_vkontakte_enable') | get_option('mo_openid_twitter_enable') | get_option('mo_openid_instagram_enable') | get_option('mo_openid_linkedin_enable') |  get_option('mo_openid_amazon_enable') | get_option('mo_openid_salesforce_enable') | get_option('mo_openid_windowslive_enable') | get_option('mo_openid_yahoo_enable') ;
+        $appsConfigured = get_option('mo_openid_facebook_enable') | get_option('mo_openid_google_enable') | get_option('mo_openid_vkontakte_enable') | get_option('mo_openid_twitter_enable') | get_option('mo_openid_instagram_enable') | get_option('mo_openid_linkedin_enable') |  get_option('mo_openid_amazon_enable') | get_option('mo_openid_salesforce_enable') | get_option('mo_openid_windowslive_enable') | get_option('mo_openid_yahoo_enable') | get_option('mo_openid_snapchat_enable') | get_option('mo_openid_dribbble_enable');
         $spacebetweenicons = isset( $atts['space'] )? esc_attr(intval($atts['space'])) : esc_attr(intval(get_option('mo_login_icon_space')));
         $customWidth = isset( $atts['width'] )? esc_attr(intval($atts['width'])) : esc_attr(intval(get_option('mo_login_icon_custom_width')));
         $customHeight = isset( $atts['height'] )? esc_attr(intval($atts['height'])) : esc_attr(intval(get_option('mo_login_icon_custom_height')));
@@ -528,6 +528,16 @@ class mo_openid_login_wid extends WP_Widget {
                 $app_dis = $this->check_capp_reg_cust($customer_register, $custom_app);
                 $html = $this->add_apps("yahoo", $customTheme, $gdpr_setting, $spacebetweenicons, $customWidth, $customHeight, $customBoundary, $buttonText, $dis, $customTextofTitle, $customSize, $selected_theme, $custom_app, $html, $view, $customBackground, $app_dis);
                 break;
+            case 'snapchat':
+                $custom_app = esc_attr($this->if_custom_app_exists('snapchat'));
+                $app_dis = $this->check_capp_reg_cust($customer_register, $custom_app);
+                $html = $this->add_apps("snapchat", $customTheme, $gdpr_setting, $spacebetweenicons, $customWidth, $customHeight, $customBoundary, $buttonText, $dis, $customTextofTitle, $customSize, $selected_theme, $custom_app, $html, $view, $customBackground, $app_dis);
+                break;
+            case 'dribbble':
+                $custom_app = esc_attr($this->if_custom_app_exists('dribbble'));
+                $app_dis = $this->check_capp_reg_cust($customer_register, $custom_app);
+                $html = $this->add_apps("dribbble", $customTheme, $gdpr_setting, $spacebetweenicons, $customWidth, $customHeight, $customBoundary, $buttonText, $dis, $customTextofTitle, $customSize, $selected_theme, $custom_app, $html, $view, $customBackground, $app_dis);
+                break;
             case 'wordpress':
             case 'wpress':
                 $custom_app = esc_attr($this->if_custom_app_exists('wordpress'));
@@ -546,6 +556,8 @@ class mo_openid_login_wid extends WP_Widget {
     //for shortcode
     public function add_apps($app_name,$theme,$gdpr_setting,$spacebetweenicons,$customWidth,$customHeight,$customBoundary,$buttonText,$dis,$customTextofTitle,$customSize,$selected_theme,$custom_app,$html,$view,$customBackground,$app_dis)
     {
+        $default_color= array('facebook'=>'#1877F2','google'=>'#DB4437','vkontakte'=>'#466482','twitter'=>'#2795e9','yahoo'=>'#430297','yandex'=>'#2795e9','instagram'=>'#3f729b','linkedin'=>'#007bb6','amazon'=>'#ff9900','paypal'=>'#0d127a','salesforce'=>'#1ab7ea','windowslive'=>'#2672ec','apple'=>'#000000','steam'=>'#000000','wordpress'=>'#587ea3','pinterest'=>'#cb2027','spotify'=>'#19bf61','tumblr'=>'#2c4762','twitch'=>'#720e9e','github'=>'#000000','dribbble'=>'#ee66aa','flickr'=>'#ff0084','stackexchange'=>'0000ff','snapchat'=>'#fffc00','reddit'=>'#ff4301','odnoklassniki'=>'#f97400','foursquare'=>'#f94877','wechat'=>'#00c300','vimeo'=>'#1ab7ea','line'=>'#00c300','hubspot'=>'#fa7820','discord'=>'#7289da','meetup'=>'#e51937','stackexchange'=>'#0000FF','wiebo'=>'#df2029','kakao'=>'#ffe812','livejournal'=>'#3c1361','naver'=>'#3EAF0E','teamsnap'=>'#ff9a1a');
+
         if($customWidth!=='auto'||$customWidth=='Auto'||$customWidth=='AUTO')
             $customWidth.='px';
         if($theme=="default")
@@ -563,7 +575,7 @@ class mo_openid_login_wid extends WP_Widget {
                         $html .= "onClick=\"moOpenIdLogin('facebook','" . $custom_app . "');\"";
                     $html .= "> <img  class='fa'  style='padding-top:" . ($customHeight - 35) . "px !important; margin-top: 0' src='" . plugins_url('includes/images/icons/fb.png', __FILE__) . "'>" . $buttonText . " Facebook</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Facebook'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('facebook','" . $custom_app . "');\""; $html.="><img alt='Facebook' style='width:" . $customSize . "px !important;height: " . $customSize . "px !important;margin-left: " . ($spacebetweenicons) . "px !important' src='" . plugins_url('includes/images/icons/facebook.png', __FILE__) . "' class='" . $dis . " login-button " . $selected_theme . "' ></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Facebook'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('facebook','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  facebook'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['facebook'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-facebook  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -580,7 +592,7 @@ class mo_openid_login_wid extends WP_Widget {
                         $html .= "onClick=\"moOpenIdLogin('google','" . $custom_app . "');\"";
                     $html.="> <img  class='fa'  style='padding-top:" . ($customHeight - 35) . "px !important; margin-top: 0' src='" . plugins_url('includes/images/icons/g.png', __FILE__) . "'>" . $buttonText . " Google</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow'";if($app_dis!="disable")$html.=" onClick=\"moOpenIdLogin('google','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . " Google'><img alt='Google' style='width:" . $customSize . "px !important;height: " . $customSize . "px !important;margin-left: " . ($spacebetweenicons) . "px !important' src='" . plugins_url('includes/images/icons/google.png', __FILE__) . "' class='" . $dis . " login-button " . $selected_theme . "' ></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Google'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('google','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  google'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['google'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-google  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -595,9 +607,9 @@ class mo_openid_login_wid extends WP_Widget {
                     }
                     if($app_dis!="disable")
                         $html .= "onClick=\"moOpenIdLogin('vkontakte','" . $custom_app . "');\"";
-                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-vk'></i>" . $buttonText . " Vkontakte</a>";
+                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-vk'></i>" . $buttonText . " Vkontakte</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow'"; if($app_dis!="disable") $html.="onClick=\"moOpenIdLogin('vkontakte','" . $custom_app . "');\""; $html.="title= ' " . $customTextofTitle . " Vkontakte'><img alt='Vkontakte' style='width:" . $customSize . "px !important;height: " . $customSize . "px !important;margin-left: " . ($spacebetweenicons) . "px !important' src='" . plugins_url('includes/images/icons/vk.png', __FILE__) . "' class='" . $dis . " login-button " . $selected_theme . "' ></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Vkontakte'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('vkontakte','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  vkontakte'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['vkontakte'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-vk  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -612,9 +624,9 @@ class mo_openid_login_wid extends WP_Widget {
                     }
                     if($app_dis!="disable")
                         $html .= "onClick=\"moOpenIdLogin('twitter','" . $custom_app . "');\"";
-                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-twitter'></i>" . $buttonText . " Twitter</a>";
+                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-twitter'></i>" . $buttonText . " Twitter</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Twitter'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('twitter','" . $custom_app . "');\""; $html.=" ><img alt='Twitter' style=' width:" . $customSize . "px !important;height: " . $customSize . "px !important;margin-left: " . ($spacebetweenicons) . "px !important' src='" . plugins_url('includes/images/icons/twitter.png', __FILE__) . "' class='" . $dis . " login-button " . $selected_theme . "' ></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Twitter'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('twitter','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  twitter'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['twitter'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-twitter  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -629,9 +641,9 @@ class mo_openid_login_wid extends WP_Widget {
                     }
                     if($app_dis!="disable")
                         $html .= "onClick=\"moOpenIdLogin('linkedin','" . $custom_app . "');\"";
-                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-linkedin'></i>" . $buttonText . " LinkedIn</a>";
+                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-linkedin'></i>" . $buttonText . " LinkedIn</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " LinkedIn'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('linkedin','" . $custom_app . "');\""; $html.=" ><img alt='LinkedIn' style='width:" . $customSize . "px !important;height: " . $customSize . "px !important;margin-left: " . ($spacebetweenicons) . "px !important' src='" . plugins_url('includes/images/icons/linkedin.png', __FILE__) . "' class='" . $dis . " login-button " . $selected_theme . "' ></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Linkedin'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('linkedin','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  linkedin'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['linkedin'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-linkedin  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -646,9 +658,9 @@ class mo_openid_login_wid extends WP_Widget {
                     }
                     if($app_dis!="disable")
                         $html .= "onClick=\"moOpenIdLogin('instagram','" . $custom_app . "');\"";
-                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-instagram'></i>" . $buttonText . " Instagram</a>";
+                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-instagram'></i>" . $buttonText . " Instagram</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' " . $customTextofTitle . " Instagram'";if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('instagram','" . $custom_app . "');\""; $html.=" ><img alt='Instagram' style='width:" . $customSize . "px !important;height: " . $customSize . "px !important;margin-left: " . ($spacebetweenicons) . "px !important' src='" . plugins_url('includes/images/icons/instagram.png', __FILE__) . "' class='" . $dis . " login-button " . $selected_theme . "' ></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Insta'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('instagram','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  amazon'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['instagram'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-instagram  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -663,9 +675,9 @@ class mo_openid_login_wid extends WP_Widget {
                     }
                     if($app_dis!="disable")
                         $html .= "onClick=\"moOpenIdLogin('amazon','" . $custom_app . "');\"";
-                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-amazon'></i>" . $buttonText . " Amazon</a>";
+                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-amazon'></i>" . $buttonText . " Amazon</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Amazon' ";if($app_dis!="disable") $html.="onClick=\"moOpenIdLogin('amazon','" . $custom_app . "');\""; $html.=" ><img alt='Amazon' style='width:" . $customSize . "px !important;height: " . $customSize . "px !important;margin-left: " . ($spacebetweenicons) . "px !important' src='" . plugins_url('includes/images/icons/amazon.png', __FILE__) . "' class='" . $dis . " login-button " . $selected_theme . "' ></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Amazon'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('amazon','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  amazon'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['amazon'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-amazon  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -684,9 +696,9 @@ class mo_openid_login_wid extends WP_Widget {
                     }
                     if($app_dis!="disable")
                         $html .= "onClick=\"moOpenIdLogin('salesforce','" . $custom_app . "');\"";
-                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-cloud'></i>" . $buttonText . " Salesforce</a>";
+                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-salesforce'></i>" . $buttonText . " Salesforce</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Salesforce'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('salesforce','" . $custom_app . "');\""; $html.=" ><img alt='Salesforce' style='width:" . $customSize . "px !important;height: " . $customSize . "px !important;margin-left: " . ($spacebetweenicons) . "px !important' src='" . plugins_url('includes/images/icons/salesforce.png', __FILE__) . "' class='" . $dis . " login-button " . $selected_theme . "' ></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " salesforce'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('salesforce','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  salesforce'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['salesforce'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-salesforce  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -701,9 +713,9 @@ class mo_openid_login_wid extends WP_Widget {
                     }
                     if($app_dis!="disable")
                         $html .= " onClick=\"moOpenIdLogin('windowslive','" . $custom_app . "');\"";
-                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-windows'></i>" . $buttonText . " Microsoft</a>";
+                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-windows'></i>" . $buttonText . " Microsoft</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow'  title= ' " . $customTextofTitle . " Microsoft'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('windowslive','" . $custom_app . "');\""; $html.=" ><img alt='Windowslive' style='width:" . $customSize . "px !important;height: " . $customSize . "px !important;margin-left: " . ($spacebetweenicons) . "px !important' src='" . plugins_url('includes/images/icons/windowslive.png', __FILE__) . "' class='" . $dis . " login-button " . $selected_theme . "' ></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " windowslive'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('windowslive','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  windowslive'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['windowslive'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-windows  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -718,10 +730,43 @@ class mo_openid_login_wid extends WP_Widget {
                     }
                     if($app_dis!="disable")
                         $html .= "onClick=\"moOpenIdLogin('yaahoo','" . $custom_app . "');\"";
-                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-yahoo'></i>" . $buttonText . " Yahoo</a>";
+                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-yahoo'></i>" . $buttonText . " Yahoo</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " .
-                        $customTextofTitle . " Yahoo'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('yaahoo','" . $custom_app . "');\""; $html.=" ><img alt='Yahoo' style='width:" . $customSize . "px !important;height: " . $customSize . "px !important;margin-left: " . ($spacebetweenicons) . "px !important' src='" . plugins_url('includes/images/icons/yahoo.png', __FILE__) . "' class='login-button " . $selected_theme . "' ></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Yahoo'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('yahoo','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  Yahoo'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['yahoo'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-yahoo  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
+                }
+                return $html;
+            }
+            else if($app_name=="snapchat")
+            {
+                if ($selected_theme == 'longbutton') {
+                    $html .= "<a  rel='nofollow' " . $gdpr_setting . " style='margin-left: " . $spacebetweenicons . "px !important;width: " . $customWidth . " !important;padding-top:" . ($customHeight - 29) . "px !important;padding-bottom:" . ($customHeight - 29) . "px !important;margin-bottom: " . ($spacebetweenicons - 5) . "px !important;border-radius: " . $customBoundary . "px !important;'";
+                    if ($view == "horizontal") {
+                        $html .= "class='mo_btn mo_btn-mo mo_btn-block-inline mo_btn-social mo_btn-snapchat mo_btn-custom-dec login-button'";
+                    } else {
+                        $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-snapchat mo_btn-custom-dec login-button'";
+                    }
+                    if($app_dis!="disable")
+                        $html .= "onClick=\"moOpenIdLogin('snapchat','" . $custom_app . "');\"";
+                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-snapchat'></i>" . $buttonText . " Snapchat</a>";
+                } else {
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " snapchat'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('snapchat','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  snapchat'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['snapchat'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-snapchat  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
+                }
+                return $html;
+            }
+            else if($app_name=="dribbble")
+            {
+                if ($selected_theme == 'longbutton') {
+                    $html .= "<a  rel='nofollow' " . $gdpr_setting . " style='margin-left: " . $spacebetweenicons . "px !important;width: " . $customWidth . " !important;padding-top:" . ($customHeight - 29) . "px !important;padding-bottom:" . ($customHeight - 29) . "px !important;margin-bottom: " . ($spacebetweenicons - 5) . "px !important;border-radius: " . $customBoundary . "px !important;'";
+                    if ($view == "horizontal") {
+                        $html .= "class='mo_btn mo_btn-mo mo_btn-block-inline mo_btn-social mo_btn-dribbble mo_btn-custom-dec login-button'";
+                    } else {
+                        $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-dribbble mo_btn-custom-dec login-button'";
+                    }
+                    if($app_dis!="disable")
+                        $html .= "onClick=\"moOpenIdLogin('dribbble','" . $custom_app . "');\"";
+                    $html.="> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-dribbble'></i>" . $buttonText . " dribbble</a>";
+                } else {
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " dribbble'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('dribbble','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  dribbble'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['dribbble'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-dribbble  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -737,9 +782,9 @@ class mo_openid_login_wid extends WP_Widget {
                     } else {
                         $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
                     }
-                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-facebook'></i> " . $buttonText . " Facebook</a>";
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-facebook'></i> " . $buttonText . " Facebook</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Facebook'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('facebook','" . $custom_app . "');\"";$html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fa mo_btn-mo fa-facebook custom-login-button  " . $selected_theme . "' ></i></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Facebook'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('facebook','" . $custom_app . "');\"";$html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-facebook custom-login-button  " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -751,9 +796,9 @@ class mo_openid_login_wid extends WP_Widget {
                     } else {
                         $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
                     }
-                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-google'></i> " . $buttonText . " Google</a>";
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-google'></i> " . $buttonText . " Google</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Google'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('google','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  Google'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fa mo_btn-mo fa-google custom-login-button  " . $selected_theme . "' ></i></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Google'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('google','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  Google'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-google custom-login-button  " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -765,9 +810,9 @@ class mo_openid_login_wid extends WP_Widget {
                     } else {
                         $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
                     }
-                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-vk'></i> " . $buttonText . " Vkontakte</a>";
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-vk'></i> " . $buttonText . " Vkontakte</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Vkontakte'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('vkontakte','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  Vkontakte'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fa mo_btn-mo fa-vk custom-login-button  " . $selected_theme . "' ></i></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Vkontakte'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('vkontakte','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  Vkontakte'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-vk custom-login-button  " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -779,9 +824,9 @@ class mo_openid_login_wid extends WP_Widget {
                     } else {
                         $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
                     }
-                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-twitter'></i> " . $buttonText . " Twitter</a>";
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-twitter'></i> " . $buttonText . " Twitter</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Twitter'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('twitter','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fa mo_btn-mo fa-twitter custom-login-button  " . $selected_theme . "' ></i></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Twitter'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('twitter','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-twitter custom-login-button  " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -793,9 +838,9 @@ class mo_openid_login_wid extends WP_Widget {
                     } else {
                         $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
                     }
-                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-linkedin'></i> " . $buttonText . " LinkedIn</a>";
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-linkedin'></i> " . $buttonText . " LinkedIn</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " LinkedIn'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('linkedin','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fa mo_btn-mo fa-linkedin custom-login-button  " . $selected_theme . "' ></i></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " LinkedIn'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('linkedin','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-linkedin custom-login-button  " . $selected_theme . "' ></i></a>";
                 }
 
                 return $html;
@@ -808,9 +853,9 @@ class mo_openid_login_wid extends WP_Widget {
                     } else {
                         $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
                     }
-                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-instagram'></i> " . $buttonText . " Instagram</a>";
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-instagram'></i> " . $buttonText . " Instagram</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Instagram'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('instagram','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fa mo_btn-mo fa-instagram custom-login-button  " . $selected_theme . "' ></i></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Instagram'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('instagram','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-instagram custom-login-button  " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -822,9 +867,9 @@ class mo_openid_login_wid extends WP_Widget {
                     } else {
                         $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
                     }
-                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-amazon'></i> " . $buttonText . " Amazon</a>";
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-amazon'></i> " . $buttonText . " Amazon</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow'  title= ' " . $customTextofTitle . " Amazon'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('amazon','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fa mo_btn-mo fa-amazon custom-login-button  " . $selected_theme . "' ></i></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow'  title= ' " . $customTextofTitle . " Amazon'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('amazon','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-amazon custom-login-button  " . $selected_theme . "' ></i></a>";
                 }
 
                 return $html;
@@ -842,9 +887,9 @@ class mo_openid_login_wid extends WP_Widget {
                     } else {
                         $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
                     }
-                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-cloud'></i> " . $buttonText . " Salesforce</a>";
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-salesforce'></i> " . $buttonText . " Salesforce</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Salesforce'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('salesforce','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fa mo_btn-mo fa-cloud custom-login-button  " . $selected_theme . "' ></i></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Salesforce'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('salesforce','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-salesforce custom-login-button  " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -857,9 +902,9 @@ class mo_openid_login_wid extends WP_Widget {
                     } else {
                         $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
                     }
-                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-windows'></i> " . $buttonText . " Microsoft</a>";
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-windows'></i> " . $buttonText . " Microsoft</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow'  title= ' " . $customTextofTitle . " Microsoft'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('windowslive','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fa mo_btn-mo fa-windows custom-login-button  " . $selected_theme . "' ></i></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow'  title= ' " . $customTextofTitle . " Microsoft'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('windowslive','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-windows custom-login-button  " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }
@@ -872,9 +917,39 @@ class mo_openid_login_wid extends WP_Widget {
                     } else {
                         $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
                     }
-                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fa fa-yahoo'></i> " . $buttonText . " Yahoo</a>";
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-yahoo'></i> " . $buttonText . " Yahoo</a>";
                 } else {
-                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Yahoo'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('yaahoo','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fa mo_btn-mo fa-yahoo custom-login-button  " . $selected_theme . "' ></i></a>";
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Yahoo'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('yaahoo','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-yahoo custom-login-button  " . $selected_theme . "' ></i></a>";
+                }
+                return $html;
+            }
+            else if($app_name=="snapchat")
+            {
+                if ($selected_theme == 'longbutton') {
+                    $html .= "<a rel='nofollow'   " . $gdpr_setting . ""; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('snapchat','" . $custom_app . "');\""; $html.=" style='margin-left: " . $spacebetweenicons . "px !important;width:" . ($customWidth) . " !important;padding-top:" . ($customHeight - 29) . "px !important;padding-bottom:" . ($customHeight - 29) . "px !important;margin-bottom:" . ($spacebetweenicons - 5) . "px !important; background:#" . $customBackground . "!important;border-radius: " . $customBoundary . "px !important;'";
+                    if ($view == "horizontal") {
+                        $html .= "class='mo_btn mo_btn-mo mo_btn-block-inline mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
+                    } else {
+                        $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
+                    }
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-snapchat'></i> " . $buttonText . " Snapchat</a>";
+                } else {
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Snapchat'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('snapchat','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-snapchat custom-login-button  " . $selected_theme . "' ></i></a>";
+                }
+                return $html;
+            }
+            else if($app_name=="dribbble")
+            {
+                if ($selected_theme == 'longbutton') {
+                    $html .= "<a rel='nofollow'   " . $gdpr_setting . ""; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('dribbble','" . $custom_app . "');\""; $html.=" style='margin-left: " . $spacebetweenicons . "px !important;width:" . ($customWidth) . " !important;padding-top:" . ($customHeight - 29) . "px !important;padding-bottom:" . ($customHeight - 29) . "px !important;margin-bottom:" . ($spacebetweenicons - 5) . "px !important; background:#" . $customBackground . "!important;border-radius: " . $customBoundary . "px !important;'";
+                    if ($view == "horizontal") {
+                        $html .= "class='mo_btn mo_btn-mo mo_btn-block-inline mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
+                    } else {
+                        $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
+                    }
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-dribbble'></i> " . $buttonText . " Dribbble</a>";
+                } else {
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Dribbble'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('dribbble','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-dribbble custom-login-button  " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }

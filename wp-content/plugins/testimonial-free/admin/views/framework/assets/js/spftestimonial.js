@@ -2971,4 +2971,93 @@
     sel.addRange(r);
   }
 
+  // Testimonial export.
+  var $export_type = $('.spt_what_export').find('input:checked').val();
+  $('.spt_what_export').on('change', function () {
+    $export_type = $(this).find('input:checked').val();
+  });
+
+  $('.spt_export .spftestimonial--button').click(function (event) {
+    event.preventDefault();
+    var $shortcode_ids = $('.spt_post_id select').val();
+    var $selected_testimonials = 'selected_spt_shortcodes' === $export_type ? $shortcode_ids : 'all_spt_shortcodes';
+    var $ex_nonce = $('#spftestimonial_options_noncesp_testimonial_pro_tools').val();
+    if ($export_type === 'all_testimonial') {
+      var data = {
+        action: 'spt_export_shortcodes',
+        lcp_ids: 'all_testimonial',
+        nonce: $ex_nonce,
+      }
+    } else if ('all_spt_shortcodes' === $export_type || 'selected_spt_shortcodes' === $export_type) {
+      var data = {
+        action: 'spt_export_shortcodes',
+        lcp_ids: $selected_testimonials,
+        nonce: $ex_nonce,
+      }
+    } else {
+      $('.spftestimonial-form-result.spftestimonial-form-success').text('No testimonials selected.').show();
+      setTimeout(function () {
+        $('.spftestimonial-form-result.spftestimonial-form-success').hide().text('');
+      }, 3000);
+    }
+    $.post(ajaxurl, data, function (resp) {
+      if (resp) {
+        // Convert JSON Array to string.
+        var json = JSON.stringify(resp);
+        // Convert JSON string to BLOB.
+        json = [json];
+        var blob = new Blob(json);
+        var link = document.createElement('a');
+        var spt_time = $.now();
+        link.href = window.URL.createObjectURL(blob);
+        link.download = "testtimonial-free-export-" + spt_time + ".json";
+        link.click();
+        $('.spftestimonial-form-result.spftestimonial-form-success').text('Exported successfully!').show();
+        setTimeout(function () {
+          $('.spftestimonial-form-result.spftestimonial-form-success').hide().text('');
+          $('.spt_post_id select').val('').trigger('chosen:updated');
+        }, 3000);
+      }
+    });
+  });
+  // Testimonial import.
+  $('.spt_import button.import').click(function (event) {
+    event.preventDefault();
+    var spt_testimonial = $('#import').prop('files')[0];
+    if ($('#import').val() != '') {
+      var $im_nonce = $('#spftestimonial_options_noncesp_testimonial_pro_tools').val();
+      var reader = new FileReader();
+      reader.readAsText(spt_testimonial);
+      reader.onload = function (event) {
+        var jsonObj = JSON.stringify(event.target.result);
+        $.ajax({
+          url: ajaxurl,
+          type: 'POST',
+          data: {
+            shortcode: jsonObj,
+            action: 'spt_import_shortcodes',
+            nonce: $im_nonce,
+          },
+          success: function (resp) {
+            $('.spftestimonial-form-result.spftestimonial-form-success').text('Imported successfully!').show();
+            setTimeout(function () {
+              $('.spftestimonial-form-result.spftestimonial-form-success').hide().text('');
+              $('#import').val('');
+              if (resp.data === 'spt_testimonial') {
+                window.location.replace($('#spt_testimonial_link_redirect').attr('href'));
+              } else {
+                window.location.replace($('#spt_shortcode_link_redirect').attr('href'));
+              }
+            }, 2000);
+          }
+        });
+      }
+    } else {
+      $('.spftestimonial-form-result.spftestimonial-form-success').text('No exported json file chosen.').show();
+      setTimeout(function () {
+        $('.spftestimonial-form-result.spftestimonial-form-success').hide().text('');
+      }, 3000);
+    }
+  });
+
 })(jQuery, window, document);

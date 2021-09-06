@@ -3,8 +3,8 @@ Contributors: justinscheetz
 Donate link: https://paypal.me/justinscheetzpaypal
 Tags: resume, resumes, skills, education, experience
 Requires at least: 4.7
-Tested up to: 5.7.1
-Stable tag: 3.0.2.1
+Tested up to: 5.7.2
+Stable tag: 3.1.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -75,10 +75,17 @@ Use a plugin like [Custom Sidebars](https://wordpress.org/plugins/custom-sidebar
 
 == Upgrade Notice ==
 
-= 3.0.2.1 =
-Quick bug fix release, sorry about those that encountered the "get_plugin_data" bug!
+= 3.1.1 =
+Quick fix for the Download button showing up even if you don't have a download attached.
 
 == Changelog ==
+
+= 3.1.1 =
+* **FIX:** Quick fix for the Download button showing up even if you don't have a download attached.
+
+= 3.1 =
+* **NEW:** Added the ability to include a downloadable "Attachment" with a resume. A great way to attach a PDF or anything else!
+* **FIX:** Other various bug fixes and improvements throughout.
 
 = 3.0.2.1 =
 * **FIX:** Quick bug fix release, sorry about those that encountered the "get_plugin_data" bug!

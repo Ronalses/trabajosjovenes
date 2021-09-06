@@ -74,3 +74,10 @@ aside.widget-area>section.widget_mo_openid_sharing_hor_wid>div.mo-openid-app-ico
 .roundededges{
     border-radius: 4px !important;
 }
+.mo_openid-login-button{
+    text-align:center !important;
+    color:white !important;
+    padding-top:8px !important;
+    box-sizing: border-box !important;
+
+}

@@ -541,6 +541,8 @@ function mo_openid_share_apps()
 
                     <div>
                         <?php
+                        $default_color= array('facebook'=>'#1877F2','google'=>'#DB4437','vkontakte'=>'#466482','twitter'=>'#2795e9','digg'=>'#000000','yahoo'=>'#430297','yandex'=>'#2795e9','instagram'=>'#3f729b','linkedin'=>'#007bb6','pocket'=>'#ee4056','print'=>'#ee4056','whatsapp'=>'#25D366','mail'=>'#787878','amazon'=>'#ff9900','paypal'=>'#0d127a','stumble'=>'#f74425','salesforce'=>'#1ab7ea','windowslive'=>'#2672ec','apple'=>'#000000','steam'=>'#000000','wordpress'=>'#587ea3','pinterest'=>'#cb2027','spotify'=>'#19bf61','tumblr'=>'#2c4762','twitch'=>'#720e9e','github'=>'#000000','dribbble'=>'#ee66aa','flickr'=>'#ff0084','stackexchange'=>'0000ff','snapchat'=>'#fffc00','reddit'=>'#ff4301','odnoklassniki'=>'#f97400','foursquare'=>'#f94877','wechat'=>'#00c300','vimeo'=>'#1ab7ea','line'=>'#00c300','hubspot'=>'#fa7820','discord'=>'#7289da','meetup'=>'#e51937','stackexchange'=>'#0000FF','wiebo'=>'#df2029','kakao'=>'#ffe812','livejournal'=>'#3c1361','naver'=>'#3EAF0E','teamsnap'=>'#ff9a1a');
+
                         $share_app=get_option('share_app');
                         
                         $share_app=explode('#',$share_app);
@@ -555,40 +557,58 @@ function mo_openid_share_apps()
                             if ($active_app == 'pocket') {
                                 $icon = 'get-pocket';
                             }
+                            if ($active_app == 'print') {
+                                $icon = 'file-alt';
+                            }
                             if ($active_app == 'stumble') {
                                 $icon = 'stumbleupon';
                             }
-                            if ($active_app == 'mail' || $active_app == 'pocket' || $active_app == 'stumble') {
+                            if ( $active_app == 'pocket' || $active_app == 'stumble') {
 
                                 ?>
 
-                                <img class="mo_sharing_icon_preview" style="display: none;"
-                                     id="mo_sharing_icon_preview_<?php echo $active_app ?>"
-                                     src="<?php echo plugin_url . '/' . $active_app . '.png' ?>"/>
-                                <i class="mo_custom_sharing_icon_preview fa fa-<?php echo $icon ?>"
+                                <i class="mo_sharing_icon_preview fab fa-<?php echo $icon ?>" style="display: none;text-align:center;background: <?php echo $default_color[$active_app]; ?>;color: #ffffff"
+                                   id="mo_sharing_icon_preview_<?php echo $active_app ?>"></i>
+                                <i class="mo_custom_sharing_icon_preview fab fa-<?php echo $icon ?>"
                                    id="mo_custom_sharing_icon_preview_<?php echo $active_app ?>"
                                    style="color:#ffffff;text-align:center;margin-top:5px;"></i>
-                                <i class="mo_custom_sharing_icon_font_preview fa fa-<?php echo $icon ?>"
+                                <i class="mo_custom_sharing_icon_font_preview fab fa-<?php echo $icon ?>"
                                    id="mo_custom_sharing_icon_font_preview_<?php echo $active_app ?>"
                                    style="text-align:center;margin-top:5px;"></i>
 
 
                                 <?php
                             }
+                            else if ( $active_app == 'print' || $active_app == 'mail') {
+
+                                ?>
+
+                                <i class="mo_sharing_icon_preview far fa-<?php echo $icon ?>" style="display: none;text-align:center;background: <?php echo $default_color[$active_app]; ?>;color: #ffffff"
+                                     id="mo_sharing_icon_preview_<?php echo $active_app ?>"></i>
+                                <i class="mo_custom_sharing_icon_preview far fa-<?php echo $icon ?>"
+                                   id="mo_custom_sharing_icon_preview_<?php echo $active_app ?>"
+                                   style="color:#ffffff;text-align:center;margin-top:5px;"></i>
+                                <i class="mo_custom_sharing_icon_font_preview far fa-<?php echo $icon ?>"
+                                   id="mo_custom_sharing_icon_font_preview_<?php echo $active_app ?>"
+                                   style="text-align:center;margin-top:5px;"></i>
+
+
+                                <?php
+                            }
+
                             else
                                 if ($active_app == 'vkontakte') {
                                     ?>
 
-                                    <img class="mo_sharing_icon_preview"
-                                         id="mo_sharing_icon_preview_<?php echo $icon ?>"
-                                         src="<?php echo plugin_url . '/' . $icon . '.png' ?>"/>
+                                    <i class="mo_sharing_icon_preview fab fa-vk" style="display: none;text-align:center;background: <?php echo $default_color[$active_app]; ?>;color: #ffffff;"
+                                       id="mo_sharing_icon_preview_<?php echo $active_app ?>"></i>
 
-                                    <i class="mo_custom_sharing_icon_preview fa fa-<?php echo $icon ?>"
+                                    <i class="mo_custom_sharing_icon_preview fab fa-<?php echo $icon ?>"
                                        id="mo_custom_sharing_icon_preview_<?php echo $icon ?>"
                                        style="color:#ffffff;text-align:center;margin-top:5px;"></i>
 
 
-                                    <i class="mo_custom_sharing_icon_font_preview fa fa-<?php echo $icon ?>"
+                                    <i class="mo_custom_sharing_icon_font_preview fab fa-<?php echo $icon ?>"
                                        id="mo_custom_sharing_icon_font_preview_<?php echo $icon ?>"
                                        style="text-align:center;margin-top:5px;"></i>
 
@@ -596,15 +616,14 @@ function mo_openid_share_apps()
                                 } else {
 
                                     ?>
-                                    <img class="mo_sharing_icon_preview"
-                                         id="mo_sharing_icon_preview_<?php echo $active_app ?>" style="display: none"
-                                         src="<?php echo plugin_url . '/' . $active_app . '.png' ?>"/>
+                                    <i class="mo_sharing_icon_preview fab fa-<?php echo $icon ?>" style="display: none;text-align:center;background: <?php echo $default_color[$icon]; ?>;color: #ffffff"
+                                       id="mo_sharing_icon_preview_<?php echo $active_app ?>"></i>
 
-                                    <i class="mo_custom_sharing_icon_preview fa fa-<?php echo $active_app ?>"
+                                    <i class="mo_custom_sharing_icon_preview fab fa-<?php echo $active_app ?>"
                                        id="mo_custom_sharing_icon_preview_<?php echo $active_app ?>"
                                        style="color:#ffffff;text-align:center;margin-top:5px;"></i>
 
-                                    <i class="mo_custom_sharing_icon_font_preview fa fa-<?php echo $active_app ?>"
+                                    <i class="mo_custom_sharing_icon_font_preview fab fa-<?php echo $active_app ?>"
                                        id="mo_custom_sharing_icon_font_preview_<?php echo $active_app ?>"
                                        style="text-align:center;margin-top:5px;"></i>
 
@@ -752,9 +771,10 @@ function mo_openid_share_apps()
                         jQuery('.mo_sharing_icon_preview').show();
                         jQuery('.mo_custom_sharing_icon_preview').hide();
                         jQuery('.mo_custom_sharing_icon_font_preview').hide();
-                        jQuery("."+a).css({height:t,width:t});
-                        jQuery("."+a).css("font-size",(t-10)+"px");
-                        jQuery("."+a).css("margin-left",(n-4)+"px");
+                        jQuery("."+a).css({height:t-8,width:t});
+                        jQuery("."+a).css("font-size",(t-16)+"px");
+                        jQuery("."+a).css("padding-top","8px");
+
 
                         if(r=="circle"){
                             jQuery("."+a).css("borderRadius","999px");

@@ -23,7 +23,7 @@ if ( $testimonial_text && ! empty( get_the_content() ) ) {
 }
 
 if ( $reviewer_name && ! empty( $tfree_name ) ) {
-	$outline .= '<h4 class="tfree-client-name">' . $tfree_name . '</h4>';
+	$outline .= '<' . $reviewer_name_tag . ' class="tfree-client-name">' . $tfree_name . '</' . $reviewer_name_tag . '>';
 }
 
 if ( $star_rating && ! empty( $tfree_rating_star ) ) {

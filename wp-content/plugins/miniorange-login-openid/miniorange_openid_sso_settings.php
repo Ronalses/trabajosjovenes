@@ -4,12 +4,12 @@
  * Plugin Name: Social Login, Social Sharing by miniOrange
  * Plugin URI: https://www.miniorange.com
  * Description: Allow your users to login, comment and share with Facebook, Google, Apple, Twitter, LinkedIn etc using customizable buttons.
- * Version: 7.4.10
+ * Version: 7.5.2
  * Author: miniOrange
  * License URI: http://miniorange.com/usecases/miniOrange_User_Agreement.pdf
  */
 
-define('MO_OPENID_SOCIAL_LOGIN_VERSION', '7.4.10');
+define('MO_OPENID_SOCIAL_LOGIN_VERSION', '7.5.2');
 define('plugin_url', plugin_dir_url(__FILE__) . "includes/images/icons/");
 define('MOSL_PLUGIN_DIR',str_replace('/','\\',plugin_dir_path(__FILE__)));
 require('miniorange_openid_sso_settings_page.php');
@@ -60,7 +60,7 @@ class miniorange_openid_sso_settings
         add_action('wp_ajax_mo_check_restrict_user', 'mo_openid_restrict_user');
         add_action('wp_ajax_mo_disable_app', 'mo_disable_app');
         add_action( 'admin_footer', array( $this,'mo_openid_feedback_request' ));
-       // add_action( 'wp_enqueue_scripts', array( $this, 'mo_openid_plugin_script' ) ,5);
+        add_action( 'wp_enqueue_scripts', array( $this, 'mo_openid_plugin_script' ) ,5);
 
         //for addon
         add_action('wp_ajax_verify_addon_licience', 'mo_openid_show_verify_addon_license_page');
@@ -86,8 +86,13 @@ class miniorange_openid_sso_settings
             update_option('mo_openid_customer_token', 'jMj7MEdu4wkHObiD');
             update_option('mo_openid_admin_customer_key', '253560');
         }
-        add_option('app_pos','facebook#google#vkontakte#twitter#instagram#linkedin#amazon#salesforce#windowslive#yahoo');
-        update_option('app_pos_premium','apple#paypal#wordpress#github#hubspot#mailru#disqus#pinterest#yandex#spotify#reddit#tumblr#twitch#vimeo#kakao#discord#dribbble#flickr#line#meetup#dropbox#stackexchange#livejournal#snapchat#foursquare#teamsnap#naver#odnoklassniki#wiebo#wechat#baidu#renren#qq');
+        add_option('app_pos','facebook#google#vkontakte#twitter#instagram#linkedin#amazon#salesforce#windowslive#yahoo#snapchat#dribbble');
+        if(strlen(get_option('app_pos')) == 88) {
+            $app_pos=get_option('app_pos');
+            $app_pos.='#snapchat#dribbble';
+            update_option('app_pos',$app_pos);
+        }
+        update_option('app_pos_premium','apple#paypal#wordpress#github#hubspot#mailru#gitlab#steam#trello#disqus#pinterest#yandex#spotify#reddit#tumblr#twitch#vimeo#kakao#discord#flickr#line#meetup#dropbox#stackexchange#livejournal#foursquare#teamsnap#naver#odnoklassniki#wiebo#wechat#baidu#renren#qq');
         add_option('mo_openid_default_login_enable',1);
         add_option('mo_openid_default_register_enable',1);
         add_option( 'mo_openid_login_theme', 'longbutton' );
@@ -335,11 +340,11 @@ Thank you.';
         }
     }
 
-//    function mo_openid_plugin_script() {
-//
-//        wp_enqueue_script( 'js-cookie-script',plugins_url('includes/js/mo_openid_jquery.cookie.min.js', __FILE__), array('jquery'));
-//        wp_enqueue_script( 'mo-social-login-script',plugins_url('includes/js/mo-openid-social_login.js', __FILE__), array('jquery') );
-//    }
+    function mo_openid_plugin_script() {
+
+        wp_enqueue_script( 'js-cookie-script',plugins_url('includes/js/mo_openid_jquery.cookie.min.js', __FILE__), array('jquery'));
+        wp_enqueue_script( 'mo-social-login-script',plugins_url('includes/js/mo-openid-social_login.js', __FILE__), array('jquery') );
+    }
 
     function miniorange_openid_save_settings()
     {

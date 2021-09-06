@@ -1,7 +1,28 @@
+= v2.51.5 - 20/07/2021 =
+- Changed: The field for “Company Name” doesn't appear anymore in the list of default fields when creating a new view, if it has been removed via the form editor. ( https://github.com/WPChill/strong-testimonials/issues/240 )
+- Changed: JQuery Strong slider public methods in order to allow users to acces public methods of bxSlider ( https://github.com/WPChill/strong-testimonials/issues/233 )
+- Fixed: The Read More link display bug ( https://github.com/WPChill/strong-testimonials/issues/245 )
+- Fixed: Undefined index ( https://github.com/WPChill/strong-testimonials/issues/249 )
+- Fixed: Incompatibility problem with Swift Performance related to lazy load ( https://github.com/WPChill/strong-testimonials/issues/254 )
+- Fixed: Error on slider arrows on the Wave accesibility report ( https://github.com/WPChill/strong-testimonials/issues/253 )
+- Fixed: Extra pagination ID or slug sanitize issue from View ( https://github.com/WPChill/strong-testimonials/issues/246 )
+- Fixed: Title setting sanitize issue from View ( https://github.com/WPChill/strong-testimonials/issues/241 )
+- Fixed: Unstyled Template issue with grid layout and pagination ( https://github.com/WPChill/strong-testimonials/issues/242 )
+- Fixed: Security fix with input escaping ( https://github.com/WPChill/strong-testimonials/issues/269 )
+- Fixed: Notice when activating the plugin or entering CPT ( https://github.com/WPChill/strong-testimonials/issues/272 )
+- Fixed: Complete data for uninstall process ( https://github.com/WPChill/strong-testimonials/issues/264 )
+- Fixed: Copy shortcode functionality ( https://github.com/WPChill/strong-testimonials/issues/265 )
+- Changed: Upsell messages display ( https://github.com/WPChill/strong-testimonials/issues/262 )
+- Changed: Noopener and Noreferrer links ON by default ( https://github.com/WPChill/strong-testimonials/issues/257 )
+- Fixed: WAVE accessibility report ( https://github.com/WPChill/strong-testimonials/issues/253 )
+- Fixed: Maximum title length ( https://github.com/WPChill/strong-testimonials/issues/256 )
+
+
+
 = v2.51.4 - 11/04/2021 =
+- Fixed: Addded more escapes and sanitization
 - Fixed: Compatibility with PHP8
-- Fixed: Gutenberg Block
-- Fixed: Added more escapes and sanitization
+
 
 = v2.51.3 - 16/03/2021 =
 - Changed: View backend in order to be more customizable ( https://github.com/WPChill/strong-testimonials/issues/222 )

@@ -38,7 +38,7 @@ function mo_openid_share_cnt(){
                         <div class="mo_openid_sharecount " >
                             <ul class="mo_openid_share_count_icon">
                                 <li>
-                                    <img style="height: 50px;width: 50px;" class="mo_sharing_icon_preview" id="mo_sharing_icon_preview_count_facebook" src="<?php echo plugin_url . 'facebook.png' ?>"/>
+                                    <i style="height: 42px;width: 50px;font-size: 2.5em;color: #FFFFFF;background: #1877F2;text-align: center;padding-top: 8px" class=" fab fa-facebook mo_sharing_icon_preview" id="mo_sharing_icon_preview_count_facebook" ></i>
                                     <span style='margin-left : <?php echo esc_attr(get_option('mo_sharing_icon_space')) ?>px !important'>12k</span>
                                 </li>
                             </ul>

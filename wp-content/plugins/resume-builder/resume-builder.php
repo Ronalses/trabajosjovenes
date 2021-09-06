@@ -7,7 +7,7 @@ Plugin URI:     https://wordpress.org/plugins/resume-builder/
 Description:    Create beautiful resumes with ease.
 Author:         Justin Scheetz
 Author URI:     https://resumebuilder.studio
-Version:        3.0.2.1
+Version:        3.1.1
 Text Domain:    resume-builder
 Domain Path:    languages
 License:        GPL2
@@ -29,7 +29,7 @@ along with Resume Builder. If not, see http://www.gnu.org/licenses/.
 
 // Plugin Version Definition
 if (! defined('RBUILDER_VERSION')) {
-    define('RBUILDER_VERSION', '3.0.2.1' );
+    define('RBUILDER_VERSION', '3.1.1' );
 }
 
 // Exit if accessed directly.

@@ -34,6 +34,7 @@ class Resume_Builder_Resumes {
 			'sidebar_position' => 'left',
 			'rating_stars' => 'show',
 			'photo_size' => '100',
+			'attachment_button_text' => __( 'Download Attachment', 'resume-builder' ),
 		];
 		return $display_settings;
 	}
@@ -78,6 +79,10 @@ class Resume_Builder_Resumes {
 
 				if ( empty($resume_settings) )
 					continue;
+					
+				if ( !isset($resume_settings['resume_file']) ):
+					$resume_settings['resume_file'] = '';
+				endif;
 
 				foreach($resume_settings as $key => $setting):
 					$resumes[$counter][$key] = $setting;

@@ -8,6 +8,7 @@ if(isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !=
 }
 $url = $http . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
 
+    $default_color= array('facebook'=>'#1877F2','google'=>'#DB4437','vkontakte'=>'#466482','twitter'=>'#2795e9','digg'=>'#000000','yahoo'=>'#430297','yandex'=>'#2795e9','instagram'=>'#3f729b','linkedin'=>'#007bb6','pocket'=>'#ee4056','print'=>'#ee4056','whatsapp'=>'#25D366','mail'=>'#787878','amazon'=>'#ff9900','paypal'=>'#0d127a','stumble'=>'#f74425','salesforce'=>'#1ab7ea','windowslive'=>'#2672ec','apple'=>'#000000','steam'=>'#000000','wordpress'=>'#587ea3','pinterest'=>'#cb2027','spotify'=>'#19bf61','tumblr'=>'#2c4762','twitch'=>'#720e9e','github'=>'#000000','dribbble'=>'#ee66aa','flickr'=>'#ff0084','stackexchange'=>'0000ff','snapchat'=>'#fffc00','reddit'=>'#ff4301','odnoklassniki'=>'#f97400','foursquare'=>'#f94877','wechat'=>'#00c300','vimeo'=>'#1ab7ea','line'=>'#00c300','hubspot'=>'#fa7820','discord'=>'#7289da','meetup'=>'#e51937','stackexchange'=>'#0000FF','wiebo'=>'#df2029','kakao'=>'#ffe812','livejournal'=>'#3c1361','naver'=>'#3EAF0E','teamsnap'=>'#ff9a1a');
 
     $selected_theme = esc_attr(get_option('mo_openid_share_theme'));
     $selected_direction = esc_attr(get_option('mo_openid_share_widget_customize_direction'));
@@ -59,7 +60,9 @@ $url = $http . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
 
 <div class="mo-openid-app-icons circle ">
 	<p style="color: #<?php echo $heading_color; ?>;"><?php
+
 		if( $orientation == 'hor' ) {
+
 			echo $heading_text;
 	 	?></p>
 	 		<div class="horizontal">
@@ -68,103 +71,103 @@ $url = $http . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
 					if( get_option('mo_openid_facebook_share_enable') ) {
                         $link = esc_url('https://www.facebook.com/sharer/sharer.php?u='.$url.'&src=sdkpreparse');
                         ?>
-						<a rel='nofollow' title="Facebook" onclick="popupCenter('<?php echo $link; ?>', 800, 400);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-facebook" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Facebook" onclick="popupCenter('<?php echo $link; ?>', 800, 400);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-facebook" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_twitter_share_enable') ) {
 						$link = esc_url(empty($twitter_username) ? 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url : 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url. '&amp;via='.$twitter_username);
 						?>
-						<a rel='nofollow' title="Twitter" onclick="popupCenter('<?php echo $link; ?>', 600, 300);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-twitter" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Twitter" onclick="popupCenter('<?php echo $link; ?>', 600, 300);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-twitter" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_google_share_enable') ) {
 						$link = esc_url('https://plus.google.com/share?url='.$url);
 						?>
-						<a rel='nofollow' title="Google" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-google-plus" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;"></i></a>
+						<a rel='nofollow' title="Google" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-google-plus" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_vkontakte_share_enable') ) {
 						$link = esc_url('http://vk.com/share.php?url='.$url.'&amp;title='.$title.'&amp;description='.$excerpt);
 						?>
-						<a rel='nofollow' title="Vkontakte"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-vk" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Vkontakte"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-vk" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_tumblr_share_enable') ) {
 						$link = esc_url('http://www.tumblr.com/share/link?url='.$url.'&amp;title='.$title.'&amp;description='.$excerpt);
 						?>
-						<a rel='nofollow' title="Tumblr"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-tumblr" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Tumblr"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-tumblr" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_stumble_share_enable') ) {
 						$link = esc_url('http://www.stumbleupon.com/submit?url='.$url.'&amp;title='.$title);
 						?>
-						<a rel='nofollow' title="StumbleUpon"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-stumbleupon" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="StumbleUpon"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-stumbleupon" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_linkedin_share_enable') ) {
 						$link = esc_url('https://www.linkedin.com/shareArticle?mini=true&amp;title='.$title.'&amp;url='.$url.'&amp;summary='.$excerpt);
 						?>
-						<a rel='nofollow' title="LinkekIn" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-linkedin" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="LinkekIn" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-linkedin" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_reddit_share_enable') ) {
 						$link = esc_url('http://www.reddit.com/submit?url='.$url.'&amp;title='.$title);
 						?>
-						<a rel='nofollow' title="Reddit"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-reddit" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Reddit"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-reddit" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_pinterest_share_enable') ) {
 						?>
-						<a rel='nofollow' title="Pinterest"  href='javascript:pinIt();' class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-pinterest" style="padding-top:3px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-10); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Pinterest"  href='javascript:pinIt();' class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-pinterest" style="padding-top:3px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-10); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_pocket_share_enable') ) {
 						$link = esc_url('https://getpocket.com/save?url='.$url.'&amp;title='.$title);
 						?>
-						<a rel='nofollow' title="Pocket"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-get-pocket" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Pocket"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-get-pocket" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_digg_share_enable') ) {
 						$link = esc_url('http://digg.com/submit?url='.$url.'&amp;title='.$title);
 						?>
-						<a rel='nofollow' title="Digg"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-digg" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Digg"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-digg" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_mail_share_enable') ) {
 						?>
 						<a rel='nofollow' title="Email this page" onclick="popupCenter('mailto:?subject=<?php echo $email_subject ?>&amp;body=<?php echo $email_body ?>',800,500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
-						<i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-envelope" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<i class="mo-custom-share-icon <?php echo $selected_theme; ?> far fa-envelope" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 					if( get_option('mo_openid_print_share_enable') ) {
 						?>
 						<a rel='nofollow' title="Print this page" onclick="javascript:window.print()"class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
-						<i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-print" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<i class="mo-custom-share-icon <?php echo $selected_theme; ?> far fa-file-alt" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
                     if( get_option('mo_openid_whatsapp_share_enable') && wp_is_mobile()) {
 
                         ?>
                         <a rel='nofollow'  title="Whatsapp" href='whatsapp://send?text=<?php echo $url?>'  class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
-                            <i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-whatsapp" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                            <i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-whatsapp" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
                         <?php
                     }
                     else if( get_option('mo_openid_whatsapp_share_enable') ) {
 
                         ?>
                         <a rel='nofollow' title="Whatsapp" target ='_blank' href='https://web.whatsapp.com/send?text=<?php echo $url?>'  class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
-                            <i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-whatsapp" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                            <i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-whatsapp" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
                         <?php
                     }
 				}
@@ -173,210 +176,210 @@ $url = $http . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
 					if( get_option('mo_openid_facebook_share_enable') ) {
                         $link = esc_url('https://www.facebook.com/sharer/sharer.php?u='.$url.'&src=sdkpreparse');
                         ?>
-						<a rel='nofollow' title="Facebook" onclick="popupCenter('<?php echo $link; ?>', 800, 400);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fa fa-facebook" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Facebook" onclick="popupCenter('<?php echo $link; ?>', 800, 400);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fab fa-facebook" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_twitter_share_enable') ) {
 						$link = esc_url(empty($twitter_username) ? 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url : 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url. '&amp;via='.$twitter_username);
 						?>
-						<a rel='nofollow' title="Twitter" onclick="popupCenter('<?php echo $link; ?>', 600, 300);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fa fa-twitter" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Twitter" onclick="popupCenter('<?php echo $link; ?>', 600, 300);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fab fa-twitter" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_google_share_enable') ) {
 						$link = esc_url('https://plus.google.com/share?url='.$url);
 						?>
-						<a rel='nofollow' title="Google" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fa fa-google-plus" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Google" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fab fa-google-plus" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_vkontakte_share_enable') ) {
 						$link = esc_url('http://vk.com/share.php?url='.$url.'&amp;title='.$title.'&amp;description='.$excerpt);
 						?>
-						<a rel='nofollow' title="Vkontakte" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fa fa-vk" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Vkontakte" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fab fa-vk" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_tumblr_share_enable') ) {
 						$link = esc_url('http://www.tumblr.com/share/link?url='.$url.'&amp;title='.$title);
 						?>
-						<a rel='nofollow' title="Tumblr"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fa fa-tumblr" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Tumblr"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fab fa-tumblr" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_stumble_share_enable') ) {
 						$link = esc_url('http://www.stumbleupon.com/submit?url='.$url.'&amp;title='.$title);
 						?>
-						<a rel='nofollow' title="StumbleUpon"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fa fa-stumbleupon" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="StumbleUpon"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fab fa-stumbleupon" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_linkedin_share_enable') ) {
 						$link = esc_url('https://www.linkedin.com/shareArticle?mini=true&amp;title='.$title.'&amp;url='.$url.'&amp;summary='.$excerpt);
 						?>
-						<a rel='nofollow' title="LinkedIn" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fa fa-linkedin" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="LinkedIn" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fab fa-linkedin" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_reddit_share_enable') ) {
 						$link = esc_url('http://www.reddit.com/submit?url='.$url.'&amp;title='.$title);
 						?>
-						<a rel='nofollow' title="Reddit"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fa fa-reddit" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Reddit"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fab fa-reddit" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_pinterest_share_enable') ) {
 						?>
-						<a rel='nofollow' title="Pinterest"  href='javascript:pinIt();' class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fa fa-pinterest" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Pinterest"  href='javascript:pinIt();' class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fab fa-pinterest" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_pocket_share_enable') ) {
 						$link = esc_url('https://getpocket.com/save?url='.$url.'&amp;title='.$title);
 						?>
-						<a rel='nofollow' title="Pocket"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fa fa-get-pocket" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Pocket"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fab fa-get-pocket" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_digg_share_enable') ) {
 						$link = esc_url('http://digg.com/submit?url='.$url.'&amp;title='.$title);
 						?>
-						<a rel='nofollow' title="Digg"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fa fa-digg" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<a rel='nofollow' title="Digg"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons-6?>px !important"><i class=" <?php echo $selected_theme; ?> fab fa-digg" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 
 					if( get_option('mo_openid_mail_share_enable') ) {
 						?>
 						<a rel='nofollow' title="Email this page" onclick="popupCenter('mailto:?subject=<?php echo $email_subject ?>&amp;body=<?php echo $email_body ?>',800,500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
-						<i class=" <?php echo $selected_theme; ?> fa fa-envelope" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<i class=" <?php echo $selected_theme; ?> far fa-envelope" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
 					if( get_option('mo_openid_print_share_enable') ) {
 						?>
 						<a rel='nofollow' title="Print this page" onclick="javascript:window.print()" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
-						<i class=" <?php echo $selected_theme; ?> fa fa-print" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+						<i class=" <?php echo $selected_theme; ?> far fa-file-alt" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 						<?php
 					}
                     if( get_option('mo_openid_whatsapp_share_enable')&& wp_is_mobile() ) {
 
                         ?>
                         <a rel='nofollow'  title="Whatsapp" href='whatsapp://send?text=<?php echo $url?>'  class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
-                            <i class=" <?php echo $selected_theme; ?> fa fa-whatsapp" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                            <i class=" <?php echo $selected_theme; ?> fab fa-whatsapp" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
                         <?php
                     }
                     else if( get_option('mo_openid_whatsapp_share_enable') ) {
 
                         ?>
                         <a rel='nofollow' title="Whatsapp" target ='_blank' href='https://web.whatsapp.com/send?text=<?php echo $url?>'  class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
-                            <i class=" <?php echo $selected_theme; ?> fa fa-whatsapp" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                            <i class=" <?php echo $selected_theme; ?> fab fa-whatsapp" style="padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-4; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
                         <?php
                     }
                 }
 
 				else{
+                if( get_option('mo_openid_facebook_share_enable') ) {
+                    $link = esc_url('https://www.facebook.com/sharer/sharer.php?u='.$url.'&src=sdkpreparse');
+                    ?>
+                    <a rel='nofollow' title="Facebook" onclick="popupCenter('<?php echo $link; ?>', 800, 400);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-facebook" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['facebook']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                    <?php
+                }
 
+                if( get_option('mo_openid_twitter_share_enable') ) {
+                    $link = esc_url(empty($twitter_username) ? 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url : 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url. '&amp;via='.$twitter_username);
+                    ?>
+                    <a rel='nofollow' title="Twitter" onclick="popupCenter('<?php echo $link; ?>', 600, 300);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-twitter" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['twitter']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                    <?php
+                }
 
-					if( get_option('mo_openid_facebook_share_enable') ) {
-                        $link = esc_url('https://www.facebook.com/sharer/sharer.php?u='.$url.'&src=sdkpreparse');
-                        ?>
-						<a rel='nofollow' title="Facebook" onclick="popupCenter('<?php echo $link; ?>', 800, 400);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><img alt='Facebook' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/facebook.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-						<?php
-					}
+                if( get_option('mo_openid_google_share_enable') ) {
+                    $link = esc_url('https://plus.google.com/share?url='.$url);
+                    ?>
+                    <a rel='nofollow' title="Google" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-google-plus" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color: <?php echo $default_color['google']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;"></i></a>
+                    <?php
+                }
 
-					if( get_option('mo_openid_twitter_share_enable') ) {
-						$link = esc_url(empty($twitter_username) ? 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url : 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url. '&amp;via='.$twitter_username);
-						?>
-						<a rel='nofollow' title="Twitter" onclick="popupCenter('<?php echo $link; ?>', 600, 300);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><img alt='Twitter' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/twitter.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-						<?php
-					}
+                if( get_option('mo_openid_vkontakte_share_enable') ) {
+                    $link = esc_url('http://vk.com/share.php?url='.$url.'&amp;title='.$title.'&amp;description='.$excerpt);
+                    ?>
+                    <a rel='nofollow' title="Vkontakte"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-vk" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['vkontakte']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                    <?php
+                }
 
-					if( get_option('mo_openid_google_share_enable') ) {
-						$link = esc_url('https://plus.google.com/share?url='.$url);
-						?>
-						<a rel='nofollow' title="Google" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><img alt='Google' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;background-color: <?php echo $selected_theme; ?>' src="<?php echo plugins_url( 'includes/images/icons/google.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-						<?php
-					}
+                if( get_option('mo_openid_tumblr_share_enable') ) {
+                    $link = esc_url('http://www.tumblr.com/share/link?url='.$url.'&amp;title='.$title.'&amp;description='.$excerpt);
+                    ?>
+                    <a rel='nofollow' title="Tumblr"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-tumblr" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['tumblr']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                    <?php
+                }
 
-					if( get_option('mo_openid_vkontakte_share_enable') ) {
-						$link = esc_url('http://vk.com/share.php?url='.$url.'&amp;title='.$title.'&amp;description='.$excerpt);
-						?>
-						<a rel='nofollow' title="Vkontakte" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><img alt='Vkontakte' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;background-color: <?php echo $selected_theme; ?>' src="<?php echo plugins_url( 'includes/images/icons/vk.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-						<?php
-					}
+                if( get_option('mo_openid_stumble_share_enable') ) {
+                    $link = esc_url('http://www.stumbleupon.com/submit?url='.$url.'&amp;title='.$title);
+                    ?>
+                    <a rel='nofollow' title="StumbleUpon"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-stumbleupon" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['stumble']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                    <?php
+                }
 
-					if( get_option('mo_openid_tumblr_share_enable') ) {
-						$link = esc_url('http://www.tumblr.com/share/link?url='.$url.'&amp;title='.$title);
-						?>
-						<a rel='nofollow' title="Tumblr"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><img alt='Tumblr' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/tumblr.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-						<?php
-					}
+                if( get_option('mo_openid_linkedin_share_enable') ) {
+                    $link = esc_url('https://www.linkedin.com/shareArticle?mini=true&amp;title='.$title.'&amp;url='.$url.'&amp;summary='.$excerpt);
+                    ?>
+                    <a rel='nofollow' title="LinkekIn" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-linkedin" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['linkedin']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                    <?php
+                }
 
-					if( get_option('mo_openid_stumble_share_enable') ) {
-						$link = esc_url('http://www.stumbleupon.com/submit?url='.$url.'&amp;title='.$title);
-						?>
-						<a rel='nofollow' title="StumbleUpon"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><img alt='StumbleUpon' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/stumble.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-						<?php
-					}
+                if( get_option('mo_openid_reddit_share_enable') ) {
+                    $link = esc_url('http://www.reddit.com/submit?url='.$url.'&amp;title='.$title);
+                    ?>
+                    <a rel='nofollow' title="Reddit"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-reddit" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['reddit']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                    <?php
+                }
 
-					if( get_option('mo_openid_linkedin_share_enable') ) {
-						$link = esc_url('https://www.linkedin.com/shareArticle?mini=true&amp;title='.$title.'&amp;url='.$url.'&amp;summary='.$excerpt);
-						?>
-						<a rel='nofollow' title="LinkedIn" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><img alt='LinkedIn' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/linkedin.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-						<?php
-					}
+                if( get_option('mo_openid_pinterest_share_enable') ) {
+                    ?>
+                    <a rel='nofollow' title="Pinterest"  href='javascript:pinIt();' class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-pinterest" style="padding-top:3px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-10); ?>px !important;background-color:<?php echo $default_color['pinterest']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                    <?php
+                }
 
-					if( get_option('mo_openid_reddit_share_enable') ) {
-						$link = esc_url('http://www.reddit.com/submit?url='.$url.'&amp;title='.$title);
-						?>
-						<a rel='nofollow' title="Reddit"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><img alt='Reddit' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/reddit.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-						<?php
-					}
-					if( get_option('mo_openid_pinterest_share_enable') ) {
-						?>
-						<a rel='nofollow' title="Pinterest"  href='javascript:pinIt();' class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><img alt='Pinterest' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/pinterest.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-						<?php
-					}
-					if( get_option('mo_openid_pocket_share_enable') ) {
-						$link = esc_url('https://getpocket.com/save?url='.$url.'&amp;title='.$title);
-						?>
-						<a rel='nofollow' title="Pocket"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><img alt='Pocket' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/pocket.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-						<?php
-					}
-					if( get_option('mo_openid_digg_share_enable') ) {
-						$link = esc_url('http://digg.com/submit?url='.$url.'&amp;title='.$title);
-						?>
-						<a rel='nofollow' title="Digg"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><img alt='Digg' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/digg.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-						<?php
-					}
-					if( get_option('mo_openid_mail_share_enable') ) {
-						?>
-						<a rel='nofollow' title="Email this page" onclick="popupCenter('mailto:?subject=<?php echo $email_subject ?>&amp;body=<?php echo $email_body ?>',800,500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
-						<img alt='Email' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/mail.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>">
-						</a>
-						<?php
-					}
-					if( get_option('mo_openid_print_share_enable') ) {
-						?>
-						<a rel='nofollow' title="Print this page" onclick="javascript:window.print()" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
-						<img alt='Print' style= 'padding-top:2px; height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/print.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>">
-						</a>
-						<?php
-					}
-                    if( get_option('mo_openid_whatsapp_share_enable') && wp_is_mobile()) {
+                if( get_option('mo_openid_pocket_share_enable') ) {
+                    $link = esc_url('https://getpocket.com/save?url='.$url.'&amp;title='.$title);
+                    ?>
+                    <a rel='nofollow' title="Pocket"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-get-pocket" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['pocket']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                    <?php
+                }
 
-                        ?>
-                        <a rel='nofollow'  title="Whatsapp" href='whatsapp://send?text=<?php echo $url?>'  class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
-                            <img alt='Whatsapp' style= 'height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/whatsapp.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>"  data-action="share/whatsapp/share"></a>
-                        <?php
-                    }
-                    else if( get_option('mo_openid_whatsapp_share_enable') ) {
+                if( get_option('mo_openid_digg_share_enable') ) {
+                    $link = esc_url('http://digg.com/submit?url='.$url.'&amp;title='.$title);
+                    ?>
+                    <a rel='nofollow' title="Digg"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-digg" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['digg']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                    <?php
+                }
+
+                if( get_option('mo_openid_mail_share_enable') ) {
+                    ?>
+                    <a rel='nofollow' title="Email this page" onclick="popupCenter('mailto:?subject=<?php echo $email_subject ?>&amp;body=<?php echo $email_body ?>',800,500);" class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
+                        <i class="mo-custom-share-icon <?php echo $selected_theme; ?> far fa-envelope" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['mail']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                    <?php
+                }
+                if( get_option('mo_openid_print_share_enable') ) {
+                    ?>
+                    <a rel='nofollow' title="Print this page" onclick="javascript:window.print()"class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
+                        <i class="mo-custom-share-icon <?php echo $selected_theme; ?> far fa-file-alt" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['print']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                    <?php
+                }
+                if( get_option('mo_openid_whatsapp_share_enable') && wp_is_mobile()) {
 
                     ?>
-                    <a rel='nofollow'title="Whatsapp" target ='_blank' href='https://web.whatsapp.com/send?text=<?php echo $url?>'  class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
-                        <img alt='Whatsapp' style= 'height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/whatsapp.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>"  data-action="share/whatsapp/share"></a>
+                    <a rel='nofollow'  title="Whatsapp" href='whatsapp://send?text=<?php echo $url?>'  class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
+                        <i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-whatsapp" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['whatsapp']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
                     <?php
-                    }
+                }
+                else if( get_option('mo_openid_whatsapp_share_enable') ) {
+
+                ?>
+                <a rel='nofollow' title="Whatsapp" target ='_blank' href='https://web.whatsapp.com/send?text=<?php echo $url?>'  class="mo-openid-share-link" style="margin-left : <?php echo $spaceBetweenIcons?>px !important">
+                    <i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-whatsapp" style="padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['whatsapp']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+                }
 				}
 			?></p>
 		</div>
@@ -389,102 +392,102 @@ $url = $http . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
 				if( get_option('mo_openid_facebook_share_enable') ) {
                     $link = esc_url('https://www.facebook.com/sharer/sharer.php?u='.$url.'&src=sdkpreparse');
                     ?>
-					<a rel='nofollow' title="Facebook" onclick="popupCenter('<?php echo $link; ?>', 800, 400);" class="mo-openid-share-link" style="margin-bottom:<?php echo $space_icons?>px !important;"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-facebook" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Facebook" onclick="popupCenter('<?php echo $link; ?>', 800, 400);" class="mo-openid-share-link" style="margin-bottom:<?php echo $space_icons?>px !important;"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-facebook" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_twitter_share_enable') ) {
 					$link = esc_url(empty($twitter_username) ? 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url : 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url. '&amp;via='.$twitter_username);
 					?>
-					<a rel='nofollow' title="Twitter" onclick="popupCenter('<?php echo $link; ?>', 600, 300);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-twitter" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Twitter" onclick="popupCenter('<?php echo $link; ?>', 600, 300);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-twitter" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_google_share_enable') ) {
 					$link = esc_url('https://plus.google.com/share?url='.$url);
 					?>
-					<a rel='nofollow' title="Google" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-bottom:<?php echo $space_icons?>px !important;"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-google-plus" style="margin-bottom:<?php echo $space_icons-4?>px!important; padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Google" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-bottom:<?php echo $space_icons?>px !important;"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-google-plus" style="margin-bottom:<?php echo $space_icons-4?>px!important; padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_vkontakte_share_enable') ) {
 					$link = esc_url('http://vk.com/share.php?url='.$url.'&amp;title='.$title.'&amp;description='.$excerpt);
 					?>
-					<a rel='nofollow' title="Vkontakte" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-bottom:<?php echo $space_icons?>px !important;"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-vk" style="margin-bottom:<?php echo $space_icons-4?>px!important; padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Vkontakte" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-bottom:<?php echo $space_icons?>px !important;"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-vk" style="margin-bottom:<?php echo $space_icons-4?>px!important; padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_tumblr_share_enable') ) {
 					$link = esc_url('http://www.tumblr.com/share/link?url='.$url.'&amp;title='.$title);
 					?>
-					<a rel='nofollow' title="Tumblr"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-tumblr" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Tumblr"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-tumblr" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_stumble_share_enable') ) {
 					$link = esc_url('http://www.stumbleupon.com/submit?url='.$url.'&amp;title='.$title);
 					?>
-					<a rel='nofollow' title="StumbleUpon"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-stumbleupon" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="StumbleUpon"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-stumbleupon" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_linkedin_share_enable') ) {
 					$link = esc_url('https://www.linkedin.com/shareArticle?mini=true&amp;title='.$title.'&amp;url='.$url.'&amp;summary='.$excerpt);
 					?>
-					<a rel='nofollow' title="LinkedIn" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-linkedin" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="LinkedIn" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-linkedin" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_reddit_share_enable') ) {
 					$link = esc_url('http://www.reddit.com/submit?url='.$url.'&amp;title='.$title);
 					?>
-					<a rel='nofollow' title="Reddit"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-reddit" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Reddit"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-reddit" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_pinterest_share_enable') ) {
 					?>
-					<a rel='nofollow' title="Pinterest"  href='javascript:pinIt();' class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-pinterest" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:3px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-10); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Pinterest"  href='javascript:pinIt();' class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-pinterest" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:3px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-10); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_pocket_share_enable') ) {
 					$link = esc_url('https://getpocket.com/save?url='.$url.'&amp;title='.$title);
 					?>
-					<a rel='nofollow' title="Pocket"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-get-pocket" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Pocket"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-get-pocket" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_digg_share_enable') ) {
 					$link = esc_url('http://digg.com/submit?url='.$url.'&amp;title='.$title);
 					?>
-					<a rel='nofollow' title="Digg"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-digg" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Digg"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-digg" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 				if( get_option('mo_openid_mail_share_enable') ) {
 					?>
 					<a rel='nofollow' title="Email this page" onclick="popupCenter('mailto:?subject=<?php echo $email_subject ?>&amp;body=<?php echo $email_body ?>',800,500);" class="mo-openid-share-link">
-					<i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-envelope" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<i class="mo-custom-share-icon <?php echo $selected_theme; ?> far fa-envelope" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 					}
 				if( get_option('mo_openid_print_share_enable') ) {
 					?>
 					<a rel='nofollow' title="Print this page" onclick="javascript:window.print()"class="mo-openid-share-link">
-					<i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-print" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<i class="mo-custom-share-icon <?php echo $selected_theme; ?> far fa-file-alt" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 					}
                 if( get_option('mo_openid_whatsapp_share_enable')&& wp_is_mobile() ) {
 
                     ?>
                     <a rel='nofollow' title="Whatsapp" href='whatsapp://send?text=<?php echo $url?>'  class="mo-openid-share-link">
-                        <i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-whatsapp" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                        <i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-whatsapp" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
                     <?php
                 }
                 else if( get_option('mo_openid_whatsapp_share_enable') ) {
 
                     ?>
                     <a rel='nofollow' title="Whatsapp" target ='_blank' href='https://web.whatsapp.com/send?text=<?php echo $url?>'  class="mo-openid-share-link">
-                        <i class="mo-custom-share-icon <?php echo $selected_theme; ?> fa fa-whatsapp" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                        <i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-whatsapp" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:#<?php echo $custom_color?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
                     <?php
                 }
 			}
@@ -492,208 +495,208 @@ $url = $http . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
 				if( get_option('mo_openid_facebook_share_enable') ) {
                     $link = esc_url('https://www.facebook.com/sharer/sharer.php?u='.$url.'&src=sdkpreparse');
                     ?>
-					<a rel='nofollow' title="Facebook" onclick="popupCenter('<?php echo $link; ?>', 800, 400);" class="mo-openid-share-link"><i class=" <?php echo $selected_theme; ?> fa fa-facebook" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top : 4px !important;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Facebook" onclick="popupCenter('<?php echo $link; ?>', 800, 400);" class="mo-openid-share-link"><i class=" <?php echo $selected_theme; ?> fab fa-facebook" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top : 4px !important;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_twitter_share_enable') ) {
 					$link = esc_url(empty($twitter_username) ? 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url : 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url. '&amp;via='.$twitter_username);
 					?>
-					<a rel='nofollow' title="Twitter" onclick="popupCenter('<?php echo $link; ?>', 600, 300);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fa fa-twitter" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Twitter" onclick="popupCenter('<?php echo $link; ?>', 600, 300);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fab fa-twitter" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_google_share_enable') ) {
 					$link = esc_url('https://plus.google.com/share?url='.$url);
 					?>
-					<a rel='nofollow' title="Google" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link"><i class=" <?php echo $selected_theme; ?> fa fa-google-plus" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Google" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link"><i class=" <?php echo $selected_theme; ?> fab fa-google-plus" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_vkontakte_share_enable') ) {
 					$link = esc_url('http://vk.com/share.php?url='.$url.'&amp;title='.$title.'&amp;description='.$excerpt);
 					?>
-					<a rel='nofollow' title="Vkontakte" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link"><i class=" <?php echo $selected_theme; ?> fa fa-vk" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Vkontakte" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link"><i class=" <?php echo $selected_theme; ?> fab fa-vk" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_tumblr_share_enable') ) {
 					$link = esc_url('http://www.tumblr.com/share/link?url='.$url.'&amp;title='.$title);
 					?>
-					<a rel='nofollow' title="Tumblr" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fa fa-tumblr" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Tumblr" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fab fa-tumblr" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_stumble_share_enable') ) {
 					$link = esc_url('http://www.stumbleupon.com/submit?url='.$url.'&amp;title='.$title);
 					?>
-					<a rel='nofollow' title="StumbleUpon" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fa fa-stumbleupon" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="StumbleUpon" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fab fa-stumbleupon" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_linkedin_share_enable') ) {
 					$link = esc_url('https://www.linkedin.com/shareArticle?mini=true&amp;title='.$title.'&amp;url='.$url.'&amp;summary='.$excerpt);
 					?>
-					<a rel='nofollow' title="LinkedIn" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fa fa-linkedin" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px !important;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="LinkedIn" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fab fa-linkedin" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px !important;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_reddit_share_enable') ) {
 					$link = esc_url('http://www.reddit.com/submit?url='.$url.'&amp;title='.$title);
 					?>
-					<a rel='nofollow' title="Reddit" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fa fa-reddit" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Reddit" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fab fa-reddit" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_pinterest_share_enable') ) {
 					?>
-					<a rel='nofollow' title="Pinterest" href='javascript:pinIt();' class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fa fa-pinterest" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-5; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Pinterest" href='javascript:pinIt();' class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fab fa-pinterest" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize-5; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_pocket_share_enable') ) {
 					$link = esc_url('https://getpocket.com/save?url='.$url.'&amp;title='.$title);
 					?>
-					<a rel='nofollow' title="Pocket" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fa fa-get-pocket" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Pocket" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fab fa-get-pocket" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_digg_share_enable') ) {
 					$link = esc_url('http://digg.com/submit?url='.$url.'&amp;title='.$title);
 					?>
-					<a rel='nofollow' title="Digg" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fa fa-digg" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<a rel='nofollow' title="Digg" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class=" <?php echo $selected_theme; ?> fab fa-digg" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 				}
 
 				if( get_option('mo_openid_mail_share_enable') ) {
 					?>
 					<a rel='nofollow' title="Email this page" onclick="popupCenter('mailto:?subject=<?php echo $email_subject ?>&amp;body=<?php echo $email_body ?>',800,500);" class="mo-openid-share-link">
-					<i class=" <?php echo $selected_theme; ?> fa fa-envelope" style=" padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<i class=" <?php echo $selected_theme; ?> far fa-envelope" style=" padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 					}
 				if( get_option('mo_openid_print_share_enable') ) {
 					?>
 					<a rel='nofollow' title="Print this page" onclick="javascript:window.print()" class="mo-openid-share-link">
-					<i class=" <?php echo $selected_theme; ?> fa fa-print" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+					<i class=" <?php echo $selected_theme; ?> far fa-file-alt" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
 					<?php
 					}
                 if( get_option('mo_openid_whatsapp_share_enable') && wp_is_mobile()) {
 
                     ?>
                     <a rel='nofollow'title="Whatsapp" href='whatsapp://send?text=<?php echo $url?>'  class="mo-openid-share-link">
-                        <i class=" <?php echo $selected_theme; ?> fa fa-whatsapp" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                        <i class=" <?php echo $selected_theme; ?> fab fa-whatsapp" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
                     <?php
                 }
                 else if( get_option('mo_openid_whatsapp_share_enable') ) {
 
                     ?>
                     <a rel='nofollow' title="Whatsapp" target ='_blank' href='https://web.whatsapp.com/send?text=<?php echo $url?>'  class="mo-openid-share-link">
-                        <i class=" <?php echo $selected_theme; ?> fa fa-whatsapp" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                        <i class=" <?php echo $selected_theme; ?> fab fa-whatsapp" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:4px;text-align:center;color:#<?php echo $fontColor ?> !important;font-size:<?php echo $sharingSize; ?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
                     <?php
                 }
 			}
 			else{
-				if( get_option('mo_openid_facebook_share_enable') ) {
-                    $link = esc_url('https://www.facebook.com/sharer/sharer.php?u='.$url.'&src=sdkpreparse');
-                    ?>
-					<a rel='nofollow' title="Facebook" onclick="popupCenter('<?php echo $link; ?>', 800, 400);" class="mo-openid-share-link"><img alt='Facebook' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;background-color:white;' src="<?php echo plugins_url( 'includes/images/icons/facebook.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-					<?php
-				}
-
-				if( get_option('mo_openid_twitter_share_enable') ) {
-					$link = esc_url(empty($twitter_username) ? 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url : 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url. '&amp;via='.$twitter_username);
-					?>
-					<a rel='nofollow' title="Twitter" onclick="popupCenter('<?php echo $link; ?>', 600, 300);" class="mo-openid-share-link" ><img alt='Twitter' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;background-color:white;' src="<?php echo plugins_url( 'includes/images/icons/twitter.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-					<?php
-				}
-
-				if( get_option('mo_openid_google_share_enable') ) {
-					$link = esc_url('https://plus.google.com/share?url='.$url);
-					?>
-					<a rel='nofollow' title="Google" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link"><img alt='Google' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;background-color: <?php echo $selected_theme; ?>' src="<?php echo plugins_url( 'includes/images/icons/google.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-					<?php
-				}
-
-				if( get_option('mo_openid_vkontakte_share_enable') ) {
-					$link = esc_url('http://vk.com/share.php?url='.$url.'&amp;title='.$title.'&amp;description='.$excerpt);
-					?>
-					<a rel='nofollow' title="Vkontakte" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link"><img alt='Vkontakte' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;background-color: <?php echo $selected_theme; ?>' src="<?php echo plugins_url( 'includes/images/icons/vk.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-					<?php
-				}
-
-				if( get_option('mo_openid_tumblr_share_enable') ) {
-					$link = esc_url('http://www.tumblr.com/share/link?url='.$url.'&amp;title='.$title);
-					?>
-					<a rel='nofollow' title="Tumblr"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><img alt='Tumblr' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/tumblr.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-					<?php
-				}
-
-				if( get_option('mo_openid_stumble_share_enable') ) {
-					$link = esc_url('http://www.stumbleupon.com/submit?url='.$url.'&amp;title='.$title);
-					?>
-					<a rel='nofollow' title="StumbleUpon"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><img alt='StumbleUpon' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/stumble.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-					<?php
-				}
-
-				if( get_option('mo_openid_linkedin_share_enable') ) {
-					$link = esc_url('https://www.linkedin.com/shareArticle?mini=true&amp;title='.$title.'&amp;url='.$url.'&amp;summary='.$excerpt);
-					?>
-					<a rel='nofollow' title="LinkedIn" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><img alt='LinkedIn' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;background-color:white;' src="<?php echo plugins_url( 'includes/images/icons/linkedin.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-					<?php
-				}
-
-				if( get_option('mo_openid_reddit_share_enable') ) {
-					$link = esc_url('http://www.reddit.com/submit?url='.$url.'&amp;title='.$title);
-					?>
-					<a rel='nofollow' title="Reddit"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><img alt='Reddit' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/reddit.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-					<?php
-				}
-
-				if( get_option('mo_openid_pinterest_share_enable') ) {
-					?>
-					<a rel='nofollow' title="Pinterest"  href='javascript:pinIt();' class="mo-openid-share-link" ><img alt='Pinterest' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/pinterest.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-					<?php
-				}
-
-				if( get_option('mo_openid_pocket_share_enable') ) {
-					$link = esc_url('https://getpocket.com/save?url='.$url.'&amp;title='.$title);
-					?>
-					<a rel='nofollow' title="Pocket"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><img alt='Pocket' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/pocket.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-					<?php
-				}
-
-				if( get_option('mo_openid_digg_share_enable') ) {
-					$link = esc_url('http://digg.com/submit?url='.$url.'&amp;title='.$title);
-					?>
-					<a rel='nofollow' title="Digg"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><img alt='Digg' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/digg.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>" ></a>
-					<?php
-				}
-
-				if( get_option('mo_openid_mail_share_enable') ) {
-					?>
-					<a rel='nofollow' title="Email this page" onclick="popupCenter('mailto:?subject=<?php echo $email_subject ?>&amp;body=<?php echo $email_body ?>',800,500);" class="mo-openid-share-link">
-					<img  alt='Email this page' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/mail.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>"></a>
-					<?php
-				}
-				if( get_option('mo_openid_print_share_enable') ) {
-					?>
-					<a rel='nofollow' title="Print this page" onclick="javascript:window.print()"class="mo-openid-share-link">
-					<img  alt='Print this page' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/print.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>"></a>
-					<?php
-				}
-                if( get_option('mo_openid_whatsapp_share_enable') && wp_is_mobile()) {
-
-                    ?>
-                    <a rel='nofollow' title="Whatsapp" href='whatsapp://send?text=<?php echo $url?>'  class="mo-openid-share-link">
-                        <img  alt='Whatsapp' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/whatsapp.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>"></a>
-                    <?php
-                }
-                else if( get_option('mo_openid_whatsapp_share_enable')) {
+            if( get_option('mo_openid_facebook_share_enable') ) {
+                $link = esc_url('https://www.facebook.com/sharer/sharer.php?u='.$url.'&src=sdkpreparse');
                 ?>
-                <a rel='nofollow' title="Whatsapp" target ='_blank' href='https://web.whatsapp.com/send?text=<?php echo $url?>'  class="mo-openid-share-link">
-                    <img  alt='Whatsapp' style= 'margin-bottom:<?php echo $space_icons-6?>px !important;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important;' src="<?php echo plugins_url( 'includes/images/icons/whatsapp.png', __FILE__ )?>" class="mo-openid-app-share-icons <?php echo $selected_theme; ?>"></a>
+                <a rel='nofollow' title="Facebook" onclick="popupCenter('<?php echo $link; ?>', 800, 400);" class="mo-openid-share-link" style="margin-bottom:<?php echo $space_icons?>px !important;"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-facebook" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['facebook']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
                 <?php
-                }
+            }
+
+            if( get_option('mo_openid_twitter_share_enable') ) {
+                $link = esc_url(empty($twitter_username) ? 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url : 'https://twitter.com/intent/tweet?text='.$title.'&amp;url='.$url. '&amp;via='.$twitter_username);
+                ?>
+                <a rel='nofollow' title="Twitter" onclick="popupCenter('<?php echo $link; ?>', 600, 300);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-twitter" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['twitter']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+
+            if( get_option('mo_openid_google_share_enable') ) {
+                $link = esc_url('https://plus.google.com/share?url='.$url);
+                ?>
+                <a rel='nofollow' title="Google" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-bottom:<?php echo $space_icons?>px !important;"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-google-plus" style="margin-bottom:<?php echo $space_icons-4?>px!important; padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['google']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+
+            if( get_option('mo_openid_vkontakte_share_enable') ) {
+                $link = esc_url('http://vk.com/share.php?url='.$url.'&amp;title='.$title.'&amp;description='.$excerpt);
+                ?>
+                <a rel='nofollow' title="Vkontakte" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" style="margin-bottom:<?php echo $space_icons?>px !important;"><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-vk" style="margin-bottom:<?php echo $space_icons-4?>px!important; padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['vkontakte']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+
+            if( get_option('mo_openid_tumblr_share_enable') ) {
+                $link = esc_url('http://www.tumblr.com/share/link?url='.$url.'&amp;title='.$title);
+                ?>
+                <a rel='nofollow' title="Tumblr"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-tumblr" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['tumblr']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+
+            if( get_option('mo_openid_stumble_share_enable') ) {
+                $link = esc_url('http://www.stumbleupon.com/submit?url='.$url.'&amp;title='.$title);
+                ?>
+                <a rel='nofollow' title="StumbleUpon"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-stumbleupon" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['stumble']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+
+            if( get_option('mo_openid_linkedin_share_enable') ) {
+                $link = esc_url('https://www.linkedin.com/shareArticle?mini=true&amp;title='.$title.'&amp;url='.$url.'&amp;summary='.$excerpt);
+                ?>
+                <a rel='nofollow' title="LinkedIn" onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-linkedin" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['linkedin']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+
+            if( get_option('mo_openid_reddit_share_enable') ) {
+                $link = esc_url('http://www.reddit.com/submit?url='.$url.'&amp;title='.$title);
+                ?>
+                <a rel='nofollow' title="Reddit"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-reddit" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['reddit']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+
+            if( get_option('mo_openid_pinterest_share_enable') ) {
+                ?>
+                <a rel='nofollow' title="Pinterest"  href='javascript:pinIt();' class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-pinterest" style="margin-bottom:<?php echo $space_icons-4?>px !important;padding-top:3px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-10); ?>px !important;background-color:<?php echo $default_color['pinterest']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+
+            if( get_option('mo_openid_pocket_share_enable') ) {
+                $link = esc_url('https://getpocket.com/save?url='.$url.'&amp;title='.$title);
+                ?>
+                <a rel='nofollow' title="Pocket"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-get-pocket" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['pocket']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+
+            if( get_option('mo_openid_digg_share_enable') ) {
+                $link = esc_url('http://digg.com/submit?url='.$url.'&amp;title='.$title);
+                ?>
+                <a rel='nofollow' title="Digg"  onclick="popupCenter('<?php echo $link; ?>', 800, 500);" class="mo-openid-share-link" ><i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-digg" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['digg']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+            if( get_option('mo_openid_mail_share_enable') ) {
+                ?>
+                <a rel='nofollow' title="Email this page" onclick="popupCenter('mailto:?subject=<?php echo $email_subject ?>&amp;body=<?php echo $email_body ?>',800,500);" class="mo-openid-share-link">
+                    <i class="mo-custom-share-icon <?php echo $selected_theme; ?> far fa-envelope" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['mail']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+            if( get_option('mo_openid_print_share_enable') ) {
+                ?>
+                <a rel='nofollow' title="Print this page" onclick="javascript:window.print()"class="mo-openid-share-link">
+                    <i class="mo-custom-share-icon <?php echo $selected_theme; ?> far fa-file-alt" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['print']?>;height:<?php echo $sharingSize?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+            if( get_option('mo_openid_whatsapp_share_enable')&& wp_is_mobile() ) {
+
+                ?>
+                <a rel='nofollow' title="Whatsapp" href='whatsapp://send?text=<?php echo $url?>'  class="mo-openid-share-link">
+                    <i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-whatsapp" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['whatsapp']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+                <?php
+            }
+            else if( get_option('mo_openid_whatsapp_share_enable') ) {
+
+            ?>
+            <a rel='nofollow' title="Whatsapp" target ='_blank' href='https://web.whatsapp.com/send?text=<?php echo $url?>'  class="mo-openid-share-link">
+                <i class="mo-custom-share-icon <?php echo $selected_theme; ?> fab fa-whatsapp" style="margin-bottom:<?php echo $space_icons-4?>px!important;padding-top:8px;text-align:center;color:#ffffff;font-size:<?php echo ($sharingSize-16); ?>px !important;background-color:<?php echo $default_color['whatsapp']?>;height:<?php echo $sharingSize; ?>px !important;width:<?php echo $sharingSize; ?>px !important"></i></a>
+            <?php
+            }
 			}
 		?></p>
 	</div>

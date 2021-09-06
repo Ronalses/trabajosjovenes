@@ -133,7 +133,7 @@ function gtm4wp_process_product( $product, $additional_product_attributes, $attr
 		'name'       => $product->get_title(),
 		'sku'        => $product_sku ? $product_sku : $product_id,
 		'category'   => $product_cat,
-		'price'      => (float) wc_get_price_to_display( $product ),
+		'price'      => round( (float) wc_get_price_to_display( $product ), 2),
 		'stocklevel' => $product->get_stock_quantity()
 	);
 
@@ -156,7 +156,19 @@ function gtm4wp_process_product( $product, $additional_product_attributes, $attr
 	return apply_filters( GTM4WP_WPFILTER_EEC_PRODUCT_ARRAY, $_temp_productdata, $attributes_used_for );
 }
 
+function gtm4wp_get_gads_product_id_variable_name( $vertical_id ) {
+	global $gtm4wp_business_verticals_ids;
+
+	if ( array_key_exists( $vertical_id, $gtm4wp_business_verticals_ids ) ) {
+		return $gtm4wp_business_verticals_ids[ $vertical_id ];
+	} else {
+		return "id";
+	}
+}
+
 function gtm4wp_map_eec_to_ga4( $productdata ) {
+	global $gtm4wp_options;
+
 	if ( !is_array($productdata) ) {
 		return;
 	}
@@ -199,6 +211,9 @@ function gtm4wp_map_eec_to_ga4( $productdata ) {
 		$ga4_product[ "coupon" ] = $productdata[ "coupon" ];
 	}
 
+	$ga4_product[ "google_business_vertical" ] = $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCBUSINESSVERTICAL ];
+	$ga4_product[ gtm4wp_get_gads_product_id_variable_name( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCBUSINESSVERTICAL ] ) ] = gtm4wp_prefix_productid( $ga4_product["item_id"] );
+
 	return $ga4_product;
 }
 
@@ -225,7 +240,7 @@ function gtm4wp_process_order_items( $order ) {
 
 			$product = $item->get_product();
 			$inc_tax = ( 'incl' === get_option( 'woocommerce_tax_display_shop' ) );
-			$product_price = (float) $order->get_item_total( $item, $inc_tax );
+			$product_price = round( (float) $order->get_item_total( $item, $inc_tax ), 2);
 			$eec_product_array = gtm4wp_process_product( $product, array(
 				'quantity' => $item->get_quantity(),
 				'price'    => $product_price
@@ -252,14 +267,16 @@ function gtm4wp_woocommerce_addglobalvars( $return = '' ) {
 	}
 
 	$return .= '
-	var gtm4wp_use_sku_instead        = ' . (int) ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCUSESKU ] ) . ";
-	var gtm4wp_id_prefix              = '" . esc_js( gtm4wp_prefix_productid( '' ) ) . "';
-	var gtm4wp_remarketing            = " . gtm4wp_escjs_boolean( (bool) ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCREMARKETING ] ) ) . ';
+	var gtm4wp_use_sku_instead        = ' . (int) ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCUSESKU ] ) . ';
+	var gtm4wp_id_prefix              = \'' . esc_js( gtm4wp_prefix_productid( '' ) ) . '\';
+	var gtm4wp_remarketing            = ' . gtm4wp_escjs_boolean( (bool) ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCREMARKETING ] ) ) . ';
 	var gtm4wp_eec                    = ' . gtm4wp_escjs_boolean( (bool) ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCTRACKENHANCEDEC ] ) ) . ';
-	var gtm4wp_classicec              = ' . gtm4wp_escjs_boolean( (bool) ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCTRACKCLASSICEC ] ) ) . ";
-	var gtm4wp_currency               = '" . esc_js( get_woocommerce_currency() ) . "';
-	var gtm4wp_product_per_impression = " . (int) ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCPRODPERIMPRESSION ] ) . ';
-	var gtm4wp_needs_shipping_address = ' . gtm4wp_escjs_boolean( $gtm4wp_needs_shipping_address ) . ';';
+	var gtm4wp_classicec              = ' . gtm4wp_escjs_boolean( (bool) ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCTRACKCLASSICEC ] ) ) . ';
+	var gtm4wp_currency               = \'' . esc_js( get_woocommerce_currency() ) . '\';
+	var gtm4wp_product_per_impression = ' . (int) ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCPRODPERIMPRESSION ] ) . ';
+	var gtm4wp_needs_shipping_address = ' . gtm4wp_escjs_boolean( $gtm4wp_needs_shipping_address ) . ';
+	var gtm4wp_business_vertical      = \'' . esc_js( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCBUSINESSVERTICAL ] ) . '\';
+	var gtm4wp_business_vertical_id   = \'' . gtm4wp_get_gads_product_id_variable_name( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCBUSINESSVERTICAL ] ) . '\';';
 
 	return $return;
 }
@@ -302,7 +319,7 @@ function gtm4wp_woocommerce_datalayer_filter_items( $dataLayer ) {
 		}
 	}
 
-	if ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCEINCLUDECARTINDL ] && version_compare( $woo->version, "3.2", ">=" ) ) {
+	if ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCEINCLUDECARTINDL ] && version_compare( $woo->version, "3.2", ">=" ) && isset($woo) && isset($woo->cart) ) {
 		$current_cart = $woo->cart;
 		$dataLayer["cartContent"] = array(
 			"totals" => array(
@@ -388,6 +405,7 @@ function gtm4wp_woocommerce_datalayer_filter_items( $dataLayer ) {
 					if ( true === $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCTRACKENHANCEDEC ] ) {
 						$currencyCode = get_woocommerce_currency();
 
+						$dataLayer['event'] = 'gtm4wp.changeDetailViewEEC';
 						$dataLayer['ecommerce'] = array(
 							'currencyCode' => $currencyCode,
 							'detail'       => array(
@@ -439,6 +457,7 @@ function gtm4wp_woocommerce_datalayer_filter_items( $dataLayer ) {
 
 			if ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCTRACKENHANCEDEC ] ) {
 				if ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCEECCARTASFIRSTSTEP ] ) {
+					$dataLayer['event'] = 'gtm4wp.checkoutStepEEC';
 					$dataLayer['ecommerce'] = array(
 						'currencyCode' => $gtm4wp_currency,
 						'checkout'     => array(
@@ -477,6 +496,22 @@ function gtm4wp_woocommerce_datalayer_filter_items( $dataLayer ) {
 				}
 			} else {
 				unset( $order );
+			}
+		}
+
+		if(isset($order) && $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCORDERMAXAGE ] ){
+
+			$now = new DateTime();
+			if($order->is_paid() && $order->get_date_paid()){
+				$diff = $now->diff($order->get_date_paid());
+				$minutes = ($diff->days * 24 * 60) + ($diff->h * 60) + $diff->i;
+			} else {
+				$diff = $now->diff($order->get_date_created());
+				$minutes = ($diff->days * 24 * 60) + ($diff->h * 60) + $diff->i;
+			}
+
+			if($minutes > $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCORDERMAXAGE ]) {
+				unset($order);
 			}
 		}
 
@@ -660,6 +695,7 @@ function gtm4wp_woocommerce_datalayer_filter_items( $dataLayer ) {
 					$sum_value += $oneproduct["price"] * $oneproduct["quantity"];
 				}
 
+				$dataLayer['event'] = 'gtm4wp.checkoutStepEEC';
 				$dataLayer['ecommerce'] = array(
 					'currencyCode' => $currencyCode,
 					'checkout'     => array(

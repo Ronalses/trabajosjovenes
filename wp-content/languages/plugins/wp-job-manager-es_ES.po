@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WP Job Manager - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-17 05:19:40+0000\n"
+"PO-Revision-Date: 2021-08-10 06:13:40+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,25 +11,58 @@ msgstr ""
 "Language: es\n"
 "Project-Id-Version: Plugins - WP Job Manager - Stable (latest release)\n"
 
+#: includes/admin/class-wp-job-manager-settings.php:385
+msgid "Select the page to link when \"Terms and Conditions Checkbox\" is enabled. See setting in \"Job Submission\" tab."
+msgstr "Selecciona la página a la que enlazar cuando está activada la «Casilla de verificación de los términos y condiciones». Mira el ajuste en la pestaña «Envío de trabajo»."
+
+#: includes/admin/class-wp-job-manager-settings.php:384
+msgid "Terms and Conditions Page"
+msgstr "Página de los términos y condiciones"
+
+#: includes/admin/class-wp-job-manager-settings.php:311
+msgid "Require a Terms and Conditions checkbox to be marked before a job can be submitted. The linked page can be set from the <a href=\"#settings-job_pages\" class=\"nav-internal\">Pages</a> settings tab."
+msgstr "Obliga a marcar la casilla de verificación de los términos y condiciones antes de poder enviar un trabajo. La página enlazada puede establecerse desde la pestaña «<a href=\"#settings-job_pages\" class=\"nav-internal\">Páginas</a>» de los ajustes."
+
+#: includes/admin/class-wp-job-manager-settings.php:310
+msgid "Enable required Terms and Conditions checkbox on the form"
+msgstr "Activa en el formulario la casilla de verificación obligatoria de los términos y condiciones"
+
+#: includes/admin/class-wp-job-manager-settings.php:309
+msgid "Terms and Conditions Checkbox"
+msgstr "Casilla de verificación de los términos y condiciones"
+
+#: includes/abstracts/abstract-wp-job-manager-form.php:477
+msgid "Terms and Conditions is a required field"
+msgstr "Los términos y condiciones son un campo obligatorio."
+
+#. translators: Placeholder %s is the Terms and Conditions placeholder.
+#: includes/abstracts/abstract-wp-job-manager-form.php:437
+msgid "I accept the %s."
+msgstr "Acepto los %s."
+
+#: includes/abstracts/abstract-wp-job-manager-form.php:426
+msgid "Terms and Conditions"
+msgstr "Términos y condiciones"
+
 #: includes/class-wp-job-manager.php:506
 msgid "Any Category"
 msgstr "Cualquier categoría"
 
 #. translators: Placeholder %s is URL to set up Google reCAPTCHA API key.
-#: includes/admin/class-wp-job-manager-settings.php:334
+#: includes/admin/class-wp-job-manager-settings.php:343
 msgid "You can retrieve your reCAPTCHA v2 \"I'm not a robot\" Checkbox secret key from <a href=\"%s\">Google's reCAPTCHA admin dashboard</a>."
 msgstr "Puedes obtener la clave secreta de la casilla de verificación «No soy un robot» de reCAPTCHA v2 desde el <a href=\"%s\">escritorio de administración de reCAPTCHA de Google</a>."
 
 #. translators: Placeholder %s is URL to set up Google reCAPTCHA API key.
-#: includes/admin/class-wp-job-manager-settings.php:325
+#: includes/admin/class-wp-job-manager-settings.php:334
 msgid "You can retrieve your reCAPTCHA v2 \"I'm not a robot\" Checkbox site key from <a href=\"%s\">Google's reCAPTCHA admin dashboard</a>."
 msgstr "Puedes obtener la clave del sitio de la casilla de verificación «No soy un robot» de reCAPTCHA v2 desde el <a href=\"%s\">escritorio de administración de reCAPTCHA de Google</a>."
 
-#: includes/class-wp-job-manager-post-types.php:1478
+#: includes/class-wp-job-manager-post-types.php:1484
 msgid "Job listing expires at the start of the day."
 msgstr "El anuncio de trabajo caduca al inicio del día."
 
-#: includes/class-wp-job-manager-post-types.php:1476
+#: includes/class-wp-job-manager-post-types.php:1482
 msgid "Job listing expires at the end of the day."
 msgstr "El anuncio de trabajo caduca al final del día."
 
@@ -41,7 +74,7 @@ msgstr "Error en el nonce. Inténtalo de nuevo."
 msgid "Show more details"
 msgstr "Mostrar más detalles"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:408
+#: includes/forms/class-wp-job-manager-form-submit-job.php:424
 msgid "Invalid image path."
 msgstr "La ruta de la imagen no es válida."
 
@@ -98,7 +131,7 @@ msgid "Save Draft"
 msgstr "Guardar borrador"
 
 #. translators: placeholder is the URL to the job dashboard page.
-#: includes/forms/class-wp-job-manager-form-submit-job.php:748
+#: includes/forms/class-wp-job-manager-form-submit-job.php:764
 msgid "Draft was saved. Job listing drafts can be resumed from the <a href=\"%s\">job dashboard</a>."
 msgstr "Borrador de trabajo guardado. Los borradores de trabajos se pueden reanudar desde el <a href=\"%s\">Panel de trabajos publicados</a>."
 
@@ -120,13 +153,13 @@ msgstr "(se abre en una nueva pestaña)"
 msgid "Learn more about updating PHP"
 msgstr "Aprende más sobre cómo actualizar PHP"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:190
-#: includes/class-wp-job-manager-post-types.php:1473
+#: includes/class-wp-job-manager-post-types.php:1479
+#: includes/forms/class-wp-job-manager-form-submit-job.php:195
 msgid "https://"
 msgstr "https://"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:185
-#: includes/class-wp-job-manager-post-types.php:1470
+#: includes/class-wp-job-manager-post-types.php:1476
+#: includes/forms/class-wp-job-manager-form-submit-job.php:190
 msgid "you@example.com"
 msgstr "tu@ejemplo.com"
 
@@ -136,11 +169,15 @@ msgstr "Este campo es obligatorio."
 
 #. translators: Placeholder %d is the number of files to that users are limited
 #. to.
-#: includes/forms/class-wp-job-manager-form-submit-job.php:446
+#. translators: Placeholder %d is the number of files to that users are limited
+#. to.
 #: includes/class-wp-job-manager.php:522
+#: includes/forms/class-wp-job-manager-form-submit-job.php:462
 msgid "You are only allowed to upload a maximum of %d files."
 msgstr "Solo puedes subir hasta un máximo de %d archivos."
 
+#. translators: Used in user select. %1$s is the user's display name; #%2$s is
+#. the user ID; %3$s is the user email.
 #. translators: Used in user select. %1$s is the user's display name; #%2$s is
 #. the user ID; %3$s is the user email.
 #: includes/admin/class-wp-job-manager-writepanels.php:527
@@ -210,7 +247,7 @@ msgstr "Página de archivo de las ofertas de trabajo"
 msgid "Continue Submission"
 msgstr "Seguir publicando"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:429
+#: includes/forms/class-wp-job-manager-form-submit-job.php:445
 msgid "Invalid attachment provided."
 msgstr "El adjunto seleccionado  no es válido."
 
@@ -224,8 +261,8 @@ msgstr ""
 "Este sitio añade las siguientes cookies para ayudar a los usuarios a reanudar los envíos de trabajos \n"
 "\t\t\t\tque han empezado pero no han completado: %1$s y %2$s"
 
-#: includes/widgets/class-wp-job-manager-widget-recent-jobs.php:59
 #: includes/widgets/class-wp-job-manager-widget-featured-jobs.php:69
+#: includes/widgets/class-wp-job-manager-widget-recent-jobs.php:59
 msgid "Show Company Logo"
 msgstr "Mostrar el logo de la compañía"
 
@@ -295,15 +332,19 @@ msgstr "Visita el Escritorio de WordPress (%s) para gestionar la oferta."
 
 #. translators: %1$s placeholder is the name of the site, %2$s placeholder is
 #. URL to the blog.
-#: templates/emails/plain/employer-expiring-job.php:33
+#. translators: %1$s placeholder is the name of the site, %2$s placeholder is
+#. URL to the blog.
 #: templates/emails/plain/admin-expiring-job.php:38
+#: templates/emails/plain/employer-expiring-job.php:33
 msgid "The following job listing is expiring soon from %1$s (%2$s)."
 msgstr "La siguiente oferta de empleo caducará pronto en %1$s (%2$s)."
 
 #. translators: %1$s placeholder is the name of the site, %2$s placeholder is
 #. URL to the blog.
-#: templates/emails/plain/employer-expiring-job.php:30
+#. translators: %1$s placeholder is the name of the site, %2$s placeholder is
+#. URL to the blog.
 #: templates/emails/plain/admin-expiring-job.php:31
+#: templates/emails/plain/employer-expiring-job.php:30
 msgid "The following job listing is expiring today from %1$s (%2$s)."
 msgstr "La siguiente oferta de empleo caduca hoy en %1$s (%2$s)."
 
@@ -333,8 +374,8 @@ msgstr "Se ha actualizado una oferta de trabajo en <a href=\"%s\">%s</a>."
 msgid "It is awaiting approval by an administrator in <a href=\"%s\">WordPress admin</a>."
 msgstr "Está esperando la aprobación de un administrador en el <a href=\"%s\">escritorio de WordPress</a>."
 
-#: templates/emails/plain/admin-new-job.php:27
 #: templates/emails/admin-new-job.php:34
+#: templates/emails/plain/admin-new-job.php:27
 msgid "It has been published and is now available to the public."
 msgstr "Se ha publicado y ya está diponible de forma pública."
 
@@ -510,8 +551,8 @@ msgstr "Seguimiento de uso activado. ¡Muchas gracias!"
 msgid "Disable Usage Tracking"
 msgstr "Desactivar seguimiento de uso"
 
-#: lib/usage-tracking/class-usage-tracking-base.php:483
 #: includes/class-wp-job-manager-usage-tracking.php:320
+#: lib/usage-tracking/class-usage-tracking-base.php:483
 msgid "Enable Usage Tracking"
 msgstr "Activar seguimiento de uso"
 
@@ -597,39 +638,39 @@ msgstr "Más información &rarr;"
 msgid "%1$s was last modified by the user on %2$s."
 msgstr "%1$s se ha modificado por el usuario el %2$s."
 
-#: includes/admin/class-wp-job-manager-settings.php:342
+#: includes/admin/class-wp-job-manager-settings.php:351
 msgid "This will help prevent bots from submitting job listings. You must have entered a valid site key and secret key above."
 msgstr "Esto ayudará a prevenir que los robots envíen ofertas de trabajo. Debes haber introducido una clave de sitio y clave secreta encima."
 
-#: includes/admin/class-wp-job-manager-settings.php:341
+#: includes/admin/class-wp-job-manager-settings.php:350
 msgid "Display a reCAPTCHA field on job submission form."
 msgstr "Mostrar un campo de reCAPTCHA en el formulario de publicación de empleo."
 
-#: includes/admin/class-wp-job-manager-settings.php:340
+#: includes/admin/class-wp-job-manager-settings.php:349
 msgid "Job Submission Form"
 msgstr "Formulario de publicación de empleo"
 
-#: includes/admin/class-wp-job-manager-settings.php:332
+#: includes/admin/class-wp-job-manager-settings.php:341
 msgid "Secret Key"
 msgstr "Clave secreta"
 
-#: includes/admin/class-wp-job-manager-settings.php:323
+#: includes/admin/class-wp-job-manager-settings.php:332
 msgid "Site Key"
 msgstr "Clave del sitio"
 
-#: includes/admin/class-wp-job-manager-settings.php:316
+#: includes/admin/class-wp-job-manager-settings.php:325
 msgid "The label used for the reCAPTCHA field on forms."
 msgstr "La etiqueta utilizada para el campo de reCAPTCHA en los formularios."
 
-#: includes/admin/class-wp-job-manager-settings.php:315
+#: includes/admin/class-wp-job-manager-settings.php:324
 msgid "Field Label"
 msgstr "Etiqueta del campo"
 
-#: includes/admin/class-wp-job-manager-settings.php:313
+#: includes/admin/class-wp-job-manager-settings.php:322
 msgid "Are you human?"
 msgstr "¿Eres humano?"
 
-#: includes/admin/class-wp-job-manager-settings.php:309
+#: includes/admin/class-wp-job-manager-settings.php:318
 msgid "reCAPTCHA"
 msgstr "reCAPTCHA"
 
@@ -695,8 +736,8 @@ msgstr "Correo electrónico"
 msgid "License"
 msgstr "Licencia"
 
-#: includes/helper/views/html-licence-key-notice.php:13
 #: includes/helper/views/html-licence-key-error.php:13
+#: includes/helper/views/html-licence-key-notice.php:13
 msgid "Hide notice"
 msgstr "Ocultar el aviso"
 
@@ -806,8 +847,8 @@ msgstr "¡Gracias por instalar <em>WP Job Manager</em>! Preparemos tu sitio para
 msgid "Welcome to the Setup Wizard!"
 msgstr "¡Bienvenido/a al asistente de instalación!"
 
-#: includes/helper/views/html-licences.php:12
 #: includes/admin/class-wp-job-manager-addons.php:133
+#: includes/helper/views/html-licences.php:12
 msgid "Licenses"
 msgstr "Licencias"
 
@@ -843,22 +884,22 @@ msgstr "Tiempo parcial"
 msgid "Full Time"
 msgstr "Tiempo completo"
 
-#: includes/class-wp-job-manager-post-types.php:291
 #: includes/admin/class-wp-job-manager-taxonomy-meta.php:87
 #: includes/admin/class-wp-job-manager-taxonomy-meta.php:110
 #: includes/admin/class-wp-job-manager-taxonomy-meta.php:129
+#: includes/class-wp-job-manager-post-types.php:293
 msgid "Employment Type"
 msgstr "Tipo de trabajo"
 
-#: includes/admin/class-wp-job-manager-settings.php:369
+#: includes/admin/class-wp-job-manager-settings.php:378
 msgid "Select the page where you've used the [jobs] shortcode. This lets the plugin know the location of the job listings page."
 msgstr "Selecciona la página en la que has utilizado el shortcode [jobs]. Esto permitirá al plugin saber la localización de la página de ofertas de empleo."
 
-#: includes/admin/class-wp-job-manager-settings.php:362
+#: includes/admin/class-wp-job-manager-settings.php:371
 msgid "Select the page where you've used the [job_dashboard] shortcode. This lets the plugin know the location of the dashboard."
 msgstr "Selecciona la página en la que has utilizado el shortcode [job_dashboard]. Esto permitirá al plugin saber la localización del panel de ofertas de trabajo."
 
-#: includes/admin/class-wp-job-manager-settings.php:355
+#: includes/admin/class-wp-job-manager-settings.php:364
 msgid "Select the page where you've used the [submit_job_form] shortcode. This lets the plugin know the location of the form."
 msgstr "Selecciona la página en la que has utilizado el shortcode [submit_job_form]. Esto permitirá al plugin saber la localización del formulario."
 
@@ -982,20 +1023,20 @@ msgstr "Contraseña"
 msgid "Passwords must be at least 8 characters long."
 msgstr "La contraseña debe tener una longitud mínima de 8 caracteres."
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:690
+#: includes/forms/class-wp-job-manager-form-submit-job.php:706
 msgid "Password is not valid."
 msgstr "La contraseña no es válida."
 
 #. translators: Placeholder %s is the password hint.
-#: includes/forms/class-wp-job-manager-form-submit-job.php:688
+#: includes/forms/class-wp-job-manager-form-submit-job.php:704
 msgid "Invalid Password: %s"
 msgstr "Contraseña no válida: %s"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:682
+#: includes/forms/class-wp-job-manager-form-submit-job.php:698
 msgid "Passwords must match."
 msgstr "Las contraseñas deben coincidir."
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:672
+#: includes/forms/class-wp-job-manager-form-submit-job.php:688
 msgid "Please enter a password."
 msgstr "Por favor, introduce una contraseña."
 
@@ -1051,7 +1092,7 @@ msgstr "Crear un nuevo trabajo"
 msgid "You are editing an existing job. %s"
 msgstr "Estas editando un trabajo existente. %s"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:228
+#: includes/forms/class-wp-job-manager-form-submit-job.php:233
 msgid "Choose job type&hellip;"
 msgstr "Elige el tipo de trabajo&hellip;"
 
@@ -1132,15 +1173,15 @@ msgstr "Página de envío no encontrada."
 msgid "Automattic"
 msgstr "Automattic"
 
-#: includes/class-wp-job-manager-post-types.php:358
+#: includes/class-wp-job-manager-post-types.php:360
 msgid "Use as company logo"
 msgstr "Usar como logotipo de la empresa"
 
-#: includes/class-wp-job-manager-post-types.php:357
+#: includes/class-wp-job-manager-post-types.php:359
 msgid "Remove company logo"
 msgstr "Eliminar el logotipo de la empresa"
 
-#: includes/class-wp-job-manager-post-types.php:356
+#: includes/class-wp-job-manager-post-types.php:358
 msgid "Set company logo"
 msgstr "Establecer el logotipo de la empresa"
 
@@ -1149,7 +1190,7 @@ msgid "Listing Expires"
 msgstr "La oferta de empleo caduca"
 
 #. translators: Placeholder %s is the number of posts in a preview state.
-#: includes/class-wp-job-manager-post-types.php:415
+#: includes/class-wp-job-manager-post-types.php:417
 msgid "Preview <span class=\"count\">(%s)</span>"
 msgid_plural "Preview <span class=\"count\">(%s)</span>"
 msgstr[0] "Previsualizar <span class=\"count\">(%s)</span>"
@@ -1239,7 +1280,7 @@ msgctxt "post status"
 msgid "Pending approval"
 msgstr "Pendiente de aprobación"
 
-#: includes/class-wp-job-manager-post-types.php:409
+#: includes/class-wp-job-manager-post-types.php:411
 #: wp-job-manager-functions.php:336
 msgctxt "post status"
 msgid "Preview"
@@ -1347,6 +1388,8 @@ msgstr "Este trabajo ya ha sido ocupado"
 
 #. translators: Placeholder %s is the relative, human readable time since the
 #. job listing was posted.
+#. translators: Placeholder %s is the relative, human readable time since the
+#. job listing was posted.
 #: wp-job-manager-template.php:750 wp-job-manager-template.php:771
 msgid "Posted %s ago"
 msgstr "Publicado hace %s"
@@ -1363,8 +1406,8 @@ msgstr "No hay anuncios que coincidan con tu búsqueda."
 msgid "Your email"
 msgstr "Tu correo electrónico"
 
-#: templates/job-submit.php:43 templates/job-submit.php:60
-#: templates/account-signin.php:65
+#: templates/account-signin.php:65 templates/job-submit.php:43
+#: templates/job-submit.php:60
 msgid "(optional)"
 msgstr "(opcional)"
 
@@ -1381,7 +1424,7 @@ msgstr "Tienes que estar conectado para crear un nuevo anuncio."
 msgid "optionally"
 msgstr "de manera opcional"
 
-#: templates/job-dashboard-login.php:20 templates/account-signin.php:42
+#: templates/account-signin.php:42 templates/job-dashboard-login.php:20
 msgid "Sign in"
 msgstr "Acceder"
 
@@ -1410,27 +1453,27 @@ msgstr "Editar el anuncio"
 msgid "Submit Listing"
 msgstr "Enviar un anuncio"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:722
+#: includes/forms/class-wp-job-manager-form-submit-job.php:738
 msgid "You must be signed in to post a new listing."
 msgstr "Debes estar conectado para publicar un nuevo anuncio."
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:676
+#: includes/forms/class-wp-job-manager-form-submit-job.php:692
 msgid "Please enter your email address."
 msgstr "Por favor, introduce tu correo electrónico."
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:668
+#: includes/forms/class-wp-job-manager-form-submit-job.php:684
 msgid "Please enter a username."
 msgstr "Por favor, introduce un nombre de usuario."
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:484
+#: includes/forms/class-wp-job-manager-form-submit-job.php:500
 msgid "Please enter a valid application email address or URL"
 msgstr "Por favor, introduce una dirección de correo electrónico o URL válidas para la solicitud"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:478
+#: includes/forms/class-wp-job-manager-form-submit-job.php:494
 msgid "Please enter a valid application URL"
 msgstr "Por favor, introduce una URL válida para la solicitud"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:473
+#: includes/forms/class-wp-job-manager-form-submit-job.php:489
 msgid "Please enter a valid application email address"
 msgstr "Por favor, introduce una dirección de correo electrónico válida para la solicitud"
 
@@ -1438,91 +1481,91 @@ msgstr "Por favor, introduce una dirección de correo electrónico válida para 
 #. %3$s is the allowed mime-types.
 #. translators: %1$s is the file field label; %2$s is the file type; %3$s is
 #. the list of allowed file types.
-#: includes/forms/class-wp-job-manager-form-submit-job.php:419
+#: includes/forms/class-wp-job-manager-form-submit-job.php:435
 #: wp-job-manager-functions.php:1368
 msgid "\"%1$s\" (filetype %2$s) needs to be one of the following file types: %3$s"
 msgstr "«%1$s» (tipo de archivo %2$s) debe ser de uno de los siguientes tipos de archivo: %3$s"
 
 #. translators: Placeholder %s is the field label that is did not validate.
-#: includes/forms/class-wp-job-manager-form-submit-job.php:378
+#: includes/forms/class-wp-job-manager-form-submit-job.php:394
 msgid "%s is invalid"
 msgstr "%s no es válido"
 
 #. translators: Placeholder %s is the label for the required field.
-#: includes/forms/class-wp-job-manager-form-submit-job.php:367
+#: includes/forms/class-wp-job-manager-form-submit-job.php:383
 msgid "%s is a required field"
 msgstr "%s es un campo obligatorio"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:297
+#: includes/forms/class-wp-job-manager-form-submit-job.php:302
 msgid "Logo"
 msgstr "Logotipo"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:293
+#: includes/forms/class-wp-job-manager-form-submit-job.php:298
 msgid "@yourcompany"
 msgstr "@tuempresa"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:290
+#: includes/forms/class-wp-job-manager-form-submit-job.php:295
 msgid "Twitter username"
 msgstr "Nombre de usuario en Twitter"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:286
+#: includes/forms/class-wp-job-manager-form-submit-job.php:291
 msgid "A link to a video about your company"
 msgstr "Un enlace a un vídeo acerca de tu empresa"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:282
+#: includes/forms/class-wp-job-manager-form-submit-job.php:287
 msgid "Video"
 msgstr "Vídeo"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:277
+#: includes/forms/class-wp-job-manager-form-submit-job.php:282
 msgid "Briefly describe your company"
 msgstr "Breve descripción de la empresa"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:274
+#: includes/forms/class-wp-job-manager-form-submit-job.php:279
 msgid "Tagline"
 msgstr "Descripción corta"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:266
+#: includes/forms/class-wp-job-manager-form-submit-job.php:271
 #: templates/content-single-job_listing-company.php:30
 msgid "Website"
 msgstr "Web"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:262
+#: includes/forms/class-wp-job-manager-form-submit-job.php:267
 msgid "Enter the name of the company"
 msgstr "Introduce el nombre de la empresa"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:259
 #: includes/class-wp-job-manager-email-notifications.php:298
+#: includes/forms/class-wp-job-manager-form-submit-job.php:264
 msgid "Company name"
 msgstr "Nombre de la empresa"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:243
+#: includes/forms/class-wp-job-manager-form-submit-job.php:248
 msgid "Description"
 msgstr "Descripción"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:218
+#: includes/forms/class-wp-job-manager-form-submit-job.php:223
 msgid "Leave this blank if the location is not important"
 msgstr "Dejar en blanco si la ubicación no es importante"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:210
+#: includes/forms/class-wp-job-manager-form-submit-job.php:215
 msgid "Job Title"
 msgstr "Título del empleo"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:195
-#: includes/class-wp-job-manager-post-types.php:1466
+#: includes/class-wp-job-manager-post-types.php:1472
+#: includes/forms/class-wp-job-manager-form-submit-job.php:200
 msgid "Enter an email address or website URL"
 msgstr "Introduce un correo electrónico o la URL de la web"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:194
-#: includes/class-wp-job-manager-post-types.php:1465
+#: includes/class-wp-job-manager-post-types.php:1471
+#: includes/forms/class-wp-job-manager-form-submit-job.php:199
 msgid "Application email/URL"
 msgstr "Dirección de correo electrónico o URL de la solicitud"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:270
+#: includes/forms/class-wp-job-manager-form-submit-job.php:275
 msgid "http://"
 msgstr "http://"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:189
-#: includes/class-wp-job-manager-post-types.php:1472
+#: includes/class-wp-job-manager-post-types.php:1478
+#: includes/forms/class-wp-job-manager-form-submit-job.php:194
 msgid "Application URL"
 msgstr "URL de la solicitud"
 
@@ -1530,22 +1573,22 @@ msgstr "URL de la solicitud"
 msgid "you@yourdomain.com"
 msgstr "tu@tudominio.com"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:184
-#: includes/class-wp-job-manager-post-types.php:1469
+#: includes/class-wp-job-manager-post-types.php:1475
+#: includes/forms/class-wp-job-manager-form-submit-job.php:189
 msgid "Application email"
 msgstr "Correo electrónico de la solicitud"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:94
+#: includes/forms/class-wp-job-manager-form-submit-job.php:99
 msgid "Done"
 msgstr "Hecho"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:88
-#: includes/forms/class-wp-job-manager-form-submit-job.php:609
+#: includes/forms/class-wp-job-manager-form-submit-job.php:93
+#: includes/forms/class-wp-job-manager-form-submit-job.php:625
 #: templates/job-preview.php:30
 msgid "Preview"
 msgstr "Previsualizar"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:82
+#: includes/forms/class-wp-job-manager-form-submit-job.php:87
 msgid "Submit Details"
 msgstr "Enviar detalles"
 
@@ -1567,6 +1610,8 @@ msgstr "Anuncio no válido"
 
 #. translators: Placeholder %s is the plural label for the job listing post
 #. type.
+#. translators: Placeholder %s is the plural label for the job listing post
+#. type.
 #: includes/widgets/class-wp-job-manager-widget-featured-jobs.php:27
 #: includes/widgets/class-wp-job-manager-widget-featured-jobs.php:35
 msgid "Featured %s"
@@ -1576,8 +1621,8 @@ msgstr "Destacado %s"
 msgid "Display a list of featured listings on your site."
 msgstr "Muestra una lista de anuncios destacados en tu sitio."
 
-#: includes/widgets/class-wp-job-manager-widget-recent-jobs.php:54
 #: includes/widgets/class-wp-job-manager-widget-featured-jobs.php:44
+#: includes/widgets/class-wp-job-manager-widget-recent-jobs.php:54
 msgid "Number of listings to show"
 msgstr "Número de anuncios a mostrar"
 
@@ -1585,6 +1630,8 @@ msgstr "Número de anuncios a mostrar"
 msgid "Keyword"
 msgstr "Palabra clave"
 
+#. translators: Placeholder %s is the plural label for the job listing post
+#. type.
 #. translators: Placeholder %s is the plural label for the job listing post
 #. type.
 #: includes/widgets/class-wp-job-manager-widget-recent-jobs.php:27
@@ -1607,10 +1654,12 @@ msgstr "Fecha de publicación"
 
 #. translators: Placeholder %s is the plural label for the job listing post
 #. type.
-#: includes/widgets/class-wp-job-manager-widget-recent-jobs.php:36
+#. translators: Placeholder %s is the plural label for the job listing post
+#. type.
+#: includes/class-wp-job-manager-shortcodes.php:341
 #: includes/widgets/class-wp-job-manager-widget-featured-jobs.php:36
 #: includes/widgets/class-wp-job-manager-widget-featured-jobs.php:52
-#: includes/class-wp-job-manager-shortcodes.php:341
+#: includes/widgets/class-wp-job-manager-widget-recent-jobs.php:36
 msgid "Title"
 msgstr "Título"
 
@@ -1642,13 +1691,13 @@ msgid "Invalid ID"
 msgstr "ID no válido"
 
 #. translators: Placeholder %s is the number of expired posts of this type.
-#: includes/class-wp-job-manager-post-types.php:403
+#: includes/class-wp-job-manager-post-types.php:405
 msgid "Expired <span class=\"count\">(%s)</span>"
 msgid_plural "Expired <span class=\"count\">(%s)</span>"
 msgstr[0] "Caducado <span class=\"count\">(%s)</span>"
 msgstr[1] "Caducados <span class=\"count\">(%s)</span>"
 
-#: includes/class-wp-job-manager-post-types.php:396
+#: includes/class-wp-job-manager-post-types.php:398
 #: wp-job-manager-functions.php:335
 msgctxt "post status"
 msgid "Expired"
@@ -1656,79 +1705,81 @@ msgstr "Caducado"
 
 #. translators: Placeholder %s is the plural label of the job listing post
 #. type.
-#: includes/class-wp-job-manager-post-types.php:361
+#: includes/class-wp-job-manager-post-types.php:363
 msgid "This is where you can create and manage %s."
 msgstr "Aquí es donde puedes crear y gestionar los %s."
 
 #. translators: Placeholder %s is the plural label of the job listing post
 #. type.
-#: includes/class-wp-job-manager-post-types.php:352
+#: includes/class-wp-job-manager-post-types.php:354
 msgid "No %s found in trash"
 msgstr "No se han encontrado %s en la papelera"
 
 #. translators: Placeholder %s is the singular label of the job listing post
 #. type.
-#: includes/class-wp-job-manager-post-types.php:350
+#: includes/class-wp-job-manager-post-types.php:352
 msgid "No %s found"
 msgstr "No se han encontrado %s"
 
 #. translators: Placeholder %s is the singular label of the job listing post
 #. type.
-#: includes/class-wp-job-manager-post-types.php:344
+#. translators: Placeholder %s is the singular label of the job listing post
+#. type.
 #: includes/class-wp-job-manager-post-types.php:346
+#: includes/class-wp-job-manager-post-types.php:348
 msgid "View %s"
 msgstr "Ver %s"
 
 #. translators: Placeholder %s is the singular label of the job listing post
 #. type.
-#: includes/class-wp-job-manager-post-types.php:342
+#: includes/class-wp-job-manager-post-types.php:344
 msgid "New %s"
 msgstr "Nuevo %s"
 
 #. translators: Placeholder %s is the singular label of the job listing post
 #. type.
-#: includes/class-wp-job-manager-post-types.php:337
+#: includes/class-wp-job-manager-post-types.php:339
 msgid "Add %s"
 msgstr "Añadir %s"
 
 #. translators: Placeholder %s is the plural label of the job listing post
 #. type.
-#: includes/class-wp-job-manager-post-types.php:335
+#: includes/class-wp-job-manager-post-types.php:337
 msgid "Add New"
 msgstr "Añadir nuevo"
 
-#: includes/class-wp-job-manager-post-types.php:1168
 #: includes/admin/class-wp-job-manager-permalink-settings.php:108
+#: includes/class-wp-job-manager-post-types.php:1170
 msgctxt "Job permalink - resave permalinks after changing this"
 msgid "job"
 msgstr "trabajo"
 
-#: includes/class-wp-job-manager-post-types.php:1152
+#: includes/class-wp-job-manager-post-types.php:1154
 msgctxt "Post type archive slug - resave permalinks after changing this"
 msgid "jobs"
 msgstr "trabajos"
 
-#: includes/class-wp-job-manager-post-types.php:302
+#: includes/class-wp-job-manager-post-types.php:304
 msgid "Jobs"
 msgstr "Trabajos"
 
-#: includes/class-wp-job-manager-post-types.php:301
+#: includes/class-wp-job-manager-post-types.php:303
 msgid "Job"
 msgstr "Trabajo"
 
-#: includes/class-wp-job-manager-post-types.php:1170
 #: includes/admin/class-wp-job-manager-permalink-settings.php:126
+#: includes/class-wp-job-manager-post-types.php:1172
 msgctxt "Job type slug - resave permalinks after changing this"
 msgid "job-type"
 msgstr "tipo-trabajo"
 
-#: includes/class-wp-job-manager-post-types.php:223
+#: includes/class-wp-job-manager-post-types.php:225
 msgid "Job types"
 msgstr "Tipos de trabajos"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:225
-#: includes/class-wp-job-manager-post-types.php:222
 #: includes/class-wp-job-manager-email-notifications.php:279
+#: includes/class-wp-job-manager-post-types.php:224
+#: includes/forms/class-wp-job-manager-form-submit-job.php:230
 msgid "Job type"
 msgstr "Tipo de trabajo"
 
@@ -1736,8 +1787,8 @@ msgstr "Tipo de trabajo"
 #. category taxonomy type.
 #. translators: Placeholder %s is the singular label of the job listing job
 #. type taxonomy type.
-#: includes/class-wp-job-manager-post-types.php:201
-#: includes/class-wp-job-manager-post-types.php:264
+#: includes/class-wp-job-manager-post-types.php:203
+#: includes/class-wp-job-manager-post-types.php:266
 msgid "New %s Name"
 msgstr "Nuevo nombre de %s"
 
@@ -1745,8 +1796,8 @@ msgstr "Nuevo nombre de %s"
 #. category taxonomy type.
 #. translators: Placeholder %s is the singular label of the job listing job
 #. type taxonomy type.
-#: includes/class-wp-job-manager-post-types.php:199
-#: includes/class-wp-job-manager-post-types.php:262
+#: includes/class-wp-job-manager-post-types.php:201
+#: includes/class-wp-job-manager-post-types.php:264
 msgid "Add New %s"
 msgstr "Añadir nuevo %s"
 
@@ -1754,8 +1805,8 @@ msgstr "Añadir nuevo %s"
 #. category taxonomy type.
 #. translators: Placeholder %s is the singular label of the job listing job
 #. type taxonomy type.
-#: includes/class-wp-job-manager-post-types.php:197
-#: includes/class-wp-job-manager-post-types.php:260
+#: includes/class-wp-job-manager-post-types.php:199
+#: includes/class-wp-job-manager-post-types.php:262
 msgid "Update %s"
 msgstr "Actualizar %s"
 
@@ -1765,9 +1816,9 @@ msgstr "Actualizar %s"
 #. type taxonomy type.
 #. translators: Placeholder %s is the singular label of the job listing post
 #. type.
-#: includes/class-wp-job-manager-post-types.php:195
-#: includes/class-wp-job-manager-post-types.php:258
-#: includes/class-wp-job-manager-post-types.php:340
+#: includes/class-wp-job-manager-post-types.php:197
+#: includes/class-wp-job-manager-post-types.php:260
+#: includes/class-wp-job-manager-post-types.php:342
 msgid "Edit %s"
 msgstr "Editar %s"
 
@@ -1775,8 +1826,8 @@ msgstr "Editar %s"
 #. category taxonomy type.
 #. translators: Placeholder %s is the singular label of the job listing job
 #. type taxonomy type.
-#: includes/class-wp-job-manager-post-types.php:193
-#: includes/class-wp-job-manager-post-types.php:256
+#: includes/class-wp-job-manager-post-types.php:195
+#: includes/class-wp-job-manager-post-types.php:258
 msgid "Parent %s:"
 msgstr "%s superior:"
 
@@ -1786,9 +1837,9 @@ msgstr "%s superior:"
 #. type taxonomy type.
 #. translators: Placeholder %s is the singular label of the job listing post
 #. type.
-#: includes/class-wp-job-manager-post-types.php:191
-#: includes/class-wp-job-manager-post-types.php:254
-#: includes/class-wp-job-manager-post-types.php:354
+#: includes/class-wp-job-manager-post-types.php:193
+#: includes/class-wp-job-manager-post-types.php:256
+#: includes/class-wp-job-manager-post-types.php:356
 msgid "Parent %s"
 msgstr "%s superior"
 
@@ -1798,9 +1849,9 @@ msgstr "%s superior"
 #. taxonomy type.
 #. translators: Placeholder %s is the plural label of the job listing post
 #. type.
-#: includes/class-wp-job-manager-post-types.php:189
-#: includes/class-wp-job-manager-post-types.php:252
-#: includes/class-wp-job-manager-post-types.php:334
+#: includes/class-wp-job-manager-post-types.php:191
+#: includes/class-wp-job-manager-post-types.php:254
+#: includes/class-wp-job-manager-post-types.php:336
 msgid "All %s"
 msgstr "Todo los %s"
 
@@ -1810,25 +1861,25 @@ msgstr "Todo los %s"
 #. taxonomy type.
 #. translators: Placeholder %s is the singular label of the job listing post
 #. type.
-#: includes/class-wp-job-manager-post-types.php:187
-#: includes/class-wp-job-manager-post-types.php:250
-#: includes/class-wp-job-manager-post-types.php:348
+#: includes/class-wp-job-manager-post-types.php:189
+#: includes/class-wp-job-manager-post-types.php:252
+#: includes/class-wp-job-manager-post-types.php:350
 msgid "Search %s"
 msgstr "Buscar %s"
 
-#: includes/class-wp-job-manager-post-types.php:1169
 #: includes/admin/class-wp-job-manager-permalink-settings.php:117
+#: includes/class-wp-job-manager-post-types.php:1171
 msgctxt "Job category slug - resave permalinks after changing this"
 msgid "job-category"
 msgstr "categoria-trabajo"
 
-#: includes/class-wp-job-manager-post-types.php:159
+#: includes/class-wp-job-manager-post-types.php:161
 msgid "Job categories"
 msgstr "Categorías de trabajos"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:234
-#: includes/class-wp-job-manager-post-types.php:158
 #: includes/class-wp-job-manager-email-notifications.php:289
+#: includes/class-wp-job-manager-post-types.php:160
+#: includes/forms/class-wp-job-manager-form-submit-job.php:239
 msgid "Job category"
 msgstr "Categoría del trabajo"
 
@@ -1877,81 +1928,81 @@ msgstr "Usar archivo"
 msgid "%s Data"
 msgstr "Datos del %s"
 
-#: includes/class-wp-job-manager-email-notifications.php:324
 #: includes/admin/class-wp-job-manager-writepanels.php:64
+#: includes/class-wp-job-manager-email-notifications.php:324
 msgid "Posted by"
 msgstr "Publicado por"
 
-#: includes/class-wp-job-manager-post-types.php:1564
+#: includes/class-wp-job-manager-post-types.php:1570
 msgid "Listing Expiry Date"
 msgstr "Fecha de caducidad del anuncio"
 
-#: includes/class-wp-job-manager-post-types.php:1556
+#: includes/class-wp-job-manager-post-types.php:1562
 msgid "Featured listings will be sticky during searches, and can be styled differently."
 msgstr "Los trabajos destacados estarán presentes en todas las búsquedas y pueden ser estilizados de forma distinta."
 
-#: includes/class-wp-job-manager-post-types.php:1554
+#: includes/class-wp-job-manager-post-types.php:1560
 msgid "Featured Listing"
 msgstr "Anuncio destacado"
 
-#: includes/class-wp-job-manager-post-types.php:1551
+#: includes/class-wp-job-manager-post-types.php:1557
 msgid "Filled listings will no longer accept applications."
 msgstr "Los anuncios cubiertos ya no aceptarán nuevas solicitudes."
 
-#: includes/class-wp-job-manager-post-types.php:1545
+#: includes/class-wp-job-manager-post-types.php:1551
 msgid "Position Filled"
 msgstr "Trabajo ocupado"
 
-#: includes/class-wp-job-manager-post-types.php:1536
+#: includes/class-wp-job-manager-post-types.php:1542
 msgid "URL to the company video"
 msgstr "URL del vídeo de la empresa"
 
 #: includes/class-wp-job-manager-data-exporter.php:56
-#: includes/class-wp-job-manager-post-types.php:1535
+#: includes/class-wp-job-manager-post-types.php:1541
 msgid "Company Video"
 msgstr "Vídeo de la empresa"
 
 #. translators: Placeholder %s is the singular label of the job listing post
 #. type.
 #: includes/class-wp-job-manager-data-exporter.php:51
-#: includes/class-wp-job-manager-post-types.php:355
+#: includes/class-wp-job-manager-post-types.php:357
 msgid "Company Logo"
 msgstr "Logotipo de la empresa"
 
 #: includes/class-wp-job-manager-data-exporter.php:55
-#: includes/class-wp-job-manager-post-types.php:1527
+#: includes/class-wp-job-manager-post-types.php:1533
 msgid "Company Twitter"
 msgstr "Twitter de la empresa"
 
-#: includes/class-wp-job-manager-post-types.php:1520
+#: includes/class-wp-job-manager-post-types.php:1526
 msgid "Brief description about the company"
 msgstr "Breve descripción de la empresa"
 
 #: includes/class-wp-job-manager-data-exporter.php:54
-#: includes/class-wp-job-manager-post-types.php:1519
+#: includes/class-wp-job-manager-post-types.php:1525
 msgid "Company Tagline"
 msgstr "Eslogan de la empresa"
 
 #: includes/class-wp-job-manager-data-exporter.php:53
-#: includes/class-wp-job-manager-post-types.php:1510
+#: includes/class-wp-job-manager-post-types.php:1516
 msgid "Company Website"
 msgstr "Web de la empresa"
 
 #: includes/class-wp-job-manager-data-exporter.php:52
-#: includes/class-wp-job-manager-post-types.php:1502
+#: includes/class-wp-job-manager-post-types.php:1508
 msgid "Company Name"
 msgstr "Nombre de la empresa"
 
-#: includes/class-wp-job-manager-post-types.php:1494
+#: includes/class-wp-job-manager-post-types.php:1500
 msgid "This field is required for the \"application\" area to appear beneath the listing."
 msgstr "Este campo es obligatorio para el área de «solicitud» que aparecen debajo del anuncio."
 
-#: includes/class-wp-job-manager-post-types.php:1485
+#: includes/class-wp-job-manager-post-types.php:1491
 msgid "Leave this blank if the location is not important."
 msgstr "Dejar en blanco si la ubicación no es importante."
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:221
-#: includes/class-wp-job-manager-post-types.php:1484
+#: includes/class-wp-job-manager-post-types.php:1490
+#: includes/forms/class-wp-job-manager-form-submit-job.php:226
 msgid "e.g. \"London\""
 msgstr "Ejemplo: «Madrid»"
 
@@ -2042,35 +2093,35 @@ msgstr "Ajustes de WP Job Manager"
 msgid "Setup"
 msgstr "Configuración"
 
-#: includes/admin/class-wp-job-manager-settings.php:442
+#: includes/admin/class-wp-job-manager-settings.php:458
 msgid "Save Changes"
 msgstr "Guardar los cambios"
 
-#: includes/admin/class-wp-job-manager-settings.php:647
+#: includes/admin/class-wp-job-manager-settings.php:663
 msgid "Select a page&hellip;"
 msgstr "Seleccionar una página&hellip;"
 
-#: includes/admin/class-wp-job-manager-settings.php:641
+#: includes/admin/class-wp-job-manager-settings.php:657
 msgid "--no page--"
 msgstr "--no hay páginas--"
 
-#: includes/admin/class-wp-job-manager-settings.php:417
+#: includes/admin/class-wp-job-manager-settings.php:433
 msgid "Settings successfully saved"
 msgstr "Ajustes guardados correctamente"
 
-#: includes/admin/class-wp-job-manager-settings.php:368
+#: includes/admin/class-wp-job-manager-settings.php:377
 msgid "Job Listings Page"
 msgstr "Página de anuncios de trabajos"
 
-#: includes/admin/class-wp-job-manager-settings.php:361
+#: includes/admin/class-wp-job-manager-settings.php:370
 msgid "Job Dashboard Page"
 msgstr "Página del escritorio de trabajos"
 
-#: includes/admin/class-wp-job-manager-settings.php:354
+#: includes/admin/class-wp-job-manager-settings.php:363
 msgid "Submit Job Form Page"
 msgstr "Página del formulario de envío de trabajos"
 
-#: includes/admin/class-wp-job-manager-settings.php:349
+#: includes/admin/class-wp-job-manager-settings.php:358
 msgid "Pages"
 msgstr "Páginas"
 
@@ -2150,9 +2201,9 @@ msgstr "Trabajos ocupados"
 msgid "Listings Per Page"
 msgstr "Anuncios por página"
 
-#: includes/class-wp-job-manager-post-types.php:332
-#: includes/class-wp-job-manager-post-types.php:435
 #: includes/admin/class-wp-job-manager-settings.php:122
+#: includes/class-wp-job-manager-post-types.php:334
+#: includes/class-wp-job-manager-post-types.php:437
 msgid "Job Listings"
 msgstr "Anuncios de trabajo"
 
@@ -2163,16 +2214,16 @@ msgstr "Borrar"
 
 #. translators: Placeholder %s is the singular label of the job listing post
 #. type.
-#: includes/class-wp-job-manager-post-types.php:338
 #: includes/admin/class-wp-job-manager-cpt.php:648
+#: includes/class-wp-job-manager-post-types.php:340
 #: includes/class-wp-job-manager-shortcodes.php:390
 #: includes/class-wp-job-manager-shortcodes.php:423
 msgid "Edit"
 msgstr "Editar"
 
+#: includes/admin/class-wp-job-manager-cpt.php:641
 #: includes/admin/class-wp-job-manager-writepanels.php:243
 #: includes/admin/class-wp-job-manager-writepanels.php:293
-#: includes/admin/class-wp-job-manager-cpt.php:641
 msgid "View"
 msgstr "Ver"
 
@@ -2208,8 +2259,8 @@ msgstr "¿Ocupado?"
 msgid "Featured?"
 msgstr "¿Destacado?"
 
-#: includes/admin/class-wp-job-manager-settings.php:162
 #: includes/admin/class-wp-job-manager-cpt.php:501
+#: includes/admin/class-wp-job-manager-settings.php:162
 msgid "Categories"
 msgstr "Categorías"
 
@@ -2225,12 +2276,12 @@ msgstr "Publicado"
 msgid "Status"
 msgstr "Estado"
 
-#: includes/forms/class-wp-job-manager-form-submit-job.php:217
-#: includes/class-wp-job-manager-post-types.php:1483
+#: includes/admin/class-wp-job-manager-cpt.php:497
 #: includes/class-wp-job-manager-email-notifications.php:270
+#: includes/class-wp-job-manager-post-types.php:1489
+#: includes/forms/class-wp-job-manager-form-submit-job.php:222
 #: includes/widgets/class-wp-job-manager-widget-recent-jobs.php:46
-#: includes/admin/class-wp-job-manager-cpt.php:497 templates/job-filters.php:35
-#: templates/job-filters.php:36
+#: templates/job-filters.php:35 templates/job-filters.php:36
 msgid "Location"
 msgstr "Ubicación"
 
@@ -2336,8 +2387,8 @@ msgstr "Extensiones"
 msgid "Settings"
 msgstr "Ajustes"
 
-#: includes/admin/views/html-admin-page-addons.php:12
 #: includes/admin/class-wp-job-manager-addons.php:125
 #: includes/admin/class-wp-job-manager-admin.php:134
+#: includes/admin/views/html-admin-page-addons.php:12
 msgid "WP Job Manager Add-ons"
 msgstr "Extensiones de WP Job Manager"

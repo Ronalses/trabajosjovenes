@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Meta Box &#8211; WordPress Custom Fields Framework - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-11 13:43:58+0000\n"
+"PO-Revision-Date: 2021-05-08 09:13:01+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,15 +11,27 @@ msgstr ""
 "Language: es\n"
 "Project-Id-Version: Plugins - Meta Box &#8211; WordPress Custom Fields Framework - Stable (latest release)\n"
 
-#: inc/loader.php:120
+#: inc/about/sections/welcome.php:23
+msgid "Youtube Channel"
+msgstr "Canal de YouTube"
+
+#: inc/about/sections/welcome.php:22
+msgid "Facebook Group"
+msgstr "Grupo de Facebook"
+
+#: inc/about/sections/getting-started-pro.php:2
+msgid "Please follow this video tutorial to get started with Meta Box and extensions:"
+msgstr "Por favor, sigue este tutorial en vídeo para empezar con Meta Box y las extensiones:"
+
+#: inc/loader.php:123
 msgid "Are you sure to dismiss all Meta Box news?"
 msgstr "¿Estás seguro de querer descartar todas las noticias de Meta Box?"
 
-#: inc/loader.php:119
+#: inc/loader.php:122
 msgid "Dismiss all Meta Box news"
 msgstr "Descartar todas las noticias de Meta Box"
 
-#: inc/fields/post.php:156 inc/fields/user.php:144 inc/fields/taxonomy.php:157
+#: inc/fields/post.php:156 inc/fields/taxonomy.php:157 inc/fields/user.php:144
 msgid "(No title)"
 msgstr "(Sin título)"
 
@@ -63,23 +75,23 @@ msgstr "-- Posición --"
 msgid "-- Repeat --"
 msgstr "-- Repetir --"
 
-#: inc/about/sections/getting-started.php:31
+#: inc/about/sections/getting-started.php:27
 msgid "Create settings pages/Customizer options."
 msgstr "Crear páginas de ajustes o un personalizador de opciones."
 
-#: inc/about/sections/getting-started.php:30
+#: inc/about/sections/getting-started.php:26
 msgid "Control the visibility of fields."
 msgstr "Controlar la visibilidad de los campos."
 
-#: inc/about/sections/getting-started.php:29
+#: inc/about/sections/getting-started.php:25
 msgid "Organize fields into repeatable groups."
 msgstr "Organizar los campos en grupos repetibles."
 
-#: inc/about/sections/getting-started.php:28
+#: inc/about/sections/getting-started.php:24
 msgid "Build meta boxes and fields with UI."
 msgstr "Construir cajas meta y campos con interfaz gráfica."
 
-#: inc/about/sections/getting-started.php:28
+#: inc/about/sections/getting-started.php:24
 msgid "Meta Box Builder"
 msgstr "Maquetador de «Meta Box»"
 
@@ -132,7 +144,7 @@ msgstr "Tu clave de licencia para Meta Box está <b>caducada</b>. Por favor, <a 
 msgid "Your license key for Meta Box is <b>invalid</b>. Please <a href=\"%1$s\">update your license key</a> or <a href=\"%2$s\" target=\"_blank\">get a new one</a> to enable automatic updates."
 msgstr "Tu clave de licencia para Meta Box <b>no es válida</b>. Por favor, <a href=\"%1$s\">actualiza tu clave de licencia</a> o <a href=\"%2$s\" target=\"_blank\">consigue una nueva</a> para activar las actualizaciones automáticas."
 
-#: inc/update/checker.php:139
+#: inc/update/checker.php:143
 msgid "UPDATE UNAVAILABLE! Please enter a valid license key to enable automatic updates."
 msgstr "¡ACTUALIZACIÓN NO DISPONIBLE! Por favor, introduce una clave de licencia válida para activar las actualizaciones automáticas."
 
@@ -197,10 +209,6 @@ msgstr "Licencia de Meta Box"
 msgid "License"
 msgstr "Licencia"
 
-#: meta-box.php:24
-msgid "Meta Box requires PHP version 5.3+. Please contact your host to upgrade."
-msgstr "Meta Box requiere la versión 5.3+ de PHP. Por favor, contacta con tu alojamiento para actualizar."
-
 #: inc/fields/input-list.php:92
 msgid "Toggle All"
 msgstr "Alternar todos"
@@ -226,7 +234,7 @@ msgstr "Error: Archivo no válido"
 msgid "Still need help with Meta Box? We offer excellent support for you. But don't forget to check our <a href=\"%s\">documentation</a> first."
 msgstr "¿Sigues necesitando ayuda con Meta Box? Te ofrecemos un soporte excelente. Pero no olvides revisar primero nuestra <a href=\"%s\">documentación</a>."
 
-#: inc/fields/osm.php:28 inc/fields/map.php:55
+#: inc/fields/map.php:55 inc/fields/osm.php:28
 msgid "No results found"
 msgstr "No se encontraron resultados"
 
@@ -284,7 +292,7 @@ msgid "Free Download"
 msgstr "Descarga gratuita"
 
 #. Translators: %1$s - link to review form.
-#: inc/about/about.php:156
+#: inc/about/about.php:160
 msgid "Please rate <strong>Meta Box</strong> <a href=\"%1$s\" target=\"_blank\">&#9733;&#9733;&#9733;&#9733;&#9733;</a> on <a href=\"%1$s\" target=\"_blank\">WordPress.org</a> to help us spread the word. Thank you from the Meta Box team!"
 msgstr "Por favor realiza una reseña de <strong>Meta Box</strong> <a href=\"%1$s\" target=\"_blank\">&#9733;&#9733;&#9733;&#9733;&#9733;</a> en <a href=\"%1$s\" target=\"_blank\">WordPress.org</a> para ayudarnos a darnos a conocer. ¡Gracias desde el equipo de Meta Box!"
 
@@ -292,7 +300,7 @@ msgstr "Por favor realiza una reseña de <strong>Meta Box</strong> <a href=\"%1$
 msgid "Meta Box is a free Gutenberg and GDPR-compatible WordPress custom fields plugin and framework that makes quick work of customizing a website with—you guessed it—meta boxes and custom fields in WordPress. Follow the instruction below to get started!"
 msgstr "Meta Box es un plugin y framework de campos personalizados compatible con Gutenberg y la RGPD que facilita el trabajo de personalizar una web utilizando—sí, lo has adivinado—metaboxes y campos personalizados de WordPress. ¡Sigue estas instrucciones para empezar!"
 
-#: inc/about/sections/welcome.php:22 inc/about/sections/tabs.php:13
+#: inc/about/sections/tabs.php:13 inc/about/sections/welcome.php:21
 msgid "Support"
 msgstr "Soporte"
 
@@ -457,37 +465,28 @@ msgstr "Cómo comenzar"
 msgid "More Extensions"
 msgstr "Más extensiones"
 
-#: inc/about/sections/getting-started.php:31
+#: inc/about/sections/getting-started.php:27
 msgid "MB Settings Page"
 msgstr "MB Settings Page"
 
-#: inc/about/sections/getting-started.php:30
+#: inc/about/sections/getting-started.php:26
 msgid "Meta Box Conditional Logic"
 msgstr "Meta Box Conditional Logic"
 
-#: inc/about/sections/getting-started.php:29
+#: inc/about/sections/getting-started.php:25
 msgid "Meta Box Group"
 msgstr "Meta Box Group"
 
-#: inc/about/sections/getting-started.php:26
+#: inc/about/sections/getting-started.php:22
 msgid "Wanna see more features that transform your WordPress website into a powerful CMS? Check out some extensions below:"
 msgstr "¿Quieres ver más características que transformen tu sitio web de WordPress en un poderoso CMS? Revisa algunas de la siguiente extensiones:"
 
-#: inc/about/sections/getting-started.php:23
 #: inc/about/sections/extensions.php:36 inc/about/sections/extensions.php:48
 #: inc/about/sections/extensions.php:60 inc/about/sections/extensions.php:72
 #: inc/about/sections/extensions.php:84 inc/about/sections/extensions.php:96
 #: inc/about/sections/extensions.php:108
 msgid "Learn More"
 msgstr "Aprender más"
-
-#: inc/about/sections/getting-started.php:22
-msgid "Meta Box doesn't have any admin page for configuration or settings. Instead of that, it provides a very powerful API to speed up the process of creating meta boxes and custom fields. It might take you a little time at first, but then you'll love the way it work because it helps you do and customize almost everything."
-msgstr "Meta Box no tiene una página de administración para configuración ni ajustes. En vez de eso, proporciona una API muy potente para acelerar el proceso de crear metaboxes y campos personalizados. Puede costarte un poco al principio, pero te encantará cómo funciona porque te ayuda a personalizarlo casi todo."
-
-#: inc/about/sections/getting-started.php:21
-msgid "Understand The Basics"
-msgstr "Entendiendo los básicos"
 
 #: inc/about/sections/getting-started.php:17
 msgid "Go to Online Generator"
@@ -517,7 +516,7 @@ msgstr "MetaBox.io"
 msgid "Create custom meta boxes and custom fields in WordPress."
 msgstr "Crea cajas personalizadas y campos personalizados en WordPress."
 
-#: inc/fields/media.php:37
+#: inc/fields/media.php:39
 msgctxt "media"
 msgid "or"
 msgstr "o"
@@ -526,12 +525,12 @@ msgstr "o"
 msgid "Select an item"
 msgstr "Selecciona un elemento"
 
-#: inc/fields/media.php:38
+#: inc/fields/media.php:40
 msgctxt "media"
 msgid "Drop files here to upload"
 msgstr "Arrastra aquí los archivos para subirlos"
 
-#: inc/fields/media.php:36
+#: inc/fields/media.php:38
 msgctxt "media"
 msgid "Select Files"
 msgstr "Seleccionar archivos"
@@ -540,37 +539,37 @@ msgstr "Seleccionar archivos"
 msgid "Select a term"
 msgstr "Seleccionar un término"
 
-#: inc/fields/media.php:33
+#: inc/fields/media.php:35
 msgctxt "media"
 msgid "No Title"
 msgstr "Sin título"
 
-#: inc/fields/media.php:29
+#: inc/fields/media.php:31
 msgctxt "media"
 msgid " files"
 msgstr "archivos"
 
-#: inc/fields/media.php:28
+#: inc/fields/media.php:30
 msgctxt "media"
 msgid " file"
 msgstr "archivo"
 
-#: inc/fields/media.php:32
+#: inc/fields/media.php:34
 msgctxt "media"
 msgid "View"
 msgstr "Ver"
 
-#: inc/fields/media.php:31
+#: inc/fields/media.php:33
 msgctxt "media"
 msgid "Edit"
 msgstr "Editar"
 
-#: inc/fields/media.php:30
+#: inc/fields/media.php:32
 msgctxt "media"
 msgid "Remove"
 msgstr "Eliminar"
 
-#: inc/fields/media.php:27
+#: inc/fields/media.php:29
 msgctxt "media"
 msgid "+ Add Media"
 msgstr "+ Añadir medios"
@@ -618,11 +617,11 @@ msgstr "Seleccionar una publicación"
 msgid "Embed HTML not available."
 msgstr "HTML incrustado no disponible."
 
-#: inc/fields/key-value.php:136
+#: inc/fields/key-value.php:129
 msgid "Value"
 msgstr "Valor"
 
-#: inc/fields/key-value.php:135
+#: inc/fields/key-value.php:128
 msgid "Key"
 msgstr "Clave"
 
@@ -645,11 +644,11 @@ msgstr "Sólo puedes subir un máximo de %d archivos"
 msgid "You may only upload maximum %d file"
 msgstr "Sólo puedes subir un máximo de %d archivo"
 
-#: inc/fields/file-input.php:45
+#: inc/fields/file-input.php:47
 msgid "Remove"
 msgstr "Eliminar"
 
-#: inc/fields/file-input.php:43 inc/fields/select.php:92
+#: inc/fields/file-input.php:45 inc/fields/select.php:92
 msgid "Select"
 msgstr "Seleccionar"
 
@@ -657,12 +656,12 @@ msgstr "Seleccionar"
 msgid "Select File"
 msgstr "Seleccionar archivo"
 
-#: inc/fields/file.php:172
+#: inc/fields/file.php:170
 msgctxt "file upload"
 msgid "Edit"
 msgstr "Editar"
 
-#: inc/fields/file.php:171
+#: inc/fields/file.php:169
 msgctxt "file upload"
 msgid "Delete"
 msgstr "Eliminar"
@@ -679,13 +678,12 @@ msgstr "Sí"
 msgid "Click me"
 msgstr "Clic aquí"
 
-#: inc/fields/autocomplete.php:23 inc/fields/autocomplete.php:85
-#: inc/fields/autocomplete.php:97
+#: inc/fields/autocomplete.php:23 inc/fields/autocomplete.php:84
+#: inc/fields/autocomplete.php:96
 msgid "Delete"
 msgstr "Borrar"
 
-#: inc/about/sections/welcome.php:21 inc/about/sections/tabs.php:12
-#: inc/about/sections/getting-started.php:25
+#: inc/about/sections/getting-started.php:21 inc/about/sections/tabs.php:12
 msgid "Extensions"
 msgstr "Extensiones"
 

@@ -1,0 +1,15 @@
+{
+    "name": "TrabajosJovenes",
+    "short_name": "TrabajosJovenes",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://trabajosjovenes.cl",
+    "icons": [
+        {
+          "src": "/wp-content/uploads/2021/04/cropped-trabajo-part-time-150x150.png",
+          "type": "image/png",
+          "sizes": "150x150"
+        }]
+  }

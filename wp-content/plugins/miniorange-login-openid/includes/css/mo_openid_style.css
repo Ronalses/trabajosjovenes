@@ -836,10 +836,16 @@ div.mo_image_id>a>img.mo_openid_image {
 	-webkit-box-sizing: content-box!important;
 	-moz-box-sizing: content-box!important;
 	box-sizing: content-box!important;
-	width:40px; !important;
+	width:40px !important;
 	position:fixed;
 }
+.mo_openid-login-button{
+	text-align:center !important;
+	color:white !important;
+	padding-top:8px !important;
+	box-sizing: border-box !important;
 
+}
 .mo-custom-share-icon{
 	box-sizing:border-box !important;
 }

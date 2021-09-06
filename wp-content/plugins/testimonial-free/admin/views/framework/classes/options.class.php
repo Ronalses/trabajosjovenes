@@ -513,6 +513,7 @@ if ( ! class_exists( 'SPFTESTIMONIAL_Options' ) ) {
 		public function add_options_html() {
 
 			$has_nav       = ( count( $this->pre_tabs ) > 1 ) ? true : false;
+			$show_buttons  = isset( $this->args['show_buttons'] ) ? $this->args['show_buttons'] : true;
 			$show_all      = ( ! $has_nav ) ? ' spftestimonial-show-all' : '';
 			$ajax_class    = ( $this->args['ajax_save'] ) ? ' spftestimonial-save-ajax' : '';
 			$sticky_class  = ( $this->args['sticky_header'] ) ? ' spftestimonial-sticky-header' : '';
@@ -542,8 +543,12 @@ if ( ! class_exists( 'SPFTESTIMONIAL_Options' ) ) {
 			echo '<div class="spftestimonial-header-inner">';
 
 			echo '<div class="spftestimonial-header-left">';
-			// echo '<h1>' . $this->args['framework_title'] . '</h1>';
-			echo '<h1> <img src="' . SP_TFREE_URL . '/admin/assets/images/icon.svg" alt="">' . $this->args['framework_title'] . '</h1>';
+			if ( $show_buttons ) {
+				echo '<h1> <img src="' . SP_TFREE_URL . '/admin/assets/images/icon.svg" alt="">' . $this->args['framework_title'] . '</h1>';
+			} else {
+				echo '<h1 class="export-import"><img src="' . SP_TFREE_URL . 'admin/assets/images/import-export.svg">' . $this->args['framework_title'] . '</h1>';
+			}
+
 			echo '</div>';
 
 			echo '<div class="spftestimonial-header-right">';
@@ -551,13 +556,13 @@ if ( ! class_exists( 'SPFTESTIMONIAL_Options' ) ) {
 			echo ( $has_nav && $this->args['show_all_options'] ) ? '<div class="spftestimonial-expand-all" title="' . esc_html__( 'show all options', 'testimonial-free' ) . '"><i class="fa fa-outdent"></i></div>' : '';
 
 			echo ( $this->args['show_search'] ) ? '<div class="spftestimonial-search"><input type="text" name="spftestimonial-search" placeholder="' . esc_html__( 'Search option(s)', 'testimonial-free' ) . '" autocomplete="off" /></div>' : '';
-
-			echo '<div class="spftestimonial-buttons">';
-			echo '<input type="submit" name="' . $this->unique . '[_nonce][save]" class="button button-primary spftestimonial-top-save spftestimonial-save' . $ajax_class . '" value="' . esc_html__( 'Save', 'testimonial-free' ) . '" data-save="' . esc_html__( 'Saving...', 'testimonial-free' ) . '">';
-			echo ( $this->args['show_reset_section'] ) ? '<input type="submit" name="spftestimonial_transient[reset_section]" class="button button-secondary spftestimonial-reset-section spftestimonial-confirm" value="' . esc_html__( 'Reset Section', 'testimonial-free' ) . '" data-confirm="' . esc_html__( 'Are you sure to reset this section options?', 'testimonial-free' ) . '">' : '';
-			echo ( $this->args['show_reset_all'] ) ? '<input type="submit" name="spftestimonial_transient[reset]" class="button spftestimonial-warning-primary spftestimonial-reset-all spftestimonial-confirm" value="' . esc_html__( 'Reset All', 'testimonial-free' ) . '" data-confirm="' . esc_html__( 'Are you sure to reset all options?', 'testimonial-free' ) . '">' : '';
-			echo '</div>';
-
+			if ( $show_buttons ) {
+				echo '<div class="spftestimonial-buttons">';
+				echo '<input type="submit" name="' . $this->unique . '[_nonce][save]" class="button button-primary spftestimonial-top-save spftestimonial-save' . $ajax_class . '" value="' . esc_html__( 'Save', 'testimonial-free' ) . '" data-save="' . esc_html__( 'Saving...', 'testimonial-free' ) . '">';
+				echo ( $this->args['show_reset_section'] ) ? '<input type="submit" name="spftestimonial_transient[reset_section]" class="button button-secondary spftestimonial-reset-section spftestimonial-confirm" value="' . esc_html__( 'Reset Section', 'testimonial-free' ) . '" data-confirm="' . esc_html__( 'Are you sure to reset this section options?', 'testimonial-free' ) . '">' : '';
+				echo ( $this->args['show_reset_all'] ) ? '<input type="submit" name="spftestimonial_transient[reset]" class="button spftestimonial-warning-primary spftestimonial-reset-all spftestimonial-confirm" value="' . esc_html__( 'Reset All', 'testimonial-free' ) . '" data-confirm="' . esc_html__( 'Are you sure to reset all options?', 'testimonial-free' ) . '">' : '';
+				echo '</div>';
+			}
 			echo '</div>';
 
 			echo '<div class="clear"></div>';

@@ -31,8 +31,8 @@ class Strong_Testimonials_Defaults {
 		$default_options = array(
 			'embed_width'             => '',
 			'nofollow'                => true,
-            'noopener'                => false,
-            'noreferrer'              => false,
+            'noopener'                => true,
+            'noreferrer'              => true,
             'disable_rewrite'         => false,
 			'pending_indicator'       => true,
 			'remove_whitespace'       => true,
@@ -393,7 +393,7 @@ class Strong_Testimonials_Defaults {
 			'fields'   => $base_forms['default']['fields'],
 		);
 
-		return $forms;
+		return apply_filters( 'wpmtst_update_custom_form', $forms );
 	}
 
 	/**

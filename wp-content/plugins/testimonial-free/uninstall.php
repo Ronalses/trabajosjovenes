@@ -20,9 +20,17 @@ if ( $testimonial_data_remove ) {
 	// Remove Option.
 	delete_option( 'sp_testimonial_pro_options' );
 	delete_option( 'testimonial_cat_children' );
+	delete_option( 'testimonial_version' );
+	delete_option( 'testimonial_first_version' );
+	delete_option( 'testimonial_activation_date' );
+	delete_option( 'testimonial_db_version' );
 
 	// Site options in Multisite.
 	delete_site_option( 'sp_testimonial_pro_options' );
 	delete_site_option( 'testimonial_cat_children' );
+	delete_site_option( 'testimonial_version' );
+	delete_site_option( 'testimonial_first_version' );
+	delete_site_option( 'testimonial_activation_date' );
+	delete_site_option( 'testimonial_db_version' );
 
 }
