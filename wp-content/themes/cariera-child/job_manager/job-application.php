@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             global $post;
                 $ws = get_post_meta( $post->ID, '_job_ws', true );
 		        $_title = get_post_meta( $post->ID, '_job_title', true );
-                echo "<a target='_blank' href='https://api.whatsapp.com/send?phone=".$ws. "&text=Hola%21👋++%0AHas+recibido+una+nueva+postulación%0A%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%0APara+el+cargo%3A+*".$_title."*%0AEn+breve+te+enviaremos+el+Currículum%0A%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%0ARecibiste+tu+vacante+por+https://trabajosjovenes.cl%0A%0AUn+saludo💪.'class='application_button application_button_ws btn btn-main btn-effect'><img src='https://trabajosjovenes.cl/wp-content/uploads/2021/04/Whatsapp-Icon-PNG-Image-715x715-1.png '/>Postular con Whatsapp</a>";
+                echo "<a target='_blank' href='https://api.whatsapp.com/send?phone=".$ws. "&text=Hola%21👋.++%0AHas+recibido+una+nueva+postulación%0A%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%0APara+el+cargo%3A+*".$_title."*%0AEn+breve+te+enviaremos+el+Currículum%0A%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%0ARecibiste+tu+vacante+por+https://trabajosjovenes.cl%0A%0AUn+saludo💪.'class='application_button application_button_ws btn btn-main btn-effect'><img src='https://trabajosjovenes.cl/wp-content/uploads/2021/04/Whatsapp-Icon-PNG-Image-715x715-1.png '/>Postular con Whatsapp</a>";
             }
             mensajeWhatsapp();
         ?>
