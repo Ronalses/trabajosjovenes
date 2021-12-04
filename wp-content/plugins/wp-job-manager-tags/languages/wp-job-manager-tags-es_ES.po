@@ -10,12 +10,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-03-01T18:35:07+00:00\n"
-"PO-Revision-Date: 2021-05-04 17:14+0000\n"
+"PO-Revision-Date: 2021-11-12 21:28+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: wp-job-manager-tags\n"
 "Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Loco-Version: 2.5.2; wp-5.7.1"
+"X-Loco-Version: 2.5.3; wp-5.8.2"
 
 #. Plugin Name of the plugin
 msgid "WP Job Manager - Job Tags"
@@ -169,7 +169,7 @@ msgstr ""
 #: wp-job-manager-tags.php:234 wp-job-manager-tags.php:245
 #: wp-job-manager-tags.php:255
 msgid "Job tags"
-msgstr ""
+msgstr "Etiquetas de trabajo"
 
 #: wp-job-manager-tags.php:235 wp-job-manager-tags.php:246
 msgid ""
@@ -184,6 +184,8 @@ msgstr ""
 msgid ""
 "Comma separate tags, such as required skills or technologies, for this job."
 msgstr ""
+"Coloque etiquetas separadas por comas, como las habilidades o tecnologías "
+"necesarias, para este trabajo."
 
 #: wp-job-manager-tags.php:259
 msgid "e.g. PHP, Social Media, Management"
@@ -195,7 +197,7 @@ msgstr ""
 
 #: wp-job-manager-tags.php:354
 msgid "Tagged as:"
-msgstr ""
+msgstr "Marcada como:"
 
 #: wp-job-manager-tags.php:369
 msgid "Tags"

@@ -22,26 +22,23 @@ endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // END ENQUEUE PARENT ACTION
-
 //Manifest y SW
-function inc_manifest_link()
-{
-    echo '<link rel="manifest" href="' . get_stylesheet_directory_uri() . '/manifest.json">';
+function inc_manifest_link() {   
+    echo '<link rel="manifest" href="'.get_stylesheet_directory_uri().'/manifest.json">';
 }
 
-function register_my_service_worker()
-{
-    echo '<script>if("serviceWorker" in navigator) {
+function register_my_service_worker () {
+echo '<script>if("serviceWorker" in navigator) {
   navigator.serviceWorker
            .register("./sw.js")
            .then(function() { console.log("Service Worker registrado") })
            .catch(function() { console.log("Service Worker no se puede registrar") });
 }</script>';
 }
-//manifest file
-add_action('wp_head', 'inc_manifest_link');
+  //manifest file
+add_action( 'wp_head', 'inc_manifest_link' );
 
-// Creates the link tag
-
-add_action('wp_head', 'register_my_service_worker');
+  // Creates the link tag
+  
+add_action ( 'wp_head', 'register_my_service_worker' );
 do_action('wp-head');

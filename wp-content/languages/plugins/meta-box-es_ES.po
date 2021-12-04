@@ -123,6 +123,8 @@ msgstr "Tu clave de licencia está <b>caducada</b>. Por favor, <a href=\"%3$s\" 
 
 #. Translators: %1$s - URL to the settings page, %2$s - URL to the pricing
 #. page.
+#. Translators: %1$s - URL to the settings page, %2$s - URL to the pricing
+#. page.
 #: inc/update/notification.php:144 inc/update/notification.php:146
 msgid "Your license key is <b>invalid</b>. Please <a href=\"%1$s\">update your license key</a> or <a href=\"%2$s\" target=\"_blank\">get a new one here</a>."
 msgstr "Tu clave de licencia <b>no es válida</b>. Por favor, <a href=\"%1$s\">actualiza tu clave de licencia</a> o <a href=\"%2$s\" target=\"_blank\">consigue una nueva aquí</a>."
@@ -138,6 +140,8 @@ msgstr "Por favor, <a href=\"%1$s\">introduce tu clave de licencia</a> o <a href
 msgid "Your license key for Meta Box is <b>expired</b>. Please <a href=\"%3$s\" target=\"_blank\">renew your license</a> to get automatic updates and premium support."
 msgstr "Tu clave de licencia para Meta Box está <b>caducada</b>. Por favor, <a href=\"%3$s\" target=\"_blank\">renueva tu licencia</a> para obtener actualizaciones automáticas y soporte premium."
 
+#. Translators: %1$s - URL to the settings page, %2$s - URL to the pricing
+#. page.
 #. Translators: %1$s - URL to the settings page, %2$s - URL to the pricing
 #. page.
 #: inc/update/notification.php:114 inc/update/notification.php:116
@@ -172,6 +176,7 @@ msgstr "Algo no funciona con la conexión a metabox.io. Por favor, inténtalo de
 msgid "Your license key is <b>expired</b>. Please <a href=\"%2$s\" target=\"_blank\">renew your license</a>."
 msgstr "Tu clave de licencia está <b>caducada</b>. Por favor, <a href=\"%2$s\" target=\"_blank\">renueva tu licencia</a>."
 
+#. Translators: %1$s - URL to the pricing page.
 #. Translators: %1$s - URL to the pricing page.
 #: inc/update/settings.php:113 inc/update/settings.php:115
 msgid "Your license key is <b>invalid</b>. Please update your license key or <a href=\"%1$s\" target=\"_blank\">get a new one here</a>."
@@ -225,7 +230,7 @@ msgstr "Crear relaciones muchos a muchos entre entradas, términos y usuarios."
 msgid "Save custom fields data to custom table. Reduce database size and increase performance."
 msgstr "Guarda los campos personalizados en una tabla propia. Reduce el tamaño de la base de datos y mejora el rendimiento."
 
-#: inc/fields/file.php:63
+#: inc/fields/file.php:69
 msgid "Error: Invalid file"
 msgstr "Error: Archivo no válido"
 
@@ -574,7 +579,7 @@ msgctxt "media"
 msgid "+ Add Media"
 msgstr "+ Añadir medios"
 
-#: inc/field.php:361
+#: inc/field.php:358
 msgid "+ Add more"
 msgstr "+ Añadir más"
 
@@ -605,6 +610,7 @@ msgid "All"
 msgstr "Todo"
 
 #. Translators: %s is the taxonomy singular label.
+#. Translators: %s is the taxonomy singular label.
 #: inc/fields/post.php:86 inc/fields/taxonomy.php:98
 msgid "Select a %s"
 msgstr "Selecciona un %s"
@@ -625,12 +631,12 @@ msgstr "Valor"
 msgid "Key"
 msgstr "Clave"
 
-#: inc/fields/file.php:90
+#: inc/fields/file.php:118
 msgctxt "file upload"
 msgid "+ Add new file"
 msgstr "+ Añadir un archivo nuevo"
 
-#: inc/fields/file.php:77
+#: inc/fields/file.php:82
 msgid "Error: Cannot delete file"
 msgstr "Error: No se puede eliminar el archivo"
 
@@ -656,12 +662,12 @@ msgstr "Seleccionar"
 msgid "Select File"
 msgstr "Seleccionar archivo"
 
-#: inc/fields/file.php:170
+#: inc/fields/file.php:199
 msgctxt "file upload"
 msgid "Edit"
 msgstr "Editar"
 
-#: inc/fields/file.php:169
+#: inc/fields/file.php:198
 msgctxt "file upload"
 msgid "Delete"
 msgstr "Eliminar"

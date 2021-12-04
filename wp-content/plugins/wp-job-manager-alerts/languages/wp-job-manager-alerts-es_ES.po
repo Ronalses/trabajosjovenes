@@ -9,13 +9,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2021-04-24 19:22+0000\n"
+"PO-Revision-Date: 2021-09-27 15:44+0000\n"
 "Last-Translator: \n"
 "Language-Team: Español\n"
 "X-Generator: Loco https://localise.biz/\n"
 "Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Loco-Version: 2.5.2; wp-5.7.1"
+"X-Loco-Version: 2.5.3; wp-5.8.1"
 
 #: includes/class-wp-job-manager-alerts-notifier.php:33
 msgid "Daily"
@@ -102,7 +102,7 @@ msgstr "Nombre de la alerta "
 
 #: templates/alert-form.php:22
 msgid "Enter a name for your alert"
-msgstr ""
+msgstr "Digita el nombre de tu alerta"
 
 #: templates/alert-form.php:26
 msgid "Keyword"
@@ -111,7 +111,7 @@ msgstr ""
 
 #: templates/alert-form.php:28
 msgid "Optionally add a keyword to match jobs against"
-msgstr ""
+msgstr "Opcionalmente, agregue una palabra clave para hacer coincidir trabajos"
 
 #: templates/alert-form.php:33
 msgid "Job Region"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: templates/alert-form.php:54
 msgid "Optionally define a location to search against"
-msgstr ""
+msgstr "Opcionalmente, defina una ubicación para buscar"
 
 #: templates/alert-form.php:60 templates/my-alerts.php:26
 msgid "Categories"
@@ -151,7 +151,7 @@ msgstr "Categoría "
 
 #: templates/alert-form.php:101
 msgid "Any job type"
-msgstr ""
+msgstr "Selecciona una categoria"
 
 #: templates/alert-form.php:111
 msgid "Email Frequency"

@@ -1,1560 +1,1560 @@
-Cariera - Job Board WordPress Theme
-------------------------------
-
-Version 1.5.1
-    Added:
-        - *** LICENSE MANAGEMENT SYSTEM
-        - *** NEW THEME ONBOARDING
-        - Login & Register form Elementor Element
-        - Product's "Short description" added to Promotional Packages
-        - Map Provider "None" option to not initialize or include any map scripts
-        - Google Maps are now handled with Leaflet
-        - New preloader, which will be on by default
-        - Delete company listing when user account gets deleted
-        - Notification when a listing status changes from "pending_payment" to "pending"
-        - Notification when a listing status changes from "pending_payment" to "published"
-        - Notification when a listing gets relisted
-
-    Improved:
-        - *** MAJOR Performance improvements
-        - *** DYNAMIC ASSETS LOADING using latest technologies | on-demand loading, assets will be loaded only when needed
-        - Onboarding when installing the theme first time
-        - Plugin installation management
-        - Demo importer
-        - Overall theme security
-        - Totally rewritten map functions & using lazy loading method
-        - Map popup UI
-        - Moved Isotope functions for job/resume/company out of the search scripts
-        - Compatibility improvements for Cariera listing templates with WPJM S&F
-        - Rewritten the whole header css
-        - Reworked sticky header to use a custom method instead of external jquery library
-        - Totally reworked Countdown elementor element
-        - Replaces deprecated jQuery functions with latest up-to-date jQuery functions
-        - Dashboard scripts and styles load only on the dashboard pages
-        - Custom Cariera avatar handling
-        - Success/Error notification UI for various pages and actions
-        - Small UX improvement to the new company submission email
-        - Redesigned Blog comments
-        - Some JS functions have been moved to the core plugin to support lazy loading
-        - Job quick preview functionality
-        - Top header moved to a separate template
-        - Template security strengthened
-        - Denqueued WPJM styles to reduce download requests
-        - Single Job Category background issues when 2 taxonomies have the same job and both have a background image
-
-    Fixed:
-        - Login & Register styling outside of the popup
-        - geocomplete js error in the backend when Google Maps is the main map provider
-        - Cariera Notification PHP error fixed
-        - Company submission label escaping issue
-        - Settings page wrong shortcode in the description for [cariera_my_account]
-        - Job Listing loader out of the page container on some pages
-        - Some Elementor elements not initializing the elements scripts
-        - Select2 overlapping select when loggedin as admin
-        - Dashboard menu being cut on small screen devices (now scrollable)
-        - Blog posts not showing the right user avatar
-        - Company Board hide filter option
-        - Bugs on leaflet maps
-        - In-site Notification text localization
-        - WPJM Regions causing js errors when activated
-        - Notifications "mark as read" removing "cart count" in header
-        - Job Alerts table not showing saved categories & tags
-        - Menu badge issue on the parent menu item
-
-    Update:
-        - Bootstrap 4.4.1 to 4.6.0
-        - job-dashboard to use latest WPJM template
-
-    Removed:
-        - Native Google Map functions (uses leaflet now)
-        - jQuery headroom library
-        - Old countdown library
-
-
-Version 1.5.0
-    Added:
-        - *** TOTAL REFACTORED assets - CSS & JS (all assets will be shipped minified from now on)
-        - *** USER IN-SITE NOTIFICATIONS (listing status, applications, promotions)
-        - Enable/disable User Notifications option
-        - *** PROMOTIONAL PACKAGE (to make a job, resume, company featured)
-        - Enable/disable options for Listing Promotion Email
-        - Enable/disable options for Listing Promotion Expired Email
-        - Custom cron schedules for database cleaning
-        - Disable additional font icon library option (via main theme settings)
-        - Custom Job Template support for "S&F for WPJM"
-        - Custom Resume Template support for "S&F for WPJM"
-        - Full support for the new "WPJM Resume Alerts" plugin by sMyles
-        - Options to choose job layout for taxonomy pages (in customizer)
-        - Options to choose resume layout for taxonomy pages (in customizer)
-        - Options to change the header CTA link (main settings)
-        - User details to the admin "new user" email notification
-        - Featured icon on the listings marker in the map to stand out
-        - Companies: Sort by featured (also default now)
-        - WooCommerce loading animation on product add to cart
-        - VK & Telegram to the footer social media options
-        - Feature resume mark in candidate dashboard
-        - css class to job_application msg for better customization flexibility
-        - Autohub (new theme) to the welcome page
-
-    Improved:
-        - Company Search and listing system
-        - Main Template management
-        - Header extra is loaded from a seperated template now
-        - WooCommerce products "add to cart"
-        - Cariera_Resume_Extender methods
-        - Featured listings handling
-        - Company contact is now added via template for better flexibility
-        - Pingback url auto-discovery header via function for latest WordPress standards
-        - Deleted old and unused css for jobs/resumes
-        - Reworked all the listings styles
-        - Overall Job Alerts
-        - Job Alerts shows only for admin and canidate on the dashboard now
-        - Leaflet uses local files now
-        - Gmaps & leaflet js files
-        - Gmaps Infobox animation
-        - Small UI Improvements
-        - small design tweaks for Job List 3
-        - Elementor Cariera Button Element
-
-    Fixed:
-        - PHP notice when resume expires and email has to be send
-        - PHP error for the "Company Dashboard" in header - extra user menu
-        - Cart header button being clickable on cart and checkout page
-        - Header cart AJAX reload issue
-        - PHP notice on import
-        - WC creating pages and duplicating the shop pages on import
-        - Outputting comma on empty shortcode attr on Job Board Elementor element
-        - Small dashboard UI issue
-        - Preloader zoom effect issue
-        - PHP error with Blog Slider Layout 2 when post has no category
-        - Job, Company, Resume loader being overlapped by the footer
-        - Leaflet map overlapping menu on hover
-        - select2 overlapping UI issue
-        - "Featured" badge for Job list 3,4 is now translatable
-        - "Featured" badge for Job Grid 1,2 is now translatable
-        
-    Updated:
-        - Least suggested PHP Version now to 7.2
-        - Job Alert templates
-        - Header Quick Search is turned off by default
-        - Leaflet libraries to the latest version
-        - POT Files
-
-
-Version 1.4.8
-    Added:
-        - MAIN SETTINGS PAGE in the backend under "Cariera"
-        - Documentation page in the backend under "Cariera"
-        - TOTAL REWORK of the login & register system from the ground up
-        - User Registration Approval System (via the new settings page)
-        - EMAIL MANAGEMENT for all the emails sent from the theme
-        - Reset your password with your Email or Username (username is the new method)
-        - Moved all "dashboard pages" to the main settings under "Cariera"
-        - Status badges (filled/expired) to the job listing if they are visible
-        - Support for WooCommerce Subscription in the job/resume submission flow
-        - Option to enable/disable "Hide Candidate Contact from owner"
-        - New output actions for Resume Listings Meta Start/End (List version 1&2) *WPJM Field Editor Support*
-        - New output actions for Company Listings Meta Start/End (List version 1&2) *WPJM Field Editor Support*
-        - Fullwidth page template (to avoid pages loading on a container and expanding on load)
-        - Font Sizer controler for "Counterup" Elementor Element
-        - Admin notice when Google Maps API Key is not added
-        - Options in the job/company/resume half map to change the main text
-        - wp_body_open() tag to be up to date with the latest standards
-        - Excluding Listing Taxonomies from "Taxonomy List/Grid" Elementor Element
-
-    Improved:
-        - Login & Register security
-        - Login & Register code flexibility
-        - Login & Register performance
-        - Password Reset functionality
-        - Error detection on the login & register
-        - Custom Database Tables handling        
-        - Cariera_Job_Extender class
-        - Total rework of the jobs-ajax-filters.js
-        - Reworked reCaptcha functionality
-        - Conditional Script loading | Certain scripts will only be loaded if needed to improve performance
-        - WooCommerce Checkout Page
-        - WooCommerce Cart page design
-        - WooCommerce Orders page design
-        - Design of expired listing single job page
-        - Cariera Avatar image size. Images get cropped to a square size now
-        - "Hide Candidate Contact from Owner" functions
-        - WPJM Template usage
-        - WPJM Resumes Template usage
-        - Mobile menu - parent menues are now clickable
-        - Avatar upload functionality
-        - Cart btn in the header doesn't show "0" anymore, it will show only when there are items in Cart
-        - After Import - dashboard pages get set up automatically now
-        
-    Fixed:
-        - Job Listing quick view job description UI issue
-        - WPJM Visibility - Candidate Video issue
-        - "g-recaptcha-response" undefined PHP error on register
-        - Autologin issue on rare occasions
-        - Cariera Avatar PHP error
-        - Job Category Slider PHP error
-        - Resume Carousel design issue
-        - WooCommerce Edit Address page and design
-        - Small string localization issues in Cariera Core
-        - Categories slider element for WPBakery PHP errors
-        - Issues with WPBakery elements PHP errors
-        - Mapbox map display issue
-        - Listing Category Image icon alignment issues
-        - Avatar Upload issues due to WordPress 5.6
-        - Jobs not loading sometimes after WordPress 5.6
-        - Companies not loading sometimes after after WordPress 5.6
-        - "Listing Packages" to "Active Packages"
-        - Dashboard menu height scroll issue on Firefox after WordPress 5.6
-        
-    Updated:
-        - wpjm template: job-dashboard to use "Harden security of job dashboard actions."
-
-    Removed:
-        - Deprecated data-vocabulary.org schema from Breadcrumbs
-
-
-Version 1.4.7
-    Added:
-        - New and more secure Job & Company Mapping
-        - Company field validation issue when editing/submitting a company
-        - "Importer has stopped" message on import error infinite loading
-        - Filter "cariera_registration_users_attachment' for user attachments on register
-        - Company Post Statuses in the backend
-        - Submission Flow CPT class for better handling
-        - Skin support for Google Maps
-        - Job List Layout 5 support for job half map page
-        - "Categories" & "Job Types" filters to the "Job Board" Elementor Element
-        - Email notification to admin when a new company has been submitted
-        - After editing a company you will be redirected to the company dashboard
-        - Company visibility options
-        - Discourage search engines from indexing company listings option
-        - Company "load more" functionality and made it default instead of "numeric pagination"
-        - New User Avatar upload method for better UX & Performance
-        - Full multisite support
-        - Resume Contact button is hidden from Resume Author
-        - "Sorry to see you go" Email notification when a user deletes their account
-        - New "Listing Category List" layout - layout 3
-        - New "Listing Category Grid" layout - layout 4
-        - Autologin after registration functionality and option (can be disabled)
-        - Full support for all Premium WPJM addons created by sMyles
-
-    Improved:
-        - Overall security
-        - Total rework of the Job & Companies mapping
-        - Jobs & companies connecting functions
-        - Assigning Jobs to a Company through Company ID
-        - Company Form when editing an existing job
-        - Company functions improved and reworked
-        - Job's "company_manager_id" meta shows pending companies in the backend too now
-        - WPJM/WPRM Search category select2 improvements
-        - Company "Team Size" is now a single select instead of multiselect
-        - Custom.js function security when a script is not enqueued
-        - Company editing method
-        - "My Profile - user avatar upload" design and responsiveness
-        - Single resume page html markup and css improvements
-
-    Fixed:
-        - "My Profile" form fields sanitized
-        - Issue when not logged in user tries to go to "My Profile" page
-        - Job Taxonomy errors on job overview when core plugin is not active
-        - Resume Taxonomy errors on resume overview when core plugin is not active
-        - Select2 display issue
-        - Company Team Size not showing
-        - Issue to lose job-company connection when Company name was changed
-        - Company sharing button position
-        - Company issue with the term-select.php
-        - Company category select2 not being initialized
-        - Keyword input being clickable on responsive
-        - UI issue when the plugin "WooCommerce Stripe Payment Gateway" is active
-        - Job Search Select2 issues due to the ".job-manager-category-dropdown" not being initialized by the theme
-        - Elementor Listing Categories PHP Error
-        - Language attribute in the html tag
-        - Login "Do not redirect" functionality
-        - Password reset small issues and translations
-        - Job Category taxonomy php issue fixed when no background image exists
-        - Job Category Grid 3 when using an image icon
-        - Small css issues
-        
-    Updated:
-        - Select2.js from 4.0.8 to 4.0.13
-
-    Remove:
-        - ".job-manager-category-dropdown" select2 init from the theme for better handling and compatibility fixes
-
-Version 1.4.6
-    Added:        
-        - User role switcher (Employer - Candidate) on the edit profile
-        - Support for social login plugin "WordPress Social Login (miniorange)": https://wordpress.org/plugins/miniorange-login-openid/
-        - Support for social login plugin "WordPress Social Login": https://wordpress.org/plugins/wordpress-social-login/
-        - Support for the "wp_nav_menu_item_custom_fields" function in the extended "cariera_walker_nav_edit" class to support third party plugins
-        - Check the GDPR checkbox on register and show a message on top
-        - Register Header & Footer locations to support Elementor Pro's Theme Builder
-        - "job_manager_default_company_logo" filter for the jobs default data-thumbnail handling
-        - "resume_manager_default_candidate_photo" for the resumes default data-thumbnail handling
-        - Hide Pagination option for jobs, resumes & companies in Elementor
-        - Job search options for "job board" element in Elementor
-        - Leaflet maps on job quick view
-        - Leaflet styles and scripts locally for improved performance and speed
-        - Select2 for job's company selection (backend) for better UX
-        - Cariera Company Manager Bookmarks (compatibility with the WP Job Manager Bookmarks plugin)
-        - Cariera Company Manager Geocoding Class to handle extra geocoding for companies
-        - "Job overview" data comes from the job-overview.php template now
-        - Missing action hooks on the new template "Job overview" for better data output handling
-        - "Company overview" data comes from the company-overview.php template now
-        - "Resume overview" data comes from the resume-overview.php template now
-        - Missing action hooks (single_resume_meta_start & single_resume_meta_end) on the new template "Resume overview" for better data output handling
-        - Salary Field to Structured Data (schema.org markup)
-        - Add og:image tag for jobs
-        - Hide the "resume contact details" under the Resume Title if the user does not have the permission to view the Resume's "Contact Details"
-        - Extra hooks for the Job Listings, Single Job Page, Single Company Page & Single Resume Page for compatibility purposes with *WPJM Field Editor* Plugin
-        - Email template is used for the "password reset" email functionality
-        - Enable/disable email notification on user register option
-        - Social Sharing for single company & resume pages
-        - Hook after the body tag "do_action( 'cariera_body_start' )"
-        - Hide & publish a Company from the Company Dashboard
-        - Edit Company when it's private
-        - "Career Level, Experience, Qualification" Taxonomies for the Job Listings
-        - "Career Level, Experience, Qualification" settings to disable these Taxonomies
-        - "Career Level, Experience, Qualification" to the job submission
-        - Options to enable/disable "Education & Experience" for resumes
-        - Options to send "approved" email notification for Jobs & Resumes 
-        - Options to send "expired" email notification for Resumes 
-
-    Improved:
-        - Login & Register overall system
-        - Redirection Options after Login ( Dashboard, Home, Custom Page, No Redirection )
-        - Job & Resume search layout 2 responsive UI
-        - "Submit Resume" design on job application when "Force Resume Creation" has been enabled
-        - WC Paid Listing packages UX for responsive view
-        - Job listings pull company logo with a higher priority then "featured/company logo" from withing the job
-        - Cariera Company Manager Geocoding Improvements
-        - User avatar upload section UI improvements
-        - Login & Register small UI improvements
-        - UI for "Download CSV" in job applications, now it's made into a button instead of a link
-        - Company phone number made into an anchor, now you can call the company by clicking on the phone number
-        - Login & Register Template on Responsive (height and scrolling issues)
-        - Check all extra fields with isset before updating the data
-        - Various improvements on the Cariera Company Manager
-        - Small UI improvements
-        - Single Resume Page content now uses hooks
-        - Switched Resume "Education & Experience" from Meta to Taxonomies
-        - XSS Security vunerabilities
-
-    Fixed:
-        - Fontawesome icons that were still using fontawesome version 4 classes
-        - "Login error redirection" when application requires user to be logged in and login layout has been set to "custom page" instead of "popup"
-        - Reset job filters issue (reseting select2 fields)
-        - Iconselector issue (500px is not the default icon anymore)
-        - Sharing class for telegram
-        - Job quick view map issue when google map is not selected as a map provider
-        - Signin bottom links visual issue
-        - WooCommere single product issue when didn't have description and reviews
-        - Better text description for some customizer options
-        - Search tags background color when active and inactive
-        - Job Category issue on Job Grid 1 when job didn't have a category
-        - Hiding the chosen.js created by the Field Editor plugin
-        - Importing issue with the latest Elementor version 2.9.14
-        - Job submission with an existing company if company has more "required" fields
-        - Company Logo upload on job submission
-
-    Updated:
-        - Leaflet.js from 1.5.1 to 1.6.0
-        - WordPress Importer to 0.7
-        - WooCommerce Templates
-        - Core Plugins
-
-
-Version 1.4.5.2
-    Added:
-        - Fontawesome verion 5 iconpicker compatibility
-
-    Improved:
-        - Company listing 1 UI
-
-    Fixed:
-        - Job applications css issue
-        - Fontawesome issue for icons. Version 4 clashing with version 5 that was added by Elementor
-
-    Updated:
-        - Fontawesome version 4 to version 5
-
-
-Version 1.4.5.1
-    Fixed:
-        - After Import issue
-
-    Updated:
-        - Importing Content
-
-
-Version 1.4.5
-    Added:
-        - 3 NEW Home Pages
-        - 3 NEW Company listing layouts
-        - 3 NEW Resume listing layouts
-        - ===== Switched the theme 100% to Elementor =====
-        - ===== Redesigned all pages =====
-        - Elementor compatibility in the Importer
-        - Elementor default global font changed to "default" for compatibility purpose
-        - Elementor default global color changed to "default colors" for compatibility purpose
-        - Location Autocomplete for company location fields for Leaflet
-        - Footer options to customize the whole footer colors and bg
-        - Content formatting on content editor for job, company & resume listing submission
-        - Login & register page template, reworked the whole design
-        - Options to change the dashboard statistics colors (border & background)
-        - GDPR Link option to the Registration form
-        - Switched from Owl Slider to Slick Slider
-        - Elementor as a required plugin
-        - New Blog Post layout element        
-        - New Blog Post Slider layout (Elementor)
-        - JS functions support on Elementor in edit mode
-        - New Job & Resume Tab search layout, also color skin (light & dark)
-        - 2 new listing category layouts
-        - 10+ New Elementor elements & element layouts
-        - New Testimonial Style (Elementor)
-        - New Pricing Table Style (Elementor)
-        - Header cta specific class (job & resume) for better customization flexibility
-        - Color overlay option for video popup (Elementor element)
-        - LEAFLET map support for Home 4 template
-
-    Improved:
-        - Functions structure for WPJM & WPRM
-        - Job, Company & Resume preview step UI design
-        - Job & Resume reports table UI design
-        - Reworked footer
-        - Single Job file for future improvements
-        - All slider elements
-        - Total rework of the custom.js file
-        - Elementor functions added in Cariera_Elementor class
-        - Total Job & Resume Category elements rework
-        - Company Post classes
-        - Reworked Company Templates
-        - Company shortcode: Template selection
-        - Job Listing List 1 css issue
-        - Main navigation css
-        - Menu item badge styling
-        - Importing times
-
-    Fixed:
-        - ZipRecruiter & Indeed job listing display issue
-        - Responsive issue for ZipRecruiter & Indeed job listing
-        - User search to change the author for single companies
-        - Location Autocomplete issue on job submission due to 2 location inputs
-        - Job Auto suggestion showing the wrong results
-        - Pagination UI issue on responsive
-        - Company selection issue on responsive
-        - Company name and select fields on responsive issue
-        - Icon selector issue
-        - Job & Resume Elementor element issue
-        - External application redirection issue
-        - Resume & Company slider image width
-        - Small css issues for Job listing (list 4-5 & grid 3)
-        - Submit Company classes in the dashboard
-        - Company jobs color overflowing on responsive
-        - Social media footer icons alignment
-        - Social media footer background on hover
-        - Dashboard "my companies" menu item class
-        - Job & Resume dashboard border issue when no listings exist
-
-    Updated:
-        - Bootstrap from 4.3.1 to 4.4.1
-        - FontIconPicker from 2.0.0 to 3.1.1
-        - Updated Core Plugins
-        - Translation .POT file
-
-    Deleted:
-        - Old Footer skins
-        - WPBakery as a required plugin
-
-
-Version 1.4.4.1
-    Fixed:
-        - Company Permalink Issue
-        - Cariera Company Manager MySQL issue
-
-
-Version 1.4.4
-    Added:
-        - ============ MAJOR IMPROVEMENTS TO THE CARIERA COMPANY MANAGER ============
-        - ============ COMPANY DASHBOARD ============ (To edit/delete single companies without editing the jobs)
-        - Single Company submission
-        - Company submission limit per account
-        - Company Permalink editor (Settings -> Permalinks)
-        - Settings page for "Company" CPT
-        - Companies CPT label changing settings
-        - "Company selector" via the backend for jobs instead of a simple text field
-        - Company pages in the dashboard
-        - Company pages assigned after import
-        - Company submit & dashboard elements for WPBakery & Elementor
-        - "Resume Search Form" Element for WPBakery & Elementor
-        - User role class for header-widget-account for better customization purposes
-        - New Job Listing layout ( Job Grid version 3)
-        - New Job Listing layout ( Job List version 5)
-        - New UI animation for "load jobs/resumes" button
-        - Job & Candidate dashboard elements for Elementor
-        - "User role selection" options for the registration form
-        - Email templates for registration in the theme's template folder
-        - Translation and string replacement possibilities for the registration mails
-
-    Improved:
-        - Rewritten Company CPT functions
-        - Moved all company settings to the "Company Settings" page
-        - Company Manager file structure (core plugin)
-        - Moved all company related functions in the core plugin
-        - Single company page template handling
-        - Company search shows "any categories" option now for better UX
-        - UI Design for the "Company details" in the single job page
-        - UI Design for the listing submission (jobs, companies, resumes)
-        - WC Paid Listings "select package" UI design on responsive
-        - UI Design for the "account sign in" box WPJM
-        - WooCommerce checkout ui
-        - Job messages UI regarding close applications and filled positions
-        - Resume manager data repeater UI design
-        - Extra job fields function (core plugin)
-        - Login & Register page template design
-        - Top header is now hidden in the dashboard page
-        - Handling of pages that require the user to be signed in
-        - Rewritten Registration Email notification functions
-
-    Fixed:
-        - WooCommerce button alignment
-        - Login issue when woocommerce is deactivated
-        - Small issue on Job search for Elementor
-        - "reset & rss" button on responsive
-        - Job Package name on checkout spacing issue
-        - Social media widget alignment issue
-        - Login & Register page template alignment issue (buttons and form)
-        - Job quick search issue when typing keyword on the job search elements
-        - Company Manager Writepanels issue when no data
-        - Company Manager CPT actions when companies in trash
-    
-    Updated:
-        - Translation files .POT
-    
-    Deleted:
-        - Secondary menu
-        - Static html registration templates (core plugin)
-
-
-Version 1.4.3
-    Added:
-        - ============ REBUILT CARIERA CORE PLUGIN ============
-        - ============ LEAFLET MAP SUPPORT (OpenStreetMap, MapBox) ============
-        - ============ Radius search for jobs & resumes ============ (works only with Google Map API Key)
-        - All main functions ( settings, extra fields, custom search ) moved to Cariera Core
-        - Rewritten all map functions and moved to core plugin
-        - Advanced map options depending on the map provider
-        - New User Role selection method
-        - New Job Search Form Layout for WPBakery & Elementor
-        - "Application Deadline" added as required plugin
-        - "Classic Editor" as required plugin
-
-    Improved:
-        - Registration form UI
-        - Custom center point option shows when Autofit is disabled
-        - Deregistered WP Resume Manager's default styling sheet for better performance
-        - Resume styling on style.css
-        - Rewritten job search elements and styling
-        - Search boxes styling (default search & sidebar search)
-        - Company listing's job count ui styling
-        - Select2 arrow UI styling
-        - Job, Resume & Company map shortcode works without WPBakery being activated (for Elementor support)
-        - No listings found design in search
-        - Application deadlines
-        - Job & Resume custom search hooks for the sidebar
-
-    Fixed:
-        - Company search select field is using select2 now
-        - Footer social media icons
-        - Mailchimp styling in the footer
-        - Select2 fields on sidebar searches
-        - Mmenu JS error when header is not used or another header has been added via Elementor Pro
-        - Extra job application checkbox, alignment issue with the description
-        - Company pagination center alignment
-        - "Job Search" php error for Elementor element
-        - "Job Search" Box php error for Elementor element
-    
-    Updated:
-        - .POT Files
-        - Update core plugins
-
-
-Version 1.4.2
-    Added:
-        - Reworked social media sharing
-        - New sharing option (telegram)
-
-    Improved:
-        - Job Alert submission page
-        - Job Alert button
-        - All select fields that were using chosen.js now use select2
-        - Select improvements
-        - UI improvements
-
-    Fixed:
-        - PHP issues for the views when a user checked a listing for the first time
-        - Dashboard link on the header user popup menu
-        - Resume preview issue
-        - "Select Package" button is now translatable for WC Paid Listings
-        - Small css issues
-
-    Updated:
-        - Core Plugins
-        - WooCommerce Templates
-        - .POT files
-    
-    Deleted:
-        - Chosen CSS & JS
-
-Version 1.4.1.2
-    Fixed:
-        - Compatibility issue with Resume Manager 1.18.0
-    
-    Updated:
-        - Core Plugins
-
-
-Version 1.4.1.1
-    Improved:
-        - Blog featured post design
-
-    Fixed:
-        - Header login/register button unclosed tag
-        - System Status PHP error
-        - Default display issue pointed by reviewer
-
-    Updated:
-        - WooCommerce Templates
-
-
-Version 1.4.1
-    Added:
-        - Online Knowledge base for the theme (will be updated constantly) 
-        - Header Options for the Extra menu items
-        - Elementor item "Post Job Form"
-        - Elementor item "Submit Resume Form"
-        - Redesigned "related jobs"
-        - Cariera Core Plugin Installation - Plugin Selection
-        - Cariera Core Plugin Installation - Plugin can now be updated
-
-    Improved:
-        - Popup loading depending on the header options
-        - Checkboxes & Radioboxes
-        - Sticky header style
-        - Improved Rate & Salary coding for single & general job templates        
-        - Improved Rate coding for single & general resume templates
-        - Plugin Installation process
-        - Theme Importer
-        - Cariera Core backend styles
-        - Rewritten Job Application css
-
-    Fixed:
-        - Login issue with expired nonce
-        - Username on responsive
-        - Company CPT Backend Position after wpjm 1.34.0
-        - Job & Resume widget display issue on footer
-        - Header widget when sticky header is enabled
-        - Login Popup small design issues
-        - Header display issue when no Menu is selected (on non loggedin users)
-        - Back to top now overlaps cookie bar
-        - JS issue with submenu positioning
-        - Fixed mobile menu JS error when sticky header is enabled and browser is resized
-        - Job Listing responsive issues
-        - mobile menu (hamburger) issue on Mozilla
-
-    Updated:
-        - Documentation
-        - POT Language files
-
-
-Version 1.4.0
-    Added:
-        - ============ SWITCHED TO BOOTSTRAP 4 ============ 
-        - ============ ELEMENTOR SUPPORT ============ All main (job, resume, company related) WPBakery Elements to Elementor
-        - ============ COMPANY SELECTION ============ (users can now select their existing companies or add a new one)
-        - User specific Companies
-        - Dashboard Profile account box
-        - Sidebar search for Jobs
-        - Sidebar search for Resumes
-        - Sidebar search for Companies
-        - Search limitation for a country only
-        - Show empty categories in the job search
-        - Hide Account Delete from the admin in the dashboard
-        - Send email to the Employer when their Job Listings get approved
-        - Send email to the Candidate when their Resumes get approved
-        - Send email to the Candidate when their Resumes expire
-        - Metabox.io as required plugin
-        - Page layout metabox to add sidebars in pages
-        - Header CTA Button
-        - New mobile navigation menu
-        - New mobile header structure
-        - Cart popup via header button instead of sending user to the cart page
-        - Header My Account quick menu when click on the Avatar
-        - ZipRecruiter & Indeed compatibility
-        - Company for each job in the Employer Dashboard table
-        - Save jobs to draft and continue submission from the dashboard
-        - Brand you map presentation for jobs, resumes & companies
-        - Widget areas that can be used on general job, resumes & company pages
-        - Job & Resume tab search on the general header search
-    
-    Improved:
-        - Core Plugin
-        - Restructured the whole core plugin
-        - Company Manager Frontend & Backend
-        - Dashboard functions & design
-        - Rebuilt Headers from scratch
-        - Login & Register
-        - Rewritten single.php for better handling
-        - Rewritten index.php & archive.php for better handling
-        - Bookmarks syles for widgets
-        - Job Type Colors
-        - Popups handling
-        - Popups design
-        - Search tabs UI
-        - Reworked the whole WooCommerce compatibility of the theme
-        - Changed job listings from div to li again
-        - Rewritten the whole job listings css part
-        - Job & Resume designs
-        - Job Alerts compatibility
-        - WPJM Table designs
-        - WPJM Handling
-        - Job & Resume Dashboard
-        - Reworked the whole Map functionality of the theme & restructured all the files
-        - Overall design and changed main color of the theme
-        - Home 1 template
-        - Job Category WPBakery element html markup & css
-        - Improved widget areas for jobs, resumes & companies
-        - Job & Resume tab search
-        - Login & Register template when user is logged in
-        - Job Quick Search in the header
-
-    Fixed:
-        - PHP error when WPJM plugin is not active
-        - Prevent WooCommerce from redirecting to the setup wizard after installation
-        - Whatsapp sharing option issue
-        - Job Alert form design issues
-        - Job Category issue on taxonomy when category was empty
-        - Fixed "Resume Category" display issue on single resume
-        - Mega Menu issue
-        - Select2 styling issues
-        - Small design issues on wpjm widgets
-        - Dashboard when layout was set to boxed
-        - Job Category PHP error on WPBakery element
-        - Single Job & Resume Sidebar issue
-        - Dashboard vertical scrolling issue (uses mCustomScrollbar now)
-        - WPBakery elements issues
-        - Add a menu issue when no menu is selected
-
-    Updated:
-        - WooCommerce Templates
-        - Slider for Slider Revolution
-        - POT Language files
-
-    Deleted:
-        - search.php it's handled by archive now
-        - Metabox.io from within the core plugin
-        - Deleted widget.php and all functions added in theme-support.php
-        - Popups.php
-        - jPush functions for mobile menu handling
-        - Old responsive menu
-        - Job/Resume submission file
-        - Fullscreen search and replaced with the quick search modal
-        
-
-Version 1.3.9
-    Added:
-        - Pagination on Job Reports
-        - Pagination on Resume Reports
-        - Job Content Start to the begining of the single job page
-        - Application notices after user applied to a job
-        - Login button under the info box for external applications when user not logged in
-        - Show only features resumes via WPBakery Element
-        - Currency Position in Job Listing Settings
-    
-    Improved:
-        - Login & Register Functions
-        - Job Applications
-        - Job & Resume Reports
-        - Load more resumes btn
-        - Hide "advance search link" when salary & rate are disabled
-        
-    Fixed:
-        - Typo on Listing Reports (External Clicks)
-        - Translation of strings with vars in them
-        - Entering Backend after logging in via Front End
-        - Saving Company Meta data
-        - Resumes Carousel output
-        - Delete account functionality
-        - Resume title position on widgets
-    
-    Updated:
-        - Slider Revolution
-        - Language Files .POT
-        
-
-Version 1.3.8
-    Added:
-        - cariera_listing_reports shortcode
-        - Reports regarding job listings
-        - Count external redirection (if user uses external url as an application method)
-        - Single Job/Resume views in Report page
-        - Choose color option for menu items on hover
-        - Disabling Dashboard Menu Items - Customizer Options
-        - Icons enabler for each menu item
-        - job-filters.php to the theme from WPJM plugin
-        - Removed unnecessary admin notices function
-    
-    Improved:
-        - Expired Job listings
-        - Job & Resume widgets
-        - Compatibility with WPJM 1.33.0
-
-    Fixed:
-        - External Application Button
-        - Application Restriction to logged in users on external applications
-        - Select box issue
-        - Resume ajax issue when WP Resume Manager is not active
-        - Small responsive issue on job search
-        - Styling issue with the latest WPJM update
-        
-    Updated:
-        - Core Plugins
-        - Core Templates
-
-Version 1.3.7.1
-    Fixed:
-        - Double application message when viewing applications
-        - Countup Companies
-        - Signin for unlogged users when they try to apply on a job
-        - Login-Register form issues when "Login - Register" template was used
-
-Version 1.3.7
-    Added:
-        - WC Paid Listing job submission text added via php for translations
-        - Apply Filter for User Role registration labels
-        - Disable WP Admin Bar for all except admin (via core plugin)
-        - Disable Views Statistics option (graph stats) for the dashboard
-        - Listing loader for jobs, resumes and companies
-        - "Applied Jobs" in the dashboard for candidates
-        
-    Improved:
-        - Footer css styles
-        - Dashboard Links
-        - Jobs Type Color Picker
-        
-    Fixed:
-        - CSS for WPJM upload input
-        - Dashboard issue when WooCommerce is not active
-        - Responsive issues
-        - Resume loading animations
-        - Job Applications display issue on responsive
-        - Multi Job Type display issue
-        - New tag on Multi Job Types
-        - Jobs Type Color picker css and default output issues
-        - Translation issues
-        - Escaping issues
-        - Job Application & Company email output
-        
-    Updated:
-        - Core Plugin
-        - WooCommerce Templates
-        - WPBakery Page Builder Plugin
-        - POT Language Files        
-
-Version 1.3.6
-    Added:
-        - New advanced Job search filters
-        - New Resume search filters
-        - New Social sharing
-        - Icon picker for menu items
-        - Simpleline icons on job category icon picker
-        - Menu Positions for the dashboard
-        - Dashboard Menus for Employers and Candidates seperatly
-        
-    Improved:
-        - Social Sharing 
-        - Theme overall size
-        - Theme performance
-        - Dashboard design and functions
-        - Search filter design
-        - Search filters use flex now
-        
-    Fixed:
-        - Blog post styling issue
-        - Small css issues
-        - Escaping issues
-        - Translation strings
-        - Job Submission design issues
-        
-    Removed:
-        - Google+ from social sharing
-        - Google+ from jobs, companies, resumes
-        
-    Updated:
-        - Core Plugin
-        - WooCommerce Templates
-        - POT language files
-        
-
-Version 1.3.5
-    Added:
-        - Company actions in the backend like wpjm
-        - Quick approve company in the backend
-        - Important message on Cariera welcome page
-        - Removed WooCommerce Nav on User Dashboard
-        - Loader for the Monthly views canvas
-        - Options to disable Company Category & Team Size
-        - Check function when core plugin is active
-        - Classes to the user dashboard depending on the user role
-        
-    Improved:
-        - Orders page on dashboard
-        - Rebuild Menu Walker
-        - Function for Company fields on post job
-        - Submission field changed to Flex
-        - Dashboard navigation classes
-        - Dashboard links
-        
-    Fixed:
-        - Scrolling issue with the dashboard
-        - Small issue on the Cariera Import page
-        - Small css issue on Single Job page
-        - Dashboard issues when WooCommerce isn't activated
-        - Company website showcase when core plugin is not active
-        - Avatar image issue on responsive
-        - Importing demo data issue
-        
-    Updated:
-        - Translation .POT files
-        
-
-Version 1.3.4.2
-    Added:
-        - Plugin installer on core plugin to avoid is_plugin_active issue
-    
-    Improve:
-        - Dashboard Overall
-    
-    Fixed:
-        - Text changed from "listings" to "resumes" on Candidates Dashboard
-        - Escaping issues
-        - Compliant issues
-        - Validation issue of unclosed div on the dashboard
-        - #wpadminbar issue
-        - VC_templates directory to avoid any issues
-
-    Updated:
-        - POT Files
-        
-    Removed:
-        - UI Autocomplete from general search
-        - All remove_filter()
-        
-
-Version 1.3.4.1
-    Fixed:
-        - Views charts showing negative numbers if no views
-        - Showing date on the "Application Deadline"
-        - Deleted default output for Application deadlines
-        - Small issue for included plugins
-        - Dashboard margin top height
-        
-
-Version 1.3.4
-    Added:
-        - MAJOR - NEW Built-in Dedicated Dashboard
-        - Listing views on Dashboard
-        - Charts for users monthly listing views
-        - Listing Packages on the dashboard (WC Paid Listing needs to be activated)
-        - New "My Profile" shortcode
-        - Built-in Avatar Uploader    
-        - Add class to the body when user is logged in
-        - Action hooks before and after the login form
-        - Button that send to the "installation video" on the backend
-        - All core plugins added
-        - New Bloglist version
-        
-    Improved:
-        - Redesigned WooCommerce Pages
-        - Major WooCommerce Improvements
-        - WooCommerce Functions
-        - Comment form design and function
-        - Avatar link changed for the new dashboard - no longer sends to woocommerce dashboard
-        - Dashboard redirection after login
-        - WPJM and core style css
-        - Dashboard Tables
-        - Changed the icons on Employer/Candidate Dashboard
-        - Scrollbar on AJAX Job Search
-    
-    Fixed:
-        - Filename after uploading a file for "apply now"
-        - Small Menu issue
-        - Small CSS issues on Responsive
-        - Small PHP issue on the header class
-        - Small displaying issues when Kirki is not active
-        
-    Removed:
-        - WooCommerce My Account extra links
-        - Add Avatar via WooCommerce
-        - WP User Avatar as a required plugin
-
-
-Version 1.3.3
-    Added:
-        - Disable all Breadcrumbs function
-        - Job Category Background image on single category page
-        - Option to enable/disable job cat image on single cat pages
-        - Job Logos on AJAX job search
-        - Email template colors match the main color of the website
-    
-    Improved:
-        - Overall Performance
-        - Code quality
-        - Send users to the right dashboard depening their user role if redirection enabled
-        - Blog Improvements
-        - Blog Functions
-        - Header 1 Improvements
-        - SEO for the whole theme
-        - Page titles function
-        - Bookmarks
-        - WooCommerce Compatibility
-        
-    Fixed:
-        - WooCommerce "Display name required" on edit account
-        - Small issue with displaying company website
-        - Small JS issue on AJAX search
-        - Small PHP issues
-        - Bookmark bug
-        - Apply for job php issue
-        
-    Updated:
-        - Metabox
-        - WPBakery Page Builder plugin 5.7
-        - WPJM Templates
-        
-
-Version 1.3.2
-    Added:
-        - Company Logos flexibility
-        - Submission Flow
-        - New Paid Listings UX and design (for WC Paid Listings plugin)
-        
-    Improved:
-        - Blog VC Element. Autocomplete Category while writing
-        - General Design
-        - Jobs, Companies, Resumes Sidebar
-        - Candidate & Employer Dashboard
-        - Job and Resume Submission
-        - Preview Jobs & Resumes
-        - Company post status when "Moderate New Listing" is enabled
-        - Select2 plugin styling due to the new WPJM update
-        
-    Fixed:
-        - Blog VC Element. Showing Category Posts
-        - Small CSS issues
-        - Small compatibility issues
-        - Edit Job Applications issue
-        - Small responsive issues
-        - WooCommerce issue with displaying a number of products
-        - Escaping issue
-        
-    Updated:
-        - WooCommerce Templates
-        - Job Manager Template
-        - Resume Manager Template
-        - Language .POT files
-
-Version 1.3.1.1
-    Added:
-        - Geolocation for Company search
-    
-    Improved:
-        - UX for search forms
-        - Customizer options
-        
-    Fixed:
-        - Small typo issues
-        - Small function issues
-        - Geolocation issue
-    
-    Updated:
-        - Language .pot files
-        
-
-Version 1.3.1
-    Added:
-        - Icon Picker for Job & Resume Categories
-        - Quick view for job listings ( on List 3 & Grid 1)
-        - Search Map to browse Companies
-        - Company Map Infoboxes
-        - Half Map for Company Search
-        - Map Location for Single Company
-        - Company Options
-        - New Theme Screenshot
-        - Job Category Slider Option on VC Element
-        - New Company Carousel Version
-        - Candidate Social Media Links
-        - Location on AJAX Job Search
-        
-    Improved:
-        - Job & Resume Categories
-        - Job Category Slider
-        - Cross browser compatibility
-        - Rebuilt AJAX Job Search
-        
-    Updated:
-        - Language .pot files
-        - VC to version 5.6
-
-
-Version 1.3.0.1
-
-    Added:
-        - Map for Single Resume page
-    
-    Improved: 
-        - Remove Company fields from job post type
-    
-    Fixed:
-        - PHP Issue for Company Manager
-        - Company listing CSS issue
-        - Showing Company Listings cache issue
-
-
-Version 1.3.0
-
-    Added:
-        - Company Manager - Custom Company CPT
-        - Companies List
-        - Company AJAX Search
-        - Company Shortcodes
-        - Company VC Elements        
-        - All Resume related functions to a new file
-        - Contact Form option for Candidates & Companies
-        - Enable/Disable Salary & Rate per hour for Jobs
-        - Widget area for Single Resumes page
-        - GDPR field in register options
-        - Redirect to login after successful register
-        - default.css for all default styles
-        - Gutenberg compatibility
-        - Cookie Bar - Notice
-        - Maps change location based on the search location
-        - Premium Icons
-        - Video Modal VC Element
-        - Resume Carousel VC Element
-        - PHP Version checker in Cariera admin panel
-        - Job/Resume Tab Search
-    
-    Improved:
-        - Overall Theme design
-        - Overall code quality
-        - General Resume Functionalities
-        - Slider Importer
-        - Redesigned Resume Page
-        - WooCommerce Customization Options
-        - General Customization Options
-        - Mega menu
-        - Checking if plugins are active so that functions don't cause any errors
-        - General Typography of the theme
-        - Rewritten Job Templates
-        - Improved Submit Job/Resume
-        - Job Sidebar
-        - Job Carousel VC Element
-        - General UX
-        - Crossbrowser compatibility
-        - Compatibility with addons
-        - Map next/previous
-        - Gallery Post slider
-        - "Hello World" post to draft after import
-        - Main style.css
-        - Custom.js rewritten and imporved
-        - Default galleries
-        - Resume Listing markup
-        - Theme Size reduced
-        - Jobs shown on maps
-        - Main navigation
-        - Redesign Job/Resume Popup
-        - Rewritten map functions
-        - VC Default Elements
-    
-    Fixed:
-        - Importer Text
-        - Add Menu visible only to admin
-        - Register disable password field
-        - Escaping issues
-        - Checkboxes issue on applications
-        - small php issues
-        - Replaced all "is_plugin_active" functions
-        - Taxonomy PHP errors
-        - Not redirecting to Dashboard when clicking on profile
-        - Crossbrowser issues
-        - Indeed Integration Compatibility
-        - Updated WPJM Options on import
-        - Job Types colors issue when types disabled
-        - Job/Resume Geo lat & lng issue
-        - Job Category Slider issue
-        - Google Maps VC Element
-        - Resume Categories VC Element
-        
-    Updated:
-        - Cariera Core Plugin
-        - Visual Composer Plugin
-        - Revolution Plugin
-        - WooCommerce Templates (3.5.x Compatibility)
-        - Owl Slider to 2.3.4
-        - Language Files
-    
-    Removed:
-        - WP Job Manager default stylesheet
-        - WP Job Manager Company Profile as required plugin
-
-
-Version 1.2.8.2
-    Fixed:
-        - Pricing Table Responsive issue
-        - Email Notification on Register issue
-    
-    
-Version 1.2.8.1
-    Fixed:
-        - Account Creation when posting a Job
-        - Small CSS issues
-    
-
-Version 1.2.8
-    Added:
-        - Half Map Template for Jobs
-        - Half Map Template for Resumes
-        - Custom scrollbar for Half Map 
-        
-    Improved:
-        - File Structure
-        - Google Maps Lib
-        
-    Fixed:
-        - Small css issues
-        - Login - Register Template issue
-
-
-Version 1.2.7
-    Added:
-        - Redirect to homepage on logout
-        - Built-in Testimonials CPT
-        - Built-in Breadcrumbs
-        - Built-in Pagination
-        
-    Improved:
-        - WooCommerce Page
-        - Dashboard links structure
-        - Theme Security
-        - Header Options
-        - Theme speed
-        - Main functions
-        - Major Core Plugin improvements
-        - Pricing Tables Options
-        
-    Fixed:
-        - Job List 1 & 2 Responsive issues
-        - Job Alerts displaying issue
-        - Google Maps issue on mobile
-        - Job Category Search issue
-        - Pricing Tables VC issue
-        - Small css issues
-    
-    Updated:
-        - RevSlider from 5.4.7.2 to 5.4.7.3
-    
-    Removed:
-        - WooThemes Testimonial plugin from recommended plugins
-        - Breadcrumb NavXT plugin from recommended plugins
-        - WP-PageNavi plugin from recommended plugins
-
-
-Version 1.2.6
-    Added:
-        - Job Type Color Options
-    
-    Fixed:
-        - Small css issues
-    
-
-
-Version 1.2.5
-    Added:
-        - New Home Page
-        - Job Extender for choosing your job layout
-        - 2 New Job List Versions
-        - 2 New Job Grid Versions
-        - Region compatibility
-        - Auto Geo Location
-        - Number of Applications on each job
-        - User Dashboard 
-        - Media Uploader for Jobs Category Images & Icons
-        - Job Category Slider
-        - Job Categories version
-        - Isotope for Job Categories
-        - Job Search Box VC addon
-        - Add Row Color Overlay Options for VC
-        - Transparent Header Option
-        - Menu Items Badges
-        - Pricing Table Version 2
-        
-    Improved:
-        - Job Featured Image
-        - Job Sidebar code
-        - Job Category UX
-        - User Dashboard
-        - Header Code & Options
-        - Job Fields
-        - Submit Job & Resume UI
-        - Home Templates code
-        - Improved & Redesigned Company Page
-        - Theme Options
-        
-    Fixed:
-        - Logo appearance issue
-        - Iconbox & Job Category icon issue
-        - Preloader Effect
-        - Mobile menu login box
-        - Email Template issue on register
-        
-    Updated:
-        - WooCommerce Templates
-        - Envato Plugin
-        - POT File
-        - RevSlider from 5.4.6.6 to 5.4.7.2
-        - Visual Composer from 5.4.5 to 5.4.7
-        
-        
-
-Version 1.2.4.1
-    Fixed:
-        - Small css issue
-        
-    Improved:
-        - My Account
-        
-    Updated:
-        - WooCommerce Templates
-        
-
-Version 1.2.4
-    Added:
-        - Whole New Import Experience
-        - New Welcome Page
-        
-    Improved:
-        - Linkedin integration
-
-    Fixed:
-        - Featured Jobs issue (major)
-        - Home Page 1 intro text
-        - Gallery Posts issue
-        - Gallery image issue
-        - Small design issues
-        
-    Updated:
-        - POT file
-        - RevSlider from 5.4.6.3.1 to 5.4.6.6
-
-
-
-Version 1.2.3.2
-    Improved:
-        - Core Plugin
-    
-    Fixed:
-        - Login & Register issue
-        - Empty widget area when no widget was active
-
-
-
-Version 1.2.3.1
-    Fixed:
-        - Major Plugin issue
-        - Shortcode issues
-        - Small css issues
-
-
-
-Version 1.2.3
-    Added:
-        - Push Menu option
-        - Dynamical option to edit the Home Page intro text
-        - Company Social Media links
-    
-    Improved:
-        - Header 3
-        - File structure
-        - Core Plugin rewritten
-        - Translation POT files
-    
-    Fixed:
-        - WooCommerce my-account small styling issue
-        - "Nav Menu Role" plugin is fully compatible with the theme
-        - String replacement on email notification for new users
-        - Login in Job Alert Page
-        - 1px white border on the end of the page
-        - Maps infobox on mobiles
-        
-    Update:
-        - Update Metaboxes
-        - Pot file
-
-
-
-Version 1.2.2
-    Added:
-        - Menu Background Options
-    
-    Improved:
-        - General Theme functions
-        - Recent Jobs Widget
-        - Featured Jobs Widget
-        - Registration user roles
-    
-    Fixed:
-        - White border on the end of the page
-        - Header 3 responsive issue
-        - Small Style issues
-        - Logo option issue
-        - Streched "recent post" thumbnails
-        - Checkmark issues
-        - Invisible pushmenu on iphones
-        - Login redirection on "post job/submit resume"
-        
-    Update:
-        - Visual Composer 5.4.4 to 5.4.5
-        - Owl Slider from 2.2.0 to 2.3.0
-        - POT File
-
-
-
-Version 1.2.1
-    Added:
-        - Redirection option after login
-    
-    Improved:
-        - Preview Job
-        - Logo Margin in Customizer
-        - Core Plugin
-        - style.css
-        - Stability
-    
-    Fixed:
-        - Mega Menu issue on responsive
-        - Responsive Issues
-        - WooCommerce deprecated functions
-        - Job type style
-        - General Search form bug on IOS 11
-        
-    Update:
-        - Slider Revolution 5.4.6 to 5.4.6.3.1
-        - Visual Composer 5.4 to 5.4.4
-        - POT file
-
-
-
-Version 1.2
-    Added:
-        - Footer widget layout options
-        - Disable Registration Option
-        - Simple line icons
-        - Background option on boxed layout
-        - New Fixed Footer layout
-        - Enable/Disable location autocomplete option
-        - Login & Register page template
-        - Register without password (Password will be emailed to the user)
-        - ReCaptcha Login & Register Option
-        - Styled Email Templates for user registration
-        - 15+ New VC Elements & Options
-        - Metaboxes to edit header, footer, page headers etc.
-        - Page Header Image option for pages
-        - Gallery Post Support
-        - General Search Map for Jobs & Resumes
-        - Home Page Template - Search Banner Version 2
-        - Home Page Template - Search with Map Background
-        - 2 New Job/Resume Category Box Layouts
-        - 10 New Pages
-        
-    Improved:
-        - Login & Register Functions
-        - Responsive.css
-        - Style.css
-        - Job Tags
-        - Boxed customization options
-        - Metaboxes
-        - Coming Soon Page
-        - Google Maps
-        - Main Plugin
-        - Single Job Map
-        - Code Cleanup
-        
-    Fixed:
-        - Small Style Issues
-        - Boxed layout
-        - WooCommerce small display issue
-        - Preloader 1 issue
-        
-    Update:
-        - WooCommerce Templates compatible with the latest version
-        - POT file
-        - Visual Composer 5.3.2 to 5.4
-        - Documentation
-    
-    
-
-Version 1.1
-    Added:
-        - Set Permalink after demo imported
-        - Set Shop, Job & Resume pages after demo is imported
-        - "New" Tag to newly published jobs
-        - Website preloader with 3 different styles
-        - Homepage Job Autocomplete
-        - Google Address Autocomplete
-        - Job page header image background option
-        - Comment support for Resumes
-        - Related Jobs on Single Job Page
-        - Fullwidth Header
-        - "WooCommerce Product per Page" option
-        - "General Search" for the header
-        - Autocomplete for "General Search"
-        - Alert box on top of the job when position is filled
-    
-    Improved:
-        - Code + File structure
-        - Redesigned user dashboard
-        - Redesigned "Job Applications" Page
-        - Cross Browser Compatibility
-        - Customizer Options
-        - Improved Popups
-    
-    Fixed:
-        - Responsive issues
-        - Dashboard links
-        - Small Style Issues
-        - Sticky Header Issue
-        - Employer Dashboard action links issue
-        - Woocommerce small errors
-        - Google Maps error when there is no api key
-        - Chosen.js issues
-    
-    Update:
-        - Rev Slider 5.4.6
-        - Visual Composer 5.3 
-        - Translation file .pot
-
-
-
-Version 1.0.1
-    Added:
-        - Job categories are enabled automatically
-        - Resume categories & skills enabled automatically
-        
-    Fixed: 
-        - Small CSS issues
-
-
-
-Version 1.0
+Cariera - Job Board WordPress Theme
+------------------------------
+
+Version 1.5.1
+    Added:
+        - *** LICENSE MANAGEMENT SYSTEM
+        - *** NEW THEME ONBOARDING
+        - Login & Register form Elementor Element
+        - Product's "Short description" added to Promotional Packages
+        - Map Provider "None" option to not initialize or include any map scripts
+        - Google Maps are now handled with Leaflet
+        - New preloader, which will be on by default
+        - Delete company listing when user account gets deleted
+        - Notification when a listing status changes from "pending_payment" to "pending"
+        - Notification when a listing status changes from "pending_payment" to "published"
+        - Notification when a listing gets relisted
+
+    Improved:
+        - *** MAJOR Performance improvements
+        - *** DYNAMIC ASSETS LOADING using latest technologies | on-demand loading, assets will be loaded only when needed
+        - Onboarding when installing the theme first time
+        - Plugin installation management
+        - Demo importer
+        - Overall theme security
+        - Totally rewritten map functions & using lazy loading method
+        - Map popup UI
+        - Moved Isotope functions for job/resume/company out of the search scripts
+        - Compatibility improvements for Cariera listing templates with WPJM S&F
+        - Rewritten the whole header css
+        - Reworked sticky header to use a custom method instead of external jquery library
+        - Totally reworked Countdown elementor element
+        - Replaces deprecated jQuery functions with latest up-to-date jQuery functions
+        - Dashboard scripts and styles load only on the dashboard pages
+        - Custom Cariera avatar handling
+        - Success/Error notification UI for various pages and actions
+        - Small UX improvement to the new company submission email
+        - Redesigned Blog comments
+        - Some JS functions have been moved to the core plugin to support lazy loading
+        - Job quick preview functionality
+        - Top header moved to a separate template
+        - Template security strengthened
+        - Denqueued WPJM styles to reduce download requests
+        - Single Job Category background issues when 2 taxonomies have the same job and both have a background image
+
+    Fixed:
+        - Login & Register styling outside of the popup
+        - geocomplete js error in the backend when Google Maps is the main map provider
+        - Cariera Notification PHP error fixed
+        - Company submission label escaping issue
+        - Settings page wrong shortcode in the description for [cariera_my_account]
+        - Job Listing loader out of the page container on some pages
+        - Some Elementor elements not initializing the elements scripts
+        - Select2 overlapping select when loggedin as admin
+        - Dashboard menu being cut on small screen devices (now scrollable)
+        - Blog posts not showing the right user avatar
+        - Company Board hide filter option
+        - Bugs on leaflet maps
+        - In-site Notification text localization
+        - WPJM Regions causing js errors when activated
+        - Notifications "mark as read" removing "cart count" in header
+        - Job Alerts table not showing saved categories & tags
+        - Menu badge issue on the parent menu item
+
+    Update:
+        - Bootstrap 4.4.1 to 4.6.0
+        - job-dashboard to use latest WPJM template
+
+    Removed:
+        - Native Google Map functions (uses leaflet now)
+        - jQuery headroom library
+        - Old countdown library
+
+
+Version 1.5.0
+    Added:
+        - *** TOTAL REFACTORED assets - CSS & JS (all assets will be shipped minified from now on)
+        - *** USER IN-SITE NOTIFICATIONS (listing status, applications, promotions)
+        - Enable/disable User Notifications option
+        - *** PROMOTIONAL PACKAGE (to make a job, resume, company featured)
+        - Enable/disable options for Listing Promotion Email
+        - Enable/disable options for Listing Promotion Expired Email
+        - Custom cron schedules for database cleaning
+        - Disable additional font icon library option (via main theme settings)
+        - Custom Job Template support for "S&F for WPJM"
+        - Custom Resume Template support for "S&F for WPJM"
+        - Full support for the new "WPJM Resume Alerts" plugin by sMyles
+        - Options to choose job layout for taxonomy pages (in customizer)
+        - Options to choose resume layout for taxonomy pages (in customizer)
+        - Options to change the header CTA link (main settings)
+        - User details to the admin "new user" email notification
+        - Featured icon on the listings marker in the map to stand out
+        - Companies: Sort by featured (also default now)
+        - WooCommerce loading animation on product add to cart
+        - VK & Telegram to the footer social media options
+        - Feature resume mark in candidate dashboard
+        - css class to job_application msg for better customization flexibility
+        - Autohub (new theme) to the welcome page
+
+    Improved:
+        - Company Search and listing system
+        - Main Template management
+        - Header extra is loaded from a seperated template now
+        - WooCommerce products "add to cart"
+        - Cariera_Resume_Extender methods
+        - Featured listings handling
+        - Company contact is now added via template for better flexibility
+        - Pingback url auto-discovery header via function for latest WordPress standards
+        - Deleted old and unused css for jobs/resumes
+        - Reworked all the listings styles
+        - Overall Job Alerts
+        - Job Alerts shows only for admin and canidate on the dashboard now
+        - Leaflet uses local files now
+        - Gmaps & leaflet js files
+        - Gmaps Infobox animation
+        - Small UI Improvements
+        - small design tweaks for Job List 3
+        - Elementor Cariera Button Element
+
+    Fixed:
+        - PHP notice when resume expires and email has to be send
+        - PHP error for the "Company Dashboard" in header - extra user menu
+        - Cart header button being clickable on cart and checkout page
+        - Header cart AJAX reload issue
+        - PHP notice on import
+        - WC creating pages and duplicating the shop pages on import
+        - Outputting comma on empty shortcode attr on Job Board Elementor element
+        - Small dashboard UI issue
+        - Preloader zoom effect issue
+        - PHP error with Blog Slider Layout 2 when post has no category
+        - Job, Company, Resume loader being overlapped by the footer
+        - Leaflet map overlapping menu on hover
+        - select2 overlapping UI issue
+        - "Featured" badge for Job list 3,4 is now translatable
+        - "Featured" badge for Job Grid 1,2 is now translatable
+        
+    Updated:
+        - Least suggested PHP Version now to 7.2
+        - Job Alert templates
+        - Header Quick Search is turned off by default
+        - Leaflet libraries to the latest version
+        - POT Files
+
+
+Version 1.4.8
+    Added:
+        - MAIN SETTINGS PAGE in the backend under "Cariera"
+        - Documentation page in the backend under "Cariera"
+        - TOTAL REWORK of the login & register system from the ground up
+        - User Registration Approval System (via the new settings page)
+        - EMAIL MANAGEMENT for all the emails sent from the theme
+        - Reset your password with your Email or Username (username is the new method)
+        - Moved all "dashboard pages" to the main settings under "Cariera"
+        - Status badges (filled/expired) to the job listing if they are visible
+        - Support for WooCommerce Subscription in the job/resume submission flow
+        - Option to enable/disable "Hide Candidate Contact from owner"
+        - New output actions for Resume Listings Meta Start/End (List version 1&2) *WPJM Field Editor Support*
+        - New output actions for Company Listings Meta Start/End (List version 1&2) *WPJM Field Editor Support*
+        - Fullwidth page template (to avoid pages loading on a container and expanding on load)
+        - Font Sizer controler for "Counterup" Elementor Element
+        - Admin notice when Google Maps API Key is not added
+        - Options in the job/company/resume half map to change the main text
+        - wp_body_open() tag to be up to date with the latest standards
+        - Excluding Listing Taxonomies from "Taxonomy List/Grid" Elementor Element
+
+    Improved:
+        - Login & Register security
+        - Login & Register code flexibility
+        - Login & Register performance
+        - Password Reset functionality
+        - Error detection on the login & register
+        - Custom Database Tables handling        
+        - Cariera_Job_Extender class
+        - Total rework of the jobs-ajax-filters.js
+        - Reworked reCaptcha functionality
+        - Conditional Script loading | Certain scripts will only be loaded if needed to improve performance
+        - WooCommerce Checkout Page
+        - WooCommerce Cart page design
+        - WooCommerce Orders page design
+        - Design of expired listing single job page
+        - Cariera Avatar image size. Images get cropped to a square size now
+        - "Hide Candidate Contact from Owner" functions
+        - WPJM Template usage
+        - WPJM Resumes Template usage
+        - Mobile menu - parent menues are now clickable
+        - Avatar upload functionality
+        - Cart btn in the header doesn't show "0" anymore, it will show only when there are items in Cart
+        - After Import - dashboard pages get set up automatically now
+        
+    Fixed:
+        - Job Listing quick view job description UI issue
+        - WPJM Visibility - Candidate Video issue
+        - "g-recaptcha-response" undefined PHP error on register
+        - Autologin issue on rare occasions
+        - Cariera Avatar PHP error
+        - Job Category Slider PHP error
+        - Resume Carousel design issue
+        - WooCommerce Edit Address page and design
+        - Small string localization issues in Cariera Core
+        - Categories slider element for WPBakery PHP errors
+        - Issues with WPBakery elements PHP errors
+        - Mapbox map display issue
+        - Listing Category Image icon alignment issues
+        - Avatar Upload issues due to WordPress 5.6
+        - Jobs not loading sometimes after WordPress 5.6
+        - Companies not loading sometimes after after WordPress 5.6
+        - "Listing Packages" to "Active Packages"
+        - Dashboard menu height scroll issue on Firefox after WordPress 5.6
+        
+    Updated:
+        - wpjm template: job-dashboard to use "Harden security of job dashboard actions."
+
+    Removed:
+        - Deprecated data-vocabulary.org schema from Breadcrumbs
+
+
+Version 1.4.7
+    Added:
+        - New and more secure Job & Company Mapping
+        - Company field validation issue when editing/submitting a company
+        - "Importer has stopped" message on import error infinite loading
+        - Filter "cariera_registration_users_attachment' for user attachments on register
+        - Company Post Statuses in the backend
+        - Submission Flow CPT class for better handling
+        - Skin support for Google Maps
+        - Job List Layout 5 support for job half map page
+        - "Categories" & "Job Types" filters to the "Job Board" Elementor Element
+        - Email notification to admin when a new company has been submitted
+        - After editing a company you will be redirected to the company dashboard
+        - Company visibility options
+        - Discourage search engines from indexing company listings option
+        - Company "load more" functionality and made it default instead of "numeric pagination"
+        - New User Avatar upload method for better UX & Performance
+        - Full multisite support
+        - Resume Contact button is hidden from Resume Author
+        - "Sorry to see you go" Email notification when a user deletes their account
+        - New "Listing Category List" layout - layout 3
+        - New "Listing Category Grid" layout - layout 4
+        - Autologin after registration functionality and option (can be disabled)
+        - Full support for all Premium WPJM addons created by sMyles
+
+    Improved:
+        - Overall security
+        - Total rework of the Job & Companies mapping
+        - Jobs & companies connecting functions
+        - Assigning Jobs to a Company through Company ID
+        - Company Form when editing an existing job
+        - Company functions improved and reworked
+        - Job's "company_manager_id" meta shows pending companies in the backend too now
+        - WPJM/WPRM Search category select2 improvements
+        - Company "Team Size" is now a single select instead of multiselect
+        - Custom.js function security when a script is not enqueued
+        - Company editing method
+        - "My Profile - user avatar upload" design and responsiveness
+        - Single resume page html markup and css improvements
+
+    Fixed:
+        - "My Profile" form fields sanitized
+        - Issue when not logged in user tries to go to "My Profile" page
+        - Job Taxonomy errors on job overview when core plugin is not active
+        - Resume Taxonomy errors on resume overview when core plugin is not active
+        - Select2 display issue
+        - Company Team Size not showing
+        - Issue to lose job-company connection when Company name was changed
+        - Company sharing button position
+        - Company issue with the term-select.php
+        - Company category select2 not being initialized
+        - Keyword input being clickable on responsive
+        - UI issue when the plugin "WooCommerce Stripe Payment Gateway" is active
+        - Job Search Select2 issues due to the ".job-manager-category-dropdown" not being initialized by the theme
+        - Elementor Listing Categories PHP Error
+        - Language attribute in the html tag
+        - Login "Do not redirect" functionality
+        - Password reset small issues and translations
+        - Job Category taxonomy php issue fixed when no background image exists
+        - Job Category Grid 3 when using an image icon
+        - Small css issues
+        
+    Updated:
+        - Select2.js from 4.0.8 to 4.0.13
+
+    Remove:
+        - ".job-manager-category-dropdown" select2 init from the theme for better handling and compatibility fixes
+
+Version 1.4.6
+    Added:        
+        - User role switcher (Employer - Candidate) on the edit profile
+        - Support for social login plugin "WordPress Social Login (miniorange)": https://wordpress.org/plugins/miniorange-login-openid/
+        - Support for social login plugin "WordPress Social Login": https://wordpress.org/plugins/wordpress-social-login/
+        - Support for the "wp_nav_menu_item_custom_fields" function in the extended "cariera_walker_nav_edit" class to support third party plugins
+        - Check the GDPR checkbox on register and show a message on top
+        - Register Header & Footer locations to support Elementor Pro's Theme Builder
+        - "job_manager_default_company_logo" filter for the jobs default data-thumbnail handling
+        - "resume_manager_default_candidate_photo" for the resumes default data-thumbnail handling
+        - Hide Pagination option for jobs, resumes & companies in Elementor
+        - Job search options for "job board" element in Elementor
+        - Leaflet maps on job quick view
+        - Leaflet styles and scripts locally for improved performance and speed
+        - Select2 for job's company selection (backend) for better UX
+        - Cariera Company Manager Bookmarks (compatibility with the WP Job Manager Bookmarks plugin)
+        - Cariera Company Manager Geocoding Class to handle extra geocoding for companies
+        - "Job overview" data comes from the job-overview.php template now
+        - Missing action hooks on the new template "Job overview" for better data output handling
+        - "Company overview" data comes from the company-overview.php template now
+        - "Resume overview" data comes from the resume-overview.php template now
+        - Missing action hooks (single_resume_meta_start & single_resume_meta_end) on the new template "Resume overview" for better data output handling
+        - Salary Field to Structured Data (schema.org markup)
+        - Add og:image tag for jobs
+        - Hide the "resume contact details" under the Resume Title if the user does not have the permission to view the Resume's "Contact Details"
+        - Extra hooks for the Job Listings, Single Job Page, Single Company Page & Single Resume Page for compatibility purposes with *WPJM Field Editor* Plugin
+        - Email template is used for the "password reset" email functionality
+        - Enable/disable email notification on user register option
+        - Social Sharing for single company & resume pages
+        - Hook after the body tag "do_action( 'cariera_body_start' )"
+        - Hide & publish a Company from the Company Dashboard
+        - Edit Company when it's private
+        - "Career Level, Experience, Qualification" Taxonomies for the Job Listings
+        - "Career Level, Experience, Qualification" settings to disable these Taxonomies
+        - "Career Level, Experience, Qualification" to the job submission
+        - Options to enable/disable "Education & Experience" for resumes
+        - Options to send "approved" email notification for Jobs & Resumes 
+        - Options to send "expired" email notification for Resumes 
+
+    Improved:
+        - Login & Register overall system
+        - Redirection Options after Login ( Dashboard, Home, Custom Page, No Redirection )
+        - Job & Resume search layout 2 responsive UI
+        - "Submit Resume" design on job application when "Force Resume Creation" has been enabled
+        - WC Paid Listing packages UX for responsive view
+        - Job listings pull company logo with a higher priority then "featured/company logo" from withing the job
+        - Cariera Company Manager Geocoding Improvements
+        - User avatar upload section UI improvements
+        - Login & Register small UI improvements
+        - UI for "Download CSV" in job applications, now it's made into a button instead of a link
+        - Company phone number made into an anchor, now you can call the company by clicking on the phone number
+        - Login & Register Template on Responsive (height and scrolling issues)
+        - Check all extra fields with isset before updating the data
+        - Various improvements on the Cariera Company Manager
+        - Small UI improvements
+        - Single Resume Page content now uses hooks
+        - Switched Resume "Education & Experience" from Meta to Taxonomies
+        - XSS Security vunerabilities
+
+    Fixed:
+        - Fontawesome icons that were still using fontawesome version 4 classes
+        - "Login error redirection" when application requires user to be logged in and login layout has been set to "custom page" instead of "popup"
+        - Reset job filters issue (reseting select2 fields)
+        - Iconselector issue (500px is not the default icon anymore)
+        - Sharing class for telegram
+        - Job quick view map issue when google map is not selected as a map provider
+        - Signin bottom links visual issue
+        - WooCommere single product issue when didn't have description and reviews
+        - Better text description for some customizer options
+        - Search tags background color when active and inactive
+        - Job Category issue on Job Grid 1 when job didn't have a category
+        - Hiding the chosen.js created by the Field Editor plugin
+        - Importing issue with the latest Elementor version 2.9.14
+        - Job submission with an existing company if company has more "required" fields
+        - Company Logo upload on job submission
+
+    Updated:
+        - Leaflet.js from 1.5.1 to 1.6.0
+        - WordPress Importer to 0.7
+        - WooCommerce Templates
+        - Core Plugins
+
+
+Version 1.4.5.2
+    Added:
+        - Fontawesome verion 5 iconpicker compatibility
+
+    Improved:
+        - Company listing 1 UI
+
+    Fixed:
+        - Job applications css issue
+        - Fontawesome issue for icons. Version 4 clashing with version 5 that was added by Elementor
+
+    Updated:
+        - Fontawesome version 4 to version 5
+
+
+Version 1.4.5.1
+    Fixed:
+        - After Import issue
+
+    Updated:
+        - Importing Content
+
+
+Version 1.4.5
+    Added:
+        - 3 NEW Home Pages
+        - 3 NEW Company listing layouts
+        - 3 NEW Resume listing layouts
+        - ===== Switched the theme 100% to Elementor =====
+        - ===== Redesigned all pages =====
+        - Elementor compatibility in the Importer
+        - Elementor default global font changed to "default" for compatibility purpose
+        - Elementor default global color changed to "default colors" for compatibility purpose
+        - Location Autocomplete for company location fields for Leaflet
+        - Footer options to customize the whole footer colors and bg
+        - Content formatting on content editor for job, company & resume listing submission
+        - Login & register page template, reworked the whole design
+        - Options to change the dashboard statistics colors (border & background)
+        - GDPR Link option to the Registration form
+        - Switched from Owl Slider to Slick Slider
+        - Elementor as a required plugin
+        - New Blog Post layout element        
+        - New Blog Post Slider layout (Elementor)
+        - JS functions support on Elementor in edit mode
+        - New Job & Resume Tab search layout, also color skin (light & dark)
+        - 2 new listing category layouts
+        - 10+ New Elementor elements & element layouts
+        - New Testimonial Style (Elementor)
+        - New Pricing Table Style (Elementor)
+        - Header cta specific class (job & resume) for better customization flexibility
+        - Color overlay option for video popup (Elementor element)
+        - LEAFLET map support for Home 4 template
+
+    Improved:
+        - Functions structure for WPJM & WPRM
+        - Job, Company & Resume preview step UI design
+        - Job & Resume reports table UI design
+        - Reworked footer
+        - Single Job file for future improvements
+        - All slider elements
+        - Total rework of the custom.js file
+        - Elementor functions added in Cariera_Elementor class
+        - Total Job & Resume Category elements rework
+        - Company Post classes
+        - Reworked Company Templates
+        - Company shortcode: Template selection
+        - Job Listing List 1 css issue
+        - Main navigation css
+        - Menu item badge styling
+        - Importing times
+
+    Fixed:
+        - ZipRecruiter & Indeed job listing display issue
+        - Responsive issue for ZipRecruiter & Indeed job listing
+        - User search to change the author for single companies
+        - Location Autocomplete issue on job submission due to 2 location inputs
+        - Job Auto suggestion showing the wrong results
+        - Pagination UI issue on responsive
+        - Company selection issue on responsive
+        - Company name and select fields on responsive issue
+        - Icon selector issue
+        - Job & Resume Elementor element issue
+        - External application redirection issue
+        - Resume & Company slider image width
+        - Small css issues for Job listing (list 4-5 & grid 3)
+        - Submit Company classes in the dashboard
+        - Company jobs color overflowing on responsive
+        - Social media footer icons alignment
+        - Social media footer background on hover
+        - Dashboard "my companies" menu item class
+        - Job & Resume dashboard border issue when no listings exist
+
+    Updated:
+        - Bootstrap from 4.3.1 to 4.4.1
+        - FontIconPicker from 2.0.0 to 3.1.1
+        - Updated Core Plugins
+        - Translation .POT file
+
+    Deleted:
+        - Old Footer skins
+        - WPBakery as a required plugin
+
+
+Version 1.4.4.1
+    Fixed:
+        - Company Permalink Issue
+        - Cariera Company Manager MySQL issue
+
+
+Version 1.4.4
+    Added:
+        - ============ MAJOR IMPROVEMENTS TO THE CARIERA COMPANY MANAGER ============
+        - ============ COMPANY DASHBOARD ============ (To edit/delete single companies without editing the jobs)
+        - Single Company submission
+        - Company submission limit per account
+        - Company Permalink editor (Settings -> Permalinks)
+        - Settings page for "Company" CPT
+        - Companies CPT label changing settings
+        - "Company selector" via the backend for jobs instead of a simple text field
+        - Company pages in the dashboard
+        - Company pages assigned after import
+        - Company submit & dashboard elements for WPBakery & Elementor
+        - "Resume Search Form" Element for WPBakery & Elementor
+        - User role class for header-widget-account for better customization purposes
+        - New Job Listing layout ( Job Grid version 3)
+        - New Job Listing layout ( Job List version 5)
+        - New UI animation for "load jobs/resumes" button
+        - Job & Candidate dashboard elements for Elementor
+        - "User role selection" options for the registration form
+        - Email templates for registration in the theme's template folder
+        - Translation and string replacement possibilities for the registration mails
+
+    Improved:
+        - Rewritten Company CPT functions
+        - Moved all company settings to the "Company Settings" page
+        - Company Manager file structure (core plugin)
+        - Moved all company related functions in the core plugin
+        - Single company page template handling
+        - Company search shows "any categories" option now for better UX
+        - UI Design for the "Company details" in the single job page
+        - UI Design for the listing submission (jobs, companies, resumes)
+        - WC Paid Listings "select package" UI design on responsive
+        - UI Design for the "account sign in" box WPJM
+        - WooCommerce checkout ui
+        - Job messages UI regarding close applications and filled positions
+        - Resume manager data repeater UI design
+        - Extra job fields function (core plugin)
+        - Login & Register page template design
+        - Top header is now hidden in the dashboard page
+        - Handling of pages that require the user to be signed in
+        - Rewritten Registration Email notification functions
+
+    Fixed:
+        - WooCommerce button alignment
+        - Login issue when woocommerce is deactivated
+        - Small issue on Job search for Elementor
+        - "reset & rss" button on responsive
+        - Job Package name on checkout spacing issue
+        - Social media widget alignment issue
+        - Login & Register page template alignment issue (buttons and form)
+        - Job quick search issue when typing keyword on the job search elements
+        - Company Manager Writepanels issue when no data
+        - Company Manager CPT actions when companies in trash
+    
+    Updated:
+        - Translation files .POT
+    
+    Deleted:
+        - Secondary menu
+        - Static html registration templates (core plugin)
+
+
+Version 1.4.3
+    Added:
+        - ============ REBUILT CARIERA CORE PLUGIN ============
+        - ============ LEAFLET MAP SUPPORT (OpenStreetMap, MapBox) ============
+        - ============ Radius search for jobs & resumes ============ (works only with Google Map API Key)
+        - All main functions ( settings, extra fields, custom search ) moved to Cariera Core
+        - Rewritten all map functions and moved to core plugin
+        - Advanced map options depending on the map provider
+        - New User Role selection method
+        - New Job Search Form Layout for WPBakery & Elementor
+        - "Application Deadline" added as required plugin
+        - "Classic Editor" as required plugin
+
+    Improved:
+        - Registration form UI
+        - Custom center point option shows when Autofit is disabled
+        - Deregistered WP Resume Manager's default styling sheet for better performance
+        - Resume styling on style.css
+        - Rewritten job search elements and styling
+        - Search boxes styling (default search & sidebar search)
+        - Company listing's job count ui styling
+        - Select2 arrow UI styling
+        - Job, Resume & Company map shortcode works without WPBakery being activated (for Elementor support)
+        - No listings found design in search
+        - Application deadlines
+        - Job & Resume custom search hooks for the sidebar
+
+    Fixed:
+        - Company search select field is using select2 now
+        - Footer social media icons
+        - Mailchimp styling in the footer
+        - Select2 fields on sidebar searches
+        - Mmenu JS error when header is not used or another header has been added via Elementor Pro
+        - Extra job application checkbox, alignment issue with the description
+        - Company pagination center alignment
+        - "Job Search" php error for Elementor element
+        - "Job Search" Box php error for Elementor element
+    
+    Updated:
+        - .POT Files
+        - Update core plugins
+
+
+Version 1.4.2
+    Added:
+        - Reworked social media sharing
+        - New sharing option (telegram)
+
+    Improved:
+        - Job Alert submission page
+        - Job Alert button
+        - All select fields that were using chosen.js now use select2
+        - Select improvements
+        - UI improvements
+
+    Fixed:
+        - PHP issues for the views when a user checked a listing for the first time
+        - Dashboard link on the header user popup menu
+        - Resume preview issue
+        - "Select Package" button is now translatable for WC Paid Listings
+        - Small css issues
+
+    Updated:
+        - Core Plugins
+        - WooCommerce Templates
+        - .POT files
+    
+    Deleted:
+        - Chosen CSS & JS
+
+Version 1.4.1.2
+    Fixed:
+        - Compatibility issue with Resume Manager 1.18.0
+    
+    Updated:
+        - Core Plugins
+
+
+Version 1.4.1.1
+    Improved:
+        - Blog featured post design
+
+    Fixed:
+        - Header login/register button unclosed tag
+        - System Status PHP error
+        - Default display issue pointed by reviewer
+
+    Updated:
+        - WooCommerce Templates
+
+
+Version 1.4.1
+    Added:
+        - Online Knowledge base for the theme (will be updated constantly) 
+        - Header Options for the Extra menu items
+        - Elementor item "Post Job Form"
+        - Elementor item "Submit Resume Form"
+        - Redesigned "related jobs"
+        - Cariera Core Plugin Installation - Plugin Selection
+        - Cariera Core Plugin Installation - Plugin can now be updated
+
+    Improved:
+        - Popup loading depending on the header options
+        - Checkboxes & Radioboxes
+        - Sticky header style
+        - Improved Rate & Salary coding for single & general job templates        
+        - Improved Rate coding for single & general resume templates
+        - Plugin Installation process
+        - Theme Importer
+        - Cariera Core backend styles
+        - Rewritten Job Application css
+
+    Fixed:
+        - Login issue with expired nonce
+        - Username on responsive
+        - Company CPT Backend Position after wpjm 1.34.0
+        - Job & Resume widget display issue on footer
+        - Header widget when sticky header is enabled
+        - Login Popup small design issues
+        - Header display issue when no Menu is selected (on non loggedin users)
+        - Back to top now overlaps cookie bar
+        - JS issue with submenu positioning
+        - Fixed mobile menu JS error when sticky header is enabled and browser is resized
+        - Job Listing responsive issues
+        - mobile menu (hamburger) issue on Mozilla
+
+    Updated:
+        - Documentation
+        - POT Language files
+
+
+Version 1.4.0
+    Added:
+        - ============ SWITCHED TO BOOTSTRAP 4 ============ 
+        - ============ ELEMENTOR SUPPORT ============ All main (job, resume, company related) WPBakery Elements to Elementor
+        - ============ COMPANY SELECTION ============ (users can now select their existing companies or add a new one)
+        - User specific Companies
+        - Dashboard Profile account box
+        - Sidebar search for Jobs
+        - Sidebar search for Resumes
+        - Sidebar search for Companies
+        - Search limitation for a country only
+        - Show empty categories in the job search
+        - Hide Account Delete from the admin in the dashboard
+        - Send email to the Employer when their Job Listings get approved
+        - Send email to the Candidate when their Resumes get approved
+        - Send email to the Candidate when their Resumes expire
+        - Metabox.io as required plugin
+        - Page layout metabox to add sidebars in pages
+        - Header CTA Button
+        - New mobile navigation menu
+        - New mobile header structure
+        - Cart popup via header button instead of sending user to the cart page
+        - Header My Account quick menu when click on the Avatar
+        - ZipRecruiter & Indeed compatibility
+        - Company for each job in the Employer Dashboard table
+        - Save jobs to draft and continue submission from the dashboard
+        - Brand you map presentation for jobs, resumes & companies
+        - Widget areas that can be used on general job, resumes & company pages
+        - Job & Resume tab search on the general header search
+    
+    Improved:
+        - Core Plugin
+        - Restructured the whole core plugin
+        - Company Manager Frontend & Backend
+        - Dashboard functions & design
+        - Rebuilt Headers from scratch
+        - Login & Register
+        - Rewritten single.php for better handling
+        - Rewritten index.php & archive.php for better handling
+        - Bookmarks syles for widgets
+        - Job Type Colors
+        - Popups handling
+        - Popups design
+        - Search tabs UI
+        - Reworked the whole WooCommerce compatibility of the theme
+        - Changed job listings from div to li again
+        - Rewritten the whole job listings css part
+        - Job & Resume designs
+        - Job Alerts compatibility
+        - WPJM Table designs
+        - WPJM Handling
+        - Job & Resume Dashboard
+        - Reworked the whole Map functionality of the theme & restructured all the files
+        - Overall design and changed main color of the theme
+        - Home 1 template
+        - Job Category WPBakery element html markup & css
+        - Improved widget areas for jobs, resumes & companies
+        - Job & Resume tab search
+        - Login & Register template when user is logged in
+        - Job Quick Search in the header
+
+    Fixed:
+        - PHP error when WPJM plugin is not active
+        - Prevent WooCommerce from redirecting to the setup wizard after installation
+        - Whatsapp sharing option issue
+        - Job Alert form design issues
+        - Job Category issue on taxonomy when category was empty
+        - Fixed "Resume Category" display issue on single resume
+        - Mega Menu issue
+        - Select2 styling issues
+        - Small design issues on wpjm widgets
+        - Dashboard when layout was set to boxed
+        - Job Category PHP error on WPBakery element
+        - Single Job & Resume Sidebar issue
+        - Dashboard vertical scrolling issue (uses mCustomScrollbar now)
+        - WPBakery elements issues
+        - Add a menu issue when no menu is selected
+
+    Updated:
+        - WooCommerce Templates
+        - Slider for Slider Revolution
+        - POT Language files
+
+    Deleted:
+        - search.php it's handled by archive now
+        - Metabox.io from within the core plugin
+        - Deleted widget.php and all functions added in theme-support.php
+        - Popups.php
+        - jPush functions for mobile menu handling
+        - Old responsive menu
+        - Job/Resume submission file
+        - Fullscreen search and replaced with the quick search modal
+        
+
+Version 1.3.9
+    Added:
+        - Pagination on Job Reports
+        - Pagination on Resume Reports
+        - Job Content Start to the begining of the single job page
+        - Application notices after user applied to a job
+        - Login button under the info box for external applications when user not logged in
+        - Show only features resumes via WPBakery Element
+        - Currency Position in Job Listing Settings
+    
+    Improved:
+        - Login & Register Functions
+        - Job Applications
+        - Job & Resume Reports
+        - Load more resumes btn
+        - Hide "advance search link" when salary & rate are disabled
+        
+    Fixed:
+        - Typo on Listing Reports (External Clicks)
+        - Translation of strings with vars in them
+        - Entering Backend after logging in via Front End
+        - Saving Company Meta data
+        - Resumes Carousel output
+        - Delete account functionality
+        - Resume title position on widgets
+    
+    Updated:
+        - Slider Revolution
+        - Language Files .POT
+        
+
+Version 1.3.8
+    Added:
+        - cariera_listing_reports shortcode
+        - Reports regarding job listings
+        - Count external redirection (if user uses external url as an application method)
+        - Single Job/Resume views in Report page
+        - Choose color option for menu items on hover
+        - Disabling Dashboard Menu Items - Customizer Options
+        - Icons enabler for each menu item
+        - job-filters.php to the theme from WPJM plugin
+        - Removed unnecessary admin notices function
+    
+    Improved:
+        - Expired Job listings
+        - Job & Resume widgets
+        - Compatibility with WPJM 1.33.0
+
+    Fixed:
+        - External Application Button
+        - Application Restriction to logged in users on external applications
+        - Select box issue
+        - Resume ajax issue when WP Resume Manager is not active
+        - Small responsive issue on job search
+        - Styling issue with the latest WPJM update
+        
+    Updated:
+        - Core Plugins
+        - Core Templates
+
+Version 1.3.7.1
+    Fixed:
+        - Double application message when viewing applications
+        - Countup Companies
+        - Signin for unlogged users when they try to apply on a job
+        - Login-Register form issues when "Login - Register" template was used
+
+Version 1.3.7
+    Added:
+        - WC Paid Listing job submission text added via php for translations
+        - Apply Filter for User Role registration labels
+        - Disable WP Admin Bar for all except admin (via core plugin)
+        - Disable Views Statistics option (graph stats) for the dashboard
+        - Listing loader for jobs, resumes and companies
+        - "Applied Jobs" in the dashboard for candidates
+        
+    Improved:
+        - Footer css styles
+        - Dashboard Links
+        - Jobs Type Color Picker
+        
+    Fixed:
+        - CSS for WPJM upload input
+        - Dashboard issue when WooCommerce is not active
+        - Responsive issues
+        - Resume loading animations
+        - Job Applications display issue on responsive
+        - Multi Job Type display issue
+        - New tag on Multi Job Types
+        - Jobs Type Color picker css and default output issues
+        - Translation issues
+        - Escaping issues
+        - Job Application & Company email output
+        
+    Updated:
+        - Core Plugin
+        - WooCommerce Templates
+        - WPBakery Page Builder Plugin
+        - POT Language Files        
+
+Version 1.3.6
+    Added:
+        - New advanced Job search filters
+        - New Resume search filters
+        - New Social sharing
+        - Icon picker for menu items
+        - Simpleline icons on job category icon picker
+        - Menu Positions for the dashboard
+        - Dashboard Menus for Employers and Candidates seperatly
+        
+    Improved:
+        - Social Sharing 
+        - Theme overall size
+        - Theme performance
+        - Dashboard design and functions
+        - Search filter design
+        - Search filters use flex now
+        
+    Fixed:
+        - Blog post styling issue
+        - Small css issues
+        - Escaping issues
+        - Translation strings
+        - Job Submission design issues
+        
+    Removed:
+        - Google+ from social sharing
+        - Google+ from jobs, companies, resumes
+        
+    Updated:
+        - Core Plugin
+        - WooCommerce Templates
+        - POT language files
+        
+
+Version 1.3.5
+    Added:
+        - Company actions in the backend like wpjm
+        - Quick approve company in the backend
+        - Important message on Cariera welcome page
+        - Removed WooCommerce Nav on User Dashboard
+        - Loader for the Monthly views canvas
+        - Options to disable Company Category & Team Size
+        - Check function when core plugin is active
+        - Classes to the user dashboard depending on the user role
+        
+    Improved:
+        - Orders page on dashboard
+        - Rebuild Menu Walker
+        - Function for Company fields on post job
+        - Submission field changed to Flex
+        - Dashboard navigation classes
+        - Dashboard links
+        
+    Fixed:
+        - Scrolling issue with the dashboard
+        - Small issue on the Cariera Import page
+        - Small css issue on Single Job page
+        - Dashboard issues when WooCommerce isn't activated
+        - Company website showcase when core plugin is not active
+        - Avatar image issue on responsive
+        - Importing demo data issue
+        
+    Updated:
+        - Translation .POT files
+        
+
+Version 1.3.4.2
+    Added:
+        - Plugin installer on core plugin to avoid is_plugin_active issue
+    
+    Improve:
+        - Dashboard Overall
+    
+    Fixed:
+        - Text changed from "listings" to "resumes" on Candidates Dashboard
+        - Escaping issues
+        - Compliant issues
+        - Validation issue of unclosed div on the dashboard
+        - #wpadminbar issue
+        - VC_templates directory to avoid any issues
+
+    Updated:
+        - POT Files
+        
+    Removed:
+        - UI Autocomplete from general search
+        - All remove_filter()
+        
+
+Version 1.3.4.1
+    Fixed:
+        - Views charts showing negative numbers if no views
+        - Showing date on the "Application Deadline"
+        - Deleted default output for Application deadlines
+        - Small issue for included plugins
+        - Dashboard margin top height
+        
+
+Version 1.3.4
+    Added:
+        - MAJOR - NEW Built-in Dedicated Dashboard
+        - Listing views on Dashboard
+        - Charts for users monthly listing views
+        - Listing Packages on the dashboard (WC Paid Listing needs to be activated)
+        - New "My Profile" shortcode
+        - Built-in Avatar Uploader    
+        - Add class to the body when user is logged in
+        - Action hooks before and after the login form
+        - Button that send to the "installation video" on the backend
+        - All core plugins added
+        - New Bloglist version
+        
+    Improved:
+        - Redesigned WooCommerce Pages
+        - Major WooCommerce Improvements
+        - WooCommerce Functions
+        - Comment form design and function
+        - Avatar link changed for the new dashboard - no longer sends to woocommerce dashboard
+        - Dashboard redirection after login
+        - WPJM and core style css
+        - Dashboard Tables
+        - Changed the icons on Employer/Candidate Dashboard
+        - Scrollbar on AJAX Job Search
+    
+    Fixed:
+        - Filename after uploading a file for "apply now"
+        - Small Menu issue
+        - Small CSS issues on Responsive
+        - Small PHP issue on the header class
+        - Small displaying issues when Kirki is not active
+        
+    Removed:
+        - WooCommerce My Account extra links
+        - Add Avatar via WooCommerce
+        - WP User Avatar as a required plugin
+
+
+Version 1.3.3
+    Added:
+        - Disable all Breadcrumbs function
+        - Job Category Background image on single category page
+        - Option to enable/disable job cat image on single cat pages
+        - Job Logos on AJAX job search
+        - Email template colors match the main color of the website
+    
+    Improved:
+        - Overall Performance
+        - Code quality
+        - Send users to the right dashboard depening their user role if redirection enabled
+        - Blog Improvements
+        - Blog Functions
+        - Header 1 Improvements
+        - SEO for the whole theme
+        - Page titles function
+        - Bookmarks
+        - WooCommerce Compatibility
+        
+    Fixed:
+        - WooCommerce "Display name required" on edit account
+        - Small issue with displaying company website
+        - Small JS issue on AJAX search
+        - Small PHP issues
+        - Bookmark bug
+        - Apply for job php issue
+        
+    Updated:
+        - Metabox
+        - WPBakery Page Builder plugin 5.7
+        - WPJM Templates
+        
+
+Version 1.3.2
+    Added:
+        - Company Logos flexibility
+        - Submission Flow
+        - New Paid Listings UX and design (for WC Paid Listings plugin)
+        
+    Improved:
+        - Blog VC Element. Autocomplete Category while writing
+        - General Design
+        - Jobs, Companies, Resumes Sidebar
+        - Candidate & Employer Dashboard
+        - Job and Resume Submission
+        - Preview Jobs & Resumes
+        - Company post status when "Moderate New Listing" is enabled
+        - Select2 plugin styling due to the new WPJM update
+        
+    Fixed:
+        - Blog VC Element. Showing Category Posts
+        - Small CSS issues
+        - Small compatibility issues
+        - Edit Job Applications issue
+        - Small responsive issues
+        - WooCommerce issue with displaying a number of products
+        - Escaping issue
+        
+    Updated:
+        - WooCommerce Templates
+        - Job Manager Template
+        - Resume Manager Template
+        - Language .POT files
+
+Version 1.3.1.1
+    Added:
+        - Geolocation for Company search
+    
+    Improved:
+        - UX for search forms
+        - Customizer options
+        
+    Fixed:
+        - Small typo issues
+        - Small function issues
+        - Geolocation issue
+    
+    Updated:
+        - Language .pot files
+        
+
+Version 1.3.1
+    Added:
+        - Icon Picker for Job & Resume Categories
+        - Quick view for job listings ( on List 3 & Grid 1)
+        - Search Map to browse Companies
+        - Company Map Infoboxes
+        - Half Map for Company Search
+        - Map Location for Single Company
+        - Company Options
+        - New Theme Screenshot
+        - Job Category Slider Option on VC Element
+        - New Company Carousel Version
+        - Candidate Social Media Links
+        - Location on AJAX Job Search
+        
+    Improved:
+        - Job & Resume Categories
+        - Job Category Slider
+        - Cross browser compatibility
+        - Rebuilt AJAX Job Search
+        
+    Updated:
+        - Language .pot files
+        - VC to version 5.6
+
+
+Version 1.3.0.1
+
+    Added:
+        - Map for Single Resume page
+    
+    Improved: 
+        - Remove Company fields from job post type
+    
+    Fixed:
+        - PHP Issue for Company Manager
+        - Company listing CSS issue
+        - Showing Company Listings cache issue
+
+
+Version 1.3.0
+
+    Added:
+        - Company Manager - Custom Company CPT
+        - Companies List
+        - Company AJAX Search
+        - Company Shortcodes
+        - Company VC Elements        
+        - All Resume related functions to a new file
+        - Contact Form option for Candidates & Companies
+        - Enable/Disable Salary & Rate per hour for Jobs
+        - Widget area for Single Resumes page
+        - GDPR field in register options
+        - Redirect to login after successful register
+        - default.css for all default styles
+        - Gutenberg compatibility
+        - Cookie Bar - Notice
+        - Maps change location based on the search location
+        - Premium Icons
+        - Video Modal VC Element
+        - Resume Carousel VC Element
+        - PHP Version checker in Cariera admin panel
+        - Job/Resume Tab Search
+    
+    Improved:
+        - Overall Theme design
+        - Overall code quality
+        - General Resume Functionalities
+        - Slider Importer
+        - Redesigned Resume Page
+        - WooCommerce Customization Options
+        - General Customization Options
+        - Mega menu
+        - Checking if plugins are active so that functions don't cause any errors
+        - General Typography of the theme
+        - Rewritten Job Templates
+        - Improved Submit Job/Resume
+        - Job Sidebar
+        - Job Carousel VC Element
+        - General UX
+        - Crossbrowser compatibility
+        - Compatibility with addons
+        - Map next/previous
+        - Gallery Post slider
+        - "Hello World" post to draft after import
+        - Main style.css
+        - Custom.js rewritten and imporved
+        - Default galleries
+        - Resume Listing markup
+        - Theme Size reduced
+        - Jobs shown on maps
+        - Main navigation
+        - Redesign Job/Resume Popup
+        - Rewritten map functions
+        - VC Default Elements
+    
+    Fixed:
+        - Importer Text
+        - Add Menu visible only to admin
+        - Register disable password field
+        - Escaping issues
+        - Checkboxes issue on applications
+        - small php issues
+        - Replaced all "is_plugin_active" functions
+        - Taxonomy PHP errors
+        - Not redirecting to Dashboard when clicking on profile
+        - Crossbrowser issues
+        - Indeed Integration Compatibility
+        - Updated WPJM Options on import
+        - Job Types colors issue when types disabled
+        - Job/Resume Geo lat & lng issue
+        - Job Category Slider issue
+        - Google Maps VC Element
+        - Resume Categories VC Element
+        
+    Updated:
+        - Cariera Core Plugin
+        - Visual Composer Plugin
+        - Revolution Plugin
+        - WooCommerce Templates (3.5.x Compatibility)
+        - Owl Slider to 2.3.4
+        - Language Files
+    
+    Removed:
+        - WP Job Manager default stylesheet
+        - WP Job Manager Company Profile as required plugin
+
+
+Version 1.2.8.2
+    Fixed:
+        - Pricing Table Responsive issue
+        - Email Notification on Register issue
+    
+    
+Version 1.2.8.1
+    Fixed:
+        - Account Creation when posting a Job
+        - Small CSS issues
+    
+
+Version 1.2.8
+    Added:
+        - Half Map Template for Jobs
+        - Half Map Template for Resumes
+        - Custom scrollbar for Half Map 
+        
+    Improved:
+        - File Structure
+        - Google Maps Lib
+        
+    Fixed:
+        - Small css issues
+        - Login - Register Template issue
+
+
+Version 1.2.7
+    Added:
+        - Redirect to homepage on logout
+        - Built-in Testimonials CPT
+        - Built-in Breadcrumbs
+        - Built-in Pagination
+        
+    Improved:
+        - WooCommerce Page
+        - Dashboard links structure
+        - Theme Security
+        - Header Options
+        - Theme speed
+        - Main functions
+        - Major Core Plugin improvements
+        - Pricing Tables Options
+        
+    Fixed:
+        - Job List 1 & 2 Responsive issues
+        - Job Alerts displaying issue
+        - Google Maps issue on mobile
+        - Job Category Search issue
+        - Pricing Tables VC issue
+        - Small css issues
+    
+    Updated:
+        - RevSlider from 5.4.7.2 to 5.4.7.3
+    
+    Removed:
+        - WooThemes Testimonial plugin from recommended plugins
+        - Breadcrumb NavXT plugin from recommended plugins
+        - WP-PageNavi plugin from recommended plugins
+
+
+Version 1.2.6
+    Added:
+        - Job Type Color Options
+    
+    Fixed:
+        - Small css issues
+    
+
+
+Version 1.2.5
+    Added:
+        - New Home Page
+        - Job Extender for choosing your job layout
+        - 2 New Job List Versions
+        - 2 New Job Grid Versions
+        - Region compatibility
+        - Auto Geo Location
+        - Number of Applications on each job
+        - User Dashboard 
+        - Media Uploader for Jobs Category Images & Icons
+        - Job Category Slider
+        - Job Categories version
+        - Isotope for Job Categories
+        - Job Search Box VC addon
+        - Add Row Color Overlay Options for VC
+        - Transparent Header Option
+        - Menu Items Badges
+        - Pricing Table Version 2
+        
+    Improved:
+        - Job Featured Image
+        - Job Sidebar code
+        - Job Category UX
+        - User Dashboard
+        - Header Code & Options
+        - Job Fields
+        - Submit Job & Resume UI
+        - Home Templates code
+        - Improved & Redesigned Company Page
+        - Theme Options
+        
+    Fixed:
+        - Logo appearance issue
+        - Iconbox & Job Category icon issue
+        - Preloader Effect
+        - Mobile menu login box
+        - Email Template issue on register
+        
+    Updated:
+        - WooCommerce Templates
+        - Envato Plugin
+        - POT File
+        - RevSlider from 5.4.6.6 to 5.4.7.2
+        - Visual Composer from 5.4.5 to 5.4.7
+        
+        
+
+Version 1.2.4.1
+    Fixed:
+        - Small css issue
+        
+    Improved:
+        - My Account
+        
+    Updated:
+        - WooCommerce Templates
+        
+
+Version 1.2.4
+    Added:
+        - Whole New Import Experience
+        - New Welcome Page
+        
+    Improved:
+        - Linkedin integration
+
+    Fixed:
+        - Featured Jobs issue (major)
+        - Home Page 1 intro text
+        - Gallery Posts issue
+        - Gallery image issue
+        - Small design issues
+        
+    Updated:
+        - POT file
+        - RevSlider from 5.4.6.3.1 to 5.4.6.6
+
+
+
+Version 1.2.3.2
+    Improved:
+        - Core Plugin
+    
+    Fixed:
+        - Login & Register issue
+        - Empty widget area when no widget was active
+
+
+
+Version 1.2.3.1
+    Fixed:
+        - Major Plugin issue
+        - Shortcode issues
+        - Small css issues
+
+
+
+Version 1.2.3
+    Added:
+        - Push Menu option
+        - Dynamical option to edit the Home Page intro text
+        - Company Social Media links
+    
+    Improved:
+        - Header 3
+        - File structure
+        - Core Plugin rewritten
+        - Translation POT files
+    
+    Fixed:
+        - WooCommerce my-account small styling issue
+        - "Nav Menu Role" plugin is fully compatible with the theme
+        - String replacement on email notification for new users
+        - Login in Job Alert Page
+        - 1px white border on the end of the page
+        - Maps infobox on mobiles
+        
+    Update:
+        - Update Metaboxes
+        - Pot file
+
+
+
+Version 1.2.2
+    Added:
+        - Menu Background Options
+    
+    Improved:
+        - General Theme functions
+        - Recent Jobs Widget
+        - Featured Jobs Widget
+        - Registration user roles
+    
+    Fixed:
+        - White border on the end of the page
+        - Header 3 responsive issue
+        - Small Style issues
+        - Logo option issue
+        - Streched "recent post" thumbnails
+        - Checkmark issues
+        - Invisible pushmenu on iphones
+        - Login redirection on "post job/submit resume"
+        
+    Update:
+        - Visual Composer 5.4.4 to 5.4.5
+        - Owl Slider from 2.2.0 to 2.3.0
+        - POT File
+
+
+
+Version 1.2.1
+    Added:
+        - Redirection option after login
+    
+    Improved:
+        - Preview Job
+        - Logo Margin in Customizer
+        - Core Plugin
+        - style.css
+        - Stability
+    
+    Fixed:
+        - Mega Menu issue on responsive
+        - Responsive Issues
+        - WooCommerce deprecated functions
+        - Job type style
+        - General Search form bug on IOS 11
+        
+    Update:
+        - Slider Revolution 5.4.6 to 5.4.6.3.1
+        - Visual Composer 5.4 to 5.4.4
+        - POT file
+
+
+
+Version 1.2
+    Added:
+        - Footer widget layout options
+        - Disable Registration Option
+        - Simple line icons
+        - Background option on boxed layout
+        - New Fixed Footer layout
+        - Enable/Disable location autocomplete option
+        - Login & Register page template
+        - Register without password (Password will be emailed to the user)
+        - ReCaptcha Login & Register Option
+        - Styled Email Templates for user registration
+        - 15+ New VC Elements & Options
+        - Metaboxes to edit header, footer, page headers etc.
+        - Page Header Image option for pages
+        - Gallery Post Support
+        - General Search Map for Jobs & Resumes
+        - Home Page Template - Search Banner Version 2
+        - Home Page Template - Search with Map Background
+        - 2 New Job/Resume Category Box Layouts
+        - 10 New Pages
+        
+    Improved:
+        - Login & Register Functions
+        - Responsive.css
+        - Style.css
+        - Job Tags
+        - Boxed customization options
+        - Metaboxes
+        - Coming Soon Page
+        - Google Maps
+        - Main Plugin
+        - Single Job Map
+        - Code Cleanup
+        
+    Fixed:
+        - Small Style Issues
+        - Boxed layout
+        - WooCommerce small display issue
+        - Preloader 1 issue
+        
+    Update:
+        - WooCommerce Templates compatible with the latest version
+        - POT file
+        - Visual Composer 5.3.2 to 5.4
+        - Documentation
+    
+    
+
+Version 1.1
+    Added:
+        - Set Permalink after demo imported
+        - Set Shop, Job & Resume pages after demo is imported
+        - "New" Tag to newly published jobs
+        - Website preloader with 3 different styles
+        - Homepage Job Autocomplete
+        - Google Address Autocomplete
+        - Job page header image background option
+        - Comment support for Resumes
+        - Related Jobs on Single Job Page
+        - Fullwidth Header
+        - "WooCommerce Product per Page" option
+        - "General Search" for the header
+        - Autocomplete for "General Search"
+        - Alert box on top of the job when position is filled
+    
+    Improved:
+        - Code + File structure
+        - Redesigned user dashboard
+        - Redesigned "Job Applications" Page
+        - Cross Browser Compatibility
+        - Customizer Options
+        - Improved Popups
+    
+    Fixed:
+        - Responsive issues
+        - Dashboard links
+        - Small Style Issues
+        - Sticky Header Issue
+        - Employer Dashboard action links issue
+        - Woocommerce small errors
+        - Google Maps error when there is no api key
+        - Chosen.js issues
+    
+    Update:
+        - Rev Slider 5.4.6
+        - Visual Composer 5.3 
+        - Translation file .pot
+
+
+
+Version 1.0.1
+    Added:
+        - Job categories are enabled automatically
+        - Resume categories & skills enabled automatically
+        
+    Fixed: 
+        - Small CSS issues
+
+
+
+Version 1.0
     - Initial
