@@ -10,12 +10,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-03-05T14:09:43+00:00\n"
-"PO-Revision-Date: 2021-04-22 21:15+0000\n"
+"PO-Revision-Date: 2021-09-27 15:46+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: wp-job-manager-bookmarks\n"
 "Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Loco-Version: 2.5.2; wp-5.7.1"
+"X-Loco-Version: 2.5.3; wp-5.8.1"
 
 #. Plugin Name of the plugin
 msgid "WP Job Manager - Bookmarks"
@@ -82,7 +82,7 @@ msgstr "Borrar"
 
 #: templates/my-bookmarks.php:63
 msgid "You currently have no bookmarks"
-msgstr ""
+msgstr "Actualmente no tienes marcadores"
 
 #: wp-job-manager-bookmarks.php:90
 msgid ""

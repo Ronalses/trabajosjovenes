@@ -15,6 +15,7 @@ use Google\Site_Kit\Core\Modules\Modules;
 use Google\Site_Kit\Core\Permissions\Permissions;
 use Google\Site_Kit\Core\Assets\Assets;
 use Google\Site_Kit\Core\REST_API\REST_Route;
+use Google\Site_Kit\Core\REST_API\REST_Routes;
 use Google\Site_Kit\Core\Storage\Options;
 use Google\Site_Kit\Core\Util\Method_Proxy_Trait;
 use Google\Site_Kit\Core\Util\Requires_Javascript_Trait;
@@ -102,6 +103,18 @@ final class Admin_Bar {
 			'googlesitekit_rest_routes',
 			function( $routes ) {
 				return array_merge( $routes, $this->get_rest_routes() );
+			}
+		);
+
+		add_filter(
+			'googlesitekit_apifetch_preload_paths',
+			function( $routes ) {
+				return array_merge(
+					$routes,
+					array(
+						'/' . REST_Routes::REST_ROOT . '/core/site/data/admin-bar-settings',
+					)
+				);
 			}
 		);
 
@@ -307,9 +320,6 @@ final class Admin_Bar {
 		if ( ! $this->is_active() ) {
 			return;
 		}
-
-		// Enqueue fonts.
-		$this->assets->enqueue_fonts();
 
 		// Enqueue styles.
 		$this->assets->enqueue_asset( 'googlesitekit-adminbar-css' );

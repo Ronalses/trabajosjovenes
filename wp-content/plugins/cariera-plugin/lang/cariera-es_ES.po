@@ -16,12 +16,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-20 23:18+0000\n"
-"PO-Revision-Date: 2021-05-02 19:41+0000\n"
+"PO-Revision-Date: 2021-11-12 21:29+0000\n"
 "Last-Translator: \n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.2; wp-5.7.1"
+"X-Loco-Version: 2.5.3; wp-5.8.2"
 
 #: inc/class-cariera-core.php:206
 msgid "Showing all resumes"
@@ -814,7 +814,7 @@ msgstr ""
 
 #: inc/core/fields.php:174
 msgid "The featured image size should be at least 1600x200px"
-msgstr ""
+msgstr "El tamaño de la imagen destacada debe ser de al menos 1600x200px"
 
 #: inc/core/fields.php:244
 msgid "Rate/h (minimum)"
@@ -1685,7 +1685,7 @@ msgstr ""
 
 #: inc/core/wp-company-manager/company-manager-functions.php:392
 msgid "Pending Review"
-msgstr ""
+msgstr "Pendiente de revisión"
 
 #: inc/core/wp-company-manager/company-manager-functions.php:388
 msgid "Published"
@@ -1752,7 +1752,7 @@ msgstr ""
 
 #: inc/core/wp-company-manager/company-manager-templates.php:814
 msgid "Job Positions"
-msgstr ""
+msgstr "Puestos de trabajo"
 
 #: inc/core/wp-company-manager/company-manager-templates.php:852
 msgid "Company Details"
@@ -2504,7 +2504,7 @@ msgstr ""
 msgid ""
 "You either have not logged in or you don't have any companies with this "
 "account."
-msgstr ""
+msgstr "No ha iniciado sesión o no tiene ninguna empresa con esta cuenta."
 
 #: inc/core/wp-company-manager/wpjm.php:197
 msgid "Select Company"

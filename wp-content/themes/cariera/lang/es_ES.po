@@ -16,12 +16,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-17 19:04+0000\n"
-"PO-Revision-Date: 2021-05-04 16:46+0000\n"
+"PO-Revision-Date: 2021-11-14 01:07+0000\n"
 "Last-Translator: \n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.2; wp-5.7.1"
+"X-Loco-Version: 2.5.3; wp-5.8.2"
 
 #: inc/theme-support.php:716, inc/theme-support.php:682
 msgid "% comments"
@@ -116,6 +116,8 @@ msgstr[1] ""
 #: job_manager/job-submitted.php:24
 msgid "%s listed successfully. To view your listing %sclick here%s."
 msgstr ""
+"%s Su publicación se hizo de manera correcta. Verifique el estado %haciendo "
+"click aquí%s."
 
 #: wc-paid-listings/resume-package-selection.php:21
 msgid "%s resume posted"
@@ -253,7 +255,7 @@ msgstr ""
 #: wp-job-manager-resumes/form-fields/repeated-field.php:25,
 #: wp-job-manager-resumes/form-fields/repeated-field.php:49
 msgid "(optional)"
-msgstr ""
+msgstr "(opcional)"
 
 #: inc/onboarding/onboarding.php:557
 msgid ""
@@ -529,7 +531,7 @@ msgstr ""
 
 #: inc/wp-job-manager/wp-job-manager.php:311
 msgid "Application(s)"
-msgstr ""
+msgstr "Postulante(s)"
 
 #: job_manager/job-listing-overview.php:77
 msgid "Applications Close"
@@ -849,7 +851,7 @@ msgstr ""
 #: inc/wp-resume-manager/templates.php:257,
 #: inc/wp-resume-manager/templates.php:262
 msgid "Choose Package"
-msgstr ""
+msgstr "Elegir paquete"
 
 #: inc/customizer.php:2233
 msgid ""
@@ -2338,7 +2340,7 @@ msgstr ""
 
 #: job_manager/form-fields/file-field.php:43
 msgid "Maximum file size: %s."
-msgstr ""
+msgstr "El tamaño máximo es de: %s."
 
 #: inc/onboarding/onboarding.php:543
 msgid "Medium"

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Code Snippets - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-02 11:12:32+0000\n"
+"PO-Revision-Date: 2021-09-14 05:03:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,10 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: es\n"
 "Project-Id-Version: Plugins - Code Snippets - Stable (latest release)\n"
+
+#: code-snippets.php:44
+msgid "Another version of Code Snippets appears to be installed. Deactivating this version."
+msgstr "Parece que está instalada otra versión de Code Snippets. Desactiva esta versión."
 
 #: php/views/edit.php:161
 msgid "Persistent search"
@@ -67,12 +71,12 @@ msgstr "Alt"
 #: php/views/edit.php:110
 msgctxt "keyboard key"
 msgid "Option"
-msgstr "Option"
+msgstr "Opción"
 
 #: php/views/edit.php:109
 msgctxt "keyboard key"
 msgid "Shift"
-msgstr "Shift"
+msgstr "Mayús"
 
 #: php/views/edit.php:108
 msgctxt "keyboard key"
@@ -89,31 +93,31 @@ msgctxt "help tooltip"
 msgid "?"
 msgstr "?"
 
-#: php/class-validator.php:239
+#: php/class-validator.php:252
 msgid "Parse error: syntax error, unexpected end of snippet"
 msgstr "Error de análisis: error de sintaxis, final inesperado del fragmento de código"
 
 #. translators: %s: PHP identifier name
-#: php/class-validator.php:201
+#: php/class-validator.php:214
 msgid "Cannot redeclare %s."
 msgstr "No se puede redeclarar %s."
 
 #. translators: %s: PHP interface name
-#: php/class-validator.php:197
+#: php/class-validator.php:210
 msgid "Cannot redeclare interface %s."
 msgstr "No se puede redeclarar la interfaz %s."
 
 #. translators: %s: PHP class name
-#: php/class-validator.php:193
+#: php/class-validator.php:206
 msgid "Cannot redeclare class %s."
 msgstr "No se puede redeclarar la clase %s."
 
 #. translators: %s: PHP function name
-#: php/class-validator.php:189
+#: php/class-validator.php:202
 msgid "Cannot redeclare function %s."
 msgstr "No se puede redeclarar la función %s."
 
-#: php/class-validator.php:176
+#: php/class-validator.php:189
 msgid "Parse error: syntax error, unexpected end of snippet."
 msgstr "Error de análisis: error de sintaxis, final inesperado del fragmento de código."
 
@@ -594,7 +598,7 @@ msgstr "Tamaño de la tabulación"
 
 #: php/settings/settings-fields.php:131
 msgid "Use hard tabs (not spaces) for indentation."
-msgstr "Utiliza tabulaciones (no espacios) para la sangría."
+msgstr "Usa tabulaciones (no espacios) para la sangría."
 
 #: php/settings/settings-fields.php:129
 msgid "Indent With Tabs"
@@ -618,7 +622,7 @@ msgstr "Activar todas las características del editor visual"
 
 #: php/settings/settings-fields.php:104
 msgid "Use Full Editor"
-msgstr "Usar editor completo"
+msgstr "Usar el editor completo"
 
 #: php/settings/settings-fields.php:98
 msgid "rows"
@@ -654,11 +658,11 @@ msgstr "Activar las etiquetas de los fragmentos de código"
 
 #: php/settings/settings-fields.php:51
 msgid "Enable the scope selector when editing a snippet"
-msgstr "Activar el selector de alcance al editar un fragmento de código"
+msgstr "Activar el selector de aplicación al editar un fragmento de código"
 
 #: php/settings/settings-fields.php:49
 msgid "Enable Scope Selector"
-msgstr "Activar el selector de alcance"
+msgstr "Activar el selector de aplicación"
 
 #: php/settings/settings-fields.php:44
 msgid "Make the 'Save and Activate' button the default action when saving a snippet."
@@ -836,7 +840,7 @@ msgstr "Modo seguro"
 #: php/class-contextual-help.php:68 php/class-contextual-help.php:89
 #: php/class-contextual-help.php:132
 msgid "Overview"
-msgstr "Descripción general"
+msgstr "Resumen"
 
 #: php/class-contextual-help.php:49
 msgid "Plugin Website"
@@ -876,7 +880,7 @@ msgstr "Donar"
 
 #: php/class-admin.php:169
 msgid "Support this plugin's development"
-msgstr "Apoyar el desarrollo de este plugin"
+msgstr "Apoya el desarrollo de este plugin"
 
 #: php/class-admin.php:165
 msgid "Support"
@@ -1024,7 +1028,7 @@ msgstr "Permitir que este fragmento de código se active en sitios individuales 
 
 #: php/admin-menus/class-edit-menu.php:419
 msgid "Scope"
-msgstr "Alcance"
+msgstr "Aplicación"
 
 #: php/admin-menus/class-edit-menu.php:415
 msgid "Only run on site front-end"
@@ -1084,6 +1088,6 @@ msgstr "Añadir nuevo"
 msgid "Edit Snippet"
 msgstr "Editar el fragmento de código"
 
-#: php/admin-menus/class-admin-menu.php:124
+#: php/admin-menus/class-admin-menu.php:127
 msgid "You are not authorized to access this page."
 msgstr "No estás autorizado para acceder a esta página."

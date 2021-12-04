@@ -10,6 +10,7 @@
 
 namespace Google\Site_Kit\Modules;
 
+use Exception;
 use Google\Site_Kit\Context;
 use Google\Site_Kit\Core\Admin\Notice;
 use Google\Site_Kit\Core\Assets\Asset;
@@ -36,13 +37,15 @@ use Google\Site_Kit\Core\Storage\Options;
 use Google\Site_Kit\Core\Storage\Post_Meta;
 use Google\Site_Kit\Core\Storage\Transients;
 use Google\Site_Kit\Core\Storage\User_Options;
+use Google\Site_Kit\Modules\Idea_Hub\Idea_Interaction_Count;
 use Google\Site_Kit\Modules\Idea_Hub\Post_Idea_Name;
 use Google\Site_Kit\Modules\Idea_Hub\Post_Idea_Text;
 use Google\Site_Kit\Modules\Idea_Hub\Post_Idea_Topics;
 use Google\Site_Kit\Modules\Idea_Hub\Settings;
 use Google\Site_Kit_Dependencies\Google\Model as Google_Model;
 use Google\Site_Kit_Dependencies\Google\Service\Ideahub as Google_Service_Ideahub;
-use Google\Site_Kit_Dependencies\Google\Service\Ideahub\GoogleSearchIdeahubV1alphaIdeaState as Google_Service_Ideahub_GoogleSearchIdeahubV1alphaIdeaState;
+use Google\Site_Kit_Dependencies\Google\Service\Ideahub\GoogleSearchIdeahubV1betaIdeaActivity as Google_Service_Ideahub_GoogleSearchIdeahubV1betaIdeaActivity;
+use Google\Site_Kit_Dependencies\Google\Service\Ideahub\GoogleSearchIdeahubV1betaIdeaState as Google_Service_Ideahub_GoogleSearchIdeahubV1betaIdeaState;
 use Google\Site_Kit_Dependencies\Psr\Http\Message\RequestInterface;
 use Google\Site_Kit\Core\Util\Method_Proxy_Trait;
 use WP_Error;
@@ -94,8 +97,17 @@ final class Idea_Hub extends Module
 	const IDEA_HUB_LAST_CHANGED = 'googlesitekit_idea_hub_last_changed';
 
 	/**
+	 * Idea activity types.
+	 */
+	const ACTIVITY_POST_PUBLISHED   = 'POST_PUBLISHED';
+	const ACTIVITY_POST_UNPUBLISHED = 'POST_UNPUBLISHED';
+	const ACTIVITY_POST_DRAFTED     = 'POST_DRAFTED';
+	const ACTIVITY_POST_DELETED     = 'POST_DELETED';
+
+	/**
 	 * Post_Idea_Name instance.
 	 *
+	 * @since 1.32.0
 	 * @var Post_Idea_Name
 	 */
 	private $post_name_setting;
@@ -103,6 +115,7 @@ final class Idea_Hub extends Module
 	/**
 	 * Post_Idea_Text instance.
 	 *
+	 * @since 1.32.0
 	 * @var Post_Idea_Text
 	 */
 	private $post_text_setting;
@@ -110,6 +123,7 @@ final class Idea_Hub extends Module
 	/**
 	 * Post_Idea_Topics instance.
 	 *
+	 * @since 1.32.0
 	 * @var Post_Idea_Topics
 	 */
 	private $post_topic_setting;
@@ -118,10 +132,17 @@ final class Idea_Hub extends Module
 	 * Transients instance.
 	 *
 	 * @since 1.40.0
-	 *
 	 * @var Transients
 	 */
 	private $transients;
+
+	/**
+	 * Idea_Interaction_Count instance.
+	 *
+	 * @since 1.42.0
+	 * @var Idea_Interaction_Count
+	 */
+	private $interaction_count;
 
 	/**
 	 * Constructor.
@@ -148,6 +169,7 @@ final class Idea_Hub extends Module
 		$this->post_text_setting  = new Post_Idea_Text( $post_meta );
 		$this->post_topic_setting = new Post_Idea_Topics( $post_meta );
 		$this->transients         = new Transients( $this->context );
+		$this->interaction_count  = new Idea_Interaction_Count( $this->user_options );
 	}
 
 	/**
@@ -162,15 +184,16 @@ final class Idea_Hub extends Module
 		add_filter(
 			'display_post_states',
 			function( $post_states, $post ) {
-				if ( 'draft' !== $post->post_status ) {
+				if ( ! $this->is_idea_post( $post->ID ) ) {
 					return $post_states;
 				}
 				$idea = $this->get_post_idea( $post->ID );
-				if ( is_null( $idea ) ) {
-					return $post_states;
+				if ( '' === $post->post_title && 'draft' === $post->post_status ) {
+					/* translators: %s: Idea Hub Idea Title */
+					$post_states['draft'] = sprintf( __( 'Idea Hub Draft “%s”', 'google-site-kit' ), $idea['text'] );
+				} else {
+					$post_states['idea-hub'] = __( 'inspired by Idea Hub', 'google-site-kit' );
 				}
-				/* translators: %s: Idea Hub Idea Title */
-				$post_states['draft'] = sprintf( __( 'Idea Hub Draft “%s”', 'google-site-kit' ), $idea['text'] );
 				return $post_states;
 			},
 			10,
@@ -212,31 +235,6 @@ final class Idea_Hub extends Module
 			 */
 			add_filter( 'post_class', $this->get_method_proxy( 'update_post_classes' ), 10, 3 );
 
-			add_filter(
-				'googlesitekit_inline_base_data',
-				function( $data ) {
-					if (
-						// Do nothing if tracking is disabled or if it is enabled and already allowed.
-						empty( $data['trackingEnabled'] ) ||
-						! empty( $data['trackingAllowed'] ) ||
-						// Also do nothing if the get_current_screen function is not available.
-						! function_exists( 'get_current_screen' )
-					) {
-						return $data;
-					}
-
-					$screen = get_current_screen();
-					if ( ! is_null( $screen ) ) {
-						$data['trackingAllowed'] =
-							( 'post' === $screen->post_type && 'edit-post' === $screen->id ) ||
-							'dashboard' === $screen->id;
-					}
-
-					return $data;
-				},
-				100
-			);
-
 			add_action(
 				'admin_footer-edit.php',
 				function() {
@@ -244,6 +242,13 @@ final class Idea_Hub extends Module
 					if ( ! is_null( $screen ) && 'post' === $screen->post_type ) {
 						echo '<div id="js-googlesitekit-post-list" class="googlesitekit-plugin"></div>';
 					}
+				}
+			);
+
+			add_action(
+				'before_delete_post',
+				function( $post_id ) {
+					$this->track_idea_activity( $post_id, self::ACTIVITY_POST_DELETED );
 				}
 			);
 
@@ -256,6 +261,8 @@ final class Idea_Hub extends Module
 		$this->post_name_setting->register();
 		$this->post_text_setting->register();
 		$this->post_topic_setting->register();
+
+		$this->interaction_count->register();
 	}
 
 	/**
@@ -293,7 +300,7 @@ final class Idea_Hub extends Module
 					$message = sprintf(
 						/* translators: %s: URL to saved ideas */
 						__( 'Want some inspiration for a new post? <a href="%s">Revisit your saved ideas</a> in Site Kit.', 'google-site-kit' ),
-						esc_url( $this->context->admin_url() . '#saved-ideas' )
+						esc_url( $this->context->admin_url( 'dashboard', array( 'idea-hub-tab' => 'saved-ideas' ) ) )
 					);
 
 					return $escape_and_wrap_notice_content( $message );
@@ -303,7 +310,7 @@ final class Idea_Hub extends Module
 					$saved_ideas = $this->transients->get( self::TRANSIENT_SAVED_IDEAS );
 					if ( false === $saved_ideas ) {
 						$saved_ideas = $this->get_data( 'saved-ideas' );
-						$this->transients->set( self::TRANSIENT_SAVED_IDEAS, $saved_ideas, DAY_IN_SECONDS );
+						$this->transients->set( self::TRANSIENT_SAVED_IDEAS, $saved_ideas, HOUR_IN_SECONDS );
 					}
 					$has_saved_ideas = count( $saved_ideas ) > 0;
 					if ( ! $has_saved_ideas && $dismissed_items->is_dismissed( self::SLUG_SAVED_IDEAS ) ) {
@@ -327,7 +334,7 @@ final class Idea_Hub extends Module
 					$message = sprintf(
 						/* translators: %s: URL to new ideas */
 						__( 'Want some inspiration for a new post? <a href="%s">Review your new ideas</a> in Site Kit.', 'google-site-kit' ),
-						esc_url( $this->context->admin_url() . '#new-ideas' )
+						esc_url( $this->context->admin_url( 'dashboard', array( 'idea-hub-tab' => 'new-ideas' ) ) )
 					);
 
 					return $escape_and_wrap_notice_content( $message );
@@ -340,7 +347,7 @@ final class Idea_Hub extends Module
 					$saved_ideas = $this->transients->get( self::TRANSIENT_SAVED_IDEAS );
 					if ( false === $saved_ideas ) {
 						$saved_ideas = $this->get_data( 'saved-ideas' );
-						$this->transients->set( self::TRANSIENT_SAVED_IDEAS, $saved_ideas, DAY_IN_SECONDS );
+						$this->transients->set( self::TRANSIENT_SAVED_IDEAS, $saved_ideas, HOUR_IN_SECONDS );
 					}
 					$has_saved_ideas = count( $saved_ideas ) > 0;
 
@@ -353,7 +360,7 @@ final class Idea_Hub extends Module
 					$new_ideas = $this->transients->get( self::TRANSIENT_NEW_IDEAS );
 					if ( false === $new_ideas ) {
 						$new_ideas = $this->get_data( 'new-ideas' );
-						$this->transients->set( self::TRANSIENT_NEW_IDEAS, $new_ideas, DAY_IN_SECONDS );
+						$this->transients->set( self::TRANSIENT_NEW_IDEAS, $new_ideas, HOUR_IN_SECONDS );
 					}
 
 					$has_new_ideas = count( $new_ideas ) > 0;
@@ -377,6 +384,7 @@ final class Idea_Hub extends Module
 	public function get_scopes() {
 		return array(
 			'https://www.googleapis.com/auth/ideahub.read',
+			'https://www.googleapis.com/auth/ideahub.full',
 		);
 	}
 
@@ -509,6 +517,10 @@ final class Idea_Hub extends Module
 					}
 
 					$this->set_post_idea( $post_id, $idea );
+					$this->track_idea_activity( $post_id, self::ACTIVITY_POST_DRAFTED );
+
+					$this->transients->delete( self::TRANSIENT_SAVED_IDEAS );
+					$this->transients->delete( self::TRANSIENT_NEW_IDEAS );
 
 					return $post_id;
 				};
@@ -555,7 +567,7 @@ final class Idea_Hub extends Module
 
 				$update_mask = array();
 
-				$body = new Google_Service_Ideahub_GoogleSearchIdeahubV1alphaIdeaState();
+				$body = new Google_Service_Ideahub_GoogleSearchIdeahubV1betaIdeaState();
 				$body->setName( $idea_name );
 
 				if ( isset( $data['saved'] ) ) {
@@ -601,6 +613,8 @@ final class Idea_Hub extends Module
 
 		switch ( "{$data->method}:{$data->datapoint}" ) {
 			case 'POST:create-idea-draft-post':
+				$this->interaction_count->increment();
+
 				return $filter_draft_post_response( $response );
 			case 'GET:draft-post-ideas':
 				return array_filter(
@@ -632,6 +646,11 @@ final class Idea_Hub extends Module
 				$ideas = $this->filter_out_ideas_with_posts( $response->getIdeas() );
 				return array_map( array( self::class, 'filter_idea_with_id' ), $ideas );
 			case 'POST:update-idea-state':
+				$this->interaction_count->increment();
+
+				$this->transients->delete( self::TRANSIENT_SAVED_IDEAS );
+				$this->transients->delete( self::TRANSIENT_NEW_IDEAS );
+
 				return self::filter_idea_state_with_id( $response );
 		}
 
@@ -649,7 +668,7 @@ final class Idea_Hub extends Module
 		return array(
 			'slug'        => self::MODULE_SLUG,
 			'name'        => _x( 'Idea Hub', 'Service name', 'google-site-kit' ),
-			'description' => __( "Idea Hub suggests what you can write about next, based on searches that haven't been answered yet", 'google-site-kit' ),
+			'description' => __( 'Idea Hub suggests what you can write about next, from actual questions people asked on Google Search', 'google-site-kit' ),
 			'order'       => 7,
 		);
 	}
@@ -719,9 +738,9 @@ final class Idea_Hub extends Module
 				array(
 					'global'        => '_googlesitekitIdeaHub',
 					'data_callback' => function () {
-						$last_idea_post_updated_at = $this->transients->get( self::IDEA_HUB_LAST_CHANGED );
 						return array(
-							'lastIdeaPostUpdatedAt' => $last_idea_post_updated_at,
+							'lastIdeaPostUpdatedAt' => $this->transients->get( self::IDEA_HUB_LAST_CHANGED ),
+							'interactionCount'      => $this->interaction_count->get(),
 						);
 					},
 				)
@@ -852,12 +871,16 @@ final class Idea_Hub extends Module
 	 * @param WP_Post $post The post in question.
 	 */
 	private function on_idea_hub_post_status_transition( $new_status, $old_status, $post ) {
-		if ( ! $this->is_idea_post( $post->ID ) ) {
+		if ( $new_status === $old_status || ! $this->is_idea_post( $post->ID ) ) {
 			return;
 		}
 
-		if ( $new_status !== $old_status ) {
-			$this->transients->set( self::IDEA_HUB_LAST_CHANGED, time() );
+		$this->transients->set( self::IDEA_HUB_LAST_CHANGED, time() );
+
+		if ( 'publish' === $new_status ) {
+			$this->track_idea_activity( $post->ID, self::ACTIVITY_POST_PUBLISHED );
+		} elseif ( 'publish' === $old_status ) {
+			$this->track_idea_activity( $post->ID, self::ACTIVITY_POST_UNPUBLISHED );
 		}
 	}
 
@@ -886,9 +909,6 @@ final class Idea_Hub extends Module
 			$classes[] = 'googlesitekit-idea-hub__post';
 
 			if ( ! wp_style_is( 'googlesitekit-admin-css' ) ) {
-				// Enqueue fonts.
-				$this->assets->enqueue_fonts();
-				// Enqueue base admin screen stylesheet.
 				$this->assets->enqueue_asset( 'googlesitekit-admin-css' );
 			}
 		}
@@ -1002,6 +1022,44 @@ final class Idea_Hub extends Module
 		);
 
 		return array_values( $ideas );
+	}
+
+	/**
+	 * Tracks an idea activity.
+	 *
+	 * @since 1.42.0
+	 *
+	 * @param int    $post_id Post ID.
+	 * @param string $type    Activity type.
+	 */
+	private function track_idea_activity( $post_id, $type ) {
+		$post = get_post( $post_id );
+		$name = $this->post_name_setting->get( $post->ID );
+		if ( empty( $name ) ) {
+			return;
+		}
+
+		$parent   = $this->get_parent_slug();
+		$activity = new Google_Service_Ideahub_GoogleSearchIdeahubV1betaIdeaActivity();
+
+		$activity->setIdeas( array( $name ) );
+		$activity->setTopics( array() );
+		$activity->setType( $type );
+
+		if ( 'publish' === $post->post_status ) {
+			$uri = get_permalink( $post );
+			if ( ! empty( $uri ) ) {
+				$activity->setUri( $uri );
+			}
+		}
+
+		try {
+			$this->get_service( 'ideahub' )
+				->platforms_properties_ideaActivities
+				->create( $parent, $activity );
+		} catch ( Exception $e ) { // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedCatch
+			// Do nothing.
+		}
 	}
 
 }
