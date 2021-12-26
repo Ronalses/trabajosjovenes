@@ -4,14 +4,15 @@
  * Plugin Name: Social Login, Social Sharing by miniOrange
  * Plugin URI: https://www.miniorange.com
  * Description: Allow your users to login, comment and share with Facebook, Google, Apple, Twitter, LinkedIn etc using customizable buttons.
- * Version: 7.5.5
+ * Version: 7.5.6
  * Author: miniOrange
  * License URI: http://miniorange.com/usecases/miniOrange_User_Agreement.pdf
  */
 
-define('MO_OPENID_SOCIAL_LOGIN_VERSION', '7.5.5');
+define('MO_OPENID_SOCIAL_LOGIN_VERSION', '7.5.6');
 define('plugin_url', plugin_dir_url(__FILE__) . "includes/images/icons/");
 define('MOSL_PLUGIN_DIR',str_replace('/','\\',plugin_dir_path(__FILE__)));
+define('MO_SL_CSS_URL', plugin_dir_url(__FILE__) . 'includes/css/mo_sl_banner.css?version='.MO_OPENID_SOCIAL_LOGIN_VERSION);
 require('miniorange_openid_sso_settings_page.php');
 require('view/config_apps/mo_openid_config_apps_funct.php');
 require('view/profile_completion/mo_openid_prof_comp_funct.php');
@@ -38,6 +39,7 @@ class miniorange_openid_sso_settings
         add_action('admin_menu', array($this, 'new_miniorange_openid_menu'));
         add_action( 'admin_init',  array( $this, 'miniorange_openid_save_settings' ) );
         add_action('init', 'mo_openid_login_validate' );
+        add_action( 'init','init_wtlwp');
         add_action( 'plugins_loaded', 'mo_openid_plugin_update' ,1 );
         add_action( 'admin_enqueue_scripts', array( $this, 'mo_openid_plugin_settings_script' ) );
         add_action( 'admin_enqueue_scripts', array( $this, 'mo_openid_plugin_settings_admin_style' ) );
@@ -61,6 +63,10 @@ class miniorange_openid_sso_settings
         add_action('wp_ajax_mo_disable_app', 'mo_disable_app');
         add_action( 'admin_footer', array( $this,'mo_openid_feedback_request' ));
         add_action( 'wp_enqueue_scripts', array( $this, 'mo_openid_plugin_script' ) ,5);
+
+        //eoss
+        add_action( 'admin_notices', array( $this, 'mo_social_showNotice' ) );
+        add_action( 'wp_ajax_mo_sl_dismiss_notice', array( $this, 'mo_sl_dismiss_notice' ) );
 
         //for addon
         add_action('wp_ajax_verify_addon_licience', 'mo_openid_show_verify_addon_license_page');
@@ -91,18 +97,22 @@ class miniorange_openid_sso_settings
             delete_option('app_pos');
             add_option('app_pos','facebook#google#discord#twitter#vkontakte#instagram#linkedin#amazon#salesforce#windowslive#yahoo#snapchat#dribbble');
         }
-        update_option('app_pos_premium','apple#paypal#wordpress#github#hubspot#mailru#gitlab#steam#slack#trello#disqus#pinterest#yandex#spotify#reddit#tumblr#twitch#vimeo#kakao#flickr#line#meetup#dropbox#stackexchange#livejournal#foursquare#teamsnap#naver#odnoklassniki#wiebo#wechat#baidu#renren#qq');
+        update_option('app_pos_premium','apple#paypal#wordpress#github#hubspot#mailru#gitlab#steam#slack#trello#disqus#pinterest#yandex#spotify#reddit#tumblr#twitch#vimeo#kakao#flickr#line#meetup#dropbox#stackexchange#livejournal#foursquare#teamsnap#naver#odnoklassniki#wiebo#wechat#baidu#renren#qq#fitbit#stackoverflow');
         add_option('mo_openid_default_login_enable',1);
         add_option('mo_openid_default_register_enable',1);
         add_option( 'mo_openid_login_theme', 'longbutton' );
         add_option( 'mo_openid_register_email_message', 'Hello,<br><br>##User Name## has registered to your site  successfully.<br><br>Thanks,<br>miniOrange' );
 
 
-        add_option( 'mo_login_icon_space','4' );
+        add_option( 'mo_login_icon_space','8' );
         add_option( 'mo_login_icon_custom_width','200' );
         add_option( 'mo_login_icon_custom_height','35' );
-        add_option( 'mo_login_icon_custom_size','35' );
+        add_option( 'mo_login_icon_custom_size','45' );
         add_option( 'mo_login_icon_custom_color', '2B41FF' );
+        add_option( 'mo_login_icon_custom_hover_color', '4AB8D4' );
+        add_option( 'mo_login_icon_custom_smart_color1', 'FF1F4B' );
+        add_option( 'mo_login_icon_custom_smart_color2', '2008FF' );
+        add_option( 'mo_openid_button_theme_effect', 'transform' );
         add_option( 'mo_openid_login_custom_theme', 'default' );
         add_option( 'mo_openid_login_button_customize_text', mo_sl('Login with' ));
         add_option('mo_login_icon_custom_boundary','4');
@@ -259,6 +269,7 @@ Thank you.';
 
     function mo_openid_plugin_settings_script() {
         if(strpos(get_current_screen()->id, 'miniorange-social-login-sharing_page') === false) return;
+        wp_enqueue_style( 'mo_openid_banner_admin_settings_style'	 , MO_SL_CSS_URL);
         wp_enqueue_script( 'mo_openid_admin_settings_jquery1_script', plugins_url('includes/js/mo-openid-config-jquery-ui.js', __FILE__ ));
         wp_enqueue_script( 'mo_openid_admin_settings_phone_script', plugins_url('includes/js/mo_openid_phone.js', __FILE__ ));
         wp_enqueue_script( 'mo_openid_admin_settings_color_script', plugins_url('includes/jscolor/jscolor.js', __FILE__ ));
@@ -273,13 +284,13 @@ Thank you.';
         wp_enqueue_style( 'mo-wp-bootstrap-social',plugins_url('includes/css/bootstrap-social.css', __FILE__), false );
         if( get_option('mo_openid_bootstrap_load') == 1)
             wp_enqueue_style( 'mo-wp-bootstrap-main',plugins_url('includes/css/bootstrap.min-preview.css', __FILE__), false );
-        wp_enqueue_style( 'mo-wp-style-icon',plugins_url('includes/css/mo_openid_login_icons.css?version=7.3.0', __FILE__), false );
+        wp_enqueue_style( 'mo-wp-style-icon',plugins_url('includes/css/mo_openid_login_icons.css?version='.MO_OPENID_SOCIAL_LOGIN_VERSION, __FILE__), false );
         if( get_option('mo_openid_fonawesome_load') == 1) {
             wp_enqueue_style('mo-openid-sl-wp-font-awesome', plugins_url('includes/css/mo-font-awesome.min.css', __FILE__), false);
             wp_enqueue_style('mo-openid-sl-wp-font-awesome', plugins_url('includes/css/mo-font-awesome.css', __FILE__), false);
         }
-        wp_enqueue_style( 'mo_openid_admin_settings_style', plugins_url('includes/css/mo_openid_style.css?version=7.3.0', __FILE__));
-        wp_enqueue_style( 'bootstrap_style_ass', plugins_url( 'includes/css/mo_openid_bootstrap-tour-standalone.css?version=5.1.4', __FILE__ ) );
+        wp_enqueue_style( 'mo_openid_admin_settings_style', plugins_url('includes/css/mo_openid_style.css?version='.MO_OPENID_SOCIAL_LOGIN_VERSION, __FILE__));
+        wp_enqueue_style( 'bootstrap_style_ass', plugins_url( 'includes/css/mo_openid_bootstrap-tour-standalone.css?version='.MO_OPENID_SOCIAL_LOGIN_VERSION, __FILE__ ) );
         wp_enqueue_style( 'mo_openid_admin_settings_phone_style', plugins_url('includes/css/phone.css', __FILE__));
     }
 
@@ -296,6 +307,38 @@ Thank you.';
         add_option('mo_openid_google_enable','1');
         add_option('mo_openid_linkedin_enable','1');
         add_option('mo_openid_amazon_enable','1');
+    }
+
+    function mo_social_showNotice(){
+        wp_enqueue_style( 'mo_openid_banner_admin_settings_style'	 , MO_SL_CSS_URL);
+        $licensePageUrl = admin_url().'admin.php?page=mo_openid_general_settings&tab=licensing_plans';
+        $current_url    = admin_url().'admin.php?'.$_SERVER['QUERY_STRING'];
+        $isNoticeClosed = get_option("mo_social_hide_notice");
+        $rest_url=admin_url().'admin.php?page=mo_openid_general_settings&tab=rest_api_page';
+        if($isNoticeClosed == "mo_social_hide_notice"){
+            $time=time();
+            $date=get_option('eoss_banner_time');
+            if(date("Y-m-d",$time)>$date) {
+                update_option('mo_social_hide_notice', '');
+            }
+        }
+        $isNoticeClosed = get_option("mo_social_hide_notice");
+        if($isNoticeClosed !== "mo_social_hide_notice"){
+            if($current_url !== $licensePageUrl){
+                echo '<div class="mo_sl_notice updated notice is-dismissible" style="padding-bottom: 7px;background-color:#e0eeee99;">
+        <p style ="font-size:18px;"><img src="'.plugin_dir_url(__FILE__).'includes/images/miniOrange_logo.png'.'" class="show_mo_icon_form" style="width: 3%;margin-bottom: -1%;">&ensp;<b>Thank you for choosing miniOrange Social Login.<br><br> END OF YEAR SALE!<br>GET UPTO 70% OFF ON ALL PREMIUM PLANS & ADDON\'S. <a class="mo_sl_notice_url" href='.$licensePageUrl.'>CHECK OUR SALE OFFERS HERE</a></b></p>        
+        <p style="font-size: initial"><b>Rest API / Mobile SSO:</b> Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fab fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fab fa-apple"><b> iOS</b></i> app? <a class="mo_sl_notice_url" style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade or <a class="mo_sl_notice_url" style="cursor: pointer" href='.$rest_url.'>Click here</a> for more details.</p>
+        <p style="font-size: initial"><b>Discord WordPress Integration:</b> Check out our <a class="mo_sl_notice_url" style="cursor: pointer" href="https://plugins.miniorange.com/discord-wordpress-add-on" target="_blank">Discord Add-on</a> if you\'re using Discord to manage your users for Membership, Role Mapping, Avatar Mapping, and more.</p>
+         </div>';
+            }
+        }
+    }
+
+    function mo_sl_dismiss_notice(){
+        update_option("mo_social_hide_notice","mo_social_hide_notice");
+        $time=time();
+        update_option('eoss_banner_time',date("Y-m-d",$time));
+
     }
 
     function new_miniorange_openid_menu() {
@@ -357,16 +400,20 @@ Thank you.';
         switch( $value )
         {
             case 'mo_openid_customise_social_icons':
-                $nonce = sanitize_text_field($_POST['mo_openid_customise_social_icons_nonce']);
+                $nonce = $_POST['mo_openid_customise_social_icons_nonce'];
                 if (!wp_verify_nonce($nonce, 'mo-openid-customise-social-icons-nonce')) {
-                    wp_die('<strong>ERROR</strong>: Please Go back and Refresh the page and try again!<br/>If you still face the same issue please contact your Administrator.');
+                    wp_die('<strong>ERROR</strong>: Invalid Request.');
                 }
                 else{
                     update_option('mo_openid_fonawesome_load', isset($_POST['mo_openid_fonawesome_load']) ? sanitize_text_field($_POST['mo_openid_fonawesome_load']) : 0);
                     update_option('mo_openid_bootstrap_load', isset($_POST['mo_openid_bootstrap_load']) ? sanitize_text_field($_POST['mo_openid_bootstrap_load']) : 0);
                     update_option('mo_openid_login_theme',isset($_POST['mo_openid_login_theme'])? sanitize_text_field($_POST['mo_openid_login_theme']):"");
+                    update_option('mo_openid_button_theme_effect',isset($_POST['mo_openid_button_theme_effect'])? sanitize_text_field($_POST['mo_openid_button_theme_effect']):"");
                     update_option('mo_openid_login_custom_theme',isset($_POST['mo_openid_login_custom_theme'])? sanitize_text_field($_POST['mo_openid_login_custom_theme']):"");
                     update_option('mo_login_icon_custom_color',isset($_POST['mo_login_icon_custom_color'])? sanitize_text_field($_POST['mo_login_icon_custom_color']):"");
+                    update_option('mo_login_icon_custom_hover_color',isset($_POST['mo_login_icon_custom_hover_color'])? sanitize_text_field($_POST['mo_login_icon_custom_hover_color']):"");
+                    update_option('mo_login_icon_custom_smart_color1',isset($_POST['mo_login_icon_custom_smart_color1'])? sanitize_text_field($_POST['mo_login_icon_custom_smart_color1']):"");
+                    update_option('mo_login_icon_custom_smart_color2',isset($_POST['mo_login_icon_custom_smart_color2'])? sanitize_text_field($_POST['mo_login_icon_custom_smart_color2']):"");
                     update_option('mo_login_icon_space',isset($_POST['mo_login_icon_space'])? sanitize_text_field($_POST['mo_login_icon_space']):"");
                     update_option('mo_login_icon_custom_width', isset($_POST['mo_login_icon_custom_width'])?sanitize_text_field($_POST['mo_login_icon_custom_width']):"");
                     update_option('mo_login_icon_custom_height',isset($_POST['mo_login_icon_custom_height'])? sanitize_text_field($_POST['mo_login_icon_custom_height']):"");
@@ -377,8 +424,9 @@ Thank you.';
                     update_option('mo_openid_login_button_customize_text',isset($_POST['mo_openid_login_button_customize_text'])? sanitize_text_field($_POST['mo_openid_login_button_customize_text']):"");
                     update_option('mo_openid_login_widget_customize_logout_name_text',isset($_POST['mo_openid_login_widget_customize_logout_name_text'])? sanitize_text_field($_POST['mo_openid_login_widget_customize_logout_name_text']):"");
                     update_option('mo_openid_login_widget_customize_logout_text', isset($_POST['mo_openid_login_widget_customize_logout_text'])?sanitize_text_field($_POST['mo_openid_login_widget_customize_logout_text']):"");
+                    update_option('mo_openid_custom_css',isset($_POST['mo_openid_custom_css'])? sanitize_text_field($_POST['mo_openid_custom_css']):"");
                     update_option('mo_openid_message', 'Your settings are saved successfully.');
-	                mo_openid_show_success_message();
+                    mo_openid_show_success_message();
                 }
                 break;
             case 'mo_openid_enable_gdpr':

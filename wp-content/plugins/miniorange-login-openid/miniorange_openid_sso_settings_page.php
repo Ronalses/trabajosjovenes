@@ -40,18 +40,9 @@ require('view/add_on/mo_discord_add_on.php');
 require('view/soc_sha/soc_med_cust/mo_openid_social_media_cust.php');
 require ('view/soc_sha/twitter_btn/mo_twitter_btn.php');
 require('view/soc_sha/soc_med_ser/mo_openid_social_media_services.php');
+require('view/tlwp/mo_openid_tlwp.php');
 
 function mo_register_openid() {
-if(!strpos($_SERVER['REQUEST_URI'], "mo_openid_general_settings&tab=licensing_plans")) {
-    ?>
-    <div id="upgrade_notice" class="mo_openid_notice mo_openid_notice-warning" >
-        <p style="font-size: larger"><b>Rest API / Mobile SSO:</b> Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fab fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fab fa-apple"><b> iOS</b></i> app? <a style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade or <a style="cursor: pointer" href=<?php echo site_url()."/wp-admin/admin.php?page=mo_openid_general_settings&tab=rest_api_page"; ?>>Click here</a> for more details.
-        </p>
-        <p style="font-size: larger"><b>Discord WordPress Integration:</b> Check out our <a style="cursor: pointer" href="https://plugins.miniorange.com/discord-wordpress-add-on" target="_blank">Discord Add-on</a> if you're using Discord to manage your users for Membership, Role Mapping, Avatar Mapping, and more.
-        </p>
-    </div>
-    <?php
-}
     if (isset($_GET['tab']) && $_GET['tab'] !== 'register') {
         $active_tab = $_GET['tab'];
     } else {
@@ -147,6 +138,12 @@ if(!strpos($_SERVER['REQUEST_URI'], "mo_openid_general_settings&tab=licensing_pl
                 <a id="disp_opt" class="tablinks<?php if($active_tab=="disp_opt") echo '_active';?>" href="<?php echo add_query_arg( array('tab' => 'disp_opt'), $_SERVER['REQUEST_URI'] ); ?>"><?php echo mo_sl('Display Options');?></a>
                 <a id="redirect_opt" class="tablinks<?php if($active_tab=="redirect_opt") echo '_active';?>" href="<?php echo add_query_arg( array('tab' => 'redirect_opt'), $_SERVER['REQUEST_URI'] ); ?>"><?php echo mo_sl('Redirect Options');?></a>
                 <a id="registration" class="tablinks<?php if($active_tab=="registration") echo '_active';?>" href="<?php echo add_query_arg( array('tab' => 'registration'), $_SERVER['REQUEST_URI'] ); ?>"><?php echo mo_sl('Registration');?></a>
+                <?php $i=get_current_user_id();
+                $temp_user=get_user_meta($i, 'temporary_url', true);
+                if( !$temp_user) {
+                ?>
+                <a id="tlwp" class="tablinks<?php if($active_tab=="tlwp") echo '_active';?>" href="<?php echo add_query_arg( array('tab' => 'tlwp'), $_SERVER['REQUEST_URI'] ); ?>"><?php echo mo_sl('Create Temporaray Login');?></a>
+                <?php } ?>
                 <a id="integration" style="color: lightgreen" class="tablinks<?php if($active_tab=="integration") echo '_active';?>" href="<?php echo add_query_arg( array('tab' => 'integration'), $_SERVER['REQUEST_URI'] ); ?>"><?php echo mo_sl('Popular Integrations');?><span class="mo-openid-premium"><?php echo mo_sl('PRO');?></span></a>
                 <a id="profile_completion" class="tablinks<?php if($active_tab=="profile_completion") echo '_active';?>" href="<?php echo add_query_arg( array('tab' => 'profile_completion'), $_SERVER['REQUEST_URI'] ); ?>"><?php echo mo_sl('Profile Completion');?></a>
                 <a id="email_settings" class="tablinks<?php if($active_tab=="email_settings") echo '_active';?>" href="<?php echo add_query_arg( array('tab' => 'email_settings'), $_SERVER['REQUEST_URI'] ); ?>"><?php echo mo_sl('Email Notification');?><span class="mo-openid-premium"><?php echo mo_sl('PRO');?></span></a>
@@ -185,6 +182,9 @@ if(!strpos($_SERVER['REQUEST_URI'], "mo_openid_general_settings&tab=licensing_pl
                                         break;
                                     case 'redirect_opt':
                                         mo_openid_redirect_opt();
+                                        break;
+                                    case 'tlwp':
+                                        mo_openid_tlwp();
                                         break;
                                     case 'registration':
                                         mo_openid_registration();
@@ -251,7 +251,7 @@ if(!strpos($_SERVER['REQUEST_URI'], "mo_openid_general_settings&tab=licensing_pl
     <script>
         jQuery("#contact_us_phone").intlTelInput();
             function mo_openid_support_form(abc) {
-                
+
                 var def = "It seems that you have shown interest. Please elaborate more on your requirements.";
                 if (abc == '' || abc == "undefined")
                     def = "Write your query here";
@@ -262,6 +262,7 @@ if(!strpos($_SERVER['REQUEST_URI'], "mo_openid_general_settings&tab=licensing_pl
                 var mo_btn = document.getElementById("mymo_btn");
                 mo_btn.style.display = "none";
                 var span = document.getElementsByClassName("mo_support_close")[0];
+                var modales = document.getElementById("myModalsss");
 
                 document.getElementById('mo_openid_support_msg').placeholder = def;
                 document.getElementById("feature_plan").value= abc;
@@ -272,6 +273,7 @@ if(!strpos($_SERVER['REQUEST_URI'], "mo_openid_general_settings&tab=licensing_pl
                 window.onclick = function (event) {
                     if (event.target == modal) {
                         modal.style.display = "none";
+                        modales.style.display = "none";
                         mo_btn.style.display = "block";
                     }
                 }
@@ -755,7 +757,6 @@ function mo_register_sharing_openid()
         }
     </script>
     <?php
-
 }
 
 function mo_comment_openid() {
@@ -999,7 +1000,7 @@ function mo_comment_openid() {
 }
 
 function mo_openid_addon_desc_page() {
-    
+
     if( isset( $_GET[ 'tab' ]) && $_GET[ 'tab' ] !== 'register' ) {
         $active_tab = $_GET[ 'tab' ];
     }
@@ -1258,5 +1259,4 @@ else
         }
     </script>
     <?php
-
 }

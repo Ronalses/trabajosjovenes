@@ -338,7 +338,7 @@ function mo_create_new_user($user_val){
     );
     $user_id 	= wp_insert_user( $userdata);
 
-    
+
 
     if(is_wp_error( $user_id )) {
         print_r($user_id);
@@ -638,12 +638,12 @@ function mo_openid_is_mailc_license_key_verified() {
         return 1;
     }
 }
-function mo_openid_show_addon_message_page()
+function mo_openid_show_addon_message_page($add)
 {
     ?>
     <div class="mo_openid_table_layout">
         <?php
-        echo "<div style='text-align: center'><p>It seems <b>Extra Attributes Add On plugin</b> is not installed or activated. Please download or activate the addon.</p></div>";
+        echo "<div style='text-align: center'><p>It seems <b>".$add."</b> is not installed or activated. Please download or activate the addon.</p></div>";
         ?>
         <h2 align="center">How do I download or activate the Social Integration Registration Form Addon ?</h2>
         <p><b>Download:</b> Download addon and license key from xecurify Console
@@ -988,18 +988,11 @@ function mo_openid_registeration_modal(){
                 </div>
             </form>
             <form method="post">
-
                 <input id="pop_next" name="show_login" value="Existing Account" class="button button-primary button-large" style="margin-left: 35%;margin-top: -7.7%;" type="submit">
-
             </form>
-
-
-
         </div>
     </div>
-
     </div>
-
     <?php
 }
 
@@ -1010,7 +1003,7 @@ function create_customer(){
         get_current_customer();
     }
     else if((strcasecmp( $customerKey['status'], 'INVALID_EMAIL_QUICK_EMAIL' ) == 0) && (strcasecmp( $customerKey['message'], 'This is not a valid email. please enter a valid email.' ) == 0) ){
-        if($_POST['action']=='mo_register_new_user')
+        if(isset($_POST['action'])?$_POST['action']=='mo_register_new_user':0)
             wp_send_json(["error" => 'There was an error creating an account for you. You may have entered an invalid Email-Id. (We discourage the use of disposable emails) Please try again with a valid email.']);
         else {
             update_option('mo_openid_message', 'There was an error creating an account for you. You may have entered an invalid Email-Id. <b> (We discourage the use of disposable emails) </b> Please try again with a valid email.');
@@ -1023,7 +1016,7 @@ function create_customer(){
         }
     }
     else if((strcasecmp( $customerKey['status'], 'FAILED' ) == 0) && (strcasecmp( $customerKey['message'], 'Email is not enterprise email.' ) == 0) ){
-        if($_POST['action']=='mo_register_new_user')
+        if(isset($_POST['action'])?$_POST['action']=='mo_register_new_user':0)
             wp_send_json(["error" => 'There was an error creating an account for you. You may have entered an invalid Email-Id. (We discourage the use of disposable emails) Please try again with a valid email.']);
         else {
             update_option('mo_openid_message', 'There was an error creating an account for you. You may have entered an invalid Email-Id. <b> (We discourage the use of disposable emails) </b> Please try again with a valid email.');
@@ -1045,7 +1038,7 @@ function create_customer(){
         update_option('mo_openid_registration_status','MO_OPENID_REGISTRATION_COMPLETE');
         delete_option('mo_openid_verify_customer');
         delete_option('mo_openid_new_registration');
-        if($_POST['action']=='mo_register_new_user')
+        if(isset($_POST['action'])?$_POST['action']=='mo_register_new_user':0)
             wp_send_json(["success" => 'Registration complete!']);
         else {
             mo_openid_show_success_message();
@@ -1165,7 +1158,7 @@ function mo_register_old_user(){
         update_option('mo_openid_admin_customer_key', $customerKey['id']);
         update_option('mo_openid_admin_api_key', $customerKey['apiKey']);
         update_option('mo_openid_customer_token', $customerKey['token']);
-        update_option('mo_openid_admin_phone', $customerKey['phone']);
+        update_option('mo_openid_admin_phone', isset($customerKey['phone'])?$customerKey['phone']:'');
         update_option('mo_openid_admin_password', '');
         update_option('mo_openid_message', 'Your account has been retrieved successfully.');
         delete_option('mo_openid_verify_customer');

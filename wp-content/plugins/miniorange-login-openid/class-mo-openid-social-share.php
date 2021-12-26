@@ -1,6 +1,4 @@
 <?php
-
-
 if(isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off'){
 	$http = "https://";
 } else {
@@ -717,10 +715,8 @@ $url = $http . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
 		    }
 			hideVerticalShare();
 		</script>
-	<?php } ?>
-
-<?php }?>
+	<?php
+	    }
+	}
+	?>
 </div><br>
-<?php
-
-?>

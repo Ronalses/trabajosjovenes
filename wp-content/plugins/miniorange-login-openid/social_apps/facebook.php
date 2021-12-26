@@ -4,7 +4,7 @@ class mo_facebook
 {
     public $color="#1877F2";
     public $scope="email, public_profile";
-    public $video_url="https://www.youtube.com/embed/1hsLaT54XYM";
+    public $video_url="https://www.youtube.com/embed/ju21twD0uB0";
     public $instructions;
     public function __construct() {
         $this->site_url = get_option( 'siteurl' );
@@ -19,13 +19,14 @@ class mo_facebook
                                 ##Under <b>User Data Deletion</b> click on the drop down, Select <b>Data Deletion Instruction URl</b> (Enter the URL of your page with the instructions on how users can delete their accounts on your site).
                                 ##Select <b>Category</b> of your website. Then click on <b>Save Changes</b>. 
                                 ##On the Left side panel, Click on <b>Facebook Login</b> and select <b>Settings</b> option. 
-                                ##Scroll down and add the following URL to the <b>Valid OAuth redirect URIs</b> field <b><code id='222'>".mo_get_permalink('facebook')."</code><i style= \"width: 11px;height: 9px;padding-left:2px;padding-top:3px\" class=\"far fa-fw fa-lg fa-copy mo_copy mo_copytooltip\" onclick=\"copyToClipboard(this, '#12', '#shortcode_url_copy3')\"><span id=\"shortcode_url_copy3\" class=\"mo_copytooltiptext\">Copy to Clipboard</span></i></b> and click on <b>Save Changes</b> button. 
+                                ##Scroll down and add the following URL to the <b>Valid OAuth redirect URIs</b> field <b><code id='222'>".mo_get_permalink('facebook')."</code><i style= \"width: 11px;height: 9px;padding-left:2px;padding-top:3px\" class=\"far fa-fw fa-lg fa-copy mo_copy mo_copytooltip\" onclick=\"copyToClipboard(this, '#222', '#shortcode_url_copy3')\"><span id=\"shortcode_url_copy3\" class=\"mo_copytooltiptext\">Copy to Clipboard</span></i></b> and click on <b>Save Changes</b> button. 
                                 ##Click on the App review tab from the left hand side menu and click on Permissions and Request.
                                 ##Now click on Request Advance Access for public_profile and email. If you want any extra data to be returned you can request permission for those scopes.
                                 ##In  the toolbar Change your app status from <b>In Development</b> to <b>Live</b> by clicking on the toggle button and further Click on <b>Switch Mode</b>.
                                 ##Go to <b>Settings > Basic</b>. Copy your <b>App ID</b> and <b>App Secret</b> provided by Facebook and paste them into the fields above.
                                 ##Input <b> email, public_profile </b>as scope.
                                 ##Click on the <b>Save settings</b> button.
+                                ##<b>NOTE:</b> If you are asked to Complete Data Use Checkup. Click on the Start Checkup button. Certify Data Use for public_profile and email. Provide consent to Facebook Developer’s Policy and click on submit.
                                 ##<b>[Optional: Extra attributes]</b> If you want to access the <b>user_birthday, user_hometown, user_location</b> of a Facebook user, you need to send your app for review to Facebook. For submitting an app for review, click <a target=\"_blank\" href=\"https://developers.facebook.com/docs/facebook-login/review/how-to-submit \">here</a>. After your app is reviewed, you can add the scopes you have sent for review in the scope above. If your app is not approved or is in the process of getting approved, let the scope be <b>email, public_profile</b>
                                 ##Go to Social Login tab to configure the display as well as other login settings.
                                 ##If you are facing any problem drop a mail on socialloginsupport@xecurify.com.";

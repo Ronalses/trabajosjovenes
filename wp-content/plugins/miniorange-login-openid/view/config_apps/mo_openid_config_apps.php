@@ -2,6 +2,80 @@
 //configure apps menu page
 function mo_openid_show_apps()
 {
+    $time=get_option('sale_banner_time');
+    if (! $time) {
+        update_option('sale_banner_time',time());
+        $time=time();
+    }
+
+    if ($time+3600 < time() ) {
+            echo '<style>
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: transparent;
+  margin: auto;
+  padding: 0px;
+  height: 420px;
+  width: 380px;
+}
+
+/* The Close Button */
+.close {
+  color: #7a7a7a;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 432px;
+  position: absolute;
+}
+
+.close:hover,
+.close:focus {
+  color: #f6f4f4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
+                    <div id="myModalsss" class="modal">
+                    
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <img height="500px" width="450px" src="' . plugin_dir_url(dirname(dirname(__FILE__))) . '/includes/images/eosssale.gif">
+                                                    
+                      </div>
+                    
+                    </div>
+                    <script>
+                    var modales = document.getElementById("myModalsss");
+                    
+                    // Get the button that opens the modal
+                    
+                    // Get the <span> element that closes the modal
+                    var sp = document.getElementsByClassName("close")[0];
+                    // When the user clicks on <span> (x), close the modal
+                    sp.onclick = function() {
+                      modales.style.display = "none";
+                    }
+                    
+                    </script>';
+        update_option('sale_banner_time',time());
+        }
+
     if (isset($_POST['update_tour_status'])){
         update_option('mo_openid_tour_new','1');
     }
@@ -98,6 +172,9 @@ function mo_openid_show_apps()
                         }elseif ($apps=='mailru'){
                             $icons='at';
                         }
+                        elseif ($apps=='stackoverflow'){
+                            $icons='stack-overflow';
+                        }
                         $dir=dirname(dirname(dirname( __FILE__ )));
                         include_once($dir.'/social_apps/'.$apps.'.php');
                         $mo_appname='mo_'.$apps;
@@ -106,7 +183,7 @@ function mo_openid_show_apps()
                         ?>
                         <div class="mo-openid-sort-apps-div mo-openid-hover-div-sett">
                             <div class="mo-openid-sort-apps-i-div" style="background-color:<?php echo $blcolor?>;">
-                                <?php if($apps=='naver'||$apps=='disqus'||$apps=='teamsnap'||$apps=='livejournal'||$apps=='kakao'||$apps=='baidu'||$apps=='mailru'){ ?>
+                                <?php if($apps=='naver'||$apps=='disqus'||$apps=='teamsnap'||$apps=='livejournal'||$apps=='kakao'||$apps=='baidu'||$apps=='mailru'||$apps=='fitbit'){ ?>
                                     <img style="float: right" src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/icons/<?php echo $apps?>.png" height="60px" width="60px"
                                          alt="<?php echo $apps?>"/>
                                 <?php }
@@ -115,7 +192,7 @@ function mo_openid_show_apps()
                                 <?php } ?>
                             </div>
                             <div id="mo-openid-hover-app-sett-show" style="display: block">
-                                <div style="display: inline-block; text-align: center;width: 100%;position: absolute;font-size: 13px;"><span style="color:black"><?php if($apps == 'mailru') $apps='mail.ru'; echo strtoupper($apps)?></span></div>
+                                <div style="display: inline-block; text-align: center;width: 100%;position: absolute;font-size: 13px;"><span style="color:black"><?php if($apps == 'mailru') $apps='mail.ru'; if($apps == 'wiebo') $apps='weibo'; echo strtoupper($apps)?></span></div>
                             </div>
                         </div>
                         <?php

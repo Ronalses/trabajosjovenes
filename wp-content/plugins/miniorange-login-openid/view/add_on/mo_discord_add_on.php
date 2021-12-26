@@ -15,7 +15,7 @@ function mo_openid_discord_add_on_display()
                         <input type="button" value="<?php echo mo_sl('Verify Key');?>"
                                id="mosocial_purchase_dis_verify"
                                class="button button-primary button-large"
-                               style="float: right;">
+                               style="float: right;display: none">
                     </h3>
                     <br>
                     <b><?php echo mo_sl('Discord Integration add-on allows you to restrict the login/registration of user based on whether the user is present in the Discord server');?></b>
@@ -26,6 +26,19 @@ function mo_openid_discord_add_on_display()
 
     </div>
     <br>
+    <hr>
+    <h2 style="font-style: italic;font-size: 1.8em; text-align: center;">Customization Available With Discord Integration</h2>
+
+    <div class="mo_openid_note_style " style="border-left: 6px solid #2196F3;border-radius: 5px" >
+        <ul style="list-style: initial;margin-left: 2%; font-weight: bold;" >
+            <li>We provide <b>DISCORD ROLE MAPPING</b> based on WordPress role and membership/subscription of the end user. </li>
+            <li>Automate the process of adding user to the discord server when user register to website.</li>
+            <li>Kick the user from the discord server when user deleted from WordPress website.</li>
+            <li>Kick the user when the subscription/membership ended.</li>
+            <li> Other Use Case as per customers requirment. For more details <a style="cursor: pointer" onclick="mo_openid_support_form()">Contact Us</a></li>
+        </ul>
+    </div>
+   <br>
     <div class="mo_openid_highlight">
         <h3 style="margin-left: 2%;line-height: 210%;color: white;"><?php echo mo_sl('Discord Integration');?></h3>
     </div>
@@ -45,24 +58,24 @@ function mo_openid_discord_add_on_display()
         </div>
 
         <form>
-	
-			<input name="option" type="hidden" value="discord_role_creation_settings">
-			<table class="form-table" role="presentation">
-				<tbody>
-				<tr class="form-field form-required">
-					<th scope="row"><label for="">Guild ID\'s <span class="description">(required)</span></label></th>
-					<td><input disabled type="text" placeholder="717473765117323473"><br><br>
-					</td>
-				</tr>			
-				<tr class="form-field form-required">
-					<th scope="row"><label for="">Bot Token Key <span class="description">(required)</span></label></th>
-					<td><input disabled type="text" placeholder="717473765117323473"/>
-					</td>
-				</tr>
-			</tbody></table>
-			
-			<p class="submit"><input type="submit" name="discord_role_creation_submit" id="discord_role_creation_submit" class="button button-primary" disabled value="Save"></p>
-		</form>
+    
+            <input name="option" type="hidden" value="discord_role_creation_settings">
+            <table class="form-table" role="presentation">
+                <tbody>
+                <tr class="form-field form-required">
+                    <th scope="row"><label for="">Guild ID\'s <span class="description">(required)</span></label></th>
+                    <td><input disabled type="text" placeholder="717473765117323473"><br><br>
+                    </td>
+                </tr>           
+                <tr class="form-field form-required">
+                    <th scope="row"><label for="">Bot Token Key <span class="description">(required)</span></label></th>
+                    <td><input disabled type="text" placeholder="717473765117323473"/>
+                    </td>
+                </tr>
+            </tbody></table>
+            
+            <p class="submit"><input type="submit" name="discord_role_creation_submit" id="discord_role_creation_submit" class="button button-primary" disabled value="Save"></p>
+        </form>
     </div>
     <td>
         <form style="display:none;" id="mosocial_loginform" action="<?php echo get_option( 'mo_openid_host_name' ) . '/moas/login'; ?>"
@@ -85,23 +98,7 @@ function mo_openid_discord_add_on_display()
             jQuery('#mo_openid_page_heading').text('<?php echo mo_sl('Discord Add On'); ?>');
             jQuery(document).ready(function($){
                 jQuery("#mosocial_purchase_dis_verify").on("click",function(){
-                    jQuery.ajax({
-                        url: "<?php echo admin_url("admin-ajax.php");?>", //the page containing php script
-                        method: "POST", //request type,
-                        dataType: 'json',
-                        data: {
-                            action: 'mo_register_customer_toggle_update',
-                        },
-                        success: function (result){
-                            if (result.status){
-                                mo_verify_add_on_license_key();
-                            }
-                            else{
-                                alert("Please register/login with miniOrange to verify key and use the Custom Registration Form Add on");
-                                window.location.href="<?php echo site_url()?>".concat("/wp-admin/admin.php?page=mo_openid_general_settings&tab=profile");
-                            }
-                        }
-                    });
+                    mo_verify_add_on_license_key();
                 });
             });
 

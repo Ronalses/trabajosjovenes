@@ -16,12 +16,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-20 23:18+0000\n"
-"PO-Revision-Date: 2021-11-12 21:29+0000\n"
+"PO-Revision-Date: 2021-12-10 15:59+0000\n"
 "Last-Translator: \n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.3; wp-5.8.2"
+"X-Loco-Version: 2.5.5; wp-5.8"
 
 #: inc/class-cariera-core.php:206
 msgid "Showing all resumes"
@@ -1843,8 +1843,8 @@ msgstr ""
 #: inc/vc-addons/company-carousel/addon.php:182
 msgid "%s Job"
 msgid_plural "%s Jobs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s Trabajo"
+msgstr[1] "%s Trabajos"
 
 #: inc/core/wp-company-manager/cpt.php:212, inc/extensions/account/user.php:824
 msgid "Approve"

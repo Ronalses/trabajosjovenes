@@ -16,12 +16,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-17 19:04+0000\n"
-"PO-Revision-Date: 2021-11-14 01:07+0000\n"
+"PO-Revision-Date: 2021-12-10 16:01+0000\n"
 "Last-Translator: \n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.3; wp-5.8.2"
+"X-Loco-Version: 2.5.5; wp-5.8"
 
 #: inc/theme-support.php:716, inc/theme-support.php:682
 msgid "% comments"
@@ -1030,7 +1030,7 @@ msgstr ""
 
 #: wp-job-manager-companies/company-overview.php:26
 msgid "Company Overview"
-msgstr ""
+msgstr "Resumen de la empresa"
 
 #: job_manager/job-templates/content-job_listing_grid1.php:61,
 #: job_manager/job-templates/content-job_listing_grid2.php:61,

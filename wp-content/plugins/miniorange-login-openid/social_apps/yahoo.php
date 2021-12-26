@@ -55,9 +55,11 @@ class mo_yahoo
 
         if(isset($profile_json_output['name'])){
             $user_name = isset( $profile_json_output['name']) ?  $profile_json_output['name'] : '';
-            $full_name = explode(" ", $user_name);
-            $first_name = isset( $full_name[0]) ?  $full_name[0] : '';
-            $last_name = isset( $full_name[1]) ?  $full_name[1] : '';
+            $first_name = isset( $profile_json_output['given_name']) ?  $profile_json_output['given_name'] : '';
+            $last_name = isset( $profile_json_output['family_name']) ?  $profile_json_output['family_name'] : '';
+            $email = isset( $profile_json_output['email']) ?  $profile_json_output['email'] : '';
+            $user_picture = isset( $profile_json_output['picture']) ?  $profile_json_output['picture'] : '';
+            $gender = isset( $profile_json_output['gender']) ?  $profile_json_output['gender'] : '';
         }
         $email = isset( $profile_json_output['email']) ?  $profile_json_output['email'] : '';
         $social_user_id = isset( $profile_json_output['sub']) ?  $profile_json_output['sub'] : '';
