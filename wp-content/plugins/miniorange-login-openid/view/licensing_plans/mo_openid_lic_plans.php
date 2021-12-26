@@ -2,7 +2,7 @@
 
 function mo_openid_licensing_plans()
 {
-    wp_enqueue_style( 'mo_openid_plugins_page_style', plugin_dir_url(dirname(dirname(__FILE__))).'includes/css/mo_openid_licensing_plan.css?version=7.4.7' );
+    wp_enqueue_style( 'mo_openid_plugins_page_style', plugin_dir_url(dirname(dirname(__FILE__))).'includes/css/mo_openid_licensing_plan.css?version='.MO_OPENID_SOCIAL_LOGIN_VERSION );
     ?>
 
     <div style="text-align: center; font-size: 14px; background: forestgreen; color: white; padding-top: 4px; padding-bottom: 4px; border-radius: 16px;"></div>
@@ -55,9 +55,9 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_ap1" class="mo-openid-cd-value">25</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_ap1" class="mo-openid-cd-value">19</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_ap2" class="mo-openid-cd-value"><s>29</s></span>
+                                        <span id="mo_openid_ap2" class="mo-openid-cd-value"><s>40</s></span>
                                     </div>
                                 </header> <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
@@ -69,7 +69,7 @@ function mo_openid_licensing_plans()
                                         <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
                                         <li class="mo-openid-lic-bold-cl" style="color: red">X</li>
                                         <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">13 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">14 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
                                         <li>
                                             <div class="mo_openid_tooltip" style="padding-left: 40px;">13 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Apple, Twitch, Discord, Facebook, Google, Twitter Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo, Instagram.</span></div></li>
                                         <li>Apple, Twitch, & Discord Login</li>
@@ -179,7 +179,7 @@ function mo_openid_licensing_plans()
                                         <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
                                         <li class="mo-openid-lic-bold-cl" style="color: red">X</li>
                                         <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">13 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">14 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
                                         <li>
                                             <div class="mo_openid_tooltip" style="padding-left: 40px;">10 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo.</span></div></li>
                                         <li>
@@ -254,9 +254,9 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_cra1" class="mo-openid-cd-value">35</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_cra1" class="mo-openid-cd-value">29</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_cra2" class="mo-openid-cd-value"><s>39</s></span>
+                                        <span id="mo_openid_cra2" class="mo-openid-cd-value"><s>60</s></span>
 
                                     </div>
                                 </header>
@@ -285,9 +285,9 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_mca1" class="mo-openid-cd-value">25</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_mca1" class="mo-openid-cd-value">19</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_mca2" class="mo-openid-cd-value"><s>29</s></span>
+                                        <span id="mo_openid_mca2" class="mo-openid-cd-value"><s>40</s></span>
                                     </div>
                                 </header> <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
@@ -319,9 +319,9 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_std1" class="mo-openid-cd-value">29</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_std1" class="mo-openid-cd-value">25</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_std2" class="mo-openid-cd-value"><s>39</s></span>
+                                        <span id="mo_openid_std2" class="mo-openid-cd-value"><s>50</s></span>
                                     </div>
                                 </header> <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
@@ -332,7 +332,7 @@ function mo_openid_licensing_plans()
                                         <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
                                         <li class="mo-openid-lic-bold-cl" style="color: red">X</li>
                                         <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">13 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">14 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
                                         <li>
                                             <div class="mo_openid_tooltip" style="padding-left: 40px;">35 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Google, Facebook, Twitter, Vkontakte, LinkedIn, Windows Live, Instagram, Amazon, Salesforce, Yahoo, <span id="mo_openid_dots4">...</span><span id="mo_openid_more4" style="display:none" >Wordpress, Mail.RU, Disqus, Pinterest, Yandex, Spotify, Reddit, Tumblr, Vimeo, Kakao, Dribbble, Flickr, MeetUp, Line, Stackexchange, Livejournal, Snapchat, Foursquare, Teamsnap, Naver, Odnoklassniki, Wiebo, Baidu, Renren, QQ.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots4','mo_openid_more4','mo_openid_myBtn4')" id="mo_openid_myBtn4">Read more</button>
                                             </div>
@@ -440,7 +440,7 @@ function mo_openid_licensing_plans()
                                         <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
                                         <li class="mo-openid-lic-bold-cl" style="color: red">X</li>
                                         <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">13 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">14 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
                                         <li>
                                             <div class="mo_openid_tooltip" style="padding-left: 40px;">35 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Google, Facebook, Twitter, Vkontakte, LinkedIn, Windows Live, Instagram, Amazon, Salesforce, Yahoo, <span id="mo_openid_dots4">...</span><span id="mo_openid_more4" style="display:none" >Wordpress, Mail.RU, Disqus, Pinterest, Yandex, Spotify, Reddit, Tumblr, Vimeo, Kakao, Dribbble, Flickr, MeetUp, Line, Stackexchange, Livejournal, Snapchat, Foursquare, Teamsnap, Naver, Odnoklassniki, Wiebo, Baidu, Renren, QQ.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots4','mo_openid_more4','mo_openid_myBtn4')" id="mo_openid_myBtn4">Read more</button>
                                             </div>
@@ -510,9 +510,9 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_wca_in1" class="mo-openid-cd-value">25</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_wca_in1" class="mo-openid-cd-value">19</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_wca_in2" class="mo-openid-cd-value"><s>29</s></span>
+                                        <span id="mo_openid_wca_in2" class="mo-openid-cd-value"><s>40</s></span>
                                     </div>
                                 </header> <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
@@ -540,9 +540,9 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_dis1" class="mo-openid-cd-value">79</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_dis1" class="mo-openid-cd-value">65</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_dis2" class="mo-openid-cd-value"><s>99</s></span>
+                                        <span id="mo_openid_dis2" class="mo-openid-cd-value"><s>130</s></span>
                                     </div>
                                 </header> <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
@@ -572,9 +572,9 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_pre1" class="mo-openid-cd-value">49</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_pre1" class="mo-openid-cd-value">39</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_pre2" class="mo-openid-cd-value"><s>59</s></span>
+                                        <span id="mo_openid_pre2" class="mo-openid-cd-value"><s>80</s></span>
                                     </div>
                                 </header> <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
@@ -585,7 +585,7 @@ function mo_openid_licensing_plans()
                                         <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
                                         <li class="mo-openid-lic-bold-cl" style="color: red">X</li>
                                         <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">13 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">14 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
                                         <li>
                                             <div class="mo_openid_tooltip" style="padding-left: 40px;">42 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;">Apple, Discord, Twitch, Line, Hubspot, Paypal, Github, Dropbox, Wechat, Google, Facebook, Twitter, Vkontakte, LinkedIn, Windows Live, Instagram, Amazon, Salesforce, Yahoo,<span id="mo_openid_dots6">...</span><span id="mo_openid_more6" style="display:none" > Wordpress, Mail.RU, Disqus, Pinterest, Yandex, Spotify, Reddit, Tumblr, Vimeo, Kakao, Dribbble, Flickr, MeetUp, Stackexchange, Livejournal, Snapchat, Foursquare, Teamsnap, Naver, Odnoklassniki, Wiebo, Baidu, Renren, QQ.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots6','mo_openid_more6','mo_openid_myBtn6')" id="mo_openid_myBtn6">Read more</button>
                                             </div>
@@ -692,7 +692,7 @@ function mo_openid_licensing_plans()
                                         <li class="mo-openid-lic-bold-cl" style="color: red">X</li>
 
                                         <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">13 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">14 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
                                         <li>
                                             <div class="mo_openid_tooltip" style="padding-left: 40px;">42 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;">Apple, Discord, Twitch, Line, Hubspot, Paypal, Github, Dropbox, Wechat, Google, Facebook, Twitter, Vkontakte, LinkedIn, Windows Live, Instagram, Amazon, Salesforce, Yahoo,<span id="mo_openid_dots6">...</span><span id="mo_openid_more6" style="display:none" > Wordpress, Mail.RU, Disqus, Pinterest, Yandex, Spotify, Reddit, Tumblr, Vimeo, Kakao, Dribbble, Flickr, MeetUp, Stackexchange, Livejournal, Snapchat, Foursquare, Teamsnap, Naver, Odnoklassniki, Wiebo, Baidu, Renren, QQ.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots6','mo_openid_more6','mo_openid_myBtn6')" id="mo_openid_myBtn6">Read more</button>
                                             </div>
@@ -764,9 +764,9 @@ function mo_openid_licensing_plans()
 
                                         <div class="cd-price" style="margin-top: 9%;">
                                             <span class="mo-openid-cd-currency">$</span>
-                                            <span id="mo_openid_bpa1" class="mo-openid-cd-value">25</span> &nbsp;&nbsp;
+                                            <span id="mo_openid_bpa1" class="mo-openid-cd-value">19</span> &nbsp;&nbsp;
                                             <span class="mo-openid-cd-currency">$</span>
-                                            <span id="mo_openid_bpa2" class="mo-openid-cd-value"><s>29</s></span>
+                                            <span id="mo_openid_bpa2" class="mo-openid-cd-value"><s>40</s></span>
                                         </div>
                                     </header> <!-- .mo-openid-cd-pricing-header -->
                                 </a>
@@ -797,9 +797,9 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_ai1" class="mo-openid-cd-value">89</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_ai1" class="mo-openid-cd-value">69</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_ai2" class="mo-openid-cd-value"><s>99</s></span>
+                                        <span id="mo_openid_ai2" class="mo-openid-cd-value"><s>140</s></span>
                                     </div>
                                 </header> <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
@@ -985,9 +985,9 @@ function mo_openid_licensing_plans()
                                     </select>
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_hub1" class="mo-openid-cd-value">45</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_hub1" class="mo-openid-cd-value">35</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_hub2" class="mo-openid-cd-value"><s>59</s></span>
+                                        <span id="mo_openid_hub2" class="mo-openid-cd-value"><s>70</s></span>
                                     </div>
                                 </header>
                                 <footer class="mo-openid-cd-pricing-footer">
@@ -1033,45 +1033,45 @@ function mo_openid_licensing_plans()
         //hubspot addon
         jQuery('#mo_openid_hub').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_hub1').html("45");
-                jQuery('#mo_openid_hub2').html("<s>59</s>");
+                jQuery('#mo_openid_hub1').html("35");
+                jQuery('#mo_openid_hub2').html("<s>70</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_hub1').html("149");
-                jQuery('#mo_openid_hub2').html("<s>295</s>");
+                jQuery('#mo_openid_hub2').html("<s>350</s>");
             }
             else if (this.value === "10") {
                 jQuery('#mo_openid_hub1').html("249");
-                jQuery('#mo_openid_hub2').html("<s>590</s>");
+                jQuery('#mo_openid_hub2').html("<s>700</s>");
             }
         });
 
         //custom registration add on
         jQuery('#mo_openid_cra').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_cra1').html("35");
-                jQuery('#mo_openid_cra2').html("<s>39</s>");
+                jQuery('#mo_openid_cra1').html("29");
+                jQuery('#mo_openid_cra2').html("<s>60</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_cra1').html("119");
-                jQuery('#mo_openid_cra2').html("<s>195</s>");
+                jQuery('#mo_openid_cra2').html("<s>300</s>");
             }
             else if (this.value === "10") {
                 jQuery('#mo_openid_cra1').html("179");
-                jQuery('#mo_openid_cra2').html("<s>390</s>");
+                jQuery('#mo_openid_cra2').html("<s>600</s>");
             }
         });
 
         //standard plan
         jQuery('#mo_openid_std').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_std1').html("29");
-                jQuery('#mo_openid_std2').html("<s>39</s>");
+                jQuery('#mo_openid_std1').html("25");
+                jQuery('#mo_openid_std2').html("<s>50</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_std1').html("99");
-                jQuery('#mo_openid_std2').html("<s>195</s>");
+                jQuery('#mo_openid_std2').html("<s>250</s>");
             }
             else if (this.value === "10") {
                 jQuery('#mo_openid_std1').html("169");
-                jQuery('#mo_openid_std2').html("<s>390</s>");
+                jQuery('#mo_openid_std2').html("<s>500</s>");
             }
         });
 
@@ -1210,30 +1210,30 @@ function mo_openid_licensing_plans()
         //woocommerce addon/plan
         jQuery('#mo_openid_wca_in').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_wca_in1').html("25");
-                jQuery('#mo_openid_wca_in2').html("<s>29</s>");
+                jQuery('#mo_openid_wca_in1').html("19");
+                jQuery('#mo_openid_wca_in2').html("<s>40</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_wca_in1').html("89");
-                jQuery('#mo_openid_wca_in2').html("<s>149</s>");
+                jQuery('#mo_openid_wca_in2').html("<s>200</s>");
             }
             else if (this.value === "10") {
                 jQuery('#mo_openid_wca_in1').html("149");
-                jQuery('#mo_openid_wca_in2').html("<s>290</s>");
+                jQuery('#mo_openid_wca_in2').html("<s>400</s>");
             }
         });
 
         //premium plugin
         jQuery('#mo_openid_pre').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_pre1').html("49");
-                jQuery('#mo_openid_pre2').html("<s>59</s>");
+                jQuery('#mo_openid_pre1').html("39");
+                jQuery('#mo_openid_pre2').html("<s>80</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_pre1').html("149");
-                jQuery('#mo_openid_pre2').html("<s>295</s>");
+                jQuery('#mo_openid_pre2').html("<s>400</s>");
             }
             else if (this.value === "10") {
                 jQuery('#mo_openid_pre1').html("199");
-                jQuery('#mo_openid_pre2').html("<s>590</s>");
+                jQuery('#mo_openid_pre2').html("<s>800</s>");
             }
         });
 
@@ -1306,30 +1306,30 @@ function mo_openid_licensing_plans()
         //buddypress addon/plan
         jQuery('#mo_openid_bpa').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_bpa1').html("25");
-                jQuery('#mo_openid_bpa2').html("<s>29</s>");
+                jQuery('#mo_openid_bpa1').html("19");
+                jQuery('#mo_openid_bpa2').html("<s>40</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_bpa1').html("89");
-                jQuery('#mo_openid_bpa2').html("<s>149</s>");
+                jQuery('#mo_openid_bpa2').html("<s>200</s>");
             }
             else if (this.value === "10") {
                 jQuery('#mo_openid_bpa1').html("149");
-                jQuery('#mo_openid_bpa2').html("<s>290</s>");
+                jQuery('#mo_openid_bpa2').html("<s>400</s>");
             }
         });
 
         //all-inclusive plan
         jQuery('#mo_openid_ai').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_ai1').html("89");
-                jQuery('#mo_openid_ai2').html("<s>99</s>");
+                jQuery('#mo_openid_ai1').html("69");
+                jQuery('#mo_openid_ai2').html("<s>140</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_ai1').html("299");
-                jQuery('#mo_openid_ai2').html("<s>495</s>");
+                jQuery('#mo_openid_ai2').html("<s>700</s>");
             }
             else if (this.value === "10") {
                 jQuery('#mo_openid_ai1').html("449");
-                jQuery('#mo_openid_ai2').html("<s>990</s>");
+                jQuery('#mo_openid_ai2').html("<s>1400</s>");
             }
         });
 
@@ -1402,45 +1402,45 @@ function mo_openid_licensing_plans()
         //mailchimp addon
         jQuery('#mo_openid_mca').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_mca1').html("25");
-                jQuery('#mo_openid_mca2').html("<s>29</s>");
+                jQuery('#mo_openid_mca1').html("19");
+                jQuery('#mo_openid_mca2').html("<s>40</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_mca1').html("89");
-                jQuery('#mo_openid_mca2').html("<s>149</s>");
+                jQuery('#mo_openid_mca2').html("<s>200</s>");
             }
             else if (this.value === "10") {
                 jQuery('#mo_openid_mca1').html("149");
-                jQuery('#mo_openid_mca2').html("<s>290</s>");
+                jQuery('#mo_openid_mca2').html("<s>400</s>");
             }
         });
 
         //discord addon
         jQuery('#mo_openid_dis').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_dis1').html("79");
-                jQuery('#mo_openid_dis2').html("<s>99</s>");
+                jQuery('#mo_openid_dis1').html("65");
+                jQuery('#mo_openid_dis2').html("<s>130</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_dis1').html("269");
-                jQuery('#mo_openid_dis2').html("<s>495</s>");
+                jQuery('#mo_openid_dis2').html("<s>650</s>");
             }
             else if (this.value === "10") {
                 jQuery('#mo_openid_dis1').html("449");
-                jQuery('#mo_openid_dis2').html("<s>990</s>");
+                jQuery('#mo_openid_dis2').html("<s>1300</s>");
             }
         });
 
         //Apple plan
         jQuery('#mo_openid_ap').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_ap1').html("25");
-                jQuery('#mo_openid_ap2').html("<s>29</s>");
+                jQuery('#mo_openid_ap1').html("19");
+                jQuery('#mo_openid_ap2').html("<s>40</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_ap1').html("99");
-                jQuery('#mo_openid_ap2').html("<s>145</s>");
+                jQuery('#mo_openid_ap2').html("<s>200</s>");
             }
             else if (this.value === "10") {
                 jQuery('#mo_openid_ap1').html("179");
-                jQuery('#mo_openid_ap2').html("<s>290</s>");
+                jQuery('#mo_openid_ap2').html("<s>400</s>");
             }
         });
 
@@ -1458,13 +1458,7 @@ function mo_openid_licensing_plans()
                 jQuery('#mo_openid_ssm2').html("<s>250</s>");
             }
         });
-
-        //var x="<?php //echo get_option('mo_openid_extension_tab'); ?>//";
-        //if(x==1){
-        //    document.getElementById('singlesite').checked= false;
-        //    //document.getElementById('multisite').checked= true;
-        //     document.getElementById('mo_add-on').checked= true;
-        //}
+        
         var card1 = document.getElementById('col1');
         var card2= document.getElementById('col2');
         var card3= document.getElementById('col3');

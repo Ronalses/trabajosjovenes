@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Google Tag Manager for WordPress - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-28 10:01:38+0000\n"
+"PO-Revision-Date: 2021-12-13 14:14:57+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,16 +24,16 @@ msgid "Container domain name"
 msgstr "Nombre de dominio del contenedor"
 
 #: admin/admin.php:415
-msgid "Enable this checkbox if you wish to use the <a href=\"%s\" target=\"_blank\">automatic cookie blocking mode of Cookiebot with Google Tag Manager</a>."
-msgstr "Activa esta casilla si quieres usar el <a href=\"%s\" target=\"_blank\">modo de bloqueo automático de cookies de Cookiebot con Google Tag Manager</a>."
+msgid "Enable this checkbox if you wish to use the <a href=\"%s\" target=\"_blank\" rel=\"noopener\">automatic cookie blocking mode of Cookiebot with Google Tag Manager</a>."
+msgstr "Activa esta casilla si quieres usar el <a href=\"%s\" target=\"_blank\">modo automático de bloqueo de cookies de Cookiebot con Google Tag Manager</a>."
 
 #: admin/admin.php:414
 msgid "Cookiebot auto blocking"
 msgstr "Bloqueo automático de Cookiebot"
 
 #: admin/admin.php:358
-msgid "Select which vertical category to add next to each product to utilize dynamic remarketing for Google Ads.<br>Use the plugin's <a href=\"%s\" target=\"_blank\">official setup guide for dynamic remarketing</a> to setup your Google Tag Manager container."
-msgstr "Selecciona qué categoría vertical añadir a continuación a cada producto para usar el remarketing dinámico en Google Ads.<br>Usa la <a href=\"%s\" target=\"_blank\">guía oficial de configuración del plugin para el remarketing dinámico</a> para configurar tu contenedor de Google Tag Manager."
+msgid "Select which vertical category to add next to each product to utilize dynamic remarketing for Google Ads.<br>Use the plugin's <a href=\"%s\" target=\"_blank\" rel=\"noopener\">official setup guide for dynamic remarketing</a> to setup your Google Tag Manager container."
+msgstr "Selecciona qué categoría vertical añadir a continuación de cada producto para usar el remarketing dinámico en Google Ads.<br>Usa la <a href=\"%s\" target=\"_blank\">guía oficial de configuración del plugin para el remarketing dinámico</a> para configurar tu contenedor de Google Tag Manager."
 
 #: admin/admin.php:356
 msgid "Google Ads Business Vertical"
@@ -48,8 +48,8 @@ msgid "Only track orders younger than"
 msgstr "Solo seguir pedidos de menos de"
 
 #: admin/admin.php:282
-msgid "Choose this option if you would like to track e-commerce data using <a href=\"%s\" target=\"_blank\">enhanced ecommerce tracking</a>.<br>Use the plugin's official guides to setup your Google Tag Manager container:<br><ul><li><a href=\"%s\" target=\"_blank\">Google Analytics 3 / Universal Analytics setup</a></li><li><a href=\"%s\" target=\"_blank\">Google Analytics 4 setup</a></li></ul>"
-msgstr "Elige esta opción si te gustaría hacer seguimiento de datos de ecommerce usando <a href=\"%s\" target=\"_blank\">el seguimiento mejorado de ecommerce</a>.<br>Usa las guías oficiales del plugin para configurar tu contenedor de Google Tag Manager:<br><ul><li><a href=\"%s\" target=\"_blank\">Configurar Google Analytics 3 / Universal Analytics</a></li><li><a href=\"%s\" target=\"_blank\">Configurar Google Analytics 4</a></li></ul>"
+msgid "Choose this option if you would like to track e-commerce data using <a href=\"%s\" target=\"_blank\" rel=\"noopener\">enhanced ecommerce tracking</a>.<br>Use the plugin's official guides to setup your Google Tag Manager container:<br><ul><li><a href=\"%s\" target=\"_blank\" rel=\"noopener\">Google Analytics 3 / Universal Analytics setup</a></li><li><a href=\"%s\" target=\"_blank\" rel=\"noopener\">Google Analytics 4 setup</a></li></ul>"
+msgstr "Elige esta opción si te gustaría hacer seguimiento de datos de ecommerce usando <a href=\"%s\" target=\"_blank\" rel=\"noopener\">el seguimiento mejorado de ecommerce</a>.<br>Usa las guías oficiales del plugin para configurar tu contenedor de Google Tag Manager:<br><ul><li><a href=\"%s\" target=\"_blank\" rel=\"noopener\">Configurar Google Analytics 3 / Universal Analytics</a></li><li><a href=\"%s\" target=\"_blank\" rel=\"noopener\">Configurar Google Analytics 4</a></li></ul>"
 
 #: admin/admin.php:276
 msgid "This feature is deprecated and will be removed soon! You should upgrade to enhanced ecommerce as soon as possible."
@@ -87,7 +87,7 @@ msgstr "Permite todo, excepto los elementos marcados en todas las pestañas de l
 msgid "For example blacklisting everything and only whitelisting the Google Analytics tag without whitelisting the URL variable type will cause your Google Analytics tags to be blocked anyway since the attached triggers (Page View) can not fire!"
 msgstr "Por ejemplo, si se incluye todo en la lista negra y sólo la etiqueta de Google Analytics en la lista blanca, sin incluir el tipo de variable de la URL, las etiquetas de Google Analytics se bloquearán de todos modos, ya que los disparadores adjuntos (vista de página) no pueden activarse."
 
-#: integration/woocommerce.php:1081
+#: integration/woocommerce.php:1200
 msgid "Grouped Product Detail Page"
 msgstr "Página de detalles de los productos agrupados"
 
@@ -151,7 +151,7 @@ msgstr "Marca esta opción para añadir los valores de la taxonomía asociados a
 msgid "Post Terms"
 msgstr "Términos de la entrada"
 
-#: admin/admin.php:1427
+#: admin/admin.php:1443
 msgid "Warning: You are using an outdated version of PHP (v"
 msgstr "Advertencia: Estás utilizando una versión obsoleta de PHP (v"
 
@@ -168,8 +168,8 @@ msgid "If you have many products shown on product category pages and/or on your 
 msgstr "Si tienes muchos productos mostrados en las páginas de categorías de productos y/o en la página de inicio de tu sitio, podrías perder vistas de páginas en Google Analytics debido a la cantidad de datos que tienen que ser enviados. Para evitarlo, puedes dividir los datos de impresión de los productos en varios eventos de Google Analytics introduciendo aquí un número (se recomienda un mínimo de 10 a 15) y añadiendo `gtm4wp.productImpressionEEC` del activador de la etiqueta de ayuda para eventos de comercio electrónico de Google Analytics.<br /><br />Deja este valor en 0 para incluir los datos de impresión del producto en el resultado de la vista de página."
 
 #: admin/admin.php:164
-msgid "Check this option to include the current weather conditions around the current visitor.<br /><br /><strong>Attention!</strong> This feature uses <a href=\"%s\" target=\"_blank\">ipstack.com</a> and <a href=\"%s\" target=\"_blank\">openweathermap.org</a> to collect data.<br />Depending on your website's traffic, additional fees may apply!<br />This plugin caches weather data for 1 hour to lower the need to access those services.<br /><br />If you activate weather data, <strong>you will need</strong> to add an IPStack.com API key regardless of whether you activate the 'Geo data' option!"
-msgstr "Marca esta opción para incluir las condiciones meteorológicas actuales en el entorno del visitante actual.<br /><br /><strong>¡Atención!</strong> Esta característica usa <a href=\"%s\" target=\"_blank\">ipstack.com</a> y <a href=\"%s\" target=\"_blank\">openweathermap.org</a> para recopilar los datos.<br />Dependiendo del tráfico de tu web, ¡se pueden aplicar cuotas adicionales!<br />Este plugin almacena en la caché los datos meteorológicos durante 1 hora para reducir la necesidad de acceso a esos servicios.<br /><br />Si activas los datos meteorológicos, <strong>tendrás</strong> que añadir una clave de la API de IPStack.com, ¡independientemente de si activas o no la opción de «Datos geográficos»!"
+msgid "Check this option to include the current weather conditions around the current visitor.<br /><br /><strong>Attention!</strong> This feature uses <a href=\"%s\" target=\"_blank\" rel=\"noopener\">ipstack.com</a> and <a href=\"%s\" target=\"_blank\" rel=\"noopener\">openweathermap.org</a> to collect data.<br />Depending on your website's traffic, additional fees may apply!<br />This plugin caches weather data for 1 hour to lower the need to access those services.<br /><br />If you activate weather data, <strong>you will need</strong> to add an IPStack.com API key regardless of whether you activate the 'Geo data' option!"
+msgstr "Marca esta opción para incluir las condiciones meteorológicas actuales en el entorno del visitante actual.<br /><br /><strong>¡Atención!</strong> Esta característica usa <a href=\"%s\" target=\"_blank\" rel=\"noopener\">ipstack.com</a> y <a href=\"%s\" target=\"_blank\" rel=\"noopener\">openweathermap.org</a> para recopilar los datos.<br />Dependiendo del tráfico de tu web, ¡se pueden aplicar cuotas adicionales!<br />Este plugin almacena en la caché los datos meteorológicos durante 1 hora para reducir la necesidad de acceso a esos servicios.<br /><br />Si activas los datos meteorológicos, <strong>tendrás</strong> que añadir una clave de la API de IPStack.com, ¡independientemente de si activas o no la opción de «Datos geográficos»!"
 
 #: admin/admin.php:1177
 msgid "Accelerated Mobile Pages"
@@ -244,12 +244,12 @@ msgid "New user registration"
 msgstr "Registro de nuevo usuario"
 
 #: admin/admin.php:186
-msgid "Enter your OpenWeatherMap API key here. <a href=\"%s\" target=\"_blank\">Get a free API key here</a>."
-msgstr "Introduce aquí tu clave de la API de OpenWeatherMap. <a href=\"%s\" target=\"_blank\">Obtén aquí una clave gratuita de la API</a>."
+msgid "Enter your OpenWeatherMap API key here. <a href=\"%s\" target=\"_blank\" rel=\"noopener\">Get a free API key here</a>."
+msgstr "Introduce aquí tu clave de la API de OpenWeatherMap. <a href=\"%s\" target=\"_blank\" rel=\"noopener\">Obtén aquí una clave gratuita de la API</a>."
 
 #: admin/admin.php:153
-msgid "Enter your IPStack.com API key here. <a href=\"%s\" target=\"_blank\">Get a free API key here</a>."
-msgstr "Introduce aquí tu clave de la API de IPStack.com. <a href=\"%s\" target=\"_blank\">Obtén aquí una clave gratuita de la API</a>."
+msgid "Enter your IPStack.com API key here. <a href=\"%s\" target=\"_blank\" rel=\"noopener\">Get a free API key here</a>."
+msgstr "Introduce aquí tu clave de la API de IPStack.com. <a href=\"%s\" target=\"_blank\" rel=\"noopener\">Obtén aquí una clave gratuita de la API</a>."
 
 #: admin/admin.php:152
 msgid "IPStack.com API key"
@@ -268,13 +268,13 @@ msgstr "IP del visitante"
 msgid "https://gtm4wp.com/"
 msgstr "https://gtm4wp.com/"
 
-#: public/frontend.php:408 public/frontend.php:409 public/frontend.php:410
-#: public/frontend.php:411 public/frontend.php:412 public/frontend.php:413
-#: public/frontend.php:414 public/frontend.php:415
+#: public/frontend.php:409 public/frontend.php:410 public/frontend.php:411
+#: public/frontend.php:412 public/frontend.php:413 public/frontend.php:414
+#: public/frontend.php:415 public/frontend.php:416
 msgid "(no geo data available)"
 msgstr "(no hay datos geográficos disponibles)"
 
-#: admin/admin.php:1409
+#: admin/admin.php:1425
 msgid "Incomplete Google Tag Manager environment configuration: either gtm_preview or gtm_auth parameter value is missing!"
 msgstr "Configuración incompleta del entorno de Google Tag Manager: ¡Falta el valor del parámetro `gtm_preview` o `gtm_auth`!"
 
@@ -354,11 +354,11 @@ msgstr "Marca esta opción para incluir el formato de entrada."
 msgid "Post Format"
 msgstr "Formato de entrada"
 
-#: integration/woocommerce.php:838
+#: integration/woocommerce.php:941
 msgid "Upsell Products"
 msgstr "Productos de venta dirigida"
 
-#: integration/woocommerce.php:830
+#: integration/woocommerce.php:933
 msgid "Cross-Sell Products"
 msgstr "Productos de venta cruzada"
 
@@ -458,39 +458,39 @@ msgstr "ID del autor del post"
 msgid "OpenWeatherMap API key"
 msgstr "Clave API de OpenWeatherMap"
 
-#: integration/woocommerce.php:921
+#: integration/woocommerce.php:1024
 msgid "Featured Products"
 msgstr "Productos destacados"
 
-#: integration/woocommerce.php:915
+#: integration/woocommerce.php:1018
 msgid "Top Rated Products"
 msgstr "Productos mejor valorados"
 
-#: integration/woocommerce.php:909
+#: integration/woocommerce.php:1012
 msgid "Best Selling Products"
 msgstr "Productos más vendidos"
 
-#: integration/woocommerce.php:903
+#: integration/woocommerce.php:1006
 msgid "Sale Products"
 msgstr "Productos en oferta"
 
-#: integration/woocommerce.php:897
+#: integration/woocommerce.php:1000
 msgid "Recent Products"
 msgstr "Productos recientes"
 
-#: integration/woocommerce.php:889
+#: integration/woocommerce.php:992
 msgid " (widget)"
 msgstr "(widget)"
 
-#: integration/woocommerce.php:822 integration/woocommerce.php:927
+#: integration/woocommerce.php:925 integration/woocommerce.php:1030
 msgid "Related Products"
 msgstr "Productos relacionados"
 
-#: integration/woocommerce.php:957
+#: integration/woocommerce.php:1060
 msgid "General Product List"
 msgstr "Lista general de productos"
 
-#: integration/woocommerce.php:953
+#: integration/woocommerce.php:1056
 msgid "Search Results"
 msgstr "Resultados de búsqueda"
 
@@ -526,23 +526,23 @@ msgstr "El primer plugin de Google Tag Manager para WordPress enfocado a objetiv
 msgid "Google Tag Manager for Wordpress"
 msgstr "Google Tag Manager for WordPress"
 
-#: public/frontend.php:398 public/frontend.php:399
+#: public/frontend.php:399 public/frontend.php:400
 msgid "(no weather data available)"
 msgstr "(no hay datos meteorológicos disponibles)"
 
-#: admin/admin.php:1463
+#: admin/admin.php:1479
 msgid "Settings"
 msgstr "Ajustes"
 
-#: admin/admin.php:1422
+#: admin/admin.php:1438
 msgid "Notice: you should deactivate the plugin \"Google Analytics for WordPress by MonsterInsights\" if you are using Google Analytics tags inside Google Tag Manager!"
 msgstr "Aviso: ¡Debes desactivar el plugin «Google Analytics for WordPress by MonsterInsights» si estás usando etiquetas de Google Analytics dentro de Google Tag Manager!"
 
-#: admin/admin.php:1418
+#: admin/admin.php:1434
 msgid "Notice: you should deactivate the plugin \"WooCommerce Google Analytics Integration\" if you are using Google Analytics tags inside Google Tag Manager!"
 msgstr "Aviso: ¡Debe desactivar el plugin \"WooCommerce Google Analytics Integration\" si estás utilizando etiquetas de Google Analytics dentro de Google Tag Manager!"
 
-#: admin/admin.php:1401
+#: admin/admin.php:1417
 msgid "To start using Google Tag Manager for WordPress, please <a href=\"%s\">enter your GTM ID</a>"
 msgstr "Por favor, <a href=\"%s\">introduce tu ID de GTM</a> para empezar a usar Google Tag Manager for WordPress"
 
@@ -719,8 +719,8 @@ msgid "Here you can check what data is needed to be included in the dataLayer to
 msgstr "Aquí puedes consultar los datos que serán incluidos en la capa de datos (dataLayer) para poder acceder a ellos mediante Google Tag Manager"
 
 #: admin/admin.php:458
-msgid "This plugin is intended to be used by IT girls&guys and marketing staff. Please be sure you read the <a href=\"https://developers.google.com/tag-manager/\" target=\"_blank\">Google Tag Manager Help Center</a> before you start using this plugin.<br /><br />"
-msgstr "Este plugin está diseñado para ser utilizado por el equipo de TI y de marketing. Por favor, aseguraros de leer el <a href=\"https://developers.google.com/tag-manager/\" target=\"_blank\">Centro de ayuda de Google Tag Manager</a> antes de utilizar este plugin.<br /><br />"
+msgid "This plugin is intended to be used by IT girls&guys and marketing staff. Please be sure you read the <a href=\"https://developers.google.com/tag-manager/\" target=\"_blank\" rel=\"noopener\">Google Tag Manager Help Center</a> before you start using this plugin.<br /><br />"
+msgstr "Este plugin está diseñado para ser utilizado por el equipo de TI y de marketing. Por favor, aseguraros de leer el <a href=\"https://developers.google.com/tag-manager/\" target=\"_blank\" rel=\"noopener\">Centro de ayuda de Google Tag Manager</a> antes de utilizar este plugin.<br /><br />"
 
 #: admin/admin.php:372
 msgid "Use SKU instead of ID"

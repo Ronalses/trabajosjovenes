@@ -55,7 +55,7 @@ class CustomerOpenID {
         $response = self::mo_openid_wp_remote_post($url, $args);
         if($response['body']==NULL)
         {
-            if($_POST['action']=='mo_register_new_user')
+            if(isset($_POST['action'])?$_POST['action']=='mo_register_new_user':0)
                 wp_send_json(["error" => 'There was an error creating an account for you. Please try again.']);
             else {
                 update_option('mo_openid_message', 'There was an error creating an account for you. Please try again.');
@@ -528,7 +528,7 @@ class CustomerOpenID {
         if(!is_wp_error($response)){
             return $response;
         } else {
-            if ($_POST['action'] == 'mo_register_new_user')
+            if (isset($_POST['action'])? $_POST['action']== 'mo_register_new_user':0)
                 wp_send_json(["error" => 'Unable to connect to the Internet. Please try again.']);
             else {
                 update_option('mo_openid_message', 'Unable to connect to the Internet. Please try again.');

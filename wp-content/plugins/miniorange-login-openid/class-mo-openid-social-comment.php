@@ -1,6 +1,6 @@
 <?php
 	function mo_openid_social_comment($post, $url){
-		
+
 		?>
 		<script>
 		function moOpenIDShowCommentForms(){
@@ -27,21 +27,21 @@
 
                 (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
 			        var d = document, s = d.createElement('script');
-			        
+
 			        // IMPORTANT: Replace EXAMPLE with your forum shortname!
 			        s.src = 'https://<?php echo get_option('mo_disqus_shortname'); ?>.disqus.com/embed.js';
-			        
+
 			        s.setAttribute('data-timestamp', +new Date());
 			        (d.head || d.body).appendChild(s);
 			    })();
-				
+
 			}
 		}
 
 		</script>
 		<?php
 	}
-	
+
 	function mo_openid_comments_shortcode(){
 		$html = '';
 		$html .= '<div id="mo_comment_shortcode"></div>';
@@ -92,5 +92,3 @@
 
 		return $html;
 	}
-
-?>

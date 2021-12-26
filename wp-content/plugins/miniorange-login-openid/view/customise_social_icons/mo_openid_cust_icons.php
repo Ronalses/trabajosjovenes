@@ -12,45 +12,73 @@ function mo_openid_customise_social_icons(){
                     <div style="float:left;width:50%;">
                         <label style="font-size: 1.2em;"><b><?php echo mo_sl('Shape');?></b><br></label>
                         <label class="mo-openid-radio-container"><?php echo mo_sl('Round');?>
-                            <input type="radio" id="mo_openid_login_shape_round"  name="mo_openid_login_theme" value="circle" onclick="shape_change();checkLoginButton();moLoginPreview(document.getElementById('mo_login_icon_size').value ,'circle',setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value)" <?php checked( get_option('mo_openid_login_theme') == 'circle' );?> /><br>
+                            <input type="radio" id="mo_openid_login_shape_round"  name="mo_openid_login_theme" value="circle" onclick="shape_change();checkLoginButton();moLoginPreview(document.getElementById('mo_login_icon_size').value ,'circle',setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value,document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())" <?php checked( get_option('mo_openid_login_theme') == 'circle' );?> /><br>
                             <span class="mo-openid-radio-checkmark"></span></label>
                         <label class="mo-openid-radio-container"><?php echo mo_sl('Rounded Edges');?>
-                            <input type="radio" id="mo_openid_login_shape_rounded_edges" name="mo_openid_login_theme" value="oval" onclick="shape_change();checkLoginButton();moLoginPreview(document.getElementById('mo_login_icon_size').value ,'oval',setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value)"  <?php checked( get_option('mo_openid_login_theme') == 'oval' );?> /><br>
+                            <input type="radio" id="mo_openid_login_shape_rounded_edges" name="mo_openid_login_theme" value="oval" onclick="shape_change();checkLoginButton();moLoginPreview(document.getElementById('mo_login_icon_size').value ,'oval',setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value,document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())"  <?php checked( get_option('mo_openid_login_theme') == 'oval' );?> /><br>
                             <span class="mo-openid-radio-checkmark"></span></label>
 
                         <label class="mo-openid-radio-container"><?php echo mo_sl('Square');?>
-                            <input type="radio" id="mo_openid_login_shape_square" name="mo_openid_login_theme" value="square" onclick="shape_change();checkLoginButton();moLoginPreview(document.getElementById('mo_login_icon_size').value ,'square',setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value)" <?php checked( get_option('mo_openid_login_theme') == 'square' );?> /><br>
+                            <input type="radio" id="mo_openid_login_shape_square" name="mo_openid_login_theme" value="square" onclick="shape_change();checkLoginButton();moLoginPreview(document.getElementById('mo_login_icon_size').value ,'square',setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value,document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())" <?php checked( get_option('mo_openid_login_theme') == 'square' );?> /><br>
                             <span class="mo-openid-radio-checkmark"></span></label>
                         <label class="mo-openid-radio-container"><?php echo mo_sl('Long Button');?>
-                            <input type="radio" id="mo_openid_login_shape_longbutton" name="mo_openid_login_theme" value="longbutton" onclick="shape_change();checkLoginButton();moLoginPreview(document.getElementById('mo_login_icon_width').value ,'longbutton',setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value)" <?php checked( get_option('mo_openid_login_theme') == 'longbutton' );?> /><br>
+                            <input type="radio" id="mo_openid_login_shape_longbutton" name="mo_openid_login_theme" value="longbutton" onclick="shape_change();checkLoginButton();moLoginPreview(document.getElementById('mo_login_icon_width').value ,'longbutton',setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value,document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())" <?php checked( get_option('mo_openid_login_theme') == 'longbutton' );?> /><br>
                             <span class="mo-openid-radio-checkmark"></span></label>
+                        <hr>
+                        <label style="font-size: 1.2em;"><b><?php echo mo_sl('Effects');?></b><br></label>
+                        <label class="mo-openid-radio-container"><?php echo mo_sl('No Effect');?>
+                            <input type="radio" id="mo_openid_button_theme_effect_no" name="mo_openid_button_theme_effect" value="noeffect" onclick="shape_change();checkLoginButton();moLoginPreview(setSizeOfIcons() ,setLoginTheme(),setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value,document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,'noeffect')" <?php checked( get_option('mo_openid_button_theme_effect') == 'noeffect' );?>/><br>
+                            <span class="mo-openid-radio-checkmark"></span></label>
+                        <label class="mo-openid-radio-container"><?php echo mo_sl('Transform Effect');?>
+                            <input type="radio" id="mo_openid_button_theme_effect_transform" name="mo_openid_button_theme_effect" value="transform" onclick="shape_change();checkLoginButton();moLoginPreview(setSizeOfIcons(), setLoginTheme(),setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value,document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,'transform')"  <?php checked( get_option('mo_openid_button_theme_effect') == 'transform' );?>/><br>
+                            <span class="mo-openid-radio-checkmark" ></span></label>
+
                     </div>
                     <div style="float: right; width: 50%;">
                         <label style="font-size: 1.2em;"><b><?php echo mo_sl('Theme');?></b><br></label>
                         <label class="mo-openid-radio-container"><?php echo mo_sl('Default');?>
                             <input type="radio" id="mo_openid_default_background_radio" name="mo_openid_login_custom_theme"
-                                   value="default" onclick="whiteThemeAd();checkLoginButton();moLoginPreview(setSizeOfIcons(), setLoginTheme(),'default',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value)"
+                                   value="default" onclick="checkLoginButton();moLoginPreview(setSizeOfIcons(), setLoginTheme(),'default',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value,document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())"
                                 <?php checked( get_option('mo_openid_login_custom_theme') == 'default' );?> /><br>
                             <span class="mo-openid-radio-checkmark"></span></label>
 
+
+                        <label for="mo_openid_white_background_radio" class="mo-openid-radio-container"><?php echo mo_sl('White Background');?>
+                            <input type="radio" id="mo_openid_white_background_radio"  name="mo_openid_login_custom_theme"
+                                   value="white" onclick="checkLoginButton();moLoginPreview(setSizeOfIcons(), setLoginTheme(),'white',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value,document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())"
+                                <?php checked( get_option('mo_openid_login_custom_theme') == 'white' );?> /><br>
+                            <span class="mo-openid-radio-checkmark"></span></label>
+
                         <label class="mo-openid-radio-container"><?php echo mo_sl('Custom background*');?>
-                            <input type="radio" id="mo_openid_custom_background_radio"  name="mo_openid_login_custom_theme" value="custom" onclick="whiteThemeAd();checkLoginButton();moLoginPreview(setSizeOfIcons(), setLoginTheme(),'custom',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value)"
+                            <input type="radio" id="mo_openid_custom_background_radio"  name="mo_openid_login_custom_theme" value="custom" onclick="checkLoginButton();moLoginPreview(setSizeOfIcons(), setLoginTheme(),'custom',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value,document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())"
                                 <?php checked( get_option('mo_openid_login_custom_theme') == 'custom' );?> /><br>
                             <span class="mo-openid-radio-checkmark"></span></label>
 
-                        <input id="mo_login_icon_custom_color" style="width:135px; margin-bottom: 3px" name="mo_login_icon_custom_color"  class="color" value="<?php echo esc_attr(get_option('mo_login_icon_custom_color'))?>" onchange="moLoginPreview(setSizeOfIcons(), setLoginTheme(),'custom',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value)" >
+                        <input id="mo_login_icon_custom_color" style="width:135px;margin-bottom: 5px;" name="mo_login_icon_custom_color"  class="color" value="<?php echo esc_attr(get_option('mo_login_icon_custom_color'))?>" onchange="moLoginPreview(setSizeOfIcons(), setLoginTheme(),'custom',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value,'',document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())" >
 
-                        <label style="cursor: context-menu" class="mo-openid-radio-container"><?php echo mo_sl('White Background*');?> <a style="left: 1%; position: relative; text-decoration: none" class="mo-openid-premium" href="<?php echo add_query_arg( array('tab' => 'licensing_plans'), $_SERVER['REQUEST_URI'] ); ?>"><?php echo mo_sl('PRO');?></a>
-                            <input type="radio" value="default" id="mo_openid_white_background_radio" name="mo_openid_login_custom_theme" style="padding-top:1%;" onclick="whiteThemeAd()">
+
+                        <label for="mo_openid_hover_radio" class="mo-openid-radio-container"><?php echo mo_sl('Hover');?>
+                            <input type="radio" id="mo_openid_hover_radio"  name="mo_openid_login_custom_theme"
+                                   value="hover" onclick="checkLoginButton();moLoginPreview(setSizeOfIcons(), setLoginTheme(),'hover',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value,document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())"
+                                <?php checked( get_option('mo_openid_login_custom_theme') == 'hover' );?> /><br>
                             <span class="mo-openid-radio-checkmark"></span></label>
 
 
+                        <label for="mo_openid_custom_hover_radio" class="mo-openid-radio-container"><?php echo mo_sl('Custom Hover');?>
+                            <input type="radio" id="mo_openid_custom_hover_radio"  name="mo_openid_login_custom_theme"
+                                   value="custom_hover" onclick="checkLoginButton();moLoginPreview(setSizeOfIcons(), setLoginTheme(),'custom_hover',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value,document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())"
+                                <?php checked( get_option('mo_openid_login_custom_theme') == 'custom_hover' );?> /><br>
+                            <span class="mo-openid-radio-checkmark"></span></label>
+                        <input id="mo_login_icon_custom_hover_color" style="width:135px;margin-bottom: 5px;" name="mo_login_icon_custom_hover_color"  class="color" value="<?php echo esc_attr(get_option('mo_login_icon_custom_hover_color'))?>" onchange="moLoginPreview(setSizeOfIcons(), setLoginTheme(),'custom_hover',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value,'',document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())" />
 
-                    </div>
-                    <div id="white_theme_ad">
 
-                        <h3>Example : </h3>
-                        <img style="display: block; margin-left: auto; margin-right: auto; height:360px; width=:360px;" src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/white_theme_ad.png" alt="white theme ad"/>
+                        <label for="mo_openid_custom_smart_radio" class="mo-openid-radio-container"><?php echo mo_sl('Smart');?>
+                            <input type="radio" id="mo_openid_custom_smart_radio"  name="mo_openid_login_custom_theme"
+                                   value="smart" onclick="checkLoginButton();moLoginPreview(setSizeOfIcons(), setLoginTheme(),'smart',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_height').value,document.getElementById('mo_login_icon_custom_boundary').value,document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())"
+                                <?php checked( get_option('mo_openid_login_custom_theme') == 'smart' );?> /><br>
+                            <span class="mo-openid-radio-checkmark"></span></label>
+                        <input id="mo_login_icon_custom_smart_color1" style="width:66px;margin-bottom: 5px;display: inline-block;" name="mo_login_icon_custom_smart_color1"  class="color" value="<?php echo esc_attr(get_option('mo_login_icon_custom_smart_color1'))?>" onchange="moLoginPreview(setSizeOfIcons(), setLoginTheme(),'smart',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value,'',document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())" />
+                        <input id="mo_login_icon_custom_smart_color2" style="width:66px;margin-bottom: 5px;" name="mo_login_icon_custom_smart_color2"  class="color" value="<?php echo esc_attr(get_option('mo_login_icon_custom_smart_color2'))?>" onchange="moLoginPreview(setSizeOfIcons(), setLoginTheme(),'smart',document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value,'',document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())" />
 
                     </div>
                 </div>
@@ -72,15 +100,15 @@ function mo_openid_customise_social_icons(){
                         </div>
                         <div id="other_button_size">
                             <input style="width:50px" id="mo_login_icon_size" onkeyup="moLoginSizeValidate(this)" name="mo_login_icon_custom_size" type="text" value="<?php echo esc_attr(get_option('mo_login_icon_custom_size'))?>">
-                            <input id="mo_login_size_plus" type="button" value="+" onmouseup="moLoginPreview(document.getElementById('mo_login_icon_size').value ,setLoginTheme(),setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value)" />
-                            <input id="mo_login_size_minus" type="button" value="-" onmouseup="moLoginPreview(document.getElementById('mo_login_icon_size').value ,setLoginTheme(),setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value)" />
+                            <input id="mo_login_size_plus" type="button" value="+" onmouseup="moLoginPreview(document.getElementById('mo_login_icon_size').value ,setLoginTheme(),setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value,'',document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())" />
+                            <input id="mo_login_size_minus" type="button" value="-" onmouseup="moLoginPreview(document.getElementById('mo_login_icon_size').value ,setLoginTheme(),setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value,'',document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())" />
                         </div>
                     </div>
                     <div style="width: 50%;float: right;margin-top: 5%">
                         <label style="font-size: 1.2em;"><b><?php echo mo_sl('Space between Icons');?></b></label><br/>
                         <input class="mo_openid_textfield_css" style="border: 1px solid ;border-color: #0867b2;width: 16%;margin-bottom: 3px" onkeyup="moLoginSpaceValidate(this)" id="mo_login_icon_space" name="mo_login_icon_space" type="text" value="<?php echo esc_attr(get_option('mo_login_icon_space'))?>"/>
-                        <input id="mo_login_space_plus" type="button" value="+" onmouseup="moLoginPreview(setSizeOfIcons() ,setLoginTheme(),setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value)" />
-                        <input id="mo_login_space_minus" type="button" value="-" onmouseup="moLoginPreview(setSizeOfIcons()  ,setLoginTheme(),setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value)" />
+                        <input id="mo_login_space_plus" type="button" value="+" onmouseup="moLoginPreview(setSizeOfIcons() ,setLoginTheme(),setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value,'',document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())" />
+                        <input id="mo_login_space_minus" type="button" value="-" onmouseup="moLoginPreview(setSizeOfIcons()  ,setLoginTheme(),setLoginCustomTheme(),document.getElementById('mo_login_icon_custom_color').value,document.getElementById('mo_login_icon_space').value,document.getElementById('mo_login_icon_custom_boundary').value,'',document.getElementById('mo_login_icon_custom_hover_color').value,document.getElementById('mo_login_icon_custom_smart_color1').value,document.getElementById('mo_login_icon_custom_smart_color2').value,setLoginEffect())" />
                     </div>
 
 
@@ -148,7 +176,7 @@ function mo_openid_customise_social_icons(){
                 <b>Preview : </b><br/>
                 <div style="padding-bottom: 1%; padding-top: 3%">
                     <?php
-                    $default_color= array('facebook'=>'#1877F2','google'=>'#DB4437','vkontakte'=>'#466482','twitter'=>'#2795e9','yahoo'=>'#430297','yandex'=>'#2795e9','instagram'=>'#3f729b','linkedin'=>'#007bb6','amazon'=>'#ff9900','paypal'=>'#0d127a','salesforce'=>'#1ab7ea','windowslive'=>'#2672ec','apple'=>'#000000','steam'=>'#000000','wordpress'=>'#587ea3','pinterest'=>'#cb2027','spotify'=>'#19bf61','tumblr'=>'#2c4762','twitch'=>'#720e9e','github'=>'#000000','dribbble'=>'#ee66aa','flickr'=>'#ff0084','stackexchange'=>'0000ff','snapchat'=>'#fffc00','reddit'=>'#ff4301','odnoklassniki'=>'#f97400','foursquare'=>'#f94877','wechat'=>'#00c300','vimeo'=>'#1ab7ea','line'=>'#00c300','hubspot'=>'#fa7820','discord'=>'#7289da','meetup'=>'#e51937','stackexchange'=>'#0000FF','wiebo'=>'#df2029');
+                    $default_color= array('facebook'=>'#1877F2','google'=>'#DB4437','vkontakte'=>'#466482','twitter'=>'#2795e9','yahoo'=>'#430297','yandex'=>'#2795e9','instagram'=>'#3f729b','linkedin'=>'#007bb6','amazon'=>'#ff9900','paypal'=>'#0d127a','salesforce'=>'#1ab7ea','windowslive'=>'#2672ec','apple'=>'#000000','steam'=>'#000000','wordpress'=>'#587ea3','pinterest'=>'#cb2027','spotify'=>'#19bf61','tumblr'=>'#2c4762','twitch'=>'#720e9e','github'=>'#000000','dribbble'=>'#ee66aa','flickr'=>'#ff0084','stackexchange'=>'0000ff','snapchat'=>'#fffc00','reddit'=>'#ff4301','odnoklassniki'=>'#f97400','foursquare'=>'#f94877','wechat'=>'#00c300','vimeo'=>'#1ab7ea','line'=>'#00c300','hubspot'=>'#fa7820','trello'=>'#0079bf','discord'=>'#7289da','meetup'=>'#e51937','stackexchange'=>'#0000FF','wiebo'=>'#df2029','gitlab'=>'#30353e','slack'=>'#4c154d','dropbox'=>'#0061ff','mailru'=>'#0000FF','kakao'=>'#ffe812');
 
                     $app_pos=get_option('app_pos');
                     $app_pos=explode('#',$app_pos);
@@ -166,9 +194,6 @@ function mo_openid_customise_social_icons(){
                                 $class_app = 'vimeo';
                                 $icon = 'salesforce';
                             }
-                            elseif ($active_app=='amazon') {
-                                $class_app = 'soundcloud';
-                            }
                             elseif ($active_app=='windowslive'){
                                 $class_app='microsoft';
                                 $icon='windows';
@@ -177,32 +202,67 @@ function mo_openid_customise_social_icons(){
                                 $count_app++;
                                 ?>
                                 <i class="mo_login_icon_preview <?php echo $extra;?> fab fa-<?php echo $active_app;?>" id="mo_login_icon_preview_facebook" style="background:<?php echo $default_color[$active_app];?> !important;text-align:center;margin-top:5px;color: white" ></i>
-                                <a style="background: rgb(255,255,255)!important; background:linear-gradient(90deg, rgba(255,255,255,1) 38px, rgb(79, 113, 232) 5%) !important;border-color: rgba(79, 113, 232, 1);border-bottom-width: thin;" id="mo_login_button_preview_google" class="mo_btn mo_btn-block mo_btn-defaulttheme mo_btn-social mo_btn-google mo_btn-custom-size"> <img class="fa" src="<?php echo plugin_url.'/g.png'?>"><?php
-                                    ?> <span style="color:#ffffff;"><?php echo esc_html(get_option('mo_openid_login_button_customize_text'));?> Google</span></a>
-                                <i class="mo_custom_login_icon_preview fab fa-google" id="mo_custom_login_icon_preview_google"  style="color:#ffffff;text-align:center;margin-top:5px;"></i>
-                                <a id="mo_custom_login_button_preview_google" class="mo_btn mo_btn-block mo_btn-customtheme mo_btn-social   mo_btn-custom-size"> <i class="fab fa-google"></i><?php
+                                <a style="background: rgb(255,255,255)!important; background:linear-gradient(90deg, rgba(255,255,255,1) 38px, rgb(79, 113, 232) 5%) !important;border-color: rgba(79, 113, 232, 1);border-bottom-width: thin;" id="mo_login_button_preview_google" class="mo_btn mo_btn-block mo_btn-defaulttheme mo_btn-social mo_btn-google mo_btn-custom-size mo_login_button mo_btn-<?php echo $active_app ?> <?php echo $extra;?>"> <img class="fa" src="<?php echo plugin_url.'/g.png'?>"><?php
+                                    ?> <span><?php echo esc_html(get_option('mo_openid_login_button_customize_text'));?> Google</span></a>
+
+                                <i class="mo_white_login_icon_preview  fab fa-google" id="mo_white_login_icon_preview_google"  style="color:<?php echo $default_color[$active_app];?>;text-align:center;margin-top:5px;"></i>
+                                <a id="mo_white_login_button_preview_google" class="mo_btn mo_btn-block mo_openid_mo_btn-whitetheme  mo_btn-social mo_btn-custom-size "> <img class="fa" src="<?php echo plugin_url.'/g.png'?>"><?php
                                     echo esc_html(get_option('mo_openid_login_button_customize_text'));?> Google</a>
-                                <?php
-                            }
-                            else if($active_app=='disqus' || $active_app=='kakao'){
-                                $count_app++;
-                                ?>
-                                <img class="mo_login_icon_preview" id="mo_login_icon_preview_<?php echo $active_app ?>" src="<?php echo plugin_url.'/'.$active_app.'.png'?>" />
-                                <a id="mo_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_btn-defaulttheme mo_btn-social mo_btn-<?php echo $active_app ?> mo_btn-custom-size"> <img class="fa" src="<?php echo plugin_url.'/'.$app_img.'.png'?>"><?php
+
+                                <div style="display: inline-block" id="mo_hover_div_google" class="mo_hover_div" onmouseover="mo_hover_on(this,'<?php echo $default_color[$active_app]?>','<?php echo $active_app; ?>')" onmouseout="mo_hover_off(this,'<?php echo $default_color[$active_app]?>','<?php echo $active_app; ?>')">
+                                    <i class="mo_hover_login_icon_preview fab fa-<?php echo $icon ?> " id="mo_hover_login_icon_preview_<?php echo $active_app ?>"   style="color:<?php echo $default_color[$active_app];?>;text-align:center;margin-top:5px;"></i>
+                                    <a id="mo_hover_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_openid_mo_btn-hovertheme   mo_btn-social mo_btn-custom-size "> <i id="mo_hover_long_button_<?php echo $active_app ?>" style="color:<?php echo $default_color[$active_app];?>;" class="fab fa-<?php echo $icon ?> mofab"></i><?php
+                                        echo esc_html(get_option('mo_openid_login_button_customize_text'));?> <?php echo $active_app ?></a>
+                                </div>
+
+                                <div style="display: inline-block" id="mo_customhover_div_google" class="mo_customhover_div" onmouseover="mo_custom_hover_on(this,'<?php echo $active_app; ?>')" onmouseout="mo_custom_hover_off(this,'<?php echo $active_app; ?>')" >
+                                    <i class="mo_custom_hover_login_icon_preview fab fa-<?php echo $icon ?> " id="mo_custom_hover_login_icon_preview_<?php echo $active_app ?>"   style="color:<?php echo get_option('mo_login_icon_custom_hover_color');?>;text-align:center;"></i>
+                                    <a id="mo_custom_hover_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_openid_mo_btn-customhovertheme   mo_btn-social mo_btn-custom-size " style="color:#<?php echo get_option('mo_login_icon_custom_hover_color');?>;border-color:#<?php echo get_option('mo_login_icon_custom_hover_color');?>;"> <i id="mo_hover_long_button_<?php echo $active_app ?>" style="color:<?php echo get_option('mo_login_icon_custom_hover_color');?>;text-align:center;" class="fab mofab fa-<?php echo $icon ?>"></i><?php
+                                        echo esc_html(get_option('mo_openid_login_button_customize_text'));?> <?php echo $active_app ?></a>
+                                </div>
+
+                                <i class="mo_custom_smart_login_icon_preview fab fa-google mo_button_smart_i " id="mo_custom_smart_login_icon_preview_google"  style="background:linear-gradient(90deg,#<?php echo get_option('mo_login_icon_custom_smart_color1');?>,#<?php echo get_option('mo_login_icon_custom_smart_color2');?>);text-align:center;margin-top:5px;color:#FFFFFF"></i>
+                                <a id="mo_custom_smart_login_button_preview_google" class="mo_btn_smart mo_btn-block   mo_btn-social mo_btn-custom-size mo_openid_mo_btn-smarttheme  mo_btn-social mo_btn-custom-size " style="background:linear-gradient(90deg,#<?php echo get_option('mo_login_icon_custom_smart_color1');?>,#<?php echo get_option('mo_login_icon_custom_smart_color2');?>);text-align:center;margin-top:5px;"> <i style="color:#FFFFFF" class="fab fa-google mofab"></i><?php
                                     echo esc_html(get_option('mo_openid_login_button_customize_text'));?> <?php echo $active_app ?></a>
-                                <i class="mo_custom_login_icon_preview fa" id="mo_custom_login_icon_preview_<?php echo $active_app ?>" style="color:#ffffff;text-align:center;" ><img id="<?php echo $app_img ?>" src="<?php echo plugin_url.'/'.$app_img.'.png'?>"></i>
-                                <a id="mo_custom_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_btn-customtheme mo_btn-social  mo_btn-custom-size"> <img class="fa" src="<?php echo plugin_url.'/'.$app_img.'.png'?>"><?php
-                                    echo esc_html(get_option('mo_openid_login_button_customize_text')); ?> <?php echo $active_app ?></a>
+
+
+                                <i class="mo_custom_login_icon_preview fab fa-google" id="mo_custom_login_icon_preview_google"  style="color:#ffffff;text-align:center;margin-top:5px;"></i>
+                                <a id="mo_custom_login_button_preview_google" class="mo_btn mo_btn-block mo_openid_mo_btn-customtheme mo_btn-social mo_btn-custom-size " style="color: #FFFFFF"> <i class="fab fa-google mofab"></i><?php
+                                    echo esc_html(get_option('mo_openid_login_button_customize_text'));?> Google</a>
+
+
                                 <?php
                             }
                             else{
                                 $count_app++;
                                 ?>
-                                <i class="mo_login_icon_preview  fab fa-<?php echo $icon;?>" id="mo_login_icon_preview_facebook" style="background:<?php echo $default_color[$active_app];?>;text-align:center;margin-top:5px;color: #FFFFFF" ></i>
-                                <a id="mo_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_btn-defaulttheme mo_btn-social mo_btn-<?php echo $class_app ?> mo_btn-custom-size"> <i class="fab fa-<?php echo $icon ?>"></i><?php
+                                <i class="mo_login_icon_preview <?php echo $extra;?> fab fa-<?php echo $icon;?>" id="mo_login_icon_preview_facebook" style="background:<?php echo $default_color[$active_app];?>;text-align:center;margin-top:5px;color: #FFFFFF" ></i>
+                                <a id="mo_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_btn-defaulttheme mo_btn-social mo_btn-custom-size mo_login_button mo_btn-<?php echo $icon ?> <?php echo $extra;?>"> <i class="fab fa-<?php echo $icon ?> mo_login_button mofab"></i><?php
                                     echo esc_html(get_option('mo_openid_login_button_customize_text'));?> <?php echo $active_app?></a>
-                                <i class="mo_custom_login_icon_preview fab fa-<?php echo $icon ?>" id="mo_custom_login_icon_preview_<?php echo $active_app ?>"  style="color:#ffffff;text-align:center;margin-top:5px;"></i>
-                                <a id="mo_custom_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_btn-customtheme mo_btn-social   mo_btn-custom-size"> <i class="fab fa-<?php echo $icon ?>"></i><?php
+
+                                <i class="mo_white_login_icon_preview fab fa-<?php echo $icon ?> " id="mo_white_login_icon_preview_<?php echo $active_app ?>"  style="color:<?php echo $default_color[$active_app];?>;text-align:center;margin-top:5px;"></i>
+                                <a id="mo_white_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_openid_mo_btn-whitetheme   mo_btn-social mo_btn-custom-size "> <i style="color:<?php echo $default_color[$active_app];?>;" class="fab fa-<?php echo $icon ?> mofab"></i><?php
+                                    echo esc_html(get_option('mo_openid_login_button_customize_text'));?> <?php echo $active_app ?></a>
+
+                                <div style="display: inline-block" class="mo_hover_div" id="mo_hover_div" onmouseover="mo_hover_on(this,'<?php echo $default_color[$active_app]?>','<?php echo $active_app; ?>')" onmouseout="mo_hover_off(this,'<?php echo $default_color[$active_app]?>','<?php echo $active_app; ?>')">
+                                    <i class="mo_hover_login_icon_preview fab fa-<?php echo $icon ?> " id="mo_hover_login_icon_preview_<?php echo $active_app ?>"   style="color:<?php echo $default_color[$active_app];?>;text-align:center;margin-top:5px;"></i>
+                                    <a id="mo_hover_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_openid_mo_btn-hovertheme   mo_btn-social mo_btn-custom-size "> <i id="mo_hover_long_button_<?php echo $active_app ?>" style="color:<?php echo $default_color[$active_app];?>;" class="fab fa-<?php echo $icon ?>  mofab"></i><?php
+                                        echo esc_html(get_option('mo_openid_login_button_customize_text'));?> <?php echo $active_app ?></a>
+                                </div>
+
+                                <div style="display: inline-block" class="mo_customhover_div" id="mo_customhover_div_<?php echo $active_app ?>" onmouseover="mo_custom_hover_on(this,'<?php echo $active_app; ?>')" onmouseout="mo_custom_hover_off(this,'<?php echo $active_app; ?>')" >
+                                    <i class="mo_custom_hover_login_icon_preview fab fa-<?php echo $icon ?> " id="mo_custom_hover_login_icon_preview_<?php echo $active_app ?>"   style="color:#<?php echo get_option('mo_login_icon_custom_hover_color');?>;text-align:center;"></i>
+                                    <a id="mo_custom_hover_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_openid_mo_btn-customhovertheme   mo_btn-social mo_btn-custom-size " style="color:#<?php echo get_option('mo_login_icon_custom_hover_color');?>;border-color:#<?php echo get_option('mo_login_icon_custom_hover_color');?>;"> <i id="mo_hover_long_button_<?php echo $active_app ?>" style="text-align:center;" class="fab fa-<?php echo $icon ?>  mofab"></i><?php
+                                        echo esc_html(get_option('mo_openid_login_button_customize_text'));?> <?php echo $active_app ?></a>
+                                </div>
+
+                                <i class="mo_custom_smart_login_icon_preview fab fa-<?php echo $icon ?>  " id="mo_custom_smart_login_icon_preview_<?php echo $active_app ?>"  style="background:linear-gradient(90deg,#<?php echo get_option('mo_login_icon_custom_smart_color1');?>,#<?php echo get_option('mo_login_icon_custom_smart_color2');?>);text-align:center;margin-top:5px;color:#FFFFFF"></i>
+                                <a id="mo_custom_smart_login_button_preview_<?php echo $active_app ?>" class=" mo_btn-block   mo_btn-social mo_btn-custom-size mo_openid_mo_btn-smarttheme  mo_btn-social mo_btn-custom-size " style="background:linear-gradient(90deg,#<?php echo get_option('mo_login_icon_custom_smart_color1');?>,#<?php echo get_option('mo_login_icon_custom_smart_color2');?>);text-align:center;margin-top:5px;"> <i style="color:#FFFFFF" class="fab fa-<?php echo $icon ?> mofab"></i><?php
+                                    echo esc_html(get_option('mo_openid_login_button_customize_text'));?> <?php echo $active_app ?></a>
+
+
+                                <i class="mo_custom_login_icon_preview fab fa-<?php echo $icon ?>  " id="mo_custom_login_icon_preview_<?php echo $active_app ?>"  style="color:#ffffff;text-align:center;margin-top:5px;"></i>
+                                <a id="mo_custom_login_button_preview_<?php echo $active_app ?>" class="mo_btn mo_btn-block mo_openid_mo_btn-customtheme mo_btn-social mo_btn-custom-size " style="color: #FFFFFF"> <i class="fab fa-<?php echo $icon ?> mofab"></i><?php
                                     echo esc_html(get_option('mo_openid_login_button_customize_text'));?> <?php echo $active_app ?></a>
                                 <?php
                             }
@@ -240,25 +300,80 @@ function mo_openid_customise_social_icons(){
     </form>
     <script>
 
-        jQuery("#white_theme_ad").hide();
-        function whiteThemeAd(){
-            if(jQuery('#mo_openid_white_background_radio').is(':checked')) {
-                jQuery("#white_theme_ad").show();
+        //to set heading name
+        jQuery('#mo_openid_page_heading').text('<?php echo mo_sl("Customize Login Icons"); ?>');
+
+        function mo_hover_on(x,y,z){
+            var check=jQuery('input[name=mo_openid_login_theme]:checked', '#form-apps').val();
+            if(check == 'longbutton'){
+                var q = "mo_hover_login_button_preview_".concat(z);
+                var r = "mo_hover_long_button_".concat(z);
+                document.getElementById(q).style.borderColor= y;
+                document.getElementById(q).style.background = y;
+                document.getElementById(q).style.color= 'white';
+                document.getElementById(r).style.color= 'white';
+            } else {
+                var p = "mo_hover_login_icon_preview_".concat(z);
+                document.getElementById(p).style.background = y;
+                document.getElementById(p).style.color = 'white';
+                document.getElementById(p).style.borderColor = y;
             }
-            else if (jQuery('#mo_openid_custom_background_radio').is(':checked'))
-            {
-                jQuery("#white_theme_ad").hide();
+
+        }
+
+        function mo_hover_off(x,y,z){
+            var check=jQuery('input[name=mo_openid_login_theme]:checked', '#form-apps').val();
+            if(check == 'longbutton'){
+                var q = "mo_hover_login_button_preview_".concat(z);
+                var r = "mo_hover_long_button_".concat(z);
+                document.getElementById(q).style.borderColor= 'black';
+                document.getElementById(q).style.background = 'white';
+                document.getElementById(q).style.color= 'black';
+                document.getElementById(r).style.color= y;
+            }else {
+                var p = "mo_hover_login_icon_preview_".concat(z);
+                document.getElementById(p).style.background = 'white';
+                document.getElementById(p).style.color = y;
+                document.getElementById(p).style.borderColor = 'black';
             }
-            else if (jQuery('#mo_openid_default_background_radio').is(':checked'))
-            {
-                jQuery("#white_theme_ad").hide();
+        }
+        function mo_custom_hover_on(x,z) {
+            var check=jQuery('input[name=mo_openid_login_theme]:checked', '#form-apps').val();
+            var color = document.getElementById('mo_login_icon_custom_hover_color').value;
+            if(check == 'longbutton') {
+                var ch_q = "mo_custom_hover_login_button_preview_".concat(z);
+                var ch_r = "mo__custom_hover_long_button_".concat(z);
+                document.getElementById(ch_q).style.borderColor= '#'+color;
+                document.getElementById(ch_q).style.background = '#'+color;
+                document.getElementById(ch_q).style.color= 'white';
+                document.getElementById(ch_r).style.color= 'white';
+            }else{
+                var ch_p = "mo_custom_hover_login_icon_preview_".concat(z);
+                document.getElementById(ch_p).style.background = '#'+ color;
+                document.getElementById(ch_p).style.color= 'white';
+                document.getElementById(ch_p).style.borderColor=  '#'+color;
+            }
+
+        }
+
+        function mo_custom_hover_off(x,z) {
+            var check=jQuery('input[name=mo_openid_login_theme]:checked', '#form-apps').val();
+            var color = document.getElementById('mo_login_icon_custom_hover_color').value;
+            if(check == 'longbutton') {
+                var ch_q = "mo_custom_hover_login_button_preview_".concat(z);
+                var ch_r = "mo__custom_hover_long_button_".concat(z);
+                document.getElementById(ch_q).style.borderColor= '#'+color;
+                document.getElementById(ch_q).style.background = 'white';
+                document.getElementById(ch_q).style.color= '#'+color;
+                document.getElementById(ch_r).style.color= '#'+color;
+            }else{
+                var ch_p = "mo_custom_hover_login_icon_preview_".concat(z);
+                document.getElementById(ch_p).style.background = 'white';
+                document.getElementById(ch_p).style.color='#'+color;
+                document.getElementById(ch_p).style.borderColor= '#'+color;
             }
         }
 
-        jQuery("#form-apps input[id=mo_openid_white_background_radio]:radio").removeClass("mo-openid-radio-checkmark");
-
-        //to set heading name
-        jQuery('#mo_openid_page_heading').text('<?php echo mo_sl("Customize Login Icons"); ?>');
         window.onload=shape_change();
         function shape_change() {
             var y = document.getElementById('mo_openid_login_shape_longbutton').checked;
@@ -281,6 +396,10 @@ function mo_openid_customise_social_icons(){
         var tempHorSpace = '<?php echo esc_attr(get_option('mo_login_icon_space'))?>';
         var tempHorHeight = '<?php echo esc_attr(get_option('mo_login_icon_custom_height')) ?>';
         var tempHorBoundary='<?php echo esc_attr(get_option('mo_login_icon_custom_boundary'))?>';
+        var tempcustomhovercolor= '<?php echo esc_attr(get_option('mo_login_icon_custom_hover_color'))?>';
+        var tempcustomSmartcolor1= '<?php echo esc_attr(get_option('mo_login_icon_custom_smart_color1'))?>';
+        var tempcustomSmartcolor2= '<?php echo esc_attr(get_option('mo_login_icon_custom_smart_color2'))?>';
+        var tempAllEffect= '<?php echo esc_attr(get_option('mo_openid_button_theme_effect'))?>';
 
         function moLoginSpaceValidate(e){
             var t=parseInt(e.value.trim());t>60?e.value=60:0>t&&(e.value=0)
@@ -331,6 +450,7 @@ function mo_openid_customise_social_icons(){
         moLoginBoundaryIncrement(document.getElementById('mo_login_boundary_minus'), "subtract", document.getElementById('mo_login_icon_custom_boundary'), 300, 0.7);
 
         function setLoginTheme(){return jQuery('input[name=mo_openid_login_theme]:checked', '#form-apps').val();}
+        function setLoginEffect(){return jQuery('input[name=mo_openid_button_theme_effect]:checked', '#form-apps').val();}
         function setLoginCustomTheme(){return jQuery('input[name=mo_openid_login_custom_theme]:checked', '#form-apps').val();}
         function setSizeOfIcons(){
             if((jQuery('input[name=mo_openid_login_theme]:checked', '#form-apps').val()) == 'longbutton'){
@@ -339,9 +459,10 @@ function mo_openid_customise_social_icons(){
                 return document.getElementById('mo_login_icon_size').value;
             }
         }
-        moLoginPreview(setSizeOfIcons(),tempHorTheme,tempHorCustomTheme,tempHorCustomColor,tempHorSpace,tempHorHeight,tempHorBoundary);
+        moLoginPreview(setSizeOfIcons(),tempHorTheme,tempHorCustomTheme,tempHorCustomColor,tempHorSpace,tempHorHeight,tempHorBoundary,tempcustomhovercolor,tempcustomSmartcolor1,tempcustomSmartcolor2,tempAllEffect);
 
-        function moLoginPreview(t,r,l,p,n,h,k){
+        function moLoginPreview(t,r,l,p,n,h,k,x,y,z,b){
+            // alert('t='+t+', r='+r+', l='+l+', p='+p+', n='+n+', h='+h+', k='+k+', x='+x+', y='+y+', z='+z+', b='+b);
             if(l == 'default'){
                 if(r == 'longbutton'){
                     var a = "mo_btn-defaulttheme";
@@ -353,14 +474,19 @@ function mo_openid_customise_social_icons(){
                         jQuery(this).css("margin-bottom",(n-5)+"px");
                         jQuery(this).css("border-radius",k+"px");
                     });
-                    jQuery(".fa").css("padding-top",(h-35)+"px");
-
+                    jQuery(".mofab").css("padding-top",(h-35)+"px");
+                    if(b == "transform"){
+                        jQuery("."+a).addClass("mo_btn_transform");
+                    }else {
+                        jQuery("."+a).removeClass("mo_btn_transform");
+                    }
                 }else{
                     var a="mo_login_icon_preview";
-                    jQuery("."+a).css("margin-left",(n-4)+"px");
                     jQuery("."+a).css("cursor","pointer");
                     jQuery("."+a).css({height:t-8,width:t});
                     jQuery("."+a).css("padding-top","8px");
+                    jQuery("."+a).css("margin-left",(n-4)+"px");
+
                     if(r=="circle"){
                         jQuery("."+a).css("borderRadius","999px");
                     }else if(r=="oval"){
@@ -369,12 +495,215 @@ function mo_openid_customise_social_icons(){
                         jQuery("."+a).css("borderRadius","0px");
                     }
                     jQuery("."+a).css("font-size",(t-16)+"px");
+                    jQuery("#disq").css({height:t-21});
+                    jQuery("#kaka").css({height:t-21});
+                    jQuery("#lines").css({height:t-22});
+                    jQuery("#meetups").css({height:t-21});
+                    jQuery("#navers").css({height:t-21});
+                    jQuery("#teamsnaps").css({height:t-21});
+                    jQuery("#livejournals").css({height:t-21});
+                    jQuery("#wiebos").css({height:t-21});
+                    jQuery("#hubs3").css({height:t-21});
+                    jQuery("#mailrus").css({height:t-17});
+                    if(b == 'transform'){
+                        jQuery("."+a).addClass("mo_btn_transform_i");
+                    }else{
+                        jQuery("."+a).removeClass("mo_btn_transform_i");
+                    }
 
                 }
             }
+            else if(l == 'white'){
+                p = 'ffffff';
+                if(r == 'longbutton'){
+                    var a = "mo_openid_mo_btn-whitetheme";
+                    jQuery("."+a).css("margin-top", "5px");
+                    jQuery("."+a).css("width",(t)+"px");
+                    jQuery("."+a).css("padding-top",(h-29)+"px");
+                    jQuery("."+a).css("padding-bottom",(h-29)+"px");
+                    jQuery("."+a).css("border-color", "#000000");
+                    jQuery("."+a).css("color", "#000000");
+                    jQuery(".fa").css("padding-top",(h-35)+"px");
+                    jQuery("."+a).css("margin-bottom",(n-5)+"px");
+                    jQuery("."+a).css("background","#"+p);
+                    jQuery("."+a).css("border-radius",k+"px");
+                     if(b == "transform"){
+                        jQuery("."+a).addClass("mo_btn_transform");
+                    }else {
+                        jQuery("."+a).removeClass("mo_btn_transform");
+                    }
+                }else{
+                    var a = "mo_white_login_icon_preview";
+                    jQuery("."+a).css("cursor","pointer");
+                    jQuery("."+a).css({"height":t-8,width:t});
+                    jQuery("."+a).css("padding-top","8px");
+                    jQuery("."+a).css("font-size",(t-14)+"px");
+                    jQuery("."+a).css("border-color","black");
+                    jQuery("."+a).css("border-style","solid");
+                    jQuery("."+a).css("border-width","1px");
+                    jQuery("."+a).css("margin-left",(n-4)+"px");
+
+                    if(r=="circle"){
+                        jQuery("."+a).css("borderRadius","999px");
+                    }else if(r=="oval"){
+                        jQuery("."+a).css("borderRadius","5px");
+                    }else if(r=="square"){
+                        jQuery("."+a).css("borderRadius","0px");
+                    }
+                    if(b == 'transform'){
+                        jQuery("."+a).addClass("mo_btn_transform_i");
+                    }else{
+                        jQuery("."+a).removeClass("mo_btn_transform_i");
+                    }
+                }
+            }
+
+            else if(l == 'hover'){
+                p = 'ffffff';
+                if(r == 'longbutton'){
+                    var a = "mo_openid_mo_btn-hovertheme";
+                    jQuery("."+a).css("margin-top", "5px");
+                    jQuery("."+a).css("width",(t)+"px");
+                    jQuery("."+a).css("padding-top",(h-29)+"px");
+                    jQuery("."+a).css("padding-bottom",(h-29)+"px");
+                    jQuery("."+a).css("border-color", "#000000");
+                    jQuery("."+a).css("color", "#000000");
+                    jQuery(".fa").css("padding-top",(h-35)+"px");
+                    jQuery("."+a).css("margin-bottom",(n-5)+"px");
+                    jQuery("."+a).css("background","#"+p);
+                    jQuery("."+a).css("border-radius",k+"px");
+                    // jQuery(".mo_hover_div").css("display","block");
+                    jQuery(".mofab").css("padding-top",(h-35)+"px");
+                     if(b == "transform"){
+                        jQuery("."+a).addClass("mo_btn_transform");
+                    }else {
+                        jQuery("."+a).removeClass("mo_btn_transform");
+                    }
+
+                }else{
+                    var a = "mo_hover_login_icon_preview";
+                    jQuery("."+a).css("cursor","pointer");
+                    jQuery("."+a).css({"height":t-8,width:t});
+                    jQuery("."+a).css("padding-top","8px");
+                    jQuery("."+a).css("font-size",(t-14)+"px");
+                    jQuery("."+a).css("border-color","black");
+                    jQuery("."+a).css("border-style","solid");
+                    jQuery("."+a).css("border-width","1px");
+                    jQuery("."+a).css("margin-left",(n-4)+"px");
+                    // jQuery(".mo_hover_div").css("display","inline-block");
+
+                    if(r=="circle"){
+                        jQuery("."+a).css("borderRadius","999px");
+                    }else if(r=="oval"){
+                        jQuery("."+a).css("borderRadius","5px");
+                    }else if(r=="square"){
+                        jQuery("."+a).css("borderRadius","0px");
+                    }
+                    if(b == 'transform'){
+                        jQuery("."+a).addClass("mo_btn_transform_i");
+                    }else{
+                        jQuery("."+a).removeClass("mo_btn_transform_i");
+                    }
+                }
+            }
+
+            else if(l == 'custom_hover'){
+                if(r == 'longbutton'){
+                    var a = "mo_openid_mo_btn-customhovertheme";
+                    jQuery("."+a).css("margin-top", "5px");
+                    jQuery("."+a).css("width",(t)+"px");
+                    jQuery("."+a).css("padding-top",(h-29)+"px");
+                    jQuery("."+a).css("padding-bottom",(h-29)+"px");
+                    jQuery("."+a).css("border-color", "#"+x);
+                    // jQuery("."+a).css("color", "#000000");
+                    jQuery(".fa").css("padding-top",(h-35)+"px");
+                    jQuery("."+a).css("margin-bottom",(n-5)+"px");
+                    jQuery("."+a).css("color","#"+x);
+                    jQuery("."+a).css("border-radius",k+"px");
+                    // jQuery(".mo_customhover_div").css("display","block");
+                    jQuery(".mofab").css("padding-top",(h-35)+"px");
+                    if(b == "transform"){
+                        jQuery("."+a).addClass("mo_btn_transform");
+                    }else {
+                        jQuery("."+a).removeClass("mo_btn_transform");
+                    }
+
+                }else{
+                    var a = "mo_custom_hover_login_icon_preview";
+                    jQuery("."+a).css("margin-top", "5px");
+                    jQuery("."+a).css("cursor","pointer");
+                    jQuery("."+a).css({"height":t-8,width:t});
+                    jQuery("."+a).css("padding-top","8px");
+                    jQuery("."+a).css("font-size",(t-16)+"px");
+                    jQuery("."+a).css("border-color","#"+x);
+                    jQuery("."+a).css("border-style","solid");
+                    jQuery("."+a).css("border-width","1px");
+                    jQuery("."+a).css("margin-left",(n-4)+"px");
+                    jQuery("."+a).css("color","#"+x);
+                    // jQuery(".mo_customhover_div").css("display","inline-block");
+
+                    if(r=="circle"){
+                        jQuery("."+a).css("borderRadius","999px");
+                    }else if(r=="oval"){
+                        jQuery("."+a).css("borderRadius","5px");
+                    }else if(r=="square"){
+                        jQuery("."+a).css("borderRadius","0px");
+                    }
+                    if(b == 'transform'){
+                        jQuery("."+a).addClass("mo_btn_transform_i");
+                    }else{
+                        jQuery("."+a).removeClass("mo_btn_transform_i");
+                    }
+                }
+            }
+
+            else if(l == 'smart'){
+                if(r == 'longbutton'){
+                    var a = "mo_openid_mo_btn-smarttheme";
+                    jQuery("."+a).css("margin-top", "5px");
+                    jQuery("."+a).css("width",(t)+"px");
+                    jQuery("."+a).css("padding-top",(h-29)+"px");
+                    jQuery("."+a).css("padding-bottom",(h-29)+"px");
+                    jQuery("."+a).css("color", "#ffffff");
+                    jQuery(".fa").css("padding-top",(h-35)+"px");
+                    jQuery("."+a).css("margin-bottom",(n-5)+"px");
+                    jQuery("."+a).css("background", "linear-gradient(45deg,#"+y+",#"+z+")");
+                    jQuery("."+a).css("border-radius",k+"px");
+                    jQuery(".mofab").css("padding-top",(h-35)+"px");
+                     if(b == "transform"){
+                        jQuery("."+a).addClass("mo_btn_transform");
+                    }else {
+                        jQuery("."+a).removeClass("mo_btn_transform");
+                    }
+                }else{
+                    var a = "mo_custom_smart_login_icon_preview";
+                    jQuery("."+a).css("cursor","pointer");
+                    jQuery("."+a).css({"height":t-8,width:t});
+                    jQuery("."+a).css("padding-top","8px");
+                    jQuery("."+a).css("font-size",(t-14)+"px");
+                    jQuery("."+a).css("border-style","solid");
+                    jQuery("."+a).css("border-width","1px");
+                    jQuery("."+a).css("background", "linear-gradient(90deg,#"+y+",#"+z+")");
+                    jQuery("."+a).css("margin-left",(n-4)+"px");
+
+                    if(r=="circle"){
+                        jQuery("."+a).css("borderRadius","999px");
+                    }else if(r=="oval"){
+                        jQuery("."+a).css("borderRadius","5px");
+                    }else if(r=="square"){
+                        jQuery("."+a).css("borderRadius","0px");
+                    }
+                    if(b == 'transform'){
+                        jQuery("."+a).addClass("mo_btn_transform_i");
+                    }else{
+                        jQuery("."+a).removeClass("mo_btn_transform_i");
+                    }
+                }
+            }
+
             else if(l == 'custom'){
                 if(r == 'longbutton'){
-                    var a = "mo_btn-customtheme";
+                    var a = "mo_openid_mo_btn-customtheme";
                     jQuery("."+a).css("margin-top", "5px");
                     jQuery("."+a).css("width",(t)+"px");
                     jQuery("."+a).css("padding-top",(h-29)+"px");
@@ -383,8 +712,14 @@ function mo_openid_customise_social_icons(){
                     jQuery("."+a).css("margin-bottom",(n-5)+"px");
                     jQuery("."+a).css("background","#"+p);
                     jQuery("."+a).css("border-radius",k+"px");
+                     if(b == "transform"){
+                        jQuery("."+a).addClass("mo_btn_transform");
+                    }else {
+                        jQuery("."+a).removeClass("mo_btn_transform");
+                    }
                 }else{
                     var a="mo_custom_login_icon_preview";
+                    jQuery("."+a).css("cursor","pointer");
                     jQuery("."+a).css({height:t-8,width:t});
                     jQuery("."+a).css("padding-top","8px");
                     jQuery("."+a).css("margin-left",(n-4)+"px");
@@ -400,6 +735,21 @@ function mo_openid_customise_social_icons(){
                     jQuery("."+a).css("font-size",(t-16)+"px");
                     jQuery("#disq").css({height:t-21});
                     jQuery("#kaka").css({height:t-21});
+                    jQuery("#lines").css({height:t-22});
+                    jQuery("#meetups").css({height:t-21});
+                    jQuery("#yandexs").css({height:t-21});
+                    jQuery("#discords").css({height:t-21});
+                    jQuery("#navers").css({height:t-21});
+                    jQuery("#teamsnaps").css({height:t-21});
+                    jQuery("#livejournals").css({height:t-21});
+                    jQuery("#wiebos").css({height:t-21});
+                    jQuery("#hubs3").css({height:t-21});
+                    jQuery("#mailrus").css({height:t-21});
+                    if(b == 'transform'){
+                        jQuery("."+a).addClass("mo_btn_transform_i");
+                    }else{
+                        jQuery("."+a).removeClass("mo_btn_transform_i");
+                    }
                 }
             }
             previewLoginIcons();
@@ -410,26 +760,190 @@ function mo_openid_customise_social_icons(){
                 if(setLoginCustomTheme() == 'default'){
                     jQuery(".mo_login_icon_preview").hide();
                     jQuery(".mo_custom_login_icon_preview").hide();
-                    jQuery(".mo_btn-customtheme").hide();
+                    jQuery(".mo_openid_mo_btn-customtheme").hide();
                     jQuery(".mo_btn-defaulttheme").show();
-                }else if(setLoginCustomTheme() == 'custom'){
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-whitetheme").hide();
+                    jQuery(".mo_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-hovertheme").hide();
+                    jQuery(".mo_custom_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-customhovertheme").hide();
+                    jQuery(".mo_custom_smart_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-smarttheme").hide();
+                }
+
+                else if(setLoginCustomTheme() == 'white'){
                     jQuery(".mo_login_icon_preview").hide();
                     jQuery(".mo_custom_login_icon_preview").hide();
                     jQuery(".mo_btn-defaulttheme").hide();
-                    jQuery(".mo_btn-customtheme").show();
+                    jQuery(".mo_openid_mo_btn-customtheme").hide();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-whitetheme").show();
+                    jQuery(".mo_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-hovertheme").hide();
+                    jQuery(".mo_custom_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-customhovertheme").hide();
+                    jQuery(".mo_custom_smart_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-smarttheme").hide();
+                }
+
+                else if(setLoginCustomTheme() == 'hover'){
+                    jQuery(".mo_login_icon_preview").hide();
+                    jQuery(".mo_custom_login_icon_preview").hide();
+                    jQuery(".mo_btn-defaulttheme").hide();
+                    jQuery(".mo_openid_mo_btn-customtheme").hide();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-whitetheme").hide();
+                    jQuery(".mo_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-hovertheme").show();
+                    jQuery(".mo_custom_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-customhovertheme").hide();
+                    jQuery(".mo_custom_smart_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-smarttheme").hide();
+                }
+
+                else if(setLoginCustomTheme() == 'custom_hover'){
+                    jQuery(".mo_login_icon_preview").hide();
+                    jQuery(".mo_custom_login_icon_preview").hide();
+                    jQuery(".mo_btn-defaulttheme").hide();
+                    jQuery(".mo_openid_mo_btn-customtheme").hide();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-whitetheme").hide();
+                    jQuery(".mo_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-hovertheme").hide();
+                    jQuery(".mo_custom_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-customhovertheme").show();
+                    jQuery(".mo_custom_smart_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-smarttheme").hide();
+                }
+
+                else if(setLoginCustomTheme() == 'smart'){
+                    jQuery(".mo_login_icon_preview").hide();
+                    jQuery(".mo_custom_login_icon_preview").hide();
+                    jQuery(".mo_btn-defaulttheme").hide();
+                    jQuery(".mo_openid_mo_btn-customtheme").hide();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-whitetheme").hide();
+                    jQuery(".mo_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-hovertheme").hide();
+                    jQuery(".mo_custom_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-customhovertheme").hide();
+                    jQuery(".mo_custom_smart_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-smarttheme").show();
+                }
+
+                else if(setLoginCustomTheme() == 'custom'){
+                    jQuery(".mo_login_icon_preview").hide();
+                    jQuery(".mo_custom_login_icon_preview").hide();
+                    jQuery(".mo_btn-defaulttheme").hide();
+                    jQuery(".mo_openid_mo_btn-customtheme").show();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-whitetheme").hide();
+                    jQuery(".mo_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-hovertheme").hide();
+                    jQuery(".mo_custom_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-customhovertheme").hide();
+                    jQuery(".mo_custom_smart_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-smarttheme").hide();
                 }
             }
             else {
                 if(setLoginCustomTheme() == 'default'){
                     jQuery(".mo_login_icon_preview").show();
                     jQuery(".mo_btn-defaulttheme").hide();
-                    jQuery(".mo_btn-customtheme").hide();
+                    jQuery(".mo_openid_mo_btn-customtheme").hide();
                     jQuery(".mo_custom_login_icon_preview").hide();
-                }else if(setLoginCustomTheme() == 'custom'){
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-whitetheme").hide();
+                    jQuery(".mo_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-hovertheme").hide();
+                    jQuery(".mo_custom_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-customhovertheme").hide();
+                    jQuery(".mo_custom_smart_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-smarttheme").hide();
+                }
+
+                else if(setLoginCustomTheme() == 'white'){
+                    jQuery(".mo_login_icon_preview").hide();
+                    jQuery(".mo_custom_login_icon_preview").hide();
+                    jQuery(".mo_btn-defaulttheme").hide();
+                    jQuery(".mo_openid_mo_btn-customtheme").hide();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-whitetheme").hide();
+                    jQuery(".mo_white_login_icon_preview").show();
+                    jQuery(".mo_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-hovertheme").hide();
+                    jQuery(".mo_custom_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-customhovertheme").hide();
+                    jQuery(".mo_custom_smart_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-smarttheme").hide();
+
+                }
+
+                else if(setLoginCustomTheme() == 'hover'){
+                    jQuery(".mo_login_icon_preview").hide();
+                    jQuery(".mo_custom_login_icon_preview").hide();
+                    jQuery(".mo_btn-defaulttheme").hide();
+                    jQuery(".mo_openid_mo_btn-customtheme").hide();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-whitetheme").hide();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_hover_login_icon_preview").show();
+                    jQuery(".mo_openid_mo_btn-hovertheme").hide();
+                    jQuery(".mo_custom_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-customhovertheme").hide();
+                    jQuery(".mo_custom_smart_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-smarttheme").hide();
+
+                }
+
+                else if(setLoginCustomTheme() == 'custom_hover'){
+                    jQuery(".mo_login_icon_preview").hide();
+                    jQuery(".mo_custom_login_icon_preview").hide();
+                    jQuery(".mo_btn-defaulttheme").hide();
+                    jQuery(".mo_openid_mo_btn-customtheme").hide();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-whitetheme").hide();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-hovertheme").hide();
+                    jQuery(".mo_custom_hover_login_icon_preview").show();
+                    jQuery(".mo_openid_mo_btn-customhovertheme").hide();
+                    jQuery(".mo_custom_smart_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-smarttheme").hide();
+
+                }
+
+                else if(setLoginCustomTheme() == 'smart'){
+                    jQuery(".mo_login_icon_preview").hide();
+                    jQuery(".mo_custom_login_icon_preview").hide();
+                    jQuery(".mo_btn-defaulttheme").hide();
+                    jQuery(".mo_openid_mo_btn-customtheme").hide();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-whitetheme").hide();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-hovertheme").hide();
+                    jQuery(".mo_custom_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-customhovertheme").hide();
+                    jQuery(".mo_custom_smart_login_icon_preview").show();
+                    jQuery(".mo_openid_mo_btn-smarttheme").hide();
+
+                }
+
+                else if(setLoginCustomTheme() == 'custom'){
                     jQuery(".mo_login_icon_preview").hide();
                     jQuery(".mo_custom_login_icon_preview").show();
                     jQuery(".mo_btn-defaulttheme").hide();
-                    jQuery(".mo_btn-customtheme").hide();
+                    jQuery(".mo_openid_mo_btn-customtheme").hide();
+                    jQuery(".mo_white_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-whitetheme").hide();
+                    jQuery(".mo_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-hovertheme").hide();
+                    jQuery(".mo_custom_hover_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-customhovertheme").hide();
+                    jQuery(".mo_custom_smart_login_icon_preview").hide();
+                    jQuery(".mo_openid_mo_btn-smarttheme").hide();
                 }
             }
             previewLoginIcons();
@@ -447,6 +961,34 @@ function mo_openid_customise_social_icons(){
                     else
                         jQuery("#mo_login_icon_preview_"+apps[i]).show();
                 }
+
+                else if(jQuery('input[name=mo_openid_login_custom_theme]:checked', '#form-apps').val() == 'white')
+                {
+                    if(jQuery('input[name=mo_openid_login_theme]:checked', '#form-apps').val() == 'longbutton')
+                        jQuery("#mo_white_login_button_preview_"+apps[i]).show();
+                    else
+                        jQuery("#mo_white_login_icon_preview_"+apps[i]).show();
+                }
+
+
+                else if(jQuery('input[name=mo_openid_login_custom_theme]:checked', '#form-apps').val() == 'hover')
+                {
+                    if(jQuery('input[name=mo_openid_login_theme]:checked', '#form-apps').val() == 'longbutton')
+                        jQuery("#mo_hover_login_button_preview_"+apps[i]).show();
+                    else
+                        jQuery("#mo_hover_login_icon_preview_"+apps[i]).show();
+                }
+
+
+
+                else if(jQuery('input[name=mo_openid_login_custom_theme]:checked', '#form-apps').val() == 'custom_hover')
+                {
+                    if(jQuery('input[name=mo_openid_login_theme]:checked', '#form-apps').val() == 'longbutton')
+                        jQuery("#mo_custom_hover_login_button_preview_"+apps[i]).show();
+                    else
+                        jQuery("#mo_custom_hover_login_icon_preview_"+apps[i]).show();
+                }
+
                 else if(jQuery('input[name=mo_openid_login_custom_theme]:checked', '#form-apps').val() == 'custom')
                 {
                     if(jQuery('input[name=mo_openid_login_theme]:checked', '#form-apps').val() == 'longbutton')

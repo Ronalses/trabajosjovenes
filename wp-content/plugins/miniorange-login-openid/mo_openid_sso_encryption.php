@@ -55,4 +55,3 @@ class MOAESEncryption {
         return substr($text, 0, -1 * $pad);
     }
 }
-?>

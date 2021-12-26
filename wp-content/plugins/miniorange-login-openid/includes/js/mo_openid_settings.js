@@ -94,4 +94,17 @@ jQuery(document).ready(function () {
     jQuery("#openid_question_plugin").click(function () {
         jQuery("#openid_question_plugin_desc").slideToggle(400);
     });
+	jQuery(document.body).on("click",".mo_sl_notice .notice-dismiss",function(o){
+        jQuery.ajax({
+            url:"admin-ajax.php",
+            type:"POST",
+            data:{
+                action:"mo_sl_dismiss_notice"
+            },
+            crossDomain:!0,
+            dataType:"json",
+            success:function(){return!0},
+            error:function(){return!1}
+        })
+    });
 });

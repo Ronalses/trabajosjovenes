@@ -198,4 +198,3 @@ delete_option('mo_openid_register_email_message');
 
 delete_option('mo_openid_bootstrap_load');
 delete_option('mo_openid_fonawesome_load');
-?>

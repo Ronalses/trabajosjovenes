@@ -185,6 +185,4 @@ function mo_openid_display_feedback_form(){
             return false;
         });
     </script><?php
-
 }
-?>

@@ -1620,3 +1620,17 @@ input:checked + .slider:before {
 .slider.round:before {
 	border-radius: 50%;
 }
+/* added for tlwp by Roshan*/
+
+.mo_succ_notice {
+	background: #e7fcd0;
+	border: 1px solid #f6f3f4;
+	border-left-color: rgb(195, 182, 182);
+
+	border-left-width: 6px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	margin: 5px 15px 2px;
+	padding: 1px 12px;
+	border-left-color: #427e05;
+
+}

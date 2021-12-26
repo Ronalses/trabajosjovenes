@@ -4,7 +4,7 @@ Donate link: https://www.miniorange.com
 Tags: social login, facebook login, google login, social sharing, twitter login, linkedIn, user login, vkontakte login, social comments, social commenting, woocommerce login, facebook, twitter, google, social connect, social network login, social plugin, windows, microsoft, discord login. 
 Requires at least: 2.0.2
 Tested up to: 5.8
-Stable tag: 7.5.5
+Stable tag: 7.5.6
 License: GPLv2 or later
 License URI: http://miniorange.com/usecases/miniOrange_User_Agreement.pdf
 
@@ -263,15 +263,29 @@ Please email us at info@miniorange.com. You can also submit your query from the 
 3. Social Login display Options.
 4. Social Login redirection options.
 5. Advanced options for Social Login.
-6. Profile Completion option for Social Login.
-7. Icon preview for Social Sharing.
-8. Social Login with square images.
-9. Social Login with icon and text buttons.
-10. Social Login with circle buttons.
-11. Square Social share buttons - horizontal and vertical.
-12. Social Sharing icons without background.
+6. Temporary user for wp-login.
+7. Profile Completion option for Social Login.
+8. Icon preview for Social Sharing.
+9. Social Login with square images.
+10. Social Login with icon with default theme and long buttons.
+11. Social Login with icon with white background and long buttons.
+12. Social Login with icon with Hover theme, Transform effect and long buttons.
+13. Social Login with icon with smart theme, Transform effect and long buttons.
+14. Social Login with icon with Custom Hover theme, Transform effect and circle buttons.
+15. Square Social share buttons - horizontal and vertical.
+16. Social Sharing icons without background.
 
 ==Changelog==
+= 7.5.6 =
+* Added Temporary login feature.
+* Added Hover, Custom hover, and Smart Theme for social login Icons.
+* Fixed Yahoo attribute mapping.
+* Updated Facebook setup instructions.
+* Updated Facebook and Google setup videos.
+* Published Christmas and EOSS.
+* Added Fitbit and Stackoverflow apps in Premium and all-inclusive app.
+* Added connect with messenger feature in Premium and all-inclusive app.
+
 = 7.5.5 =
 * Added meeting scheduler in support section.
 * Fix the discord profile picture mapping issue.
@@ -955,6 +969,16 @@ SECURITY FIXES
 * First version of Social Login, Social Sharing plugin.
 
 == Upgrade Notice ==
+= 7.5.6 =
+* Added Temporary login feature.
+* Added Hover, Custom hover, and Smart Theme for social login Icons.
+* Fixed Yahoo attribute mapping.
+* Updated Facebook setup instructions.
+* Updated Facebook and Google setup videos.
+* Published Christmas and EOSS.
+* Added Fitbit, Trello and Stackoverflow apps in Premium and all-inclusive app.
+* Added connect with messenger feature in Premium and all-inclusive app.
+
 = 7.5.5 =
 * Added meeting scheduler in support section.
 * Fix the discord profile picture mapping issue.
