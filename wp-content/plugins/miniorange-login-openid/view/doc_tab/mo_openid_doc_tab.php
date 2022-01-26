@@ -153,7 +153,7 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">1</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <i class="fab fa-amazon" style="margin-bottom: 5px; font-size: 3.5em;color: black"></i>
+                                    <i class="fab fa-amazon" style="margin-bottom: 5px; font-size: 3.5em;color:#FF9900"></i>
                                     <br>Amazon
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/configure-amazon-with-social-login-in-wordpress" target="_blank">Amazon Login Setup Guide</a></div>
@@ -184,14 +184,24 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">4</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <i class="fab fa-linkedin" style="margin-bottom: 5px; font-size: 3.5em;color: #007bb6"></i>
-                                    <br>LinkedIn</div>
-                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/configure-linkedin-with-social-login-in-wordpress" target="_blank">LinkedIn Login Setup Guide</a></div>
-                                <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming soon!</p></div>
+                                    <i class="fab fa-discord" style="margin-bottom: 5px; font-size: 3.5em;color: #7289da"></i>
+                                    <br>Discord
+                                </div>
+                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-discord-with-social-login-in-wordpress" target="_blank">Discord Login Setup Guide</a></div>
+                                <div class="modt-table-col modt-table-col-4" data-label="Video"><iframe id="modt-vid-dc" width="150" height="75" src="https://www.youtube.com/embed/zryQ0xE5sKA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe></div>
                             </li>
 
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">5</div>
+                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
+                                    <i class="fab fa-linkedin" style="margin-bottom: 5px; font-size: 3.5em;color: #007bb6"></i>
+                                    <br>LinkedIn</div>
+                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/configure-linkedin-with-social-login-in-wordpress" target="_blank">LinkedIn Login Setup Guide</a></div>
+                                <div class="modt-table-col modt-table-col-4" data-label="Video"><iframe id="modt-vid-dc" width="150" height="75" src="https://www.youtube.com/embed/Qs-PSyy7KVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe></div>
+                            </li>
+
+                            <li class="modt-table-row">
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">6</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
                                     <i class="fab fa-twitter" style="margin-bottom: 5px; font-size: 3.5em;color: #2795e9"></i>
                                     <br>Twitter
@@ -201,7 +211,7 @@ function mo_openid_doc_tab()
                             </li>
 
                             <li class="modt-table-row">
-                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">6</div>
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">7</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
                                     <i class="fab fa-windows" style="margin-bottom: 5px; font-size: 3.5em;color: #2672ec"></i>
                                     <br>Windows
@@ -211,12 +221,43 @@ function mo_openid_doc_tab()
                             </li>
 
                             <li class="modt-table-row">
-                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">7</div>
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">8</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
                                     <i class="fab fa-yahoo" style="margin-bottom: 5px; font-size: 3.5em;color: #430297"></i>
                                     <br>Yahoo</div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/guide-to-configure-yahoo-social-login-in-wordpress" target="_blank">Yahoo Login Setup Guide</a></div>
                                 <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming soon!</p></div>
+                            </li>
+
+                            <li class="modt-table-row">
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">9</div>
+                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
+                                    <i class="fab fa-vk" style="margin-bottom: 5px; font-size: 3.5em;color: #4C75A3"></i>
+                                    <br>Vkontakte
+                                </div>
+                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/configure-vkontakte-with-social-login-in-wordpress" target="_blank">Vkontakte Login Setup Guide</a></div>
+                                <div class="modt-table-col modt-table-col-4" data-label="Video"><iframe id="modt-vid-wl" width="150" height="75" src="https://www.youtube.com/embed/LqYZIKKEVxY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe></div>
+                            </li>
+
+                            <li class="modt-table-row">
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">10</div>
+                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
+                                    <i class="fab fa-snapchat" style="margin-bottom: 5px; font-size: 3.5em;color: #FFFC00"></i>
+                                    <br>Snapchat
+                                </div>
+                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-snapchat-with-social-login-in-wordpress" target="_blank">Snapchat Login Setup Guide</a></div>
+                                <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming Soon!</p></div>
+                            </li>
+
+                            <li class="modt-table-row">
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">10</div>
+                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
+                                    <i class="fab fa-dribbble" style="margin-bottom: 5px; font-size: 3.5em;color: ##ff3399"></i>
+                                    <br>Dribbble
+                                </div>
+                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-dribbble-with-social-login-in-wordpress" target="_blank">Snapchat Login Setup Guide</a></div>
+                                <div class="modt-table-col modt-table-col-4" data-label="Video"><iframe id="modt-vid-wl" width="150" height="75" src="https://www.youtube.com/embed/9M95pxJ8Emo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
+                                </div>
                             </li>
 
                             <br><h5>PREMIUM APPLICATIONS</h5><br>
@@ -231,15 +272,7 @@ function mo_openid_doc_tab()
                                 <div class="modt-table-col modt-table-col-4" data-label="Video"><iframe id="modt-vid-ap" width="150" height="75" src="https://www.youtube.com/embed/-8FGxHGQV2Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe></div>
                             </li>
 
-                            <li class="modt-table-row">
-                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">9</div>
-                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <i class="fab fa-discord" style="margin-bottom: 5px; font-size: 3.5em;color: #7289da"></i>
-                                    <br>Discord
-                                </div>
-                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-discord-with-social-login-in-wordpress" target="_blank">Discord Login Setup Guide</a></div>
-                                <div class="modt-table-col modt-table-col-4" data-label="Video"><iframe id="modt-vid-dc" width="150" height="75" src="https://www.youtube.com/embed/zryQ0xE5sKA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe></div>
-                            </li>
+                            
 
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">10</div>
@@ -249,16 +282,6 @@ function mo_openid_doc_tab()
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/configure-disqus-with-social-login-in-wordpress" target="_blank">Disqus Login Setup Guide</a></div>
                                 <div class="modt-table-col modt-table-col-4" data-label="Video"><iframe id="modt-vid-dq" width="150" height="75" src="https://www.youtube.com/embed/fusUWinPYXY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe></div>
-                            </li>
-
-                            <li class="modt-table-row">
-                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">11</div>
-                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <i class="fab fa-dribbble" style="margin-bottom: 5px; font-size: 3.5em;color: #ee66aa"></i>
-                                    <br>Dribble
-                                </div>
-                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-dribbble-with-social-login-in-wordpress" target="_blank">Dribble Login Setup Guide</a></div>
-                                <div class="modt-table-col modt-table-col-4" data-label="Video"><iframe id="modt-vid-dr" width="150" height="75" src="https://www.youtube.com/embed/9M95pxJ8Emo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe></div>
                             </li>
 
                             <li class="modt-table-row">
@@ -362,16 +385,6 @@ function mo_openid_doc_tab()
                             </li>
 
                             <li class="modt-table-row">
-                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">22</div>
-                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <i class="fab fa-snapchat" style="margin-bottom: 5px; font-size: 3.5em;color: #fffc00"></i>
-                                    <br>Snapchat
-                                </div>
-                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-snapchat-with-social-login-in-wordpress" target="_blank">Snapchat Login Setup Guide</a></div>
-                                <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming soon!</p></div>
-                            </li>
-
-                            <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">23</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
                                     <i class="fab fa-spotify" style="margin-bottom: 5px; font-size: 3.5em;color: #19bf61"></i>
@@ -421,8 +434,6 @@ function mo_openid_doc_tab()
                                 <div class="modt-table-col modt-table-col-4" data-label="Video"><iframe id="modt-vid-th" width="150" height="75" src="https://www.youtube.com/embed/dS77fqT5IpM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe></div>
                             </li>
 
-
-
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">28</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
@@ -436,16 +447,6 @@ function mo_openid_doc_tab()
                             <li class="modt-table-row">
                                 <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">29</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <i class="fab fa-vk" style="margin-bottom: 5px; font-size: 3.5em;color: #466482"></i>
-                                    <br>Vkontakte
-                                </div>
-                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="http://plugins.miniorange.com/configure-vkontakte-with-social-login-in-wordpress" target="_blank">Vkontakte Login Setup Guide</a></div>
-                                <div class="modt-table-col modt-table-col-4" data-label="Video"><iframe id="modt-vid-vk" width="150" height="75" src="https://www.youtube.com/embed/DmF-jflxQ9o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe></div>
-                            </li>
-
-                            <li class="modt-table-row">
-                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">30</div>
-                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
                                     <i class="fab fa-weixin" style="margin-bottom: 5px; font-size: 3.5em;color: #00c300"></i>
                                     <br>Wechat
                                 </div>
@@ -454,7 +455,7 @@ function mo_openid_doc_tab()
                             </li>
 
                             <li class="modt-table-row">
-                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">31</div>
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">30</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
                                     <i class="fab fa-wordpress" style="margin-bottom: 5px; font-size: 3.5em;color: #587ea3"></i>
                                     <br>WordPress
@@ -464,12 +465,72 @@ function mo_openid_doc_tab()
                             </li>
 
                             <li class="modt-table-row">
-                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">32</div>
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">31</div>
                                 <div class="modt-table-col modt-table-col-2" data-label="App Name">
-                                    <i class="fab fa-yandex" style="margin-bottom: 5px; font-size: 3.5em;color: #2795e9"></i>
+                                    <i class="fab fa-yandex" style="margin-bottom: 5px; font-size: 3.5em;color: #FF0000"></i>
                                     <br>Yandex
                                 </div>
                                 <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/login-with-yandex-using-wordpress-social-login" target="_blank">Yandex Login Setup Guide</a></div>
+                                <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming soon!</p></div>
+                            </li>
+
+                            <li class="modt-table-row">
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">32</div>
+                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
+                                    <i class="fab fa-github" style="margin-bottom: 5px; font-size: 3.5em;color: #000000"></i>
+                                    <br>Github
+                                </div>
+                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/integrate-github-login-in-your-website-wordpress-oauth" target="_blank">Github Login Setup Guide</a></div>
+                                <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming soon!</p></div>
+                            </li>
+
+                            <li class="modt-table-row">
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">33</div>
+                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
+                                    <i class="fab fa-hubspot" style="margin-bottom: 5px; font-size: 3.5em;color: #f57722"></i>
+                                    <br>Hubspot
+                                </div>
+                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-hubspot-sign-in-for-wordpress-website" target="_blank">Hubspot Login Setup Guide</a></div>
+                                <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming soon!</p></div>
+                            </li>
+
+                            <li class="modt-table-row">
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">34</div>
+                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
+                                    <i class="fas fa-at" style="margin-bottom: 5px; font-size: 3.5em;color: #ffa930"></i>
+                                    <br>Mail.ru
+                                </div>
+                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/configure-social-login-into-wordpress-using-mail-ru-mail-ru-sso" target="_blank">Mail.ru Login Setup Guide</a></div>
+                                <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming soon!</p></div>
+                            </li>
+
+                             <li class="modt-table-row">
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">35</div>
+                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
+                                    <i class="fab fa-steam" style="margin-bottom: 5px; font-size: 3.5em;color: #00adee"></i>
+                                    <br>Steam
+                                </div>
+                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/how-to-setup-steam-login-for-wordpress-website-social-login" target="_blank">Steam Login Setup Guide</a></div>
+                                <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming soon!</p></div>
+                            </li>
+
+                            <li class="modt-table-row">
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">36</div>
+                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
+                                    <i class="fab fa-dropbox" style="margin-bottom: 5px; font-size: 3.5em;color: #3d9ae8"></i>
+                                    <br>Dropbox
+                                </div>
+                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/login-with-dropbox-on-wordpress-using-social-login" target="_blank">Dropbox Login Setup Guide</a></div>
+                                <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming soon!</p></div>
+                            </li>
+
+                             <li class="modt-table-row">
+                                <div class="modt-table-col modt-table-col-1" data-label="Sr. No.">37</div>
+                                <div class="modt-table-col modt-table-col-2" data-label="App Name">
+                                    <i class="fab fa-weibo" style="margin-bottom: 5px; font-size: 3.5em;color: #ce1126"></i>
+                                    <br>Weibo
+                                </div>
+                                <div class="modt-table-col modt-table-col-3" data-label="Guide"><a href="https://plugins.miniorange.com/guide-to-configure-weibo-social-login-into-wordpress-weibo-sso" target="_blank">Weibo Login Setup Guide</a></div>
                                 <div class="modt-table-col modt-table-col-4" data-label="Video"><p>Coming soon!</p></div>
                             </li>
 

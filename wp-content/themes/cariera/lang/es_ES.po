@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-17 19:04+0000\n"
-"PO-Revision-Date: 2021-12-10 16:01+0000\n"
+"PO-Revision-Date: 2022-01-18 16:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
@@ -115,9 +115,7 @@ msgstr[1] ""
 
 #: job_manager/job-submitted.php:24
 msgid "%s listed successfully. To view your listing %sclick here%s."
-msgstr ""
-"%s Su publicación se hizo de manera correcta. Verifique el estado %haciendo "
-"click aquí%s."
+msgstr "%s publicado con éxito. Para ver tu publicación %shaz click aquí%s."
 
 #: wc-paid-listings/resume-package-selection.php:21
 msgid "%s resume posted"

@@ -16,12 +16,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-20 23:18+0000\n"
-"PO-Revision-Date: 2021-12-10 15:59+0000\n"
+"PO-Revision-Date: 2022-01-26 15:49+0000\n"
 "Last-Translator: \n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.5; wp-5.8"
+"X-Loco-Version: 2.5.7; wp-5.8"
 
 #: inc/class-cariera-core.php:206
 msgid "Showing all resumes"
@@ -4094,7 +4094,7 @@ msgstr "Cambiar clave "
 
 #: inc/extensions/account/user.php:330, inc/extensions/account/user.php:338
 msgid "Or connect with"
-msgstr ""
+msgstr "Puedes iniciar sesión con"
 
 #: inc/extensions/account/user.php:454
 msgid "Please provide captcha information"
@@ -4106,7 +4106,7 @@ msgstr ""
 
 #: inc/extensions/account/user.php:447
 msgid "Login successful, redirecting..."
-msgstr ""
+msgstr "Inicio de sesión exitoso, ingresando..."
 
 #: inc/extensions/account/user.php:441
 msgid "Wrong username or password."
@@ -4184,7 +4184,7 @@ msgstr ""
 
 #: inc/extensions/account/user.php:651
 msgid "You have been successfully registered, you can login now."
-msgstr ""
+msgstr "Se ha registrado correctamente, puede iniciar sesión ahora."
 
 #: inc/extensions/account/user.php:643
 msgid "You have been successfully registered, you will be logged in shortly."

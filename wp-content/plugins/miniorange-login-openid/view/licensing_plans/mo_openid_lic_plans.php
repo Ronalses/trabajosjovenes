@@ -4,33 +4,6 @@ function mo_openid_licensing_plans()
 {
     wp_enqueue_style( 'mo_openid_plugins_page_style', plugin_dir_url(dirname(dirname(__FILE__))).'includes/css/mo_openid_licensing_plan.css?version='.MO_OPENID_SOCIAL_LOGIN_VERSION );
     ?>
-        <style>
-            @import url(https://fonts.googleapis.com/css?family=Inconsolata);
-
-
-            @-webkit-keyframes salePulse {
-                from { background-color: #a00; }
-                50% { background-color: #c00; -webkit-transform:scale(1.1); }
-                to { background-color: #a00; }
-            }
-
-            mark.sale {
-                background:#c00; /* fallback for non-webkit browsers */
-                display:block; /* or it wont work */
-                width:320px;
-                text-align:center;
-                line-height:3em;
-                border-radius:0.1em;
-                color:#fff;
-                font-weight:bold;
-                -webkit-animation-name:salePulse;
-                -webkit-animation-duration:1s;
-                -webkit-animation-iteration-count:infinite;
-                margin: 0 auto;
-            }
-        </style>
-    <mark class="sale" style="font-family: 'Inconsolata', san-srif ;">Minimum 50% off on all Social Login Products</mark>
-
     <input type="hidden" id="mo_license_plan_selected" value="" />
     <div class="mo-openid-tab-content">
         <div class="active">
@@ -69,269 +42,6 @@ function mo_openid_licensing_plans()
                         <ul class="mo-openid-cd-pricing-wrapper" id="col1">
                             <li data-type="singlesite" class="mosslp is-visible" style="">
                                 <header class="mo-openid-cd-pricing-header">
-                                    <h2 style="margin-bottom: 10%;">Apple Plan</h2>
-                                    <label for="mo_openid_ap">Select No. of Instances : </label>
-                                    <select name="mo_openid_ap" id="mo_openid_ap">
-                                        <option value="1">1</option>
-                                        <option value="5">5</option>
-                                        <option value="10">10</option>
-                                    </select>
-
-                                    <div class="cd-price" style="margin-top: 9%;">
-                                        <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_ap1" class="mo-openid-cd-value">19</span> &nbsp;&nbsp;
-                                        <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_ap2" class="mo-openid-cd-value"><s>40</s></span>
-                                    </div>
-                                </header> <!-- .mo-openid-cd-pricing-header -->
-                                <footer class="mo-openid-cd-pricing-footer">
-                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_apple_plan')" >Upgrade Now</a>
-                                </footer>
-
-                                <div class="mo-openid-cd-pricing-body">
-                                    <ul class="mo-openid-cd-pricing-features ">
-                                        <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
-                                        <li class="mo-openid-lic-bold-cl" style="color: red">X</li>
-                                        <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">14 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
-                                        <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">13 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Apple, Twitch, Discord, Facebook, Google, Twitter Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo, Instagram.</span></div></li>
-                                        <li>Apple, Twitch, & Discord Login</li>
-                                        <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">7 Pre-Configured Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo</span></div></li>
-                                        <li>Sharing Display Option</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li>Facebook Share Count</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li>Vertical Icons & Horizontal Icons</li>
-                                        <li style="padding:7.5%;" class="mo-openid-lic-bold-cl";>X</li>
-                                        <li style="padding:7.5%;" class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl" style="padding: 7%;">X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl">X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li style="padding:7.5%;" class="mo-openid-lic-bold-cl">X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-
-                                        <li style="padding:7.5%;" class="mo-openid-lic-bold-cl">X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl">X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li style="padding:7.51%;"class="mo-openid-lic-bold-cl">X</li>
-
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-
-                                        <li style="padding:7.8%;" class="mo-openid-lic-bold-cl">X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-
-                                        <li>Shortcodes to display social icons on<br/>any homepage page, post, popup and php pages.</li>
-
-                                        <li><a style="cursor: pointer" onclick="mo_openid_support_form('')">Click here to Contact Us</a></li>
-
-                                    </ul>
-                                </div> <!-- .mo-openid-cd-pricing-body -->
-                            </li>
-                            <li data-type="multisite" class="momslp is-hidden" style="">
-                                <header class="mo-openid-cd-pricing-header">
-                                    <h2 style="margin-bottom: 10%;">Apple Plan</h2>
-                                    <label for="mo_openid_m_apple">Select No. of Instances : </label>
-                                    <select name="mo_openid_m_apple" id="mo_openid_m_apple" onchange="update_val_apple('mo_openid_m_apple','mo_openid_m_apple_sub','mo_openid_m_apple1','mo_openid_m_apple2')">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select><br/><br/>
-                                    <label for="mo_openid_m_std_apple">Select No. of Sub-Site : </label>
-                                    <select name="mo_openid_m_apple_sub" id="mo_openid_m_apple_sub" onchange="update_val_apple('mo_openid_m_apple','mo_openid_m_apple_sub','mo_openid_m_apple1','mo_openid_m_apple2')">
-                                        <option value="3">3</option>
-                                        <option value="5">5</option>
-                                        <option value="10">10</option>
-                                        <option value="15">15</option>
-                                        <option value="20">20</option>
-                                        <option value="30">30</option>
-                                        <option value="40">40</option>
-                                        <option value="50">50</option>
-                                        <option value="100">100</option>
-                                    </select>
-
-                                    <div class="cd-price" style="margin-top: 9%;">
-                                        <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_m_apple1" class="mo-openid-cd-value">85</span> &nbsp;&nbsp;
-                                        <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_m_apple2" class="mo-openid-cd-value"><s>140</s></span>
-                                    </div>
-                                </header> <!-- .mo-openid-cd-pricing-header -->
-                                <footer class="mo-openid-cd-pricing-footer">
-<!--                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_apple_plan')" >Upgrade Now</a>-->
-                                    <a href="#" class="mo-openid-cd-select" onclick="mo_openid_support_form('wp_social_login_apple_plan-multisite : ')" >Contact us for more details</a>
-                                </footer>
-
-                                <div class="mo-openid-cd-pricing-body">
-                                    <ul class="mo-openid-cd-pricing-features ">
-                                        <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
-                                        <li class="mo-openid-lic-bold-cl" style="color: red">X</li>
-                                        <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">14 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
-                                        <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">10 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo.</span></div></li>
-                                        <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">7 Pre-Configured Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo</span></div></li>
-
-                                        <li>Sharing Display Option</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li>Facebook Share Count</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li>Vertical Icons & Horizontal Icons</li>
-                                        <li style="padding:7.5%;" class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl" style="padding: 7%;">X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li style="padding:7.5%;" class="mo-openid-lic-bold-cl">X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-
-                                        <li style="padding:7.5%;" class="mo-openid-lic-bold-cl">X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl">X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li style="padding:7.51%;"class="mo-openid-lic-bold-cl">X</li>
-
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-
-                                        <li style="padding:7.8%;" class="mo-openid-lic-bold-cl">X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li>Shortcodes to display social icons on<br/>any homepage page, post, popup and php pages.</li>
-
-                                        <li><a style="cursor: pointer" onclick="mo_openid_support_form('')">Click here to Contact Us</a></li>
-
-                                    </ul>
-                                </div> <!-- .mo-openid-cd-pricing-body -->
-                            </li>
-                            <li data-type="mo_add-on" class="moaslp is-hidden" style="">
-                                <header class="mo-openid-cd-pricing-header">
-
-                                    <h2 style="margin-bottom: 10%;" >Custom Registration Form Add-On </h2>
-
-                                    <label for="mo_openid_cra">Select No. of Instances : </label>
-                                    <select name="mo_openid_cra" id="mo_openid_cra">
-                                        <option value="1">1</option>
-                                        <option value="5">5</option>
-                                        <option value="10">10</option>
-                                    </select>
-
-                                    <div class="cd-price" style="margin-top: 9%;">
-                                        <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_cra1" class="mo-openid-cd-value">29</span> &nbsp;&nbsp;
-                                        <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_cra2" class="mo-openid-cd-value"><s>60</s></span>
-
-                                    </div>
-                                </header>
-                                <!-- .mo-openid-cd-pricing-header -->
-                                <footer class="mo-openid-cd-pricing-footer">
-                                    <a href="#" class="mo-openid-cd-select" id="mosocial_purchase_cust_addon" onclick="mosocial_addonform('wp_social_login_extra_attributes_addon')" >Upgrade Now</a>
-                                </footer>
-
-                                <div class="mo-openid-cd-pricing-body">
-                                    <ul class="mo-openid-cd-pricing-features">
-                                        <li onclick="mo_all_features_clk('custom_registration_adon')"style="cursor:pointer">Click Here to see features<i class="far fa-hand-pointer" style="color: orangered;margin-left: .5%" aria-hidden="true"></i></li>
-                                        <li><a style="cursor: pointer" onclick="mo_openid_support_form('')">Click here to Contact Us</a></li>
-                                    </ul>
-                                </div> <!-- .mo-openid-cd-pricing-body -->
-                            </li>
-                            <br>
-                            <li data-type="mo_add-on" class="moaslp is-hidden">
-                                <header class="mo-openid-cd-pricing-header">
-                                    <h2 style="margin-bottom: 10%;">MailChimp Integration Add-on</h2>
-                                    <label for="mo_openid_mca">Select No. of Instances : </label>
-                                    <select name="mo_openid_mca" id="mo_openid_mca">
-                                        <option value="1">1</option>
-                                        <option value="5">5</option>
-                                        <option value="10">10</option>
-                                    </select>
-
-                                    <div class="cd-price" style="margin-top: 9%;">
-                                        <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_mca1" class="mo-openid-cd-value">19</span> &nbsp;&nbsp;
-                                        <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_mca2" class="mo-openid-cd-value"><s>40</s></span>
-                                    </div>
-                                </header> <!-- .mo-openid-cd-pricing-header -->
-                                <footer class="mo-openid-cd-pricing-footer">
-                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_mailchimp_addon')" >Upgrade Now</a>
-                                </footer>
-                                <div class="mo-openid-cd-pricing-body">
-                                    <ul class="mo-openid-cd-pricing-features">
-                                        <li onclick="mo_all_features_clk('mailchimp_adon')"style="cursor:pointer">Click Here to see features<i class="far fa-hand-pointer" style="color: orangered;margin-left: .5%" aria-hidden="true"></i></li>
-                                        <li><a style="cursor: pointer" onclick="mo_openid_support_form('')">Click here to Contact Us</a></li>
-                                    </ul>
-                                </div> <!-- .mo-openid-cd-pricing-body -->
-                            </li>
-
-                        </ul> <!-- .mo-openid-cd-pricing-wrapper -->
-                    </li>
-
-                    <li class="mo-openid-cd-popular">
-                        <ul class="mo-openid-cd-pricing-wrapper" id="col2">
-                            <li data-type="singlesite" class="mosslp is-visible" style="">
-                                <header class="mo-openid-cd-pricing-header">
                                     <h2 style="margin-bottom: 10%;" >Standard<span style="font-size:0.5em"></span></h2>
 
                                     <label for="mo_openid_std">Select No. of Instances : </label>
@@ -343,9 +53,9 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_std1" class="mo-openid-cd-value">25</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_std1" class="mo-openid-cd-value">29</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_std2" class="mo-openid-cd-value"><s>50</s></span>
+                                        <span id="mo_openid_std2" class="mo-openid-cd-value"><s>39</s></span>
                                     </div>
                                 </header> <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
@@ -371,14 +81,21 @@ function mo_openid_licensing_plans()
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
 
                                         <li>Facebook Share Count</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li>Vertical Icons & Horizontal Icons</li>
                                         <li style="padding: 7.2%;" class="mo-openid-lic-bold-cl">X</li>
-                                        <li style="padding: 7.5%;" class="mo-openid-lic-bold-cl">X</li>
+                                        <li style="padding: 7.2%;" class="mo-openid-lic-bold-cl">X</li>
                                         <li>General Data Protection Regulation (GDPR)</li>
                                         <li>Google recaptcha</li>
                                         <li>BuddyPress Display Option</li>
@@ -389,7 +106,7 @@ function mo_openid_licensing_plans()
                                         <li>Advance Account Linking</li>
                                         <li>Redirect After Login & Logout Option</li>
                                         <li>Role Mapping</li>
-                                        <li style="padding: 7.5%;" class="mo-openid-lic-bold-cl">X</li>
+                                        <li style="padding: 7.2%;" class="mo-openid-lic-bold-cl">X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
@@ -408,7 +125,7 @@ function mo_openid_licensing_plans()
                                         <li class="mo-openid-lic-bold-cl";>X</li>
 
                                         <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li style="padding: 8%;" class="mo-openid-lic-bold-cl">X</li>
+                                        <li style="padding: 7.4%;" class="mo-openid-lic-bold-cl">X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
@@ -459,6 +176,7 @@ function mo_openid_licensing_plans()
                                 <footer class="mo-openid-cd-pricing-footer">
                                     <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_standard_multisite_plan')" >Upgrade Now</a>
                                 </footer>
+
                                 <div class="mo-openid-cd-pricing-body">
                                     <ul class="mo-openid-cd-pricing-features">
                                         <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
@@ -469,29 +187,42 @@ function mo_openid_licensing_plans()
                                             <div class="mo_openid_tooltip" style="padding-left: 40px;">35 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Google, Facebook, Twitter, Vkontakte, LinkedIn, Windows Live, Instagram, Amazon, Salesforce, Yahoo, <span id="mo_openid_dots4">...</span><span id="mo_openid_more4" style="display:none" >Wordpress, Mail.RU, Disqus, Pinterest, Yandex, Spotify, Reddit, Tumblr, Vimeo, Kakao, Dribbble, Flickr, MeetUp, Line, Stackexchange, Livejournal, Snapchat, Foursquare, Teamsnap, Naver, Odnoklassniki, Wiebo, Baidu, Renren, QQ.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots4','mo_openid_more4','mo_openid_myBtn4')" id="mo_openid_myBtn4">Read more</button>
                                             </div>
                                         </li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li>
                                             <div class="mo_openid_tooltip" style="padding-left: 40px;">8 Pre-Configured Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo, Wordpress</span></div></li>
                                         <li>Sharing Display Option</li>
+
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+
                                         <li>Facebook Share Count</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li>Vertical Icons & Horizontal Icons</li>
                                         <li style="padding: 7.2%;" class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
                                         <li>General Data Protection Regulation (GDPR)</li>
                                         <li>Google recaptcha</li>
                                         <li>BuddyPress Display Option</li>
                                         <li>Woocommerce Display Options</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
+
                                         <li>Advance Account Linking</li>
+                                        <li>Redirect After Login & Logout Option</li>
                                         <li>Role Mapping</li>
-                                        <li style="padding: 7.5%;" class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
@@ -510,7 +241,7 @@ function mo_openid_licensing_plans()
                                         <li class="mo-openid-lic-bold-cl";>X</li>
 
                                         <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li style="padding: 8%; font-weight:bold;">X</li>
+                                        <li style="padding: 5.5%" class="mo-openid-lic-bold-cl">X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
@@ -524,9 +255,11 @@ function mo_openid_licensing_plans()
                             </li>
                             <li data-type="mo_add-on" class="moaslp is-hidden" style="">
                                 <header class="mo-openid-cd-pricing-header">
-                                    <h2 style="margin-bottom: 10%;">WooCommerce Integration Add-On</h2>
-                                    <label for="mo_openid_wca_in">Select No. of Instances : </label>
-                                    <select name="mo_openid_wca_in" id="mo_openid_wca_in">
+
+                                    <h2 style="margin-bottom: 10%;" >Custom Registration Form Add-On </h2>
+
+                                    <label for="mo_openid_cra">Select No. of Instances : </label>
+                                    <select name="mo_openid_cra" id="mo_openid_cra">
                                         <option value="1">1</option>
                                         <option value="5">5</option>
                                         <option value="10">10</option>
@@ -534,19 +267,20 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_wca_in1" class="mo-openid-cd-value">19</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_cra1" class="mo-openid-cd-value">35</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_wca_in2" class="mo-openid-cd-value"><s>40</s></span>
+                                        <span id="mo_openid_cra2" class="mo-openid-cd-value"><s>39</s></span>
+
                                     </div>
-                                </header> <!-- .mo-openid-cd-pricing-header -->
+                                </header>
+                                <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
-                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_woocommerce_addon')" >Upgrade Now</a>
+                                    <a href="#" class="mo-openid-cd-select" id="mosocial_purchase_cust_addon" onclick="mosocial_addonform('wp_social_login_extra_attributes_addon')" >Upgrade Now</a>
                                 </footer>
+
                                 <div class="mo-openid-cd-pricing-body">
                                     <ul class="mo-openid-cd-pricing-features">
-                                        <li onclick="mo_all_features_clk('woocommerce_int_adon')"style="cursor:pointer">Click Here to see features<i class="far fa-hand-pointer" style="color: orangered;margin-left: .5%" aria-hidden="true"></i></li>
-
-
+                                        <li onclick="mo_all_features_clk('custom_registration_adon')"style="cursor:pointer">Click Here to see features<i class="far fa-hand-pointer" style="color: orangered;margin-left: .5%" aria-hidden="true"></i></li>
                                         <li><a style="cursor: pointer" onclick="mo_openid_support_form('')">Click here to Contact Us</a></li>
                                     </ul>
                                 </div> <!-- .mo-openid-cd-pricing-body -->
@@ -554,9 +288,9 @@ function mo_openid_licensing_plans()
                             <br>
                             <li data-type="mo_add-on" class="moaslp is-hidden">
                                 <header class="mo-openid-cd-pricing-header">
-                                    <h2 style="margin-bottom: 10%;">Discord Integration Add-on</h2>
-                                    <label for="mo_openid_dis">Select No. of Instances : </label>
-                                    <select name="mo_openid_dis" id="mo_openid_dis">
+                                    <h2 style="margin-bottom: 10%;">MailChimp Integration Add-on</h2>
+                                    <label for="mo_openid_mca">Select No. of Instances : </label>
+                                    <select name="mo_openid_mca" id="mo_openid_mca">
                                         <option value="1">1</option>
                                         <option value="5">5</option>
                                         <option value="10">10</option>
@@ -564,26 +298,27 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_dis1" class="mo-openid-cd-value">65</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_mca1" class="mo-openid-cd-value">25</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_dis2" class="mo-openid-cd-value"><s>130</s></span>
+                                        <span id="mo_openid_mca2" class="mo-openid-cd-value"><s>29</s></span>
                                     </div>
                                 </header> <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
-                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_discord_addon')" >Upgrade Now</a>
+                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_mailchimp_addon')" >Upgrade Now</a>
                                 </footer>
                                 <div class="mo-openid-cd-pricing-body">
                                     <ul class="mo-openid-cd-pricing-features">
-                                        <li onclick="mo_all_features_clk('discord_adon')"style="cursor:pointer">Click Here to see features<i class="far fa-hand-pointer" style="color: orangered;margin-left: .5%" aria-hidden="true"></i></li>
+                                        <li onclick="mo_all_features_clk('mailchimp_adon')"style="cursor:pointer">Click Here to see features<i class="far fa-hand-pointer" style="color: orangered;margin-left: .5%" aria-hidden="true"></i></li>
                                         <li><a style="cursor: pointer" onclick="mo_openid_support_form('')">Click here to Contact Us</a></li>
                                     </ul>
                                 </div> <!-- .mo-openid-cd-pricing-body -->
                             </li>
+
                         </ul> <!-- .mo-openid-cd-pricing-wrapper -->
                     </li>
 
-                    <li>
-                        <ul class="mo-openid-cd-pricing-wrapper" id="col3">
+                    <li class="mo-openid-cd-popular">
+                        <ul class="mo-openid-cd-pricing-wrapper" id="col2">
                             <li data-type="singlesite" class="mosslp is-visible" style="">
                                 <header class="mo-openid-cd-pricing-header">
                                     <h2 style="margin-bottom: 10%;">Premium</h2>
@@ -596,9 +331,9 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_pre1" class="mo-openid-cd-value">39</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_pre1" class="mo-openid-cd-value">49</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_pre2" class="mo-openid-cd-value"><s>80</s></span>
+                                        <span id="mo_openid_pre2" class="mo-openid-cd-value"><s>59</s></span>
                                     </div>
                                 </header> <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
@@ -616,17 +351,24 @@ function mo_openid_licensing_plans()
                                         </li>
                                         <li>Apple, Twitch, & Discord Login</li>
                                         <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">8 Pre-Configured Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo, Wordpress</span></div></li>                                        <li>Sharing Display Option</li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">8 Pre-Configured Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo, Wordpress</span></div></li>
+                                        <li>Sharing Display Option</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
-
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li>Facebook Share Count</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
                                         <li>Vertical Icons & Horizontal Icons</li>
                                         <li class="mo-openid-lic-bold-cl" style="padding: 7.2%;">X</li>
                                         <li>White Backgound for Social Login Icons</li>
@@ -714,13 +456,13 @@ function mo_openid_licensing_plans()
                                     <ul class="mo-openid-cd-pricing-features">
                                         <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
                                         <li class="mo-openid-lic-bold-cl" style="color: red">X</li>
-
                                         <li>
                                             <div class="mo_openid_tooltip" style="padding-left: 40px;">14 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<br></span></div></li>
                                         <li>
                                             <div class="mo_openid_tooltip" style="padding-left: 40px;">42 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;">Apple, Discord, Twitch, Line, Hubspot, Paypal, Github, Dropbox, Wechat, Google, Facebook, Twitter, Vkontakte, LinkedIn, Windows Live, Instagram, Amazon, Salesforce, Yahoo,<span id="mo_openid_dots6">...</span><span id="mo_openid_more6" style="display:none" > Wordpress, Mail.RU, Disqus, Pinterest, Yandex, Spotify, Reddit, Tumblr, Vimeo, Kakao, Dribbble, Flickr, MeetUp, Stackexchange, Livejournal, Snapchat, Foursquare, Teamsnap, Naver, Odnoklassniki, Wiebo, Baidu, Renren, QQ.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots6','mo_openid_more6','mo_openid_myBtn6')" id="mo_openid_myBtn6">Read more</button>
                                             </div>
                                         </li>
+                                        <li>Apple, Twitch, & Discord Login</li>
                                         <li>
                                             <div class="mo_openid_tooltip" style="padding-left: 40px;">8 Pre-Configured Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo, Wordpress</span></div></li>
                                         <li>Sharing Display Option</li>
@@ -729,24 +471,34 @@ function mo_openid_licensing_plans()
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
                                         <li>Facebook Share Count</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
-                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
                                         <li>Vertical Icons & Horizontal Icons</li>
-                                        <li class="mo-openid-lic-bold-cl" style="padding: 7.2%; ">X</li>
+                                        <li class="mo-openid-lic-bold-cl" style="padding: 7.2%;">X</li>
+                                        <li>White Backgound for Social Login Icons</li>
                                         <li>General Data Protection Regulation (GDPR)</li>
                                         <li>Google recaptcha</li>
                                         <li>BuddyPress Display Option</li>
                                         <li>Woocommerce Display Options</li>
                                         <li>Ultimate Member Display Option</li>
-                                        <li>MemberPress Display Options</li>
+                                        <li>MemberPress Display Option</li>
                                         <li>Advance Account Linking</li>
+                                        <li>Redirect After Login & Logout Option</li>
                                         <li>Role Mapping</li>
                                         <li>Restrict registration from specific pages</li>
                                         <li>Extended User Attribute</li>
                                         <li>User Moderation</li>
-                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+
                                         <li>Account Linking & Unlinking for Users</li>
                                         <li>Email notification to multiple admins</li>
                                         <li>Welcome Email to end users</li>
@@ -764,11 +516,280 @@ function mo_openid_licensing_plans()
                                         <li><div class="mo_openid_tooltip" ><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/woocommerce.png" alt="wc" style="width:35px;height:20px;"> Woocommerce Integration  <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;"> First name, last name and email are pre-filled in billing details of a user and on the Woocommerce checkout page. Social Login icons are displayed on the Woocommerce checkout page.</span></li>
                                         <li><span class="mo_openid_tooltip"><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/paidmember.png" alt="pmpro" style="width:35px;height:20px;">  Paid Membership pro Integration <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;">Assign default levels or let users choose to set their levels provided by Paid Membership Pro to the users login using Social Login</span></li>
                                         <li><div class="mo_openid_tooltip" ><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/buddypress.png" alt="bp" style="width:35px;height:20px;"> BuddyPress Integration<i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;"> Extended attributes returned from social app are mapped to Custom BuddyPress fields. Profile picture from social media is mapped to Buddypress avatar.</span></li>
-                                        <li><div class="mo_openid_tooltip" ><i class="fab fa-mailchimp" style="font-size:2em;width:35px;height:20px;"></i> MailChimp Integration <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;">A user is added as a subscriber to a mailing list in MailChimp when that user registers using Social Login. First name, last name and email are also captured for that user in the Mailing List. Option is available to download csv file that has list of emails of all users in WordPress.</span></li>
+                                        <li><div class="mo_openid_tooltip" ><i class="fab fa-mailchimp" style="font-size: 2em; width:35px;height:20px;"></i> MailChimp Integration <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;">A user is added as a subscriber to a mailing list in MailChimp when that user registers using Social Login. First name, last name and email are also captured for that user in the Mailing List. Option is available to download csv file that has list of emails of all users in WordPress.</span></li>
                                         <li><div class="mo_openid_tooltip" >miniOrange OTP Integration<span style="color: red">*</span> <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;">Verify your users via OTP on registration.</span></li>
                                         <li><span class="mo_openid_tooltip">Custom attribute mapping <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;">Extended attributes returned from social app are mapped to Custom attributes created by admin. These Attributes get stored in user_meta.</span></li>
                                         <li><div class="mo_openid_tooltip" >Custom Integration <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;"> If you have a specific custom requirement in the Social Login Plugin, we can implement and integrate it in the Plugin fo you. This includes all those custom features that come under the scope of Social Login/ Sharing/ Comments and impart additional value to the plugin. These features are chargeable. Please send us a query through the support forum to get in touch with us about your custom requirements.</span></div></li>
 
+                                        <li>Shortcodes to display social icons on<br/>any homepage page, post, popup and php pages.</li>
+
+                                        <li><a style="cursor: pointer" onclick="mo_openid_support_form('')">Click here to Contact Us</a></li>
+                                    </ul>
+                                </div> <!-- .mo-openid-cd-pricing-body -->
+                            </li>
+                            <li data-type="mo_add-on" class="moaslp is-hidden" style="">
+                                <header class="mo-openid-cd-pricing-header">
+                                    <h2 style="margin-bottom: 10%;">WooCommerce Integration Add-On</h2>
+                                    <label for="mo_openid_wca_in">Select No. of Instances : </label>
+                                    <select name="mo_openid_wca_in" id="mo_openid_wca_in">
+                                        <option value="1">1</option>
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                    </select>
+
+                                    <div class="cd-price" style="margin-top: 9%;">
+                                        <span class="mo-openid-cd-currency">$</span>
+                                        <span id="mo_openid_wca_in1" class="mo-openid-cd-value">25</span> &nbsp;&nbsp;
+                                        <span class="mo-openid-cd-currency">$</span>
+                                        <span id="mo_openid_wca_in2" class="mo-openid-cd-value"><s>29</s></span>
+                                    </div>
+                                </header> <!-- .mo-openid-cd-pricing-header -->
+                                <footer class="mo-openid-cd-pricing-footer">
+                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_woocommerce_addon')" >Upgrade Now</a>
+                                </footer>
+                                <div class="mo-openid-cd-pricing-body">
+                                    <ul class="mo-openid-cd-pricing-features">
+                                        <li onclick="mo_all_features_clk('woocommerce_int_adon')"style="cursor:pointer">Click Here to see features<i class="far fa-hand-pointer" style="color: orangered;margin-left: .5%" aria-hidden="true"></i></li>
+
+
+                                        <li><a style="cursor: pointer" onclick="mo_openid_support_form('')">Click here to Contact Us</a></li>
+                                    </ul>
+                                </div> <!-- .mo-openid-cd-pricing-body -->
+                            </li>
+                            <br>
+                            <li data-type="mo_add-on" class="moaslp is-hidden">
+                                <header class="mo-openid-cd-pricing-header">
+                                    <h2 style="margin-bottom: 10%;">Discord Integration Add-on</h2>
+                                    <label for="mo_openid_dis">Select No. of Instances : </label>
+                                    <select name="mo_openid_dis" id="mo_openid_dis">
+                                        <option value="1">1</option>
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                    </select>
+
+                                    <div class="cd-price" style="margin-top: 9%;">
+                                        <span class="mo-openid-cd-currency">$</span>
+                                        <span id="mo_openid_dis1" class="mo-openid-cd-value">79</span> &nbsp;&nbsp;
+                                        <span class="mo-openid-cd-currency">$</span>
+                                        <span id="mo_openid_dis2" class="mo-openid-cd-value"><s>99</s></span>
+                                    </div>
+                                </header> <!-- .mo-openid-cd-pricing-header -->
+                                <footer class="mo-openid-cd-pricing-footer">
+                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_discord_addon')" >Upgrade Now</a>
+                                </footer>
+                                <div class="mo-openid-cd-pricing-body">
+                                    <ul class="mo-openid-cd-pricing-features">
+                                        <li onclick="mo_all_features_clk('discord_adon')"style="cursor:pointer">Click Here to see features<i class="far fa-hand-pointer" style="color: orangered;margin-left: .5%" aria-hidden="true"></i></li>
+                                        <li><a style="cursor: pointer" onclick="mo_openid_support_form('')">Click here to Contact Us</a></li>
+                                    </ul>
+                                </div> <!-- .mo-openid-cd-pricing-body -->
+                            </li>
+                        </ul> <!-- .mo-openid-cd-pricing-wrapper -->
+                    </li>
+
+                    <li>
+                        <ul class="mo-openid-cd-pricing-wrapper" id="col3">
+                            <li data-type="singlesite" class="mosslp is-visible" style="">
+                                <header class="mo-openid-cd-pricing-header">
+                                    <h2 style="margin-bottom: 10%;">All-Inclusive</h2>
+                                    <label for="mo_openid_ai">Select No. of Instances : </label>
+                                    <select name="mo_openid_ai" id="mo_openid_ai">
+                                        <option value="1">1</option>
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                    </select>
+
+                                    <div class="cd-price" style="margin-top: 9%;">
+                                        <span class="mo-openid-cd-currency">$</span>
+                                        <span id="mo_openid_ai1" class="mo-openid-cd-value">89</span> &nbsp;&nbsp;
+                                        <span class="mo-openid-cd-currency">$</span>
+                                        <span id="mo_openid_ai2" class="mo-openid-cd-value"><s>99</s></span>
+                                    </div>
+                                </header> <!-- .mo-openid-cd-pricing-header -->
+                                <footer class="mo-openid-cd-pricing-footer">
+                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_all_inclusive')" >Upgrade Now</a>
+                                </footer>
+                                <div class="mo-openid-cd-pricing-body">
+                                    <ul class="mo-openid-cd-pricing-features ">
+                                        <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;"  title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
+                                        <li onclick="mo_all_features_clk('custom_registration_adon')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>Custom Registration Form+</b></li>
+                                        <li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">45 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<span id="mo_openid_dots3">...</span><span id="mo_openid_more3" style="display:none" ><br>Buffer, Amazon_wishlist, Telegram, Line, Yahoo, Instapaper, Mewe, Livejournal, Mix, AOI Mail, Qzone, Gmail, Typepad_post, Fark, Bookmark, Fintel, Mendeley, Slashdot, Wanelo, Classroom, Yummly, Hacker_news, Kakao, Plurk, Trello, wykop, Weibo, Renren, Xing, Wordpress, Front it, Skype, Kindle It, Bloggerpost, Mail.ru, Papaly, Blogmarks, Twiddla.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots3','mo_openid_more3','mo_openid_myBtn3')" id="mo_openid_myBtn3">Read more</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">43 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;">Apple, Dropbox, Discord, Twitch, Line, Hubspot, Google, Facebook, Twitter, Vkontakte, LinkedIn, Windows Live, Instagram, Amazon, Salesforce, Yahoo.<span id="mo_openid_dots0">...</span><span id="mo_openid_more0" style="display:none" >Paypal, Wordpress, Github, Mail.RU, Disqus, Pinterest, Yandex, Spotify, Reddit, Tumblr, Vimeo, Kakao, Dribbble, Flickr, MeetUp, Stackexchange, Livejournal, Snapchat, Foursquare, Teamsnap, Naver, Odnoklassniki, Wiebo, Wechat, Baidu, Renren, QQ.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots0','mo_openid_more0','mo_openid_myBtn0')" id="mo_openid_myBtn0">Read more</button>
+                                            </div>
+                                        </li>
+                                        <li>Apple, Twitch, & Discord Login</li>
+                                        <li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">9 Pre-Configured Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;">Facebook, Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo, Wordpress</span></div></li>
+                                        <li>Sharing Display Option</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li>Discord Auto Post</li>
+                                        <li>Hover Icons & Floating Icons</li>
+                                        <li>Sharing Icons for BBPress</li>
+                                        <li>WooCommerce Product Sharing</li>
+                                        <li>E-mail subscriber</li>
+                                        <li>Facebook Share Count
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li>Facebook Like & Recommended</li>
+                                        <li>Pinterest Pin it Button</li>
+                                        <li>Twitter Follow Button</li>
+                                        <li>Vertical Icons & Horizontal Icons</li>
+                                        <li>Vkontakte, Stumble Upon, Buffer, Pinterest and Reddit Share Count</li>
+                                        <li>White Backgound for Social Login Icons</li>
+                                        <li>General Data Protection Regulation (GDPR)</li>
+                                        <li>Google recaptcha</li>
+                                        <li>BuddyPress Display Option</li>
+                                        <li>Woocommerce Display Options</li>
+                                        <li>Ultimate Member Display Option</li>
+                                        <li>MemberPress Display Options</li>
+                                        <li>Advance Account Linking</li>
+                                        <li>Redirect After Login & Logout Option</li>
+                                        <li>Role Mapping</li>
+                                        <li>Restrict registration from specific pages</li>
+                                        <li>Extended User Attribute</li>
+                                        <li>User Moderation</li>
+                                        <li>Report (Basic Data Analytics)</li>
+                                        <li>Account Linking & Unlinking for Users</li>
+                                        <li>Email notification to multiple admins</li>
+                                        <li>Welcome Email to end users</li>
+                                        <li>Customizable Email Notification template</li>
+                                        <li>Customizable welcome Email template</li>
+                                        <li>Custom CSS for Social Login buttons</li>
+                                        <li>Social Login Opens in a New Window</li>
+                                        <li>Domain restriction</li>
+                                        <li>Force Admin To Login Using Password</li>
+                                        <li>Send Username and Password Reset link</li>
+                                        <li>Redirect Login To a New Window</li>
+                                        <li>Disable Admin Bar</li>
+                                        <li><span class="mo_openid_tooltip">MemberPress Integration <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;">Assign default levels or let users choose to set their levels provided by MemberPress to the users login using Social Login</span></li>
+                                        <li><div class="mo_openid_tooltip" ><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/woocommerce.png" alt="wc" style="width:35px;height:20px;"> Woocommerce Integration  <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;"> First name, last name and email are pre-filled in billing details of a user and on the Woocommerce checkout page. Social Login icons are displayed on the Woocommerce checkout page.</span></li>
+                                        <li><span class="mo_openid_tooltip"><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/paidmember.png" alt="pmpro" style="width:35px;height:20px;">  Paid Membership pro Integration <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;">Assign default levels or let users choose to set their levels provided by Paid Membership Pro to the users login using Social Login</span></li>
+                                        <li><div class="mo_openid_tooltip" ><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/buddypress.png" alt="bp" style="width:35px;height:20px;"> BuddyPress Integration<i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;"> Extended attributes returned from social app are mapped to Custom BuddyPress fields. Profile picture from social media is mapped to Buddypress avatar.</span></li>
+                                        <li><div class="mo_openid_tooltip" ><i class="fab fa-mailchimp" style="font-size:2em;width:35px;height:20px;"></i> MailChimp Integration <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;">A user is added as a subscriber to a mailing list in MailChimp when that user registers using Social Login. First name, last name and email are also captured for that user in the Mailing List. Option is available to download csv file that has list of emails of all users in WordPress.</span></li>
+                                        <li><div class="mo_openid_tooltip" >miniOrange OTP Integration<span style="color: red">*</span> <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;">Verify your users via OTP on registration.</span></li>
+                                        <li><span class="mo_openid_tooltip">Custom attribute mapping <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;">Extended attributes returned from social app are mapped to Custom attributes created by admin. These Attributes get stored in user_meta.</span></li>
+                                        <li><div class="mo_openid_tooltip" >Custom Integration <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;"> If you have a specific custom requirement in the Social Login Plugin, we can implement and integrate it in the Plugin fo you. This includes all those custom features that come under the scope of Social Login/ Sharing/ Comments and impart additional value to the plugin. These features are chargeable. Please send us a query through the support forum to get in touch with us about your custom requirements.</span></div></li>
+                                        <li>Shortcodes to display social icons on<br/>any homepage page, post, popup and php pages.</li>
+
+                                        <li><a style="cursor: pointer" onclick="mo_openid_support_form('')">Click here to Contact Us</a></li>
+                                    </ul>
+                                </div> <!-- .mo-openid-cd-pricing-body -->
+                            </li>
+                            <li data-type="multisite" class="momslp is-hidden" style="">
+                                <header class="mo-openid-cd-pricing-header">
+                                    <h2 style="margin-bottom: 10%;">All-Inclusive</h2>
+                                    <label for="mo_openid_m_ai">Select No. of Instances : </label>
+                                    <select name="mo_openid_m_ai" id="mo_openid_m_ai" onchange="update_val_allinc('mo_openid_m_ai','mo_openid_m_ai_prem_sub','mo_openid_m_ai1','mo_openid_m_ai2')">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select><br/><br/>
+                                    <label for="mo_openid_m_ai_sub">Select No. of Sub-Site : </label>
+                                    <select name="mo_openid_m_ai_sub" id="mo_openid_m_ai_prem_sub" onchange="update_val_allinc('mo_openid_m_ai','mo_openid_m_ai_prem_sub','mo_openid_m_ai1','mo_openid_m_ai2')">
+                                        <option value="3">3</option>
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="40">40</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>
+
+                                    <div class="cd-price" style="margin-top: 9%;">
+                                        <span class="mo-openid-cd-currency">$</span>
+                                        <span id="mo_openid_m_ai1" class="mo-openid-cd-value">149</span> &nbsp;&nbsp;
+                                        <span class="mo-openid-cd-currency">$</span>
+                                        <span id="mo_openid_m_ai2" class="mo-openid-cd-value"><s>396</s></span>
+                                    </div>
+                                </header> <!-- .mo-openid-cd-pricing-header -->
+                                <footer class="mo-openid-cd-pricing-footer">
+                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_all_inclusive_multisite_plan')" >Upgrade Now</a>
+                                </footer>
+                                <div class="mo-openid-cd-pricing-body">
+                                    <ul class="mo-openid-cd-pricing-features ">
+                                        <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;"  title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
+                                        <li onclick="mo_all_features_clk('custom_registration_adon')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>Custom Registration Form+</b></li>
+                                        <li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">45 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<span id="mo_openid_dots3">...</span><span id="mo_openid_more3" style="display:none" ><br>Buffer, Amazon_wishlist, Telegram, Line, Yahoo, Instapaper, Mewe, Livejournal, Mix, AOI Mail, Qzone, Gmail, Typepad_post, Fark, Bookmark, Fintel, Mendeley, Slashdot, Wanelo, Classroom, Yummly, Hacker_news, Kakao, Plurk, Trello, wykop, Weibo, Renren, Xing, Wordpress, Front it, Skype, Kindle It, Bloggerpost, Mail.ru, Papaly, Blogmarks, Twiddla.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots3','mo_openid_more3','mo_openid_myBtn3')" id="mo_openid_myBtn3">Read more</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">43 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;">Apple, Dropbox, Discord, Twitch, Line, Hubspot, Google, Facebook, Twitter, Vkontakte, LinkedIn, Windows Live, Instagram, Amazon, Salesforce, Yahoo.<span id="mo_openid_dots0">...</span><span id="mo_openid_more0" style="display:none" >Paypal, Wordpress, Github, Mail.RU, Disqus, Pinterest, Yandex, Spotify, Reddit, Tumblr, Vimeo, Kakao, Dribbble, Flickr, MeetUp, Stackexchange, Livejournal, Snapchat, Foursquare, Teamsnap, Naver, Odnoklassniki, Wiebo, Wechat, Baidu, Renren, QQ.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots0','mo_openid_more0','mo_openid_myBtn0')" id="mo_openid_myBtn0">Read more</button>
+                                            </div>
+                                        </li>
+                                        <li>Apple, Twitch, & Discord Login</li>
+                                        <li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">9 Pre-Configured Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;">Facebook, Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo, Wordpress</span></div></li>
+                                        <li>Sharing Display Option</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li class="mo-openid-lic-bold-cl">X</li>
+                                        <li>Discord Auto Post</li>
+                                        <li>Hover Icons & Floating Icons</li>
+                                        <li>Sharing Icons for BBPress</li>
+                                        <li>WooCommerce Product Sharing</li>
+                                        <li>E-mail subscriber</li>
+                                        <li>Facebook Share Count
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li class="mo-openid-lic-bold-cl";>X</li>
+                                        <li>Facebook Like & Recommended</li>
+                                        <li>Pinterest Pin it Button</li>
+                                        <li>Twitter Follow Button</li>
+                                        <li>Vertical Icons & Horizontal Icons</li>
+                                        <li>Vkontakte, Stumble Upon, Buffer, Pinterest and Reddit Share Count</li>
+                                        <li>White Backgound for Social Login Icons</li>
+                                        <li>General Data Protection Regulation (GDPR)</li>
+                                        <li>Google recaptcha</li>
+                                        <li>BuddyPress Display Option</li>
+                                        <li>Woocommerce Display Options</li>
+                                        <li>Ultimate Member Display Option</li>
+                                        <li>MemberPress Display Options</li>
+                                        <li>Advance Account Linking</li>
+                                        <li>Redirect After Login & Logout Option</li>
+                                        <li>Role Mapping</li>
+                                        <li>Restrict registration from specific pages</li>
+                                        <li>Extended User Attribute</li>
+                                        <li>User Moderation</li>
+                                        <li>Report (Basic Data Analytics)</li>
+                                        <li>Account Linking & Unlinking for Users</li>
+                                        <li>Email notification to multiple admins</li>
+                                        <li>Welcome Email to end users</li>
+                                        <li>Customizable Email Notification template</li>
+                                        <li>Customizable welcome Email template</li>
+                                        <li>Custom CSS for Social Login buttons</li>
+                                        <li>Social Login Opens in a New Window</li>
+                                        <li>Domain restriction</li>
+                                        <li>Force Admin To Login Using Password</li>
+                                        <li>Send Username and Password Reset link</li>
+                                        <li>Redirect Login To a New Window</li>
+                                        <li>Disable Admin Bar</li>
+                                        <li><span class="mo_openid_tooltip">MemberPress Integration <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;">Assign default levels or let users choose to set their levels provided by MemberPress to the users login using Social Login</span></li>
+                                        <li><div class="mo_openid_tooltip" ><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/woocommerce.png" alt="wc" style="width:35px;height:20px;"> Woocommerce Integration  <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;"> First name, last name and email are pre-filled in billing details of a user and on the Woocommerce checkout page. Social Login icons are displayed on the Woocommerce checkout page.</span></li>
+                                        <li><span class="mo_openid_tooltip"><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/paidmember.png" alt="pmpro" style="width:35px;height:20px;">  Paid Membership pro Integration <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;">Assign default levels or let users choose to set their levels provided by Paid Membership Pro to the users login using Social Login</span></li>
+                                        <li><div class="mo_openid_tooltip" ><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/buddypress.png" alt="bp" style="width:35px;height:20px;"> BuddyPress Integration<i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;"> Extended attributes returned from social app are mapped to Custom BuddyPress fields. Profile picture from social media is mapped to Buddypress avatar.</span></li>
+                                        <li><div class="mo_openid_tooltip" ><i class="fab fa-mailchimp" style="font-size:2em;width:35px;height:20px;"></i> MailChimp Integration <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;">A user is added as a subscriber to a mailing list in MailChimp when that user registers using Social Login. First name, last name and email are also captured for that user in the Mailing List. Option is available to download csv file that has list of emails of all users in WordPress.</span></li>
+                                        <li><div class="mo_openid_tooltip" >miniOrange OTP Integration<span style="color: red">*</span> <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;">Verify your users via OTP on registration.</span></li>
+                                        <li><span class="mo_openid_tooltip">Custom attribute mapping <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;">Extended attributes returned from social app are mapped to Custom attributes created by admin. These Attributes get stored in user_meta.</span></li>
+                                        <li><div class="mo_openid_tooltip" >Custom Integration <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;"> If you have a specific custom requirement in the Social Login Plugin, we can implement and integrate it in the Plugin fo you. This includes all those custom features that come under the scope of Social Login/ Sharing/ Comments and impart additional value to the plugin. These features are chargeable. Please send us a query through the support forum to get in touch with us about your custom requirements.</span></div></li>
                                         <li>Shortcodes to display social icons on<br/>any homepage page, post, popup and php pages.</li>
 
                                         <li><a style="cursor: pointer" onclick="mo_openid_support_form('')">Click here to Contact Us</a></li>
@@ -788,9 +809,9 @@ function mo_openid_licensing_plans()
 
                                         <div class="cd-price" style="margin-top: 9%;">
                                             <span class="mo-openid-cd-currency">$</span>
-                                            <span id="mo_openid_bpa1" class="mo-openid-cd-value">19</span> &nbsp;&nbsp;
+                                            <span id="mo_openid_bpa1" class="mo-openid-cd-value">25</span> &nbsp;&nbsp;
                                             <span class="mo-openid-cd-currency">$</span>
-                                            <span id="mo_openid_bpa2" class="mo-openid-cd-value"><s>40</s></span>
+                                            <span id="mo_openid_bpa2" class="mo-openid-cd-value"><s>29</s></span>
                                         </div>
                                     </header> <!-- .mo-openid-cd-pricing-header -->
                                 </a>
@@ -811,9 +832,9 @@ function mo_openid_licensing_plans()
                         <ul class="mo-openid-cd-pricing-wrapper" id="col4">
                             <li data-type="singlesite" class="mosslp is-visible" style="">
                                 <header class="mo-openid-cd-pricing-header">
-                                    <h2 style="margin-bottom: 10%;">All-Inclusive</h2>
+                                    <h2 style="margin-bottom: 10%;">Enterprise Plan</h2>
                                     <label for="mo_openid_ai">Select No. of Instances : </label>
-                                    <select name="mo_openid_ai" id="mo_openid_ai">
+                                    <select name="mo_openid_ent" id="mo_openid_ent">
                                         <option value="1">1</option>
                                         <option value="5">5</option>
                                         <option value="10">10</option>
@@ -821,13 +842,13 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_ai1" class="mo-openid-cd-value">69</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_ent1" class="mo-openid-cd-value">199</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_ai2" class="mo-openid-cd-value"><s>140</s></span>
+                                        <span id="mo_openid_ent2" class="mo-openid-cd-value"><s>399</s></span>
                                     </div>
                                 </header> <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
-                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_all_inclusive')" >Upgrade Now</a>
+                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_enterprise_plan')" >Upgrade Now</a>
                                 </footer>
                                 <div class="mo-openid-cd-pricing-body">
                                     <ul class="mo-openid-cd-pricing-features ">
@@ -843,14 +864,21 @@ function mo_openid_licensing_plans()
                                         </li>
                                         <li>Apple, Twitch, & Discord Login</li>
                                         <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">8 Pre-Configured Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo, Wordpress</span></div></li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">9 Pre-Configured Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;">Facebook, Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo, Wordpress</span></div></li>
                                         <li>Sharing Display Option</li>
-                                        <li>Hover Icons & Floating Icons</li>
+                                        <li onclick="mo_all_features_clk('support_chat')" class="mo_openid-on-hover-free-fetr" style="cursor:pointer;"><span><i class="fa fa-user"></i> &nbsp; &nbsp;</span>Support Chat</li>
+                                        <li onclick="mo_all_features_clk('gravity_form')" class="mo_openid-on-hover-free-fetr" style="cursor:pointer;"><span><i class="fab fa-wpforms"></i> &nbsp; &nbsp;</span>Gravity Form Integration</li>
+                                        <li onclick="mo_all_features_clk('discord_integration')" class="mo_openid-on-hover-free-fetr" style="cursor:pointer;"><span><i class="fab fa-discord"></i> &nbsp; &nbsp;</span>Discord Integration</li>
                                         <li>Discord Auto Post</li>
+                                        <li>Hover Icons & Floating Icons</li>
                                         <li>Sharing Icons for BBPress</li>
                                         <li>WooCommerce Product Sharing</li>
                                         <li>E-mail subscriber</li>
                                         <li>Facebook Share Count</li>
+                                        <li onclick="mo_all_features_clk('github_integration')" class="mo_openid-on-hover-free-fetr" style="cursor:pointer;"><span><i class="fab fa-github"></i> &nbsp; &nbsp;</span>Github Integration</li>
+                                        <li onclick="mo_all_features_clk('mailerlite_integration')" class="mo_openid-on-hover-free-fetr" style="cursor:pointer;"><span><i class="fa fa-mail-bulk"></i> &nbsp; &nbsp;</span>Mailerlite Integration</li>
+                                        <li onclick="mo_all_features_clk('active_campaign_integration')" class="mo_openid-on-hover-free-fetr"  style="cursor:pointer;"><span><i class="fa fa-campground"></i> &nbsp; &nbsp;</span>Active Campaign Integration</li>
+                                        <li onclick="mo_all_features_clk('hubspot_integration')" class="mo_openid-on-hover-free-fetr" style="cursor:pointer;"><span><i class="fab fa-hubspot"></i> &nbsp; &nbsp;</span>Hubspot Integration</li>
                                         <li>Facebook Like & Recommended</li>
                                         <li>Pinterest Pin it Button</li>
                                         <li>Twitter Follow Button</li>
@@ -898,9 +926,9 @@ function mo_openid_licensing_plans()
                             </li>
                             <li data-type="multisite" class="momslp is-hidden style="">
                                 <header class="mo-openid-cd-pricing-header">
-                                    <h2 style="margin-bottom: 10%;">All-Inclusive</h2>
-                                    <label for="mo_openid_m_ai">Select No. of Instances : </label>
-                                    <select name="mo_openid_m_ai" id="mo_openid_m_ai" onchange="update_val_allinc('mo_openid_m_ai','mo_openid_m_ai_prem_sub','mo_openid_m_ai1','mo_openid_m_ai2')">
+                                    <h2 style="margin-bottom: 10%;">Enterprise Plan</h2>
+                                    <label for="mo_openid_m_ent">Select No. of Instances : </label>
+                                    <select name="mo_openid_m_ent" id="mo_openid_m_ent" onchange="update_val_ent('mo_openid_m_ent','mo_openid_m_ent_sub','mo_openid_m_ent1','mo_openid_m_ent2')">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -912,8 +940,8 @@ function mo_openid_licensing_plans()
                                         <option value="9">9</option>
                                         <option value="10">10</option>
                                     </select><br/><br/>
-                                    <label for="mo_openid_m_ai_sub">Select No. of Sub-Site : </label>
-                                    <select name="mo_openid_m_ai_sub" id="mo_openid_m_ai_prem_sub" onchange="update_val_allinc('mo_openid_m_ai','mo_openid_m_ai_prem_sub','mo_openid_m_ai1','mo_openid_m_ai2')">
+                                    <label for="mo_openid_m_ent_sub">Select No. of Sub-Site : </label>
+                                    <select name="mo_openid_m_ent_sub" id="mo_openid_m_ent_sub" onchange="update_val_ent('mo_openid_m_ent','mo_openid_m_ent_sub','mo_openid_m_ent1','mo_openid_m_ent2')">
                                         <option value="3">3</option>
                                         <option value="5">5</option>
                                         <option value="10">10</option>
@@ -927,40 +955,49 @@ function mo_openid_licensing_plans()
 
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_m_ai1" class="mo-openid-cd-value">149</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_m_ent1" class="mo-openid-cd-value">379</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_m_ai2" class="mo-openid-cd-value"><s>396</s></span>
+                                        <span id="mo_openid_m_ent2" class="mo-openid-cd-value"><s>1596</s></span>
                                     </div>
                                 </header> <!-- .mo-openid-cd-pricing-header -->
                                 <footer class="mo-openid-cd-pricing-footer">
-                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_all_inclusive_multisite_plan')" >Upgrade Now</a>
+                                    <a href="#" class="mo-openid-cd-select" onclick="mosocial_addonform('wp_social_login_enterprise_multisite_plan')" >Upgrade Now</a>
                                 </footer>
                                 <div class="mo-openid-cd-pricing-body">
                                     <ul class="mo-openid-cd-pricing-features ">
-                                        <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
+                                        <li onclick="mo_all_features_clk('free_feature')" style="cursor:pointer;"  title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>All Free Features +</b></li>
                                         <li onclick="mo_all_features_clk('custom_registration_adon')" style="cursor:pointer;" title="Click here for Feature list" class="mo_openid-on-hover-free-fetr"><b>Custom Registration Form+</b></li>
                                         <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">45 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<span id="mo_openid_dots2">...</span><span id="mo_openid_more2" style="display:none" ><br>Buffer, Amazon_wishlist, Telegram, Line, Yahoo, Instapaper, Mewe, Livejournal, Mix, AOI Mail, Qzone, Gmail, Typepad_post, Fark, Bookmark, Fintel, Mendeley, Slashdot, Wanelo, Classroom, Yummly, Hacker_news, Kakao, Plurk, Trello, wykop, Weibo, Renren, Xing, Wordpress, Front it, Skype, Kindle It, Bloggerpost, Mail.ru, Papaly, Blogmarks, Twiddla.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots2','mo_openid_more2','mo_openid_myBtn2')" id="mo_openid_myBtn2">Read more</button>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">45 Social Sharing Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Facebook, Twitter, Vkontakte, WhatsApp, Tunmblr, StumbleUpon, LinkedIn, Reddit, Pinterest, Pocket, Digg, Email, Print.<span id="mo_openid_dots3">...</span><span id="mo_openid_more3" style="display:none" ><br>Buffer, Amazon_wishlist, Telegram, Line, Yahoo, Instapaper, Mewe, Livejournal, Mix, AOI Mail, Qzone, Gmail, Typepad_post, Fark, Bookmark, Fintel, Mendeley, Slashdot, Wanelo, Classroom, Yummly, Hacker_news, Kakao, Plurk, Trello, wykop, Weibo, Renren, Xing, Wordpress, Front it, Skype, Kindle It, Bloggerpost, Mail.ru, Papaly, Blogmarks, Twiddla.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots3','mo_openid_more3','mo_openid_myBtn3')" id="mo_openid_myBtn3">Read more</button>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">43 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;">Apple, Dropbox, Discord, Twitch, Line, Hubspot, Google, Facebook, Twitter, Vkontakte, LinkedIn, Windows Live, Instagram, Amazon, Salesforce, Yahoo.<span id="mo_openid_dots8">...</span><span id="mo_openid_more8" style="display:none" >Paypal, Wordpress, Github, Mail.RU, Disqus, Pinterest, Yandex, Spotify, Reddit, Tumblr, Vimeo, Kakao, Dribbble, Flickr, MeetUp, Stackexchange, Livejournal, Snapchat, Foursquare, Teamsnap, Naver, Odnoklassniki, Wiebo, Wechat, Baidu, Renren, QQ.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots8','mo_openid_more8','mo_openid_myBtn8')" id="mo_openid_myBtn8">Read more</button>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">43 Social Login Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;">Apple, Dropbox, Discord, Twitch, Line, Hubspot, Google, Facebook, Twitter, Vkontakte, LinkedIn, Windows Live, Instagram, Amazon, Salesforce, Yahoo.<span id="mo_openid_dots0">...</span><span id="mo_openid_more0" style="display:none" >Paypal, Wordpress, Github, Mail.RU, Disqus, Pinterest, Yandex, Spotify, Reddit, Tumblr, Vimeo, Kakao, Dribbble, Flickr, MeetUp, Stackexchange, Livejournal, Snapchat, Foursquare, Teamsnap, Naver, Odnoklassniki, Wiebo, Wechat, Baidu, Renren, QQ.</span><button style="border:transparent;background-color: transparent;color: tomato;" onclick="myFunction('mo_openid_dots0','mo_openid_more0','mo_openid_myBtn0')" id="mo_openid_myBtn0">Read more</button>
                                             </div>
                                         </li>
+                                        <li>Apple, Twitch, & Discord Login</li>
                                         <li>
-                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">8 Pre-Configured Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;"> Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo, Wordpress</span></div></li>
+                                            <div class="mo_openid_tooltip" style="padding-left: 40px;">9 Pre-Configured Apps <i class="far fa-comment-dots " style="font-size:18px; color:#85929E"></i><span class="mo_openid_tooltiptext" style="width:100%;">Facebook, Google, Vkontakte, LinkedIn, Windows Live, Amazon, Salesforce, Yahoo, Wordpress</span></div></li>
                                         <li>Sharing Display Option</li>
-                                        <li>Hover Icons & Floating Icons</li>
+                                        <li>Support Chat</li>
+                                        <li>Gravity Form Integration</li>
+                                        <li>Discord Integration</li>
                                         <li>Discord Auto Post</li>
+                                        <li>Hover Icons & Floating Icons</li>
                                         <li>Sharing Icons for BBPress</li>
                                         <li>WooCommerce Product Sharing</li>
                                         <li>E-mail subscriber</li>
                                         <li>Facebook Share Count</li>
+                                        <li>Github Integration</li>
+                                        <li>Mailerlite Integration</li>
+                                        <li>Active Campaign Integration</li>
+                                        <li>Hubspot Integration</li>
                                         <li>Facebook Like & Recommended</li>
                                         <li>Pinterest Pin it Button</li>
                                         <li>Twitter Follow Button</li>
                                         <li>Vertical Icons & Horizontal Icons</li>
                                         <li>Vkontakte, Stumble Upon, Buffer, Pinterest and Reddit Share Count</li>
+                                        <li>White Backgound for Social Login Icons</li>
                                         <li>General Data Protection Regulation (GDPR)</li>
                                         <li>Google recaptcha</li>
                                         <li>BuddyPress Display Option</li>
@@ -968,6 +1005,7 @@ function mo_openid_licensing_plans()
                                         <li>Ultimate Member Display Option</li>
                                         <li>MemberPress Display Options</li>
                                         <li>Advance Account Linking</li>
+                                        <li>Redirect After Login & Logout Option</li>
                                         <li>Role Mapping</li>
                                         <li>Restrict registration from specific pages</li>
                                         <li>Extended User Attribute</li>
@@ -989,11 +1027,12 @@ function mo_openid_licensing_plans()
                                         <li><div class="mo_openid_tooltip" ><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/woocommerce.png" alt="wc" style="width:35px;height:20px;"> Woocommerce Integration  <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;"> First name, last name and email are pre-filled in billing details of a user and on the Woocommerce checkout page. Social Login icons are displayed on the Woocommerce checkout page.</span></li>
                                         <li><span class="mo_openid_tooltip"><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/paidmember.png" alt="pmpro" style="width:35px;height:20px;">  Paid Membership pro Integration <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;">Assign default levels or let users choose to set their levels provided by Paid Membership Pro to the users login using Social Login</span></li>
                                         <li><div class="mo_openid_tooltip" ><img src="<?php echo plugin_dir_url(dirname(dirname(__FILE__)));?>includes/images/buddypress.png" alt="bp" style="width:35px;height:20px;"> BuddyPress Integration<i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;"> Extended attributes returned from social app are mapped to Custom BuddyPress fields. Profile picture from social media is mapped to Buddypress avatar.</span></li>
-                                        <li><div class="mo_openid_tooltip" ><i class="fab fa-mailchimp" style="font-size: 2em;width:35px;height:20px;"></i> MailChimp Integration <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;">A user is added as a subscriber to a mailing list in MailChimp when that user registers using Social Login. First name, last name and email are also captured for that user in the Mailing List. Option is available to download csv file that has list of emails of all users in WordPress.</span></li>
+                                        <li><div class="mo_openid_tooltip" ><i class="fab fa-mailchimp" style="font-size:2em;width:35px;height:20px;"></i> MailChimp Integration <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;">A user is added as a subscriber to a mailing list in MailChimp when that user registers using Social Login. First name, last name and email are also captured for that user in the Mailing List. Option is available to download csv file that has list of emails of all users in WordPress.</span></li>
                                         <li><div class="mo_openid_tooltip" >miniOrange OTP Integration<span style="color: red">*</span> <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;">Verify your users via OTP on registration.</span></li>
                                         <li><span class="mo_openid_tooltip">Custom attribute mapping <i class="far fa-comment-dots" style="font-size:18px;color:#85929E"></i> <span class="mo_openid_tooltiptext" style="width:100%;">Extended attributes returned from social app are mapped to Custom attributes created by admin. These Attributes get stored in user_meta.</span></li>
                                         <li><div class="mo_openid_tooltip" >Custom Integration <i class="far fa-comment-dots " style="font-size:18px;color:#85929E"> </i><span class="mo_openid_tooltiptext" style="width:100%;"> If you have a specific custom requirement in the Social Login Plugin, we can implement and integrate it in the Plugin fo you. This includes all those custom features that come under the scope of Social Login/ Sharing/ Comments and impart additional value to the plugin. These features are chargeable. Please send us a query through the support forum to get in touch with us about your custom requirements.</span></div></li>
                                         <li>Shortcodes to display social icons on<br/>any homepage page, post, popup and php pages.</li>
+
                                         <li><a style="cursor: pointer" onclick="mo_openid_support_form('')">Click here to Contact Us</a></li>
                                     </ul>
                                 </div> <!-- .mo-openid-cd-pricing-body -->
@@ -1009,9 +1048,9 @@ function mo_openid_licensing_plans()
                                     </select>
                                     <div class="cd-price" style="margin-top: 9%;">
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_hub1" class="mo-openid-cd-value">35</span> &nbsp;&nbsp;
+                                        <span id="mo_openid_hub1" class="mo-openid-cd-value">45</span> &nbsp;&nbsp;
                                         <span class="mo-openid-cd-currency">$</span>
-                                        <span id="mo_openid_hub2" class="mo-openid-cd-value"><s>70</s></span>
+                                        <span id="mo_openid_hub2" class="mo-openid-cd-value"><s>59</s></span>
                                     </div>
                                 </header>
                                 <footer class="mo-openid-cd-pricing-footer">
@@ -1087,7 +1126,7 @@ function mo_openid_licensing_plans()
         //standard plan
         jQuery('#mo_openid_std').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_std1').html("25");
+                jQuery('#mo_openid_std1').html("29");
                 jQuery('#mo_openid_std2').html("<s>50</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_std1').html("99");
@@ -1249,7 +1288,7 @@ function mo_openid_licensing_plans()
         //premium plugin
         jQuery('#mo_openid_pre').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_pre1').html("39");
+                jQuery('#mo_openid_pre1').html("49");
                 jQuery('#mo_openid_pre2').html("<s>80</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_pre1').html("149");
@@ -1345,7 +1384,7 @@ function mo_openid_licensing_plans()
         //all-inclusive plan
         jQuery('#mo_openid_ai').on('change', function () {
             if (this.value === "1") {
-                jQuery('#mo_openid_ai1').html("69");
+                jQuery('#mo_openid_ai1').html("89");
                 jQuery('#mo_openid_ai2').html("<s>140</s>");
             } else if (this.value === "5") {
                 jQuery('#mo_openid_ai1').html("299");
@@ -1354,6 +1393,20 @@ function mo_openid_licensing_plans()
             else if (this.value === "10") {
                 jQuery('#mo_openid_ai1').html("449");
                 jQuery('#mo_openid_ai2').html("<s>1400</s>");
+            }
+        });
+        //Enterprise plan
+        jQuery('#mo_openid_ent').on('change', function () {
+            if (this.value === "1") {
+                jQuery('#mo_openid_ent1').html("199");
+                jQuery('#mo_openid_ent2').html("<s>299</s>");
+            } else if (this.value === "5") {
+                jQuery('#mo_openid_ent1').html("599");
+                jQuery('#mo_openid_ent2').html("<s>1500</s>");
+            }
+            else if (this.value === "10") {
+                jQuery('#mo_openid_ent1').html("999");
+                jQuery('#mo_openid_ent2').html("<s>2990</s>");
             }
         });
 
@@ -1420,6 +1473,72 @@ function mo_openid_licensing_plans()
                 jQuery('#' + value).html(449+(20 * no_of_sub * no_of_sites));
                 no_of_sub=parseInt(no_of_sub) +1;
                 jQuery('#' + actual_value).html("<s>"+990 * no_of_sub+"</s>");
+            }
+        }
+
+ //Enterprise plan for multisite
+        function update_val_ent(no_of_ins, no_of_sub_sites, value, actual_value){
+            no_of_sites=document.getElementById(no_of_ins).value;
+            no_of_sub=document.getElementById(no_of_sub_sites).value;
+            if(no_of_sites==1)
+            {
+                jQuery('#' + value).html(199+(20 * no_of_sub ));
+                no_of_sub=parseInt(no_of_sub) +1;
+                jQuery('#' + actual_value).html("<s>"+399 * no_of_sub +"</s>");
+            }
+            else if(no_of_sites==2)
+            {
+                jQuery('#' + value).html(349+(20 * no_of_sub * no_of_sites));
+                no_of_sub=parseInt(no_of_sub) +1;
+                jQuery('#' + actual_value).html("<s>"+798 * no_of_sub+"</s>");
+            }
+            else if(no_of_sites==3)
+            {
+                jQuery('#' + value).html(449+(20 * no_of_sub * no_of_sites));
+                no_of_sub=parseInt(no_of_sub) +1;
+                jQuery('#' + actual_value).html("<s>"+1197 * no_of_sub+"</s>");
+            }
+            else if(no_of_sites==4)
+            {
+                jQuery('#' + value).html(599+(20 * no_of_sub * no_of_sites));
+                no_of_sub=parseInt(no_of_sub) +1;
+                jQuery('#' + actual_value).html("<s>"+1596 * no_of_sub+"</s>");
+            }
+            else if(no_of_sites==5)
+            {
+                jQuery('#' + value).html(699+(20 * no_of_sub * no_of_sites));
+                no_of_sub=parseInt(no_of_sub) +1;
+                jQuery('#' + actual_value).html("<s>"+1995 * no_of_sub+"</s>");
+            }
+            else if(no_of_sites==6)
+            {
+                jQuery('#' + value).html(799+(20 * no_of_sub * no_of_sites));
+                no_of_sub=parseInt(no_of_sub) +1;
+                jQuery('#' + actual_value).html("<s>"+2394 * no_of_sub+"</s>");
+            }
+            else if(no_of_sites==7)
+            {
+                jQuery('#' + value).html(849+(20 * no_of_sub * no_of_sites));
+                no_of_sub=parseInt(no_of_sub) +1;
+                jQuery('#' + actual_value).html("<s>"+2793 * no_of_sub+"</s>");
+            }
+            else if(no_of_sites==8)
+            {
+                jQuery('#' + value).html(899+(20 * no_of_sub * no_of_sites));
+                no_of_sub=parseInt(no_of_sub) +1;
+                jQuery('#' + actual_value).html("<s>"+3192 * no_of_sub+"</s>");
+            }
+            else if(no_of_sites==9)
+            {
+                jQuery('#' + value).html(949+(20 * no_of_sub * no_of_sites));
+                no_of_sub=parseInt(no_of_sub) +1;
+                jQuery('#' + actual_value).html("<s>"+3591 * no_of_sub+"</s>");
+            }
+            else if(no_of_sites==10)
+            {
+                jQuery('#' + value).html(999+(20 * no_of_sub * no_of_sites));
+                no_of_sub=parseInt(no_of_sub) +1;
+                jQuery('#' + actual_value).html("<s>"+3990 * no_of_sub+"</s>");
             }
         }
 
@@ -1642,8 +1761,15 @@ function mo_openid_licensing_plans()
     'custom_registration_adon'=>'<h2><img src="'. plugin_dir_url(dirname(dirname(__FILE__))) .'includes/images/miniorange_logo.png" style="width:35px;height:30px;">  Custom Registration Form Add-on Features</h2><li>Create a pre-registration form</li><li>Allow user to select Role while Registration</li> <li>All WordPress Themes Supported</li><li>Map Users Data returned from all Social Apps</li><li>Add Custom Fields in the Registration form</li><li>Edit Profile option using shortcode</li><li>Support input field types: text, date, checkbox or dropdown</li><li>Advanced Form Control</li><li>Sync existing meta field</li>',
     'woocommerce_int_adon'=>'<h2><img src="'. plugin_dir_url(dirname(dirname(__FILE__))) .'includes/images/woocommerce.png" style="width:35px;height:30px;"> WooCommerce Integration Add-on Features</h2><li>WooCommerce Display Options</li><li>First name, last name and email are pre-filled in billing details of a user and on the Woocommerce checkout page.</li><li>Social Login on WooCommerce Login Page</li><li>Social Login on WooCommerce Registration Page</li><li>Social Login on WooCommerce Checkout Page</li><li>Before WooCommerce Login Form</li><li>Before "Remember Me" of WooCommerce Login Form</li> <li>After WooCommerce Login Form</li><li>Before WooCommerce Registration Form</li><li>Before "Register button" of WooCommerce Registration Form</li> <li>After WooCommerce Registration Form</li><li>Before & After WooCommerce Checkout Form</li>',
     'buddypress_adon'=>' <h2><img src="'. plugin_dir_url(dirname(dirname(__FILE__))) .'includes/images/buddypress.png" style="width:35px;height:30px;"> Buddypress Integration Add-on Features</h2><h2>Description</h2><li>Social Login for BuddyPress</li> <li>Extended attributes returned from social app are mapped to Custom BuddyPress fields.</li><li> Profile picture from social media is mapped to Buddypress avatar</li><li>Before BuddyPress Registration Form</li><li>Before BuddyPress Account Details</li><li>After BuddyPress Registration Form</li>',
-    'hubspot_adon'=>' <h2><i class="fab fa-hubspot" style="width:35px;height:30px;color: orangered;font-size: 1.6em;"></i>Hubpot Integration Add-on Feature</h2><h2>Description</h2><li>Add social login user to Hubspot Contact List</li><li>Track the activities of the user on your website.</li>',
+    'hubspot_adon'=>' <h2><i class="fab fa-hubspot" style="width:35px;height:30px;color: orangered;font-size: 1.6em;"></i>Hubspot Integration Add-on Feature</h2><h2>Description</h2><li>Add social login user to Hubspot Contact List</li><li>Track the activities of the user on your website.</li>',
     'discord_adon'=>' <h2><i class="fab fa-discord" style="width:35px;height:30px;color: #7289da;font-size: 1.6em;"></i> Discord Integration Add-on Feature</h2><h2>Description</h2><li>Manage your users and restrict the login/registration of user based on whether the user is present in the Discord server or not.</li>',
+    'support_chat'=>' <h2><i class="fa fa-user" style="width:35px;height:30px;color: #7289da;font-size: 1.6em;"></i> Support Chat Add-on Feature</h2><h2>Description</h2><li>Manage your users queries and guide your users while chatting with them through this support chat feature.</li>',
+    'gravity_form'=>' <h2><i class="fab fa-wpforms" style="width:35px;height:30px;color: #7289da;font-size: 1.6em;"></i> Gravity Form Integration Feature</h2><h2>Description</h2><li>It allows you to map the attribute return from the social login provider with the Gravity user registration form.</li>',
+    'discord_integration'=>' <h2><i class="fab fa-discord" style="width:35px;height:30px;color: #7289da;font-size: 1.6em;"></i> Discord Integration Add-on Feature</h2><h2>Description</h2><li>Manage your users and restrict the login/registration of user based on whether the user is present in the Discord server or not.</li>',
+    'github_integration'=>' <h2><i class="fab fa-github" style="width:35px;height:30px;color: #7289da;font-size: 1.6em;"></i> Github Integration Add-on Feature</h2><h2>Description</h2><li>Manage your users and restrict the login/registration of user based on whether the user is present in the Github server or not.</li>',
+    'mailerlite_integration'=>' <h2><i class="fa fa-mail-bulk" style="width:35px;height:30px;color: #7289da;font-size: 1.6em;"></i> Mailerlite Integration </h2><h2>Description</h2><li>A user is added as a subscriber to a mailing list in Mailerlite when that user registers using Social Login. First name and email are also captured for that user in the Mailing List.</li>',
+    'active_campaign_integration'=>' <h2><i class="fa fa-campground" style="width:35px;height:30px;color: #7289da;font-size: 1.6em;"></i> Active Campaign Add-on Feature</h2><h2>Description</h2><li>A user is added as a contact in to your active campaign list when user register with social media application. Captured first name, last name and email address.</li>',
+    'hubspot_integration'=>' <h2><i class="fab fa-hubspot" style="width:35px;height:30px;color: #7289da;font-size: 1.6em;"></i>Hubspot Integration Add-on Feature</h2><h2>Description</h2><li>Add social login user to Hubspot Contact List</li><li>Track the activities of the user on your website.</li>',
     'social_share'=>' <h2><img src="'. plugin_dir_url(dirname(dirname(__FILE__))) .'includes/images/miniorange_logo.png" style="width:35px;height:30px;"> Social Share Plan Feature</h2><li>All Free Features</li><li>45 Social Sharing Apps</li><li>Sharing Display Option</li><li>Hover Icons & Floating Icons</li><li>Discord Auto Post</li><li>Sharing Icons for BBPress</li><li>WooCommerce Product Sharing</li><li>E-mail subscriber</li><li>Facebook, Vkontakte, Stumble Upon, Buffer, Pinterest and Reddit Share Count</li><li>Facebook Like & Recommended</li><li>Pinterest Pin it Button</li><li>Twitter Follow Button</li>'
         )
 

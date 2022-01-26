@@ -34,9 +34,10 @@ function mo_openid_display_feedback_form(){
                             "Not Working",
                             "Login Icons are not displayed on Custom Registration/Login page",
                             "Confusing Interface",
-                            "Does not have the features I am looking for",
+                            "The plugin is great, but I need specific feature that you don't support",
                             "I dont want to register",
                             "Installing paid version",
+                            "It's a temporary deactivation. I'm just debugging an issue",
                             "Other Reasons:",
                         );
                         $i=0;$p=0;
@@ -44,7 +45,7 @@ function mo_openid_display_feedback_form(){
 
                     <div  class="radio" style="padding:1px;margin-left:2%">
                         <label style="font-weight:normal;font-size:14.6px" for="<?php echo esc_attr($deactivate_reasons); ?>">
-                            <input type="radio" name="deactivate_plugin" value="<?php echo esc_attr($deactivate_reasons);?>" required >
+                            <input type="radio" name="deactivate_plugin" value="<?php echo esc_attr($deactivate_reasons);?>" >
                             <?php echo esc_html($deactivate_reasons);?>
                         </label>
                     </div>
@@ -59,12 +60,16 @@ function mo_openid_display_feedback_form(){
                     <br>
                     Email: <input type="text" id="mo_feedback_email" name="mo_feedback_email" value="<?php echo $email?>"/>
                     <br><br>
+                    <div style="margin-left: 2%; width: 100%; margin-bottom: 5%; font-size: 15px;">
+                        <input type="checkbox" name="get_reply" value="reply" checked>miniOrange representative will reach out to you at the email-address entered above.</input>
+                    </div>
                     <div class="mo_openid_modal-footer" >
                         <?php
                         update_option( 'mo_openid_message',"ERROR_WHILE_SUBMITTING_QUERY");
                         mo_openid_show_success_message();
                         ?>
-                        <input type="submit" name="submit" class="button button-primary button-large" value="submit" />
+                        <input type="submit" name="submit" class="button button-primary button-large" value="Submit" />
+                        <input type="submit" name="skip_reply" class="button button-primary button-large" style="width: 11%" value="skip">
                     </div>
                 </div>
             </form>
@@ -133,20 +138,20 @@ function mo_openid_display_feedback_form(){
                     add_text_box(6,"Can you please let us know which plan you have upgraded?");
                 }
                 else if(reason=="Other Reasons:"){
-                    add_text_box(7,"Can you let us know the reason for deactivation?");
+                    add_text_box(8,"Can you let us know the reason for deactivation?");
                 }
                 else if(reason=="Remove miniOrange Logo under Icons"){
                     show_link='<p style="background-color:#feffb2;padding:5px 10px;"><a href="\n' +
                         'https://plugins.miniorange.com/disable-branding-logo-under-wordpress-social-login-icons" target="_blank"><b>Please refer to the guide to remove the miniOrange Icon from the login page : <b>Guide</b></p>';
-                    add_text_box(8,"");
+                    add_text_box(9,"");
                 }
                 else if(reason=="Not Receiving OTP During Registration"){
                     show_link='<p style="background-color:#feffb2;padding:5px 10px;">Please '+'<a href="https://www.miniorange.com/businessfreetrial" target="_blank"><b>click here</b></a>'+' to create an account.</p>';
-                    add_text_box(9,"Can you please describe the issue in detail?");
+                    add_text_box(10,"Can you please describe the issue in detail?");
 
                 }
                 else if(reason=="Bugs in the plugin"){
-                    add_text_box(10,"Can you please let us know about the bug in detail?");
+                    add_text_box(11,"Can you please let us know about the bug in detail?");
                 }
             });
 

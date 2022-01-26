@@ -4,12 +4,12 @@
  * Plugin Name: Social Login, Social Sharing by miniOrange
  * Plugin URI: https://www.miniorange.com
  * Description: Allow your users to login, comment and share with Facebook, Google, Apple, Twitter, LinkedIn etc using customizable buttons.
- * Version: 7.5.8
- * Author: miniOrange
+ * Version: 7.5.9
+ * Author: <a href="https://www.miniorange.com/">miniOrange</a>
  * License URI: http://miniorange.com/usecases/miniOrange_User_Agreement.pdf
  */
 
-define('MO_OPENID_SOCIAL_LOGIN_VERSION', '7.5.8');
+define('MO_OPENID_SOCIAL_LOGIN_VERSION', '7.5.9');
 define('plugin_url', plugin_dir_url(__FILE__) . "includes/images/icons/");
 define('MOSL_PLUGIN_DIR',str_replace('/','\\',plugin_dir_path(__FILE__)));
 require('miniorange_openid_sso_settings_page.php');
@@ -92,7 +92,7 @@ class miniorange_openid_sso_settings
             delete_option('app_pos');
             add_option('app_pos','facebook#google#discord#twitter#vkontakte#instagram#linkedin#amazon#salesforce#windowslive#yahoo#snapchat#dribbble');
         }
-        update_option('app_pos_premium','apple#paypal#wordpress#github#hubspot#mailru#gitlab#steam#slack#trello#disqus#pinterest#yandex#spotify#reddit#tumblr#twitch#vimeo#kakao#flickr#line#meetup#dropbox#stackexchange#livejournal#foursquare#teamsnap#naver#odnoklassniki#wiebo#wechat#baidu#renren#qq#fitbit#stackoverflow');
+        update_option('app_pos_premium','apple#paypal#wordpress#github#hubspot#mailru#gitlab#steam#slack#trello#disqus#pinterest#yandex#spotify#reddit#tumblr#twitch#vimeo#kakao#flickr#line#meetup#dropbox#stackexchange#livejournal#foursquare#teamsnap#naver#odnoklassniki#wiebo#wechat#baidu#renren#qq#fitbit#stackoverflow#mailchimp#youtube#strava');
         add_option('mo_openid_default_login_enable',1);
         add_option('mo_openid_default_register_enable',1);
         add_option( 'mo_openid_login_theme', 'longbutton' );
@@ -727,21 +727,54 @@ Thank you.';
                 if ( ! wp_verify_nonce( $nonce, 'mo-openid-feedback-nonce' ) ) {
                     wp_die('<strong>ERROR</strong>: Please Go back and Refresh the page and try again!<br/>If you still face the same issue please contact your Administrator.');
                 } else {
+                
                     $message='';
                     $email = '';
-                    if(isset($_POST['deactivate_plugin']) )
-                    {
+                    
+                        if (isset($_POST['deactivate_plugin'])) {
                         $message.=' '. sanitize_text_field($_POST['deactivate_plugin']);
+                    } else {
+                        $message.='User has not selected any reasons.';
+                    }
+
+                    if ( isset ($_POST['mo_openid_query_feedback'])){
                         if($_POST['mo_openid_query_feedback']!='')
                         {
                             $message.='. '.sanitize_text_field($_POST['mo_openid_query_feedback']);
                         }
+                    }
+                    
 
                         $email = sanitize_text_field($_POST['mo_feedback_email']);
+
+                        $reply_required = '';
+                    if(isset($_POST['get_reply']))
+                        $reply_required = htmlspecialchars($_POST['get_reply']);
+                        if(empty($reply_required)){
+                        $reply_required = "No";
+                        $reply ='[:'.$reply_required.']';
+                    }else{
+                        $reply_required = "Yes";
+                        $reply ='[:'.$reply_required.']';
+                    }
+
+
+                    $skip_followup = '';
+                    if (isset($_POST['skip_reply'])) {
+                    if ($_POST['skip_reply'] == 'skip') {
+                        $skip_followup = "Please Don't follow.";
+                        $reply = "No";
+                    }
+                }
+                else{
+                        $skip_followup = "You can follow.";
+                    }
+                    
                         //only reason
                         $phone='';
                         $contact_us = new CustomerOpenID();
-                        $submited = json_decode( $contact_us->mo_openid_send_email_alert( $email, $phone, $message ), true );
+                        
+                        $submited = json_decode( $contact_us->mo_openid_send_email_alert( $email, $phone, $message, $reply, $skip_followup ), true );
 
                         if ( json_last_error() == JSON_ERROR_NONE ) {
                             if ( is_array( $submited ) && array_key_exists( 'status', $submited ) && $submited['status'] == 'ERROR' )
@@ -770,7 +803,7 @@ Thank you.';
                         deactivate_plugins( '/miniorange-login-openid/miniorange_openid_sso_settings.php' );
                         update_option('mo_openid_message',"Plugin Deactivated Successfully");
                         mo_openid_show_success_message();
-                    }
+                    
                 }
                 break;
 

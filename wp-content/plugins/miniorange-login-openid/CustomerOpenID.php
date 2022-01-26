@@ -160,9 +160,8 @@ class CustomerOpenID {
         $response = self::mo_openid_wp_remote_post($url);
         return $response['body'];
     }
-    function mo_openid_send_email_alert($email,$phone,$message){
-
-        // $hostname = Utilities::getHostname();
+    
+    function mo_openid_send_email_alert($email,$phone,$message,$reply,$skip_followup){
         $hostname 	= get_site_option('mo_openid_host_name') ;
         $url =  $hostname.'/moas/api/notify/send';
         // $customer_details = Utilities::getCustomerDetails();
@@ -193,6 +192,8 @@ class CustomerOpenID {
 								<br><br>Phone Number : '.$phone_number.'
 								<br><br>Email : <a href="mailto:'.$fromEmail.'" target="_blank">'.$fromEmail.'</a>
 								<br><br>Activation time : '.$activation_date.' - '.$deactivationdate.'  ['.$total_activation_days.']
+                                <br><br>Reply: '.$reply.'
+                                <br><br>Follow-Up: '.$skip_followup.'
 								<br><br>Plugin Deactivated: '.$query.''. $version.'
 								<br><br>Reason: <b>'.$message.'</b></div>';
 
@@ -223,7 +224,7 @@ class CustomerOpenID {
         $args = array(
             'method' => 'POST',
             'body' => $field_string,
-            'timeout' => '5',
+            'timeout' => '10',
             'redirection' => '5',
             'httpversion' => '1.0',
             'blocking' => true,

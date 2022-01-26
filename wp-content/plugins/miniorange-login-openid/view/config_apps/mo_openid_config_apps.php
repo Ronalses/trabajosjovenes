@@ -101,6 +101,15 @@ function mo_openid_show_apps()
                         elseif ($apps=='stackoverflow'){
                             $icons='stack-overflow';
                         }
+                        elseif ($apps=='mailchimp'){
+                            $icons='mailchimp';
+                        }
+                        elseif ($apps=='youtube'){
+                            $icons='youtube';
+                        }
+                        elseif ($apps=='strava'){
+                            $icons='strava';
+                        }
                         $dir=dirname(dirname(dirname( __FILE__ )));
                         include_once($dir.'/social_apps/'.$apps.'.php');
                         $mo_appname='mo_'.$apps;

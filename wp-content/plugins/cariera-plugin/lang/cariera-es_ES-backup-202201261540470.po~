@@ -1,0 +1,5878 @@
+# Copyright (C) 2021 cariera-plugin
+# This file is distributed under the same license as the cariera-plugin package.
+msgid ""
+msgstr ""
+"Project-Id-Version: cariera-plugin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:"
+"1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-20 23:18+0000\n"
+"PO-Revision-Date: 2022-01-26 15:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: Español\n"
+"Language: es_ES\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.7; wp-5.8"
+
+#: inc/class-cariera-core.php:206
+msgid "Showing all resumes"
+msgstr ""
+
+#: inc/class-cariera-core.php:351
+msgid ""
+"Please add an unrestricted Google Maps API key in the \"Job Listings->"
+"Settings\" in order to be able to geocode your listings and show them in the "
+"maps."
+msgstr ""
+
+#: inc/class-cariera-core.php:351
+msgid "Learn More"
+msgstr ""
+
+#: inc/class-cariera-core.php:370
+msgid "Once every 5 minutes"
+msgstr ""
+
+#: inc/class-cariera-core.php:377
+msgid "Once every 30 minutes"
+msgstr ""
+
+#: inc/class-cariera-core.php:384
+msgid "Once monthly"
+msgstr ""
+
+#: inc/core/admin.php:106, inc/core/admin.php:106,
+#: inc/core/wp-company-manager/settings.php:58,
+#: inc/core/wp-company-manager/settings.php:58
+msgid "Settings"
+msgstr ""
+
+#: inc/core/admin.php:108, inc/core/admin.php:108
+msgid "Documentation"
+msgstr ""
+
+#: inc/core/admin.php:129
+msgid "General"
+msgstr ""
+
+#: inc/core/admin.php:134
+msgid "Main Header CTA Link"
+msgstr ""
+
+#: inc/core/admin.php:135
+msgid ""
+"This link will be added to the Header CTA for non loggedin, employers and "
+"admins."
+msgstr ""
+
+#: inc/core/admin.php:142
+msgid "Candidate Header CTA Link"
+msgstr ""
+
+#: inc/core/admin.php:143
+msgid "This link will be added to the Header CTA for loggedin Candidate users."
+msgstr ""
+
+#: inc/core/admin.php:150
+msgid "Notifications"
+msgstr ""
+
+#: inc/core/admin.php:151
+msgid "Notifications will be disabled if this option is turned off."
+msgstr ""
+
+#: inc/core/admin.php:157
+msgid "Job Promotions"
+msgstr ""
+
+#: inc/core/admin.php:158
+msgid "Job Promotions will be disabled if this option is turned off."
+msgstr ""
+
+#: inc/core/admin.php:164
+msgid "Company Promotions"
+msgstr ""
+
+#: inc/core/admin.php:165
+msgid "Company Promotions will be disabled if this option is turned off."
+msgstr ""
+
+#: inc/core/admin.php:171
+msgid "Resume Promotions"
+msgstr ""
+
+#: inc/core/admin.php:172
+msgid "Resume Promotions will be disabled if this option is turned off."
+msgstr ""
+
+#: inc/core/admin.php:178
+msgid "Additional Font Icons"
+msgstr ""
+
+#: inc/core/admin.php:179
+msgid ""
+"You can disable Iconsmind font icon library by turning the switch off if you "
+"do not use any icons from this library to improve performance."
+msgstr ""
+
+#: inc/core/admin.php:189
+msgid "reCAPTCHA"
+msgstr ""
+
+#: inc/core/admin.php:193
+msgid "reCAPTCHA Site Key"
+msgstr ""
+
+#: inc/core/admin.php:194, inc/core/admin.php:200
+msgid ""
+"Get the sitekey from https://www.google.com/recaptcha/admin#list - use "
+"reCAPTCHA v2"
+msgstr ""
+
+#: inc/core/admin.php:199
+msgid "reCAPTCHA Secret Key"
+msgstr ""
+
+#: inc/core/admin.php:205
+msgid "Login form"
+msgstr ""
+
+#: inc/core/admin.php:206
+msgid ""
+"Display reCAPTCHA field to the login form. You must have entered a valid "
+"site key and secret key above."
+msgstr ""
+
+#: inc/core/admin.php:211
+msgid "Registration form"
+msgstr ""
+
+#: inc/core/admin.php:212
+msgid ""
+"Display reCAPTCHA field to the registration form. You must have entered a "
+"valid site key and secret key above."
+msgstr ""
+
+#: inc/core/admin.php:223
+msgid "Login & Register"
+msgstr "Iniciar sesión y registrarse"
+
+#: inc/core/admin.php:228, inc/elementor/video_popup.php:117
+msgid "Popup"
+msgstr ""
+
+#: inc/core/admin.php:229
+msgid "Custom Page"
+msgstr ""
+
+#: inc/core/admin.php:232
+msgid "Login & Registration Layout"
+msgstr ""
+
+#: inc/core/admin.php:233
+msgid ""
+"You can set your login & register to \"popup\" or to redirect to a \"custom "
+"page\"."
+msgstr ""
+
+#: inc/core/admin.php:240
+msgid "Login & Registration Custom Page"
+msgstr ""
+
+#: inc/core/admin.php:241
+msgid "Choose page that uses \"Page Template Login\"."
+msgstr ""
+
+#: inc/core/admin.php:248
+msgid "Dashboard"
+msgstr "Tablero"
+
+#: inc/core/admin.php:249
+msgid "Home Page"
+msgstr ""
+
+#: inc/core/admin.php:250
+msgid "No Redirection"
+msgstr ""
+
+#: inc/core/admin.php:253
+msgid "Login Redirection"
+msgstr ""
+
+#: inc/core/admin.php:254
+msgid "Select your prefered login redirection method."
+msgstr ""
+
+#: inc/core/admin.php:262, inc/core/admin.php:268
+msgid "Registration"
+msgstr ""
+
+#: inc/core/admin.php:269
+msgid "Turn the switch \"off\" if you want to disable registration."
+msgstr ""
+
+#: inc/core/admin.php:275
+msgid "Candidate Role Selection"
+msgstr ""
+
+#: inc/core/admin.php:276
+msgid ""
+"Turn the switch \"off\" if you want to disable the \"Candidate\" role from "
+"the registration form."
+msgstr ""
+
+#: inc/core/admin.php:283
+msgid "Employer Role Selection"
+msgstr ""
+
+#: inc/core/admin.php:284
+msgid ""
+"Turn the switch \"off\" if you want to disable the \"Employer\" role from "
+"the registration form."
+msgstr ""
+
+#: inc/core/admin.php:292
+msgid "Auto Approval"
+msgstr ""
+
+#: inc/core/admin.php:293
+msgid "Email Approval"
+msgstr ""
+"Aprobación de correo electrónico\n"
+
+#: inc/core/admin.php:294
+msgid "Admin Approval"
+msgstr ""
+
+#: inc/core/admin.php:297
+msgid "Moderate New User"
+msgstr ""
+
+#: inc/core/admin.php:298
+msgid ""
+"Users are automatically approved once registered and there is no need to "
+"activate their account. You can setup so that they can activate their "
+"account by email or that admin has to approve them manually."
+msgstr ""
+"Los usuarios se aprueban automáticamente una vez registrados y no es "
+"necesario activar su cuenta. Puede configurar para que puedan activar su "
+"cuenta por correo electrónico o que el administrador tenga que aprobarlos "
+"manualmente.\n"
+
+#: inc/core/admin.php:305
+msgid "Approve User Page"
+msgstr ""
+
+#: inc/core/admin.php:306
+msgid ""
+"Approve pending user page. The page needs to have [cariera_approve_user] "
+"shortcode."
+msgstr ""
+
+#: inc/core/admin.php:313
+msgid "Auto Login after Registration"
+msgstr ""
+
+#: inc/core/admin.php:314
+msgid "If enabled the user will automatically login after registration."
+msgstr ""
+
+#: inc/core/admin.php:321
+msgid "Privacy Policy"
+msgstr ""
+
+#: inc/core/admin.php:322
+msgid ""
+"Turn the switch to \"off\" if you want to disable privacy policy checkbox."
+msgstr ""
+
+#: inc/core/admin.php:329
+msgid "Privacy Policy Text"
+msgstr ""
+
+#: inc/core/admin.php:330
+msgid ""
+"Make sure to add \"{gdpr_link}\" in the input below if you want to add a "
+"link. The {gdpr_link} will get replace with the page set on the next option."
+msgstr ""
+
+#: inc/core/admin.php:332
+msgid "By signing up, you agree to our {gdpr_link}."
+msgstr "Al registrarse, acepta nuestros {gdpr_link}."
+
+#: inc/core/admin.php:338
+msgid "Privacy Policy Page"
+msgstr ""
+
+#: inc/core/admin.php:339
+msgid ""
+"Choose page that will contain detailed information about the Privacy Policy "
+"of your website."
+msgstr ""
+"Elija la página que contendrá información detallada sobre la Política de "
+"privacidad de su sitio web.\n"
+
+#: inc/core/admin.php:350
+msgid "New User Welcome Email - Auto Approve"
+msgstr ""
+"Correo electrónico de bienvenida para nuevos usuarios: aprobación "
+"automática\n"
+
+#: inc/core/admin.php:351, inc/core/admin.php:548
+msgid "Available tags are: "
+msgstr ""
+
+#: inc/core/admin.php:357
+msgid "User Welcome Email"
+msgstr ""
+"Correo electrónico de bienvenida del usuario\n"
+
+#: inc/core/admin.php:358
+msgid "Enable/Disable email notification when a user registers on the website."
+msgstr ""
+"Habilitar / deshabilitar la notificación por correo electrónico cuando un "
+"usuario se registre en el sitio web.\n"
+
+#: inc/core/admin.php:365
+msgid "Admin Notification - New User"
+msgstr ""
+
+#: inc/core/admin.php:366
+msgid ""
+"Enable/Disable email notification to notify the admin that a new user has "
+"registered."
+msgstr ""
+"Habilite / deshabilite la notificación por correo electrónico para notificar "
+"al administrador que se ha registrado un nuevo usuario.\n"
+
+#: inc/core/admin.php:373, inc/core/admin.php:404, inc/core/admin.php:431,
+#: inc/core/admin.php:458, inc/core/admin.php:560, inc/core/admin.php:592,
+#: inc/core/admin.php:624
+msgid "Email Subject"
+msgstr ""
+"Asunto del email\n"
+
+#: inc/core/admin.php:374
+msgid "Welcome to {site_name}"
+msgstr ""
+
+#: inc/core/admin.php:380, inc/core/admin.php:411, inc/core/admin.php:438,
+#: inc/core/admin.php:465, inc/core/admin.php:567, inc/core/admin.php:599,
+#: inc/core/admin.php:631
+msgid "Email Content"
+msgstr ""
+"Contenido de correo electrónico\n"
+
+#: inc/core/admin.php:397
+msgid "Approve new registered User"
+msgstr ""
+
+#: inc/core/admin.php:398
+msgid ""
+"This email will be sent to the user or the admin depening on your approval "
+"settings. Available tags are: "
+msgstr ""
+"\n"
+"Este correo electrónico se enviará al usuario o al administrador según su "
+"configuración de aprobación. Las etiquetas disponibles son:"
+
+#: inc/core/admin.php:405
+msgid "Approve new Registered user: {user_name}"
+msgstr ""
+
+#: inc/core/admin.php:424
+msgid "User Approved"
+msgstr ""
+
+#: inc/core/admin.php:425
+msgid ""
+"This email will be sent to the user once their user status changes to "
+"\"Approved\""
+msgstr ""
+"Este correo electrónico se enviará al usuario una vez que su estado de "
+"usuario cambie a \"Aprobado\".\n"
+
+#: inc/core/admin.php:432
+msgid "Your Account has been Approved"
+msgstr ""
+
+#: inc/core/admin.php:451
+msgid "User Denied"
+msgstr ""
+
+#: inc/core/admin.php:452
+msgid ""
+"This email will be sent to the user once their user status changes to "
+"\"Denied\""
+msgstr ""
+"Este correo electrónico se enviará al usuario una vez que su estado de "
+"usuario cambie a \"Denegado\".\n"
+
+#: inc/core/admin.php:459
+msgid "Your Account has been Denied"
+msgstr ""
+
+#: inc/core/admin.php:480, inc/core/wp-company-manager/settings.php:242
+msgid "Pages"
+msgstr ""
+
+#: inc/core/admin.php:485
+msgid "Dashboard Page"
+msgstr ""
+"\n"
+"Página del tablero"
+
+#: inc/core/admin.php:486
+msgid ""
+"Main User Dashboard page. The page needs to have [cariera_dashboard] "
+"shortcode (optional)."
+msgstr ""
+
+#: inc/core/admin.php:492
+msgid "Bookmarks Page"
+msgstr ""
+
+#: inc/core/admin.php:493
+msgid "The page needs to have [my_bookmarks] shortcode."
+msgstr ""
+
+#: inc/core/admin.php:499
+msgid "Applied Jobs Page"
+msgstr ""
+
+#: inc/core/admin.php:500
+msgid "The page needs to have [past_applications] shortcode."
+msgstr ""
+
+#: inc/core/admin.php:506
+msgid "Listing Reports Page"
+msgstr ""
+
+#: inc/core/admin.php:507
+msgid "The page needs to have [cariera_listing_reports] shortcode."
+msgstr ""
+
+#: inc/core/admin.php:513
+msgid "My Profile Page"
+msgstr ""
+
+#: inc/core/admin.php:514
+msgid ""
+"Profile customization page. The page needs to have [cariera_my_account] "
+"shortcode."
+msgstr ""
+
+#: inc/core/admin.php:525
+msgid "Emails"
+msgstr ""
+
+#: inc/core/admin.php:529
+msgid "\"From name\" in email"
+msgstr ""
+"\"De nombre\" en el correo electrónico\n"
+
+#: inc/core/admin.php:530
+msgid ""
+"The name from who the email is received, by default it is your site name."
+msgstr ""
+"El nombre de quien se recibe el correo electrónico, por defecto es el nombre "
+"de su sitio.\n"
+
+#: inc/core/admin.php:536
+msgid "\"From\" email "
+msgstr ""
+
+#: inc/core/admin.php:537
+msgid ""
+"This will act as the \"from\" and \"reply-to\" address. This emails should "
+"match your domain address"
+msgstr ""
+"Esto actuará como la dirección \"de\" y \"responder a\". Estos correos "
+"electrónicos deben coincidir con su dirección de dominio\n"
+
+#: inc/core/admin.php:547
+msgid "Delete Account Email"
+msgstr ""
+"Eliminar correo electrónico de la cuenta\n"
+
+#: inc/core/admin.php:553
+msgid "Delete Account Notification"
+msgstr ""
+
+#: inc/core/admin.php:554
+msgid "Enable/Disable email notification when a user deletes their account."
+msgstr ""
+"Habilitar / deshabilitar la notificación por correo electrónico cuando un "
+"usuario elimina su cuenta.\n"
+
+#: inc/core/admin.php:562
+msgid "Your account has been deleted!"
+msgstr ""
+
+#: inc/core/admin.php:579, inc/core/admin.php:585
+msgid "Listing Promotion"
+msgstr ""
+
+#: inc/core/admin.php:580, inc/core/admin.php:612
+msgid "Available tags that can be used in the mail content: "
+msgstr ""
+
+#: inc/core/admin.php:586, inc/core/admin.php:618
+msgid ""
+"Enable/Disable email notifications to notify the author when their listing "
+"get's promoted."
+msgstr ""
+"Habilite / deshabilite las notificaciones por correo electrónico para "
+"notificar al autor cuando se promocione su lista.\n"
+
+#: inc/core/admin.php:594
+msgid "Listing Promoted Successfully!"
+msgstr ""
+
+#: inc/core/admin.php:611
+msgid "Listing Promotion Expired"
+msgstr ""
+
+#: inc/core/admin.php:617
+msgid "Promotion Expired"
+msgstr ""
+
+#: inc/core/admin.php:626
+msgid "Promotion has Expired!"
+msgstr ""
+
+#: inc/core/admin.php:683
+msgid "Cariera Core Settings"
+msgstr ""
+
+#: inc/core/admin.php:697
+msgid "Settings successfully saved"
+msgstr ""
+"Configuración guardada correctamente\n"
+
+#: inc/core/admin.php:720, inc/extensions/dashboard/my-account.php:455,
+#: inc/extensions/dashboard/my-account.php:521
+msgid "Save Changes"
+msgstr ""
+"Guardar cambios\n"
+
+#: inc/core/admin.php:771
+msgid "on"
+msgstr ""
+
+#: inc/core/admin.php:771
+msgid "off"
+msgstr ""
+
+#: inc/core/admin.php:915
+msgid "--no page--"
+msgstr ""
+
+#: inc/core/admin.php:920
+msgid "Select a page&hellip;"
+msgstr ""
+
+#: inc/core/cpt.php:64, inc/core/fields.php:105
+msgid "Job Career Level"
+msgstr ""
+
+#: inc/core/cpt.php:65
+msgid "Job Career level"
+msgstr ""
+
+#: inc/core/cpt.php:66
+msgctxt "Job career level permalink - resave permalinks after changing this"
+msgid "job-career-level"
+msgstr ""
+
+#: inc/core/cpt.php:70, inc/core/cpt.php:71, inc/core/fields.php:117
+msgid "Job Experience"
+msgstr ""
+
+#: inc/core/cpt.php:72
+msgctxt "Job experience permalink - resave permalinks after changing this"
+msgid "job-experience"
+msgstr ""
+
+#: inc/core/cpt.php:76, inc/core/cpt.php:77, inc/core/fields.php:94
+msgid "Job Qualification"
+msgstr ""
+
+#: inc/core/cpt.php:78
+msgctxt "Job qualification permalink - resave permalinks after changing this"
+msgid "job-qualification"
+msgstr ""
+
+#: inc/core/cpt.php:97, inc/core/cpt.php:176,
+#: inc/core/wp-company-manager/cpt.php:318,
+#: inc/core/wp-company-manager/cpt.php:401,
+#: inc/core/wp-company-manager/cpt.php:447
+msgid "Search %s"
+msgstr ""
+
+#: inc/core/cpt.php:98, inc/core/cpt.php:177,
+#: inc/core/wp-company-manager/cpt.php:310,
+#: inc/core/wp-company-manager/cpt.php:402,
+#: inc/core/wp-company-manager/cpt.php:448,
+#: inc/extensions/testimonials/testimonials.php:36
+msgid "All %s"
+msgstr ""
+
+#: inc/core/cpt.php:99, inc/core/cpt.php:178,
+#: inc/core/wp-company-manager/cpt.php:321,
+#: inc/core/wp-company-manager/cpt.php:403,
+#: inc/core/wp-company-manager/cpt.php:449
+msgid "Parent %s"
+msgstr ""
+
+#: inc/core/cpt.php:100, inc/core/cpt.php:179,
+#: inc/core/wp-company-manager/cpt.php:404,
+#: inc/core/wp-company-manager/cpt.php:450
+msgid "Parent %s:"
+msgstr ""
+
+#: inc/core/cpt.php:101, inc/core/cpt.php:180,
+#: inc/core/wp-company-manager/cpt.php:314,
+#: inc/core/wp-company-manager/cpt.php:405,
+#: inc/core/wp-company-manager/cpt.php:451,
+#: inc/extensions/testimonials/testimonials.php:34
+msgid "Edit %s"
+msgstr ""
+
+#: inc/core/cpt.php:102, inc/core/cpt.php:181,
+#: inc/core/wp-company-manager/cpt.php:406,
+#: inc/core/wp-company-manager/cpt.php:452
+msgid "Update %s"
+msgstr ""
+
+#: inc/core/cpt.php:103, inc/core/cpt.php:182,
+#: inc/core/wp-company-manager/cpt.php:407,
+#: inc/core/wp-company-manager/cpt.php:453,
+#: inc/core/wp-company-manager/settings.php:231,
+#: inc/extensions/testimonials/testimonials.php:33
+msgid "Add New %s"
+msgstr ""
+
+#: inc/core/cpt.php:104, inc/core/cpt.php:183,
+#: inc/core/wp-company-manager/cpt.php:408,
+#: inc/core/wp-company-manager/cpt.php:454
+msgid "New %s Name"
+msgstr ""
+
+#: inc/core/cpt.php:149, inc/core/cpt.php:150
+msgid "Candidate Education"
+msgstr ""
+
+#: inc/core/cpt.php:151
+msgctxt "Candidate education permalink - resave permalinks after changing this"
+msgid "resume-education"
+msgstr ""
+
+#: inc/core/cpt.php:155, inc/core/cpt.php:156
+msgid "Candidate Experience"
+msgstr ""
+
+#: inc/core/cpt.php:157
+msgctxt ""
+"Candidate experience permalink - resave permalinks after changing this"
+msgid "resume-experience"
+msgstr ""
+
+#: inc/core/emails.php:243
+msgid "New User Registration"
+msgstr ""
+
+#: inc/core/emails.php:247
+msgid "Hi Admin,"
+msgstr ""
+
+#: inc/core/emails.php:248
+msgid "A new user just registered on your website."
+msgstr "Un nuevo usuario acaba de registrarse en su sitio web."
+
+#: inc/core/emails.php:249
+msgid "Username: {user_name}"
+msgstr ""
+
+#: inc/core/emails.php:250
+msgid "Email: {user_mail}"
+msgstr ""
+
+#: inc/core/emails.php:486
+msgid "Your Job Listing has been approved!"
+msgstr ""
+
+#: inc/core/emails.php:488, inc/core/emails.php:519, inc/core/emails.php:543,
+#: inc/extensions/account/user.php:762
+msgid "Hello %s,"
+msgstr ""
+
+#: inc/core/emails.php:489
+msgid "Your Job Listing *%s* has been approved."
+msgstr "Su oferta de trabajo *% s * ha sido aprobada."
+
+#: inc/core/emails.php:490
+msgid "You can visit your Job Listing by clicking on the following link: %s"
+msgstr ""
+"Puede visitar su Lista de trabajos haciendo clic en el siguiente enlace: %s"
+
+#: inc/core/emails.php:517
+msgid "Your Resume has been approved!"
+msgstr ""
+"¡Tu currículum ha sido aprobado!\n"
+
+#: inc/core/emails.php:520
+msgid "Your resume *%s* has been approved."
+msgstr "Su currículum *%s* ha sido aprobado."
+
+#: inc/core/emails.php:521
+msgid "You can visit your resume by clicking on the following link: %s"
+msgstr "Puede visitar su currículum haciendo clic en el siguiente enlace: %s"
+
+#: inc/core/emails.php:541
+msgid "Your Resume has expired!"
+msgstr ""
+"¡Tu currículum ha caducado!\n"
+
+#: inc/core/emails.php:544
+msgid "Your resume *%s* has now expired: %s"
+msgstr "Tu currículum *%s* ha expirado: %s"
+
+#: inc/core/fields.php:85, inc/core/fields.php:278
+msgid "External \"Apply for Job\" link"
+msgstr ""
+
+#: inc/core/fields.php:88, inc/core/fields.php:281
+msgid "http://"
+msgstr ""
+
+#: inc/core/fields.php:98
+msgid "Choose a job qualification"
+msgstr ""
+
+#: inc/core/fields.php:110
+msgid "Choose a career level"
+msgstr ""
+
+#: inc/core/fields.php:122
+msgid "Choose a job experience"
+msgstr ""
+
+#: inc/core/fields.php:130
+msgid "Minimum rate/h"
+msgstr ""
+
+#: inc/core/fields.php:133, inc/core/fields.php:254, inc/core/fields.php:308,
+#: inc/core/fields.php:452
+msgid "e.g. 20"
+msgstr ""
+
+#: inc/core/fields.php:137
+msgid "Maximum rate/h"
+msgstr ""
+
+#: inc/core/fields.php:140
+msgid "e.g. 50"
+msgstr ""
+
+#: inc/core/fields.php:148, inc/core/search.php:113
+msgid "Minimum Salary"
+msgstr "Suelde desde "
+
+#: inc/core/fields.php:151
+msgid "e.g. 20000"
+msgstr "Ej. 200.000"
+
+#: inc/core/fields.php:155, inc/core/search.php:118
+msgid "Maximum Salary"
+msgstr "Sueldo sobre"
+
+#: inc/core/fields.php:158
+msgid "e.g. 50000"
+msgstr "Ej. 800.000"
+
+#: inc/core/fields.php:164, inc/core/fields.php:234
+msgid "Hours per week"
+msgstr ""
+
+#: inc/core/fields.php:167
+msgid "e.g. 72"
+msgstr ""
+
+#: inc/core/fields.php:171, inc/core/fields.php:345, inc/core/fields.php:494
+msgid "Featured Image"
+msgstr ""
+
+#: inc/core/fields.php:174
+msgid "The featured image size should be at least 1600x200px"
+msgstr "El tamaño de la imagen destacada debe ser de al menos 1600x200px"
+
+#: inc/core/fields.php:244
+msgid "Rate/h (minimum)"
+msgstr ""
+
+#: inc/core/fields.php:248
+msgid "Put just a number"
+msgstr ""
+
+#: inc/core/fields.php:251
+msgid "Rate/h (maximum) "
+msgstr ""
+
+#: inc/core/fields.php:255
+msgid ""
+"Put just a number - you can leave it empty and set only minimum rate value "
+msgstr ""
+
+#: inc/core/fields.php:262
+msgid "Salary min"
+msgstr ""
+
+#: inc/core/fields.php:265
+msgid "e.g. 20.000"
+msgstr ""
+
+#: inc/core/fields.php:266
+msgid "Enter the min Salary of the Job"
+msgstr ""
+
+#: inc/core/fields.php:269
+msgid "Salary max"
+msgstr ""
+
+#: inc/core/fields.php:272
+msgid "e.g. 50.000"
+msgstr "Ej. 800.000"
+
+#: inc/core/fields.php:273
+msgid ""
+"Maximum of salary range you can offer - you can leave it empty and set only "
+"minimum salary "
+msgstr ""
+
+#: inc/core/fields.php:282
+msgid ""
+"If the job applying is done on external page, here's the place to put link "
+"to that page - it will be used instead of standard Apply form"
+msgstr ""
+
+#: inc/core/fields.php:305, inc/core/fields.php:450
+msgid "Rate per Hour"
+msgstr ""
+
+#: inc/core/fields.php:314
+msgid "Education Level"
+msgstr ""
+
+#: inc/core/fields.php:319
+msgid "Bachelor degree"
+msgstr ""
+
+#: inc/core/fields.php:325, inc/core/fields.php:457
+msgid "Languages"
+msgstr "Idioma "
+
+#: inc/core/fields.php:328, inc/core/fields.php:459
+msgid "English, German, Chinese"
+msgstr ""
+
+#: inc/core/fields.php:334, inc/core/settings.php:160,
+#: inc/core/settings.php:218
+msgid "Experience"
+msgstr "Experiencia "
+
+#: inc/core/fields.php:339
+msgid "3 years"
+msgstr ""
+
+#: inc/core/fields.php:348
+msgid "The featured image size should be max 1920x400px"
+msgstr ""
+
+#: inc/core/fields.php:361, inc/core/fields.php:464,
+#: inc/core/wp-company-manager/form/submit-company.php:262,
+#: inc/core/wp-company-manager/writepanels.php:74,
+#: inc/extensions/social-share/social.php:91,
+#: inc/widgets/social-media-widget.php:25
+msgid "Facebook"
+msgstr ""
+
+#: inc/core/fields.php:363, inc/core/fields.php:466
+msgid "Your Facebook page link"
+msgstr ""
+
+#: inc/core/fields.php:369, inc/core/fields.php:470,
+#: inc/core/wp-company-manager/form/submit-company.php:269,
+#: inc/core/wp-company-manager/writepanels.php:78,
+#: inc/extensions/social-share/social.php:107,
+#: inc/widgets/social-media-widget.php:26
+msgid "Twitter"
+msgstr ""
+
+#: inc/core/fields.php:371, inc/core/fields.php:472
+msgid "Your Twitter page link"
+msgstr ""
+
+#: inc/core/fields.php:377, inc/core/fields.php:476,
+#: inc/core/wp-company-manager/form/submit-company.php:276,
+#: inc/core/wp-company-manager/writepanels.php:82,
+#: inc/extensions/social-share/social.php:123
+msgid "LinkedIn"
+msgstr ""
+
+#: inc/core/fields.php:379, inc/core/fields.php:478
+msgid "Your LinkedIn page link"
+msgstr ""
+
+#: inc/core/fields.php:385, inc/core/fields.php:482,
+#: inc/widgets/social-media-widget.php:32
+msgid "Instagram"
+msgstr ""
+
+#: inc/core/fields.php:387, inc/core/fields.php:484
+msgid "Your Instagram page link"
+msgstr ""
+
+#: inc/core/fields.php:393, inc/core/fields.php:488,
+#: inc/widgets/social-media-widget.php:27
+msgid "Youtube"
+msgstr ""
+
+#: inc/core/fields.php:395, inc/core/fields.php:490
+msgid "Your Youtube page link"
+msgstr ""
+
+#: inc/core/fields.php:530, inc/core/fields.php:595
+msgid "Category Background Image"
+msgstr ""
+
+#: inc/core/fields.php:532, inc/core/fields.php:540
+msgid "upload image"
+msgstr ""
+
+#: inc/core/fields.php:533, inc/core/fields.php:541, inc/core/fields.php:599,
+#: inc/core/fields.php:609
+msgid "Remove image"
+msgstr ""
+
+#: inc/core/fields.php:534
+msgid "Upload or select a background image."
+msgstr ""
+
+#: inc/core/fields.php:538, inc/core/fields.php:605
+msgid "Custom Image Icon"
+msgstr ""
+
+#: inc/core/fields.php:542
+msgid "Upload or select a custom image icon."
+msgstr ""
+
+#: inc/core/fields.php:546, inc/core/fields.php:615
+msgid "Category Font Icon"
+msgstr ""
+
+#: inc/core/fields.php:569, inc/core/fields.php:650
+msgid "Icon will be displayed in categories grid view"
+msgstr ""
+
+#: inc/core/fields.php:598, inc/core/fields.php:608
+msgid "Upload image"
+msgstr ""
+
+#: inc/core/fields.php:600
+msgid "Upload or change the categories background image."
+msgstr ""
+
+#: inc/core/fields.php:610
+msgid "Upload or change the categories icon image."
+msgstr ""
+
+#: inc/core/notifications.php:287
+msgid "Listing %s has been published."
+msgstr "Tu oferta % ha sido publicada"
+
+#: inc/core/notifications.php:303
+msgid "Your listing %s is pending for approval."
+msgstr "Tu anuncio %s está pendiente de aprobación."
+
+#: inc/core/notifications.php:319
+msgid "Your listing %s has been created, payment approval might be required."
+msgstr ""
+"Se ha creado su anuncio %s, es posible que se requiera la aprobación del "
+"pago."
+
+#: inc/core/notifications.php:335
+msgid "Your listing %s has been approved."
+msgstr "Tu anuncio %s ha sido aprobado."
+
+#: inc/core/notifications.php:351
+msgid "Your listing %s has expired."
+msgstr ""
+"\n"
+"Tu anuncio %s ha caducado."
+
+#: inc/core/notifications.php:367
+msgid "Your listing %s has been relisted."
+msgstr "Tu anuncio %s se ha vuelto a poner en linea. "
+
+#: inc/core/notifications.php:383
+msgid "Your listing %s has been deleted."
+msgstr ""
+"\n"
+"Tu anuncio %s ha sido eliminado."
+
+#: inc/core/notifications.php:403
+msgid "%s applied to your job %s."
+msgstr "%s aplico a su trabajo %s."
+
+#: inc/core/notifications.php:419
+msgid "Your listing %s has been promoted."
+msgstr "Tu anuncio %s ha sido promocionado."
+
+#: inc/core/notifications.php:435
+msgid "Your promotion for %s has expired."
+msgstr ""
+"\n"
+"Tu promoción de %s ha expirado."
+
+#: inc/core/promotions/package.php:91, inc/core/promotions/package.php:102
+msgid "Promotion Packages"
+msgstr ""
+
+#: inc/core/promotions/package.php:92
+msgid "Promotion Package"
+msgstr ""
+
+#: inc/core/promotions/package.php:93
+msgid "Promote a Listing"
+msgstr ""
+
+#: inc/core/promotions/package.php:94
+msgid "Add New Package"
+msgstr ""
+
+#: inc/core/promotions/package.php:95
+msgid "Edit Package"
+msgstr ""
+
+#: inc/core/promotions/package.php:96
+msgid "New Package"
+msgstr ""
+
+#: inc/core/promotions/package.php:97
+msgid "All Packages"
+msgstr ""
+
+#: inc/core/promotions/package.php:98
+msgid "View Package"
+msgstr ""
+
+#: inc/core/promotions/package.php:99
+msgid "Search Packages"
+msgstr ""
+
+#: inc/core/promotions/package.php:100
+msgid "Not Found"
+msgstr ""
+
+#: inc/core/promotions/package.php:101
+msgid "Not Found in Trash"
+msgstr ""
+
+#: inc/core/promotions/package.php:161, inc/core/promotions/package.php:185
+msgid "Cancelled"
+msgstr ""
+
+#. translators: %s is label count.
+#: inc/core/promotions/package.php:167
+msgid "Cancelled <span class=\"count\">(%s)</span>"
+msgid_plural "Cancelled <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/core/promotions/package.php:182
+msgid "Active"
+msgstr ""
+
+#: inc/core/promotions/package.php:183,
+#: inc/core/wp-company-manager/company-manager-functions.php:398
+msgid "Inactive"
+msgstr ""
+
+#: inc/core/promotions/package.php:184,
+#: inc/core/wp-company-manager/company-manager-functions.php:390
+msgid "Expired"
+msgstr ""
+
+#: inc/core/promotions/package.php:276
+msgctxt "Admin view promotions - Expired Packages"
+msgid "Expired"
+msgstr ""
+
+#: inc/core/promotions/package.php:322
+msgid "Edit Package #%d"
+msgstr ""
+
+#: inc/core/promotions/package.php:339
+msgid "Package ID"
+msgstr ""
+
+#: inc/core/promotions/package.php:340,
+#: inc/core/promotions/promotions-wc.php:171,
+#: inc/elementor/listing_categories_grid.php:85,
+#: inc/elementor/listing_categories_list.php:84,
+#: inc/vc-addons/listing-categories/grid.php:20,
+#: inc/vc-addons/listing-categories/list.php:20
+msgid "Listing"
+msgstr ""
+
+#: inc/core/promotions/package.php:341
+msgid "User"
+msgstr ""
+
+#: inc/core/promotions/package.php:342
+msgid "Promoted Until"
+msgstr ""
+
+#: inc/core/promotions/package.php:343
+msgid "Product"
+msgstr ""
+
+#: inc/core/promotions/package.php:344
+msgid "Order ID"
+msgstr ""
+
+#: inc/core/promotions/package.php:373, inc/core/promotions/package.php:394,
+#: inc/core/promotions/package.php:406
+msgid "n/a"
+msgstr ""
+
+#: inc/core/promotions/package.php:427
+msgctxt "Promotions list in wp-admin"
+msgid "Edit Package"
+msgstr ""
+
+#: inc/core/promotions/package.php:430
+msgctxt "Promotions list in wp-admin"
+msgid "Edit Listing"
+msgstr ""
+
+#: inc/core/promotions/package.php:688, inc/core/promotions/promotions.php:140,
+#: inc/core/promotions/promotions.php:146,
+#: inc/core/promotions/promotions.php:153
+msgid "Could not process request."
+msgstr ""
+
+#: inc/core/promotions/promotions-wc.php:106
+msgid "Promotion duration"
+msgstr ""
+
+#: inc/core/promotions/promotions-wc.php:107
+msgid "The number of days that the listing will be promoted."
+msgstr ""
+
+#: inc/core/promotions/promotions-wc.php:202
+msgid "\"%s\" will be promoted once the order is verified and completed."
+msgstr ""
+"\n"
+"\"%s\" se promocionará una vez que se verifique y complete el pedido."
+
+#: inc/core/promotions/promotions-wc.php:200
+msgid "\"%s\" has been promoted successfully."
+msgstr "\"%s\" se ha promocionado correctamente."
+
+#: inc/core/promotions/promotions-wc.php:366,
+#: inc/core/promotions/promotions-wc.php:393,
+#: inc/core/promotions/promotions-wc.php:420
+msgid "Promote"
+msgstr ""
+
+#: inc/core/promotions/promotions-wc.php:452
+msgid "Job Promotion"
+msgstr ""
+
+#: inc/core/promotions/promotions-wc.php:462,
+#: inc/core/promotions/promotions-wc.php:541,
+#: inc/core/promotions/promotions-wc.php:620
+msgid "Promotional Packages"
+msgstr ""
+
+#: inc/core/promotions/promotions-wc.php:482,
+#: inc/core/promotions/promotions-wc.php:561,
+#: inc/core/promotions/promotions-wc.php:640
+msgid "Promotion lasts for %s days"
+msgstr "La promoción dura %s días."
+
+#: inc/core/promotions/promotions-wc.php:493,
+#: inc/core/promotions/promotions-wc.php:572,
+#: inc/core/promotions/promotions-wc.php:651
+msgid "There are no promotional packages available at the moment."
+msgstr ""
+
+#: inc/core/promotions/promotions-wc.php:531
+msgid "Company Promotion"
+msgstr ""
+
+#: inc/core/promotions/promotions-wc.php:610
+msgid "Resume Promotion"
+msgstr ""
+
+#: inc/core/promotions/wc-product-listing-promotion.php:198
+msgid "Job Promotion Package"
+msgstr ""
+
+#: inc/core/promotions/wc-product-listing-promotion.php:201
+msgid "Company Promotion Package"
+msgstr ""
+
+#: inc/core/promotions/wc-product-listing-promotion.php:204
+msgid "Resume Promotion Package"
+msgstr ""
+
+#: inc/core/search.php:89
+msgid "Advanced Search"
+msgstr ""
+
+#: inc/core/search.php:114
+msgid "Search Salary Min"
+msgstr ""
+
+#: inc/core/search.php:119
+msgid "Search Salary Max"
+msgstr ""
+
+#: inc/core/search.php:179, inc/core/search.php:367
+msgid "Minimum Rate"
+msgstr "Campo no habilitado "
+
+#: inc/core/search.php:180
+msgid "Search Rate Min"
+msgstr ""
+
+#: inc/core/search.php:184
+msgid "Maximum Rate"
+msgstr ""
+
+#: inc/core/search.php:185
+msgid "Search Rate Max"
+msgstr ""
+
+#: inc/core/search.php:247
+msgid "Radius around selected location."
+msgstr ""
+
+#: inc/core/search.php:318
+msgid "Filter by Skills"
+msgstr ""
+
+#: inc/core/search.php:319
+msgid "Choose a skill"
+msgstr ""
+
+#: inc/core/search.php:368
+msgid "Search by minimum rate"
+msgstr "No llenes nada aquí "
+
+#: inc/core/settings.php:64
+msgid "Currency Symbol positon"
+msgstr ""
+
+#: inc/core/settings.php:65
+msgid ""
+"Select the positon of your selected currency symbol (before/after number)"
+msgstr ""
+
+#: inc/core/settings.php:68
+msgid "Before Number"
+msgstr ""
+
+#: inc/core/settings.php:69
+msgid "After Number"
+msgstr ""
+
+#: inc/core/settings.php:75
+msgid "Currency Symbol"
+msgstr ""
+
+#: inc/core/settings.php:76
+msgid "Select the currency symbol that will be used in salary/rate fields"
+msgstr ""
+
+#: inc/core/settings.php:79
+msgid "Disable Currency Symbol"
+msgstr ""
+
+#: inc/core/settings.php:80, inc/core/settings.php:127
+msgid "US Dollars"
+msgstr ""
+
+#: inc/core/settings.php:81
+msgid "United Arab Emirates Dirham"
+msgstr ""
+
+#: inc/core/settings.php:82
+msgid "Argentine Peso"
+msgstr ""
+
+#: inc/core/settings.php:83
+msgid "Australian Dollars"
+msgstr ""
+
+#: inc/core/settings.php:84
+msgid "Bangladeshi Taka"
+msgstr ""
+
+#: inc/core/settings.php:85
+msgid "Bahraini Dinar"
+msgstr ""
+
+#: inc/core/settings.php:86
+msgid "Brazilian Real"
+msgstr ""
+
+#: inc/core/settings.php:87
+msgid "Bulgarian Lev"
+msgstr ""
+
+#: inc/core/settings.php:88
+msgid "Canadian Dollars"
+msgstr ""
+
+#: inc/core/settings.php:89
+msgid "Chilean Peso"
+msgstr ""
+
+#: inc/core/settings.php:90
+msgid "Chinese Yuan"
+msgstr ""
+
+#: inc/core/settings.php:91
+msgid "Colombian Peso"
+msgstr ""
+
+#: inc/core/settings.php:92
+msgid "Czech Koruna"
+msgstr ""
+
+#: inc/core/settings.php:93
+msgid "Danish Krone"
+msgstr ""
+
+#: inc/core/settings.php:94
+msgid "Dominican Peso"
+msgstr ""
+
+#: inc/core/settings.php:95
+msgid "Euros"
+msgstr ""
+
+#: inc/core/settings.php:96
+msgid "Hong Kong Dollar"
+msgstr ""
+
+#: inc/core/settings.php:97
+msgid "Croatia kuna"
+msgstr ""
+
+#: inc/core/settings.php:98
+msgid "Hungarian Forint"
+msgstr ""
+
+#: inc/core/settings.php:99
+msgid "Icelandic krona"
+msgstr ""
+
+#: inc/core/settings.php:100
+msgid "Indonesia Rupiah"
+msgstr ""
+
+#: inc/core/settings.php:101
+msgid "Indian Rupee"
+msgstr ""
+
+#: inc/core/settings.php:102
+msgid "Nepali Rupee"
+msgstr ""
+
+#: inc/core/settings.php:103
+msgid "Israeli Shekel"
+msgstr ""
+
+#: inc/core/settings.php:104
+msgid "Japanese Yen"
+msgstr ""
+
+#: inc/core/settings.php:105
+msgid "Lao Kip"
+msgstr ""
+
+#: inc/core/settings.php:106
+msgid "South Korean Won"
+msgstr ""
+
+#: inc/core/settings.php:107
+msgid "Sri Lankan Rupee"
+msgstr ""
+
+#: inc/core/settings.php:108
+msgid "Malaysian Ringgits"
+msgstr ""
+
+#: inc/core/settings.php:109
+msgid "Mexican Peso"
+msgstr ""
+
+#: inc/core/settings.php:110
+msgid "Nigerian Naira"
+msgstr ""
+
+#: inc/core/settings.php:111
+msgid "Norwegian Krone"
+msgstr ""
+
+#: inc/core/settings.php:112
+msgid "New Zealand Dollar"
+msgstr ""
+
+#: inc/core/settings.php:113
+msgid "Paraguayan Guaraní"
+msgstr ""
+
+#: inc/core/settings.php:114
+msgid "Philippine Pesos"
+msgstr ""
+
+#: inc/core/settings.php:115
+msgid "Polish Zloty"
+msgstr ""
+
+#: inc/core/settings.php:116
+msgid "Pounds Sterling"
+msgstr ""
+
+#: inc/core/settings.php:117
+msgid "Romanian Leu"
+msgstr ""
+
+#: inc/core/settings.php:118
+msgid "Russian Ruble"
+msgstr ""
+
+#: inc/core/settings.php:119
+msgid "Singapore Dollar"
+msgstr ""
+
+#: inc/core/settings.php:120
+msgid "South African rand"
+msgstr ""
+
+#: inc/core/settings.php:121
+msgid "Swedish Krona"
+msgstr ""
+
+#: inc/core/settings.php:122
+msgid "Swiss Franc"
+msgstr ""
+
+#: inc/core/settings.php:123
+msgid "Taiwan New Dollars"
+msgstr ""
+
+#: inc/core/settings.php:124
+msgid "Thai Baht"
+msgstr ""
+
+#: inc/core/settings.php:125
+msgid "Turkish Lira"
+msgstr ""
+
+#: inc/core/settings.php:126
+msgid "Ukrainian Hryvnia"
+msgstr ""
+
+#: inc/core/settings.php:128
+msgid "Vietnamese Dong"
+msgstr ""
+
+#: inc/core/settings.php:129
+msgid "Egyptian Pound"
+msgstr ""
+
+#: inc/core/settings.php:135
+msgid "Salary"
+msgstr "Sueldo"
+
+#: inc/core/settings.php:136
+msgid "Enable listing salary"
+msgstr ""
+
+#: inc/core/settings.php:137
+msgid ""
+"Enabling this option will show a salary range filter in sidebar on Jobs page "
+"and salary fields on Job posting."
+msgstr ""
+
+#: inc/core/settings.php:143
+msgid "Rates"
+msgstr ""
+
+#: inc/core/settings.php:144
+msgid "Enable listing rates"
+msgstr ""
+
+#: inc/core/settings.php:145
+msgid ""
+"Enabling this option will show a rate range filter in sidebar on Jobs page "
+"and rate fields on Job posting."
+msgstr ""
+
+#: inc/core/settings.php:151
+msgid "Career Level"
+msgstr ""
+
+#: inc/core/settings.php:152
+msgid "Enable listing career level"
+msgstr ""
+
+#: inc/core/settings.php:153
+msgid ""
+"This lets users select from a list of career level when submitting a job. "
+"Note: an admin has to create career level before site users can select them."
+msgstr ""
+
+#: inc/core/settings.php:161, inc/core/settings.php:219
+msgid "Enable listing experience"
+msgstr ""
+
+#: inc/core/settings.php:162
+msgid ""
+"This lets users select from a list of experience when submitting a job. Note:"
+" an admin has to create experience before site users can select them."
+msgstr ""
+
+#: inc/core/settings.php:169
+msgid "Qualification"
+msgstr ""
+
+#: inc/core/settings.php:170
+msgid "Enable listing qualification"
+msgstr ""
+
+#: inc/core/settings.php:171
+msgid ""
+"This lets users select from a list of qualification when submitting a job. "
+"Note: an admin has to create qualification before site users can select them."
+msgstr ""
+
+#: inc/core/settings.php:179
+msgid "Approved Job"
+msgstr ""
+
+#: inc/core/settings.php:180
+msgid "Approved Job Notification"
+msgstr ""
+
+#: inc/core/settings.php:181
+msgid ""
+"When enabled the Employer will receive an email notification when their job "
+"get's approved."
+msgstr ""
+"Cuando está habilitado, el empleador recibirá una notificación por correo "
+"electrónico cuando se apruebe su trabajo.\n"
+
+#: inc/core/settings.php:209
+msgid "Education"
+msgstr ""
+
+#: inc/core/settings.php:210
+msgid "Enable listing education"
+msgstr ""
+
+#: inc/core/settings.php:211
+msgid ""
+"This lets users select their education when submitting a resume. Note: an "
+"admin has to create experience before site users can select them."
+msgstr ""
+
+#: inc/core/settings.php:220
+msgid ""
+"This lets users select their experience when submitting a resume. Note: an "
+"admin has to create experience before site users can select them."
+msgstr ""
+
+#: inc/core/settings.php:227
+msgid "Single Resume Contact Form"
+msgstr ""
+
+#: inc/core/settings.php:228
+msgid "Select the contact form that you want to show on a single resume page."
+msgstr ""
+
+#: inc/core/settings.php:235
+msgid "Owner Contact"
+msgstr ""
+
+#: inc/core/settings.php:236
+msgid "Hide Contact to Owner"
+msgstr ""
+
+#: inc/core/settings.php:237
+msgid ""
+"When enabled the \"contact button & form\" of the Resume will be hidden from "
+"the owner of the Resume. This will avoid Candidates being able to send "
+"emails to themselves via their own Resume."
+msgstr ""
+"Cuando está habilitado, el \"botón y formulario de contacto\" del currículum "
+"se ocultará al propietario del currículum. Esto evitará que los candidatos "
+"puedan enviarse correos electrónicos a sí mismos a través de su propio "
+"currículum.\n"
+
+#: inc/core/settings.php:246
+msgid "Approved Resume"
+msgstr ""
+
+#: inc/core/settings.php:247
+msgid "Approved Resume Notification"
+msgstr ""
+
+#: inc/core/settings.php:248
+msgid ""
+"When enabled the Candidate will receive an email notification when their "
+"resume get's approved."
+msgstr ""
+"Cuando está habilitado, el candidato recibirá una notificación por correo "
+"electrónico cuando se apruebe su currículum.\n"
+
+#: inc/core/settings.php:255
+msgid "Expired Resume"
+msgstr ""
+
+#: inc/core/settings.php:256
+msgid "Expired Resume Notification"
+msgstr ""
+
+#: inc/core/settings.php:257
+msgid ""
+"When enabled the Candidate will receive an email notification when their "
+"resume get's expired."
+msgstr ""
+"Cuando está habilitado, el candidato recibirá una notificación por correo "
+"electrónico cuando su currículum haya vencido.\n"
+
+#: inc/core/wp-company-manager/bookmarks.php:111,
+#: inc/core/wp-company-manager/bookmarks.php:151
+msgid "Bad request"
+msgstr ""
+
+#: inc/core/wp-company-manager/company-manager-functions.php:396,
+#: inc/core/wp-company-manager/form/submit-company.php:66,
+#: inc/core/wp-company-manager/form/submit-company.php:808
+msgid "Preview"
+msgstr "Avance"
+
+#: inc/core/wp-company-manager/company-manager-functions.php:394
+msgid "Hidden"
+msgstr ""
+
+#: inc/core/wp-company-manager/company-manager-functions.php:392
+msgid "Pending Review"
+msgstr "Pendiente de revisión"
+
+#: inc/core/wp-company-manager/company-manager-functions.php:388
+msgid "Published"
+msgstr ""
+
+#: inc/core/wp-company-manager/company-manager-functions.php:495,
+#: inc/core/wp-company-manager/company-manager-functions.php:497,
+#: inc/elementor/job_resume_search.php:132,
+#: inc/extensions/dashboard/reports.php:157,
+#: inc/vc-addons/job-resume-search/addon.php:64
+msgid "Jobs"
+msgstr ""
+"Trabajos\n"
+
+#: inc/core/wp-company-manager/company-manager-functions.php:490,
+#: inc/core/wp-company-manager/company-manager-functions.php:492,
+#: inc/vc-addons/job/addon.php:186
+msgid "Job"
+msgstr ""
+
+#: inc/core/wp-company-manager/company-manager-functions.php:969
+msgctxt "post status"
+msgid "Draft"
+msgstr ""
+
+#: inc/core/wp-company-manager/company-manager-functions.php:972
+msgctxt "post status"
+msgid "Preview"
+msgstr "Avance"
+
+#: inc/core/wp-company-manager/company-manager-functions.php:973
+msgctxt "post status"
+msgid "Pending approval"
+msgstr ""
+
+#: inc/core/wp-company-manager/company-manager-functions.php:975
+msgctxt "post status"
+msgid "Active"
+msgstr ""
+
+#: inc/core/wp-company-manager/company-manager-templates.php:297,
+#: inc/extensions/account/user.php:233
+msgid "Username"
+msgstr ""
+"Nombre de usuario\n"
+
+#: inc/core/wp-company-manager/company-manager-templates.php:303,
+#: inc/extensions/account/user.php:138, inc/extensions/account/user.php:243
+msgid "Password"
+msgstr "Contraseña"
+
+#: inc/core/wp-company-manager/company-manager-templates.php:313
+msgid "Verify Password"
+msgstr ""
+
+#: inc/core/wp-company-manager/company-manager-templates.php:759
+msgid "About the Company"
+msgstr ""
+"Sobre la empresa\n"
+
+#: inc/core/wp-company-manager/company-manager-templates.php:763
+msgid "Pages:"
+msgstr ""
+
+#: inc/core/wp-company-manager/company-manager-templates.php:814
+msgid "Job Positions"
+msgstr "Puestos de trabajo"
+
+#: inc/core/wp-company-manager/company-manager-templates.php:852
+msgid "Company Details"
+msgstr ""
+"Detalles de la compañía\n"
+
+#: inc/core/wp-company-manager/company-manager-templates.php:853,
+#: inc/core/wp-company-manager/form/submit-company.php:454
+msgid "Preview Company"
+msgstr ""
+"Vista previa de la empresa\n"
+
+#: inc/core/wp-company-manager/cpt.php:138,
+#: inc/core/wp-company-manager/form/submit-company.php:174
+msgid "Company Name"
+msgstr ""
+"Nombre de empresa\n"
+
+#: inc/core/wp-company-manager/cpt.php:139,
+#: inc/core/wp-company-manager/form/submit-company.php:202,
+#: inc/core/wp-company-manager/shortcodes.php:176,
+#: inc/core/wp-company-manager/writepanels.php:55,
+#: inc/elementor/job_board.php:312, inc/elementor/job_resume_search.php:194,
+#: inc/elementor/job_resume_search.php:194,
+#: inc/elementor/job_resume_search.php:203,
+#: inc/elementor/job_resume_search.php:203, inc/elementor/job_search.php:97,
+#: inc/elementor/job_search.php:144, inc/elementor/job_search_box.php:92,
+#: inc/elementor/job_search_box.php:148, inc/elementor/job_search_box.php:149,
+#: inc/elementor/resume_search.php:97, inc/elementor/resume_search.php:144,
+#: inc/functions.php:2960, inc/vc-addons/job-resume-search/addon.php:130,
+#: inc/vc-addons/job-resume-search/addon.php:130,
+#: inc/vc-addons/job-resume-search/addon.php:138,
+#: inc/vc-addons/job-resume-search/addon.php:138,
+#: inc/vc-addons/job-search-box/addon.php:28,
+#: inc/vc-addons/job-search-box/addon.php:80,
+#: inc/vc-addons/job-search-box/addon.php:81,
+#: inc/vc-addons/job-search/addon.php:30, inc/vc-addons/job/addon.php:151,
+#: inc/vc-addons/resume-search/addon.php:30,
+#: inc/vc-addons/resume-search/addon.php:73,
+#: inc/widgets/company-search-widget.php:61,
+#: inc/widgets/company-search-widget.php:62,
+#: inc/widgets/job-search-widget.php:61, inc/widgets/job-search-widget.php:62,
+#: inc/widgets/resume-search-widget.php:61
+msgid "Location"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:140, inc/elementor/job_board.php:322,
+#: inc/elementor/job_search.php:119, inc/elementor/job_search_box.php:114,
+#: inc/elementor/job_search_box.php:190, inc/elementor/resume_search.php:119,
+#: inc/vc-addons/blog-posts/addon.php:95,
+#: inc/vc-addons/job-search-box/addon.php:44,
+#: inc/vc-addons/job-search-box/addon.php:123,
+#: inc/vc-addons/job-search/addon.php:46, inc/vc-addons/job/addon.php:130,
+#: inc/vc-addons/resume-search/addon.php:46,
+#: inc/vc-addons/resume/addon.php:157, inc/widgets/company-search-widget.php:69
+msgid "Categories"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:141,
+#: inc/core/wp-company-manager/cpt.php:141
+msgid "Featured?"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:142
+msgid "Posted"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:143
+msgid "Posted Jobs"
+msgstr ""
+"Trabajos publicados\n"
+
+#: inc/core/wp-company-manager/cpt.php:144
+msgid "Actions"
+msgstr ""
+
+#. translators: %s placeholder is the username of the user.
+#: inc/core/wp-company-manager/cpt.php:197
+msgid "by a guest"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:197
+msgid "by %s"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:201,
+#: inc/elementor/company_slider.php:222,
+#: inc/vc-addons/company-carousel/addon.php:182
+msgid "%s Job"
+msgid_plural "%s Jobs"
+msgstr[0] "%s Trabajo"
+msgstr[1] "%s Trabajos"
+
+#: inc/core/wp-company-manager/cpt.php:212, inc/extensions/account/user.php:824
+msgid "Approve"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:221
+msgid "View"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:228,
+#: inc/core/wp-company-manager/cpt.php:313
+msgid "Edit"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:235
+msgid "Delete"
+msgstr "Borrar"
+
+#: inc/core/wp-company-manager/cpt.php:311
+msgid "Add New"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:312
+msgid "Add %s"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:315,
+#: inc/extensions/testimonials/testimonials.php:35
+msgid "New %s"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:316,
+#: inc/core/wp-company-manager/cpt.php:317,
+#: inc/extensions/testimonials/testimonials.php:37
+msgid "View %s"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:319
+msgid "No %s found"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:320
+msgid "No %s found in trash"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:322
+msgid "Company Logo"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:323
+msgid "Set company logo"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:324
+msgid "Remove company logo"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:325
+msgid "Use as company logo"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:331
+msgid "This is where you can create and manage %s."
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:384
+msgid "%s Category"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:385
+msgid "%s Categories"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:431
+msgid "Team size"
+msgstr ""
+"Tamaño del equipo\n"
+
+#: inc/core/wp-company-manager/cpt.php:432
+msgid "Team sizes"
+msgstr "Tamaños de equipo"
+
+#: inc/core/wp-company-manager/cpt.php:435
+msgctxt "Company permalink - resave permalinks after changing this"
+msgid "company-team-size"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:487, inc/elementor/listing_map.php:88,
+#: inc/vc-addons/job-resume-map/addon.php:25
+msgid "Companies"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:545
+msgctxt "Post type archive slug - resave permalinks after changing this"
+msgid "companies"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:562,
+#: inc/core/wp-company-manager/permalinks.php:97
+msgctxt "Company permalink - resave permalinks after changing this"
+msgid "company"
+msgstr ""
+
+#: inc/core/wp-company-manager/cpt.php:563
+msgctxt "Company category permalink - resave permalinks after changing this"
+msgid "company-category"
+msgstr ""
+
+#: inc/core/wp-company-manager/email-notifications.php:49
+msgid "New Company Submission: %s"
+msgstr ""
+
+#: inc/core/wp-company-manager/form/edit-company.php:85
+msgid "Invalid Company"
+msgstr ""
+
+#: inc/core/wp-company-manager/form/edit-company.php:120
+msgid "Save changes"
+msgstr ""
+"Guardar cambios\n"
+
+#: inc/core/wp-company-manager/form/edit-company.php:159
+msgid "Your changes have been saved."
+msgstr ""
+"Se han guardado los cambios.\n"
+
+#: inc/core/wp-company-manager/form/edit-company.php:169
+msgid ""
+"Your changes have been submitted and your company will be available again "
+"once approved."
+msgstr ""
+
+#: inc/core/wp-company-manager/form/edit-company.php:167
+msgid "View &rarr;"
+msgstr "Ver &rarr;"
+
+#: inc/core/wp-company-manager/form/submit-company.php:60
+msgid "Submit Details"
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:72
+msgid "Done"
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:177
+msgid "The full Company name"
+msgstr "Es opcional llenar este campo "
+
+#: inc/core/wp-company-manager/form/submit-company.php:181
+msgid "Company Website"
+msgstr ""
+"Página Web de la compañía\n"
+
+#: inc/core/wp-company-manager/form/submit-company.php:184
+msgid "https://domain.com"
+msgstr "Es opcional llenar este campo "
+
+#: inc/core/wp-company-manager/form/submit-company.php:188
+msgid "Company Email"
+msgstr ""
+"Correo electrónico de la empresa\n"
+
+#: inc/core/wp-company-manager/form/submit-company.php:191,
+#: inc/core/wp-company-manager/writepanels.php:61
+msgid "you@yourdomain.com"
+msgstr "Es opcional llenar este campo "
+
+#: inc/core/wp-company-manager/form/submit-company.php:195
+msgid "Company Contact Phone"
+msgstr ""
+"Teléfono de contacto de la empresa\n"
+
+#: inc/core/wp-company-manager/form/submit-company.php:198
+msgid "+1 (202) 555 0183"
+msgstr "No es necesario"
+
+#: inc/core/wp-company-manager/form/submit-company.php:205
+msgid "e.g. \"London, UK\""
+msgstr "Es opcional llenar este campo "
+
+#: inc/core/wp-company-manager/form/submit-company.php:209,
+#: inc/core/wp-company-manager/writepanels.php:91
+msgid "Since"
+msgstr "Desde "
+
+#: inc/core/wp-company-manager/form/submit-company.php:212
+msgid "Established date/year"
+msgstr "Es opcional llenar este campo "
+
+#: inc/core/wp-company-manager/form/submit-company.php:216
+msgid "Company category"
+msgstr ""
+"Categoría de empresa\n"
+
+#: inc/core/wp-company-manager/form/submit-company.php:225
+msgid "Company team size"
+msgstr ""
+"Tamaño del equipo de la empresa\n"
+
+#: inc/core/wp-company-manager/form/submit-company.php:234,
+#: inc/elementor/logo_slider.php:89, inc/vc-addons/logo/addon.php:65
+msgid "Logo"
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:248
+msgid "Company Description"
+msgstr ""
+"Descripción de la compañía\n"
+
+#: inc/core/wp-company-manager/form/submit-company.php:255,
+#: inc/core/wp-company-manager/writepanels.php:86
+msgid "Video"
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:259
+msgid "A link to a video about the company"
+msgstr "Este campo no es necesario"
+
+#: inc/core/wp-company-manager/form/submit-company.php:266
+msgid "Facebook Page URL"
+msgstr "Este campo no es necesario"
+
+#: inc/core/wp-company-manager/form/submit-company.php:273
+msgid "Twitter URL"
+msgstr "Este campo no es necesario"
+
+#: inc/core/wp-company-manager/form/submit-company.php:280
+msgid "LinkedIn URL"
+msgstr "Este campo no es necesario"
+
+#: inc/core/wp-company-manager/form/submit-company.php:322
+msgid "%s is a required field"
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:334,
+#: inc/core/wp-company-manager/form/submit-company.php:329
+msgid "%s is invalid"
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:341
+msgid "Please enter a valid email address"
+msgstr ""
+"Por favor, introduce una dirección de correo electrónico válida\n"
+
+#: inc/core/wp-company-manager/form/submit-company.php:358
+msgid "Invalid attachment provided."
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:497
+msgid "Please enter a username."
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:501
+msgid "Please enter a password."
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:505
+msgid "Please enter your email address."
+msgstr ""
+"Por favor, introduzca su dirección de correo electrónico.\n"
+
+#: inc/core/wp-company-manager/form/submit-company.php:511
+msgid "Passwords must match."
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:518
+msgid "Password is not valid."
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:516
+msgid "Invalid Password: %s"
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:543
+msgid "You must be signed in to post your company."
+msgstr ""
+
+#: inc/core/wp-company-manager/form/submit-company.php:801
+msgid "&larr; Edit Company"
+msgstr "&larr; Editar empresa"
+
+#: inc/core/wp-company-manager/form/submit-company.php:802
+msgid "Submit Company &rarr;"
+msgstr "Subir Compañía &rarr;"
+
+#: inc/core/wp-company-manager/permalinks.php:59
+msgid "Company base"
+msgstr ""
+
+#: inc/core/wp-company-manager/permalinks.php:66
+msgid "Company category base"
+msgstr ""
+"Base de categoría de empresa\n"
+
+#: inc/core/wp-company-manager/permalinks.php:73
+msgid "Company archive page"
+msgstr ""
+
+#: inc/core/wp-company-manager/permalinks.php:87
+msgctxt "Companies archive permalink - resave permalinks after changing this"
+msgid "companies"
+msgstr ""
+
+#: inc/core/wp-company-manager/permalinks.php:107
+msgctxt "Company category slug - resave permalinks after changing this"
+msgid "company-category"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:93
+msgid "Company Listings"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:99
+msgid "Listings Per Page"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:100
+msgid "Number of job listings to display per page."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:106
+msgid "Company Category"
+msgstr ""
+"Categoría de empresa\n"
+
+#: inc/core/wp-company-manager/settings.php:107
+msgid "Enable Company Category"
+msgstr ""
+"Habilitar categoría de empresa\n"
+
+#: inc/core/wp-company-manager/settings.php:108
+msgid ""
+"Enabling this option will show the Company Categories in sidebar, job "
+"posting and in the backend."
+msgstr ""
+"Enabling this option will show the Company Categories in sidebar, job "
+"posting and in the backend."
+
+#: inc/core/wp-company-manager/settings.php:114
+msgid "Team Size"
+msgstr ""
+"Tamaño del equipo\n"
+
+#: inc/core/wp-company-manager/settings.php:115
+msgid "Enable Team Size"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:116
+msgid ""
+"Enabling this option will show the Team Size in sidebar, job posting and in "
+"the backend."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:125
+msgid "Company Single Page"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:130
+msgid "Single Company Contact Form"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:131
+msgid ""
+"Select the form for single company contact form. This lets the plugin know "
+"the contact form of single company."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:133, inc/functions.php:2759
+msgid "Please select a form"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:138
+msgid "Active Jobs"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:150
+msgid "Company Submission"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:155
+msgid "Account Required"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:156
+msgid "Submitting listings requires an account"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:157
+msgid "Limits company submissions to registered, logged-in users."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:164
+msgid "Account Creation"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:165
+msgid "Allow account creation"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:166
+msgid ""
+"Includes account creation on the company submission form, to allow non-"
+"registered users to create an account and submit a company simultaneously."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:173
+msgid "Account Role"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:174
+msgid ""
+"If you enable registration on your submission form, choose a role for the "
+"new user."
+msgstr ""
+"Si habilita el registro en su formulario de envío, elija un rol para el "
+"nuevo usuario.\n"
+
+#: inc/core/wp-company-manager/settings.php:181
+msgid "Approval Required"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:182
+msgid "New submissions require admin approval"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:183
+msgid ""
+"Sets all new submissions to \"pending.\" They will not appear on your site "
+"until an admin approves them."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:190
+msgid "Email New Submission"
+msgstr ""
+"Enviar nuevo envío por correo electrónico\n"
+
+#: inc/core/wp-company-manager/settings.php:191
+msgid "Email details to the admin"
+msgstr ""
+"Detalles de correo electrónico al administrador\n"
+
+#: inc/core/wp-company-manager/settings.php:192
+msgid ""
+"If enabled, the admin will be notified via email everytime there is a new "
+"company submission."
+msgstr ""
+"Si está habilitado, el administrador será notificado por correo electrónico "
+"cada vez que haya un nuevo envío de la empresa.\n"
+
+#: inc/core/wp-company-manager/settings.php:199
+msgid "Listing Limit"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:200
+msgid ""
+"Limit users submission by adding a max number. Can be left blank to allow "
+"unlimited %s per account."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:202
+msgid "No limit"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:207
+msgid "User Specific Companies"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:208
+msgid "Enable User Specific Companies"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:209
+msgid ""
+"If enabled the user will be able to see only the companies created by the "
+"user under the \"existing company\". If disabled all companies will be "
+"visible, even for non logged in users."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:218,
+#: inc/core/wp-company-manager/settings.php:224
+msgid "WPJM Integration"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:223
+msgid "Cariera Company Manager"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:225
+msgid ""
+"Replace all the default %s fields from WP Job Manager with the main Cariera "
+"Company Manager fields."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:247
+msgid "Submit Company Page"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:248
+msgid ""
+"Select the page for company submission where you have placed the "
+"[submit_company] shortcode. This lets the plugin know the location of the "
+"company listings page."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:254
+msgid "Company Dashboard Page"
+msgstr "Página del panel de control de la empresa"
+
+#: inc/core/wp-company-manager/settings.php:255
+msgid ""
+"Select the page for company dashboard where you have placed the "
+"[company_dashboard] shortcode. This lets the plugin know the location of the "
+"company dashboard page."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:261
+msgid "Company Listings Page"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:262
+msgid ""
+"Select the page for company listing. This lets the plugin know the location "
+"of the company listings page."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:271
+msgid "%s Visibility"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:276
+msgid "Browse Capability"
+msgstr ""
+
+#. translators: Placeholder %s is the url to the WordPress core documentation for capabilities and roles.
+#: inc/core/wp-company-manager/settings.php:279
+msgid ""
+"Enter the <a href=\"%s\">capability</a> required in order to browse. "
+"Supports a comma separated list of roles/capabilities."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:284
+msgid "View Capability"
+msgstr ""
+
+#. translators: Placeholder %s is the url to the WordPress core documentation for capabilities and roles.
+#: inc/core/wp-company-manager/settings.php:287
+msgid ""
+"Enter the <a href=\"%s\">capability</a> required in order to view a single "
+"company. Supports a comma separated list of roles/capabilities."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:292
+msgid "Search Engine Visibility"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:293
+msgid "Discourage search engines from indexing company listings"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:294
+msgid "Search engines choose whether to honor this request."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:304
+msgid "Other"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:310
+msgid "Singular Label"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:311
+msgid ""
+"You can change the singular label and use a custom label instead of "
+"\"Company\"."
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:318
+msgid "Plural Label"
+msgstr ""
+
+#: inc/core/wp-company-manager/settings.php:319
+msgid ""
+"You can change the plural label and use a custom label instead of "
+"\"Companies\"."
+msgstr ""
+
+#: inc/core/wp-company-manager/shortcodes.php:78
+msgid "Invalid Company ID"
+msgstr ""
+
+#: inc/core/wp-company-manager/shortcodes.php:87
+msgid "%s has been deleted"
+msgstr "%s ha sido eliminado"
+
+#: inc/core/wp-company-manager/shortcodes.php:93
+msgid "%s has been hidden"
+msgstr "%s se ha ocultado"
+
+#: inc/core/wp-company-manager/shortcodes.php:100
+msgid "%s has been published"
+msgstr "%s ha sido publicado"
+
+#: inc/core/wp-company-manager/shortcodes.php:175,
+#: inc/elementor/company_board.php:145,
+#: inc/elementor/job_categories_slider.php:133,
+#: inc/elementor/listing_categories_grid.php:188,
+#: inc/elementor/listing_categories_list.php:167
+msgid "Name"
+msgstr "Nombre"
+
+#: inc/core/wp-company-manager/shortcodes.php:177,
+#: inc/elementor/job_resume_search.php:150,
+#: inc/elementor/job_resume_search.php:171,
+#: inc/vc-addons/blog-slider/addon.php:69,
+#: inc/vc-addons/job-resume-search/addon.php:84,
+#: inc/vc-addons/job-resume-search/addon.php:107,
+#: inc/widgets/job-search-widget.php:80,
+#: inc/widgets/resume-search-widget.php:80
+msgid "Category"
+msgstr ""
+
+#: inc/core/wp-company-manager/shortcodes.php:178
+msgid "Date Posted"
+msgstr ""
+"Fecha de publicación\n"
+
+#: inc/core/wp-company-manager/shortcodes.php:179
+msgid "Active %s"
+msgstr "%s Activo "
+
+#: inc/core/wp-company-manager/shortcodes.php:349,
+#: inc/core/wp-company-manager/shortcodes.php:311
+msgid "Load more companies"
+msgstr ""
+"Cargar más empresas\n"
+
+#: inc/core/wp-company-manager/shortcodes.php:477
+msgid "All"
+msgstr ""
+
+#: inc/core/wp-company-manager/wpjm.php:104
+msgid "Company"
+msgstr ""
+
+#: inc/core/wp-company-manager/wpjm.php:156
+msgid "New Company"
+msgstr ""
+"Nueva compañia\n"
+
+#: inc/core/wp-company-manager/wpjm.php:165
+msgid "Existing Company"
+msgstr ""
+"Empresa existente\n"
+
+#: inc/core/wp-company-manager/wpjm.php:172
+msgid ""
+"You either have not logged in or you don't have any companies with this "
+"account."
+msgstr "No ha iniciado sesión o no tiene ninguna empresa con esta cuenta."
+
+#: inc/core/wp-company-manager/wpjm.php:197
+msgid "Select Company"
+msgstr ""
+"Seleccionar empresa\n"
+
+#: inc/core/wp-company-manager/wpjm.php:271
+msgid "(optional)"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:51
+msgid "Tagline"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:52
+msgid "Brief description about the company"
+msgstr ""
+"Breve descripción de la empresa\n"
+
+#: inc/core/wp-company-manager/writepanels.php:56
+msgid "e.g. \"London\""
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:60,
+#: inc/extensions/account/user.php:238
+msgid "Email"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:65
+msgid "Website"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:69
+msgid "Phone"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:70
+msgid "Enter the company's phone number"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:75
+msgid "company facebook page link"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:79
+msgid "company twitter page link"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:83
+msgid "company linkedin page link"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:87
+msgid "URL to the company video"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:92
+msgid "company established"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:95
+msgid "Company Header Image"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:100
+msgid "Feature this Company?"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:102
+msgid "Featured companies will be styled differently."
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:105
+msgid "Posted by"
+msgstr ""
+
+#: inc/core/wp-company-manager/writepanels.php:121
+msgid "Company Data"
+msgstr ""
+
+#: inc/core/wp-job-manager/jobs.php:263, inc/core/wp-job-manager/jobs.php:219
+msgid "Load more listings"
+msgstr "Cargar más "
+
+#: inc/core/wp-job-manager/jobs.php:364
+msgid "Load previous listings"
+msgstr ""
+
+#: inc/core/wp-job-manager/wp-job-manager-colors.php:51
+msgid "Job Colors"
+msgstr ""
+
+#: inc/core/wp-job-manager/wp-job-manager-colors.php:69
+msgid "Hex value for the color of this job type."
+msgstr ""
+
+#: inc/core/wp-job-manager/wp-job-manager-maps.php:112,
+#: inc/core/wp-job-manager/wp-job-manager-maps.php:119
+msgid "New"
+msgstr ""
+
+#: inc/core/wp-job-manager/wp-job-manager-maps.php:137,
+#: inc/core/wp-job-manager/wp-job-manager-maps.php:85
+msgid "/ hour"
+msgstr ""
+
+#: inc/core/wp-job-manager/wp-job-manager-writepanels.php:60
+msgid "No Company Selected"
+msgstr ""
+
+#: inc/core/wp-resume-manager/resumes.php:195,
+#: inc/core/wp-resume-manager/resumes.php:159
+msgid "Load more resumes"
+msgstr ""
+"Cargar más currículums\n"
+
+#: inc/core/wp-resume-manager/resumes.php:297
+msgid "No resumes found matching your selection."
+msgstr ""
+"No se encontraron currículums que coincidan con su selección.\n"
+
+#: inc/core/wp-resume-manager/resumes.php:330
+msgid "Showing all %sresumes"
+msgstr "Mostrando todos los %s Currículums"
+
+#: inc/core/wp-resume-manager/resumes.php:328
+msgid "Showing &ldquo;%1$s&rdquo; %2$sresumes"
+msgstr ""
+
+#: inc/core/wp-resume-manager/resumes.php:333
+msgid "located in &ldquo;%s&rdquo;"
+msgstr ""
+
+#: inc/elementor.php:49
+msgid "Cariera Elements"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:43, inc/vc-addons/blog-posts/addon.php:10
+msgid "Blog Posts"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:75, inc/elementor/blog_slider.php:77
+msgid "Post Layout"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:83, inc/elementor/blog_slider.php:85
+msgid "Blog Post Layout"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:86, inc/elementor/blog_slider.php:88,
+#: inc/elementor/counter.php:100,
+#: inc/elementor/listing_categories_grid.php:101,
+#: inc/elementor/listing_categories_list.php:100,
+#: inc/elementor/pricing_tables.php:87, inc/elementor/testimonials.php:87
+msgid "Layout 1"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:87, inc/elementor/blog_slider.php:89,
+#: inc/elementor/counter.php:101,
+#: inc/elementor/listing_categories_grid.php:102,
+#: inc/elementor/listing_categories_list.php:101,
+#: inc/elementor/pricing_tables.php:88, inc/elementor/testimonials.php:88
+msgid "Layout 2"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:88, inc/elementor/blog_slider.php:90,
+#: inc/elementor/listing_categories_grid.php:103,
+#: inc/elementor/listing_categories_list.php:102,
+#: inc/elementor/pricing_tables.php:89, inc/elementor/testimonials.php:89
+msgid "Layout 3"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:96
+msgid "Columns Grid"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:99
+msgid "Two Columns"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:100
+msgid "Three Columns"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:101
+msgid "Four Columns"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:109, inc/elementor/blog_slider.php:98,
+#: inc/vc-addons/blog-posts/addon.php:55
+msgid "Show Post Thumbnail"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:111, inc/elementor/blog_posts.php:126,
+#: inc/elementor/blog_posts.php:142, inc/elementor/blog_posts.php:155,
+#: inc/elementor/blog_slider.php:100, inc/elementor/blog_slider.php:115,
+#: inc/elementor/blog_slider.php:131, inc/elementor/blog_slider.php:144,
+#: inc/elementor/company_board.php:171, inc/elementor/company_board.php:184,
+#: inc/elementor/job_board.php:234, inc/elementor/job_board.php:247,
+#: inc/elementor/job_board.php:279, inc/elementor/job_board.php:293,
+#: inc/elementor/job_categories_slider.php:99,
+#: inc/elementor/job_categories_slider.php:121,
+#: inc/elementor/job_search.php:99, inc/elementor/job_search.php:110,
+#: inc/elementor/job_search.php:121, inc/elementor/job_search_box.php:94,
+#: inc/elementor/job_search_box.php:105, inc/elementor/job_search_box.php:116,
+#: inc/elementor/listing_categories_grid.php:115,
+#: inc/elementor/listing_categories_grid.php:130,
+#: inc/elementor/listing_categories_grid.php:145,
+#: inc/elementor/listing_categories_grid.php:160,
+#: inc/elementor/listing_categories_grid.php:175,
+#: inc/elementor/listing_categories_list.php:124,
+#: inc/elementor/listing_categories_list.php:139,
+#: inc/elementor/listing_categories_list.php:154,
+#: inc/elementor/resumes.php:171, inc/elementor/resumes.php:184,
+#: inc/elementor/resumes.php:216, inc/elementor/resume_search.php:99,
+#: inc/elementor/resume_search.php:110, inc/elementor/resume_search.php:121,
+#: inc/vc-addons/testimonial/addon.php:34
+msgid "Show"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:112, inc/elementor/blog_posts.php:127,
+#: inc/elementor/blog_posts.php:143, inc/elementor/blog_posts.php:156,
+#: inc/elementor/blog_slider.php:101, inc/elementor/blog_slider.php:116,
+#: inc/elementor/blog_slider.php:132, inc/elementor/blog_slider.php:145,
+#: inc/elementor/company_board.php:172, inc/elementor/company_board.php:183,
+#: inc/elementor/job_board.php:235, inc/elementor/job_board.php:246,
+#: inc/elementor/job_board.php:280, inc/elementor/job_board.php:294,
+#: inc/elementor/job_categories_slider.php:100,
+#: inc/elementor/job_categories_slider.php:122,
+#: inc/elementor/job_search.php:100, inc/elementor/job_search.php:111,
+#: inc/elementor/job_search.php:122, inc/elementor/job_search_box.php:95,
+#: inc/elementor/job_search_box.php:106, inc/elementor/job_search_box.php:117,
+#: inc/elementor/listing_categories_grid.php:116,
+#: inc/elementor/listing_categories_grid.php:131,
+#: inc/elementor/listing_categories_grid.php:146,
+#: inc/elementor/listing_categories_grid.php:161,
+#: inc/elementor/listing_categories_grid.php:176,
+#: inc/elementor/listing_categories_list.php:125,
+#: inc/elementor/listing_categories_list.php:140,
+#: inc/elementor/listing_categories_list.php:155,
+#: inc/elementor/resumes.php:172, inc/elementor/resumes.php:183,
+#: inc/elementor/resumes.php:217, inc/elementor/resume_search.php:100,
+#: inc/elementor/resume_search.php:111, inc/elementor/resume_search.php:122
+msgid "Hide"
+msgstr ""
+"Esconder\n"
+
+#: inc/elementor/blog_posts.php:124, inc/elementor/blog_slider.php:113,
+#: inc/vc-addons/blog-posts/addon.php:67
+msgid "Show Author Avatar"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:140, inc/elementor/blog_slider.php:129
+msgid "Show Post Date"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:152, inc/elementor/blog_slider.php:141,
+#: inc/vc-addons/job/addon.php:123, inc/vc-addons/resume/addon.php:150
+msgid "Show Categories"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:166
+msgid "Button Name"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:170
+msgid ""
+"Delete the text of the field if you want to hide the \"read more\" button"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:176
+msgid "Read All URL"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:194, inc/elementor/blog_slider.php:159
+msgid "Post Query"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:202, inc/elementor/blog_slider.php:167
+msgid "Post Category IDs to include"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:206, inc/elementor/blog_slider.php:171
+msgid ""
+"Enter post category ids to include, separated by a comma. Leave empty to get "
+"posts from all categories."
+msgstr ""
+
+#: inc/elementor/blog_posts.php:212, inc/elementor/blog_slider.php:177,
+#: inc/elementor/testimonials.php:128
+msgid "Enter Post IDs"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:216, inc/elementor/blog_slider.php:181
+msgid "Enter Post ids to show, separated by a comma. Leave empty to show all."
+msgstr ""
+
+#: inc/elementor/blog_posts.php:222, inc/elementor/blog_slider.php:187
+msgid "Or Post IDs to Exclude"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:226, inc/elementor/blog_slider.php:191
+msgid ""
+"Enter post ids to exclude, separated by a comma (,). Use if the field above "
+"is empty."
+msgstr ""
+
+#: inc/elementor/blog_posts.php:232, inc/elementor/blog_slider.php:198,
+#: inc/elementor/company_board.php:138, inc/elementor/company_slider.php:128,
+#: inc/elementor/job_board.php:201,
+#: inc/elementor/job_categories_slider.php:130,
+#: inc/elementor/job_slider.php:115,
+#: inc/elementor/listing_categories_grid.php:185,
+#: inc/elementor/listing_categories_list.php:164,
+#: inc/elementor/resumes.php:138, inc/elementor/resume_slider.php:128,
+#: inc/vc-addons/company-carousel/addon.php:55,
+#: inc/vc-addons/job-categories/slider.php:83,
+#: inc/vc-addons/job-spotlight/addon.php:41,
+#: inc/vc-addons/listing-categories/grid.php:118,
+#: inc/vc-addons/listing-categories/list.php:98,
+#: inc/vc-addons/resume-carousel/addon.php:52
+msgid "Order by"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:235, inc/elementor/blog_slider.php:201,
+#: inc/elementor/company_board.php:142, inc/elementor/company_slider.php:132,
+#: inc/elementor/job_board.php:205, inc/elementor/job_slider.php:119,
+#: inc/elementor/resumes.php:142, inc/elementor/resume_slider.php:132
+msgid "Date"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:236, inc/elementor/blog_slider.php:202,
+#: inc/elementor/company_board.php:144, inc/elementor/company_slider.php:133,
+#: inc/elementor/job_board.php:206,
+#: inc/elementor/job_categories_slider.php:134,
+#: inc/elementor/job_slider.php:120,
+#: inc/elementor/listing_categories_grid.php:189,
+#: inc/elementor/listing_categories_list.php:168,
+#: inc/elementor/resumes.php:143, inc/elementor/resume_slider.php:133
+msgid "ID"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:237, inc/elementor/blog_slider.php:203,
+#: inc/elementor/company_slider.php:134, inc/elementor/job_board.php:207,
+#: inc/elementor/job_slider.php:121, inc/elementor/resumes.php:144,
+#: inc/elementor/resume_slider.php:134
+msgid "Author"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:238, inc/elementor/blog_slider.php:204,
+#: inc/elementor/company_board.php:143, inc/elementor/company_slider.php:135,
+#: inc/elementor/counter.php:204, inc/elementor/job_board.php:208,
+#: inc/elementor/job_slider.php:122, inc/elementor/pricing_tables.php:98,
+#: inc/elementor/resumes.php:145, inc/elementor/resume_slider.php:135,
+#: inc/vc-addons/counterup/addon.php:63, inc/vc-addons/icon-box/addon.php:109,
+#: inc/vc-addons/newsletter/addon.php:39,
+#: inc/vc-addons/pricing-tables/addon.php:33,
+#: inc/widgets/social-media-widget.php:97
+msgid "Title"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:239, inc/elementor/blog_slider.php:205,
+#: inc/elementor/company_board.php:146, inc/elementor/company_slider.php:136,
+#: inc/elementor/job_board.php:209, inc/elementor/job_slider.php:123,
+#: inc/elementor/resumes.php:146, inc/elementor/resume_slider.php:136
+msgid "Modified"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:240, inc/elementor/blog_slider.php:206,
+#: inc/elementor/company_board.php:147, inc/elementor/company_slider.php:137,
+#: inc/elementor/job_board.php:210, inc/elementor/job_slider.php:124,
+#: inc/elementor/resumes.php:147, inc/elementor/resume_slider.php:137,
+#: inc/elementor/testimonials.php:117
+msgid "Random"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:241, inc/elementor/blog_slider.php:207
+msgid "Comment Count"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:242, inc/elementor/blog_slider.php:208
+msgid "Menu Order"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:243, inc/elementor/blog_slider.php:209
+msgid "ID order given (post__in)"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:247, inc/elementor/blog_slider.php:213
+msgid "Select how to sort retrieved posts. More at "
+msgstr ""
+
+#: inc/elementor/blog_posts.php:253, inc/elementor/blog_slider.php:219
+msgid "Sort Order"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:256, inc/elementor/blog_slider.php:222,
+#: inc/elementor/company_board.php:160, inc/elementor/company_slider.php:150,
+#: inc/elementor/job_board.php:223,
+#: inc/elementor/job_categories_slider.php:150,
+#: inc/elementor/job_slider.php:137,
+#: inc/elementor/listing_categories_grid.php:205,
+#: inc/elementor/listing_categories_list.php:184,
+#: inc/elementor/resumes.php:160, inc/elementor/resume_slider.php:150
+msgid "Ascending"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:257, inc/elementor/blog_slider.php:223,
+#: inc/elementor/company_board.php:159, inc/elementor/company_slider.php:149,
+#: inc/elementor/job_board.php:222,
+#: inc/elementor/job_categories_slider.php:149,
+#: inc/elementor/job_slider.php:136,
+#: inc/elementor/listing_categories_grid.php:204,
+#: inc/elementor/listing_categories_list.php:183,
+#: inc/elementor/resumes.php:159, inc/elementor/resume_slider.php:149
+msgid "Descending"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:261, inc/elementor/blog_slider.php:227
+msgid "Select Ascending or Descending order. More at"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:267, inc/elementor/blog_slider.php:233,
+#: inc/elementor/testimonials.php:141
+msgid "Posts to show"
+msgstr ""
+
+#: inc/elementor/blog_posts.php:270, inc/elementor/blog_slider.php:236
+msgid "Number of posts to show (-1 for all)."
+msgstr ""
+
+#: inc/elementor/blog_posts.php:414, inc/elementor/blog_posts.php:376,
+#: inc/elementor/blog_slider.php:381, inc/elementor/blog_slider.php:341,
+#: inc/vc-addons/blog-posts/addon.php:251,
+#: inc/vc-addons/blog-posts/addon.php:208,
+#: inc/vc-addons/blog-slider/addon.php:163
+msgid "read more"
+msgstr "Leer Mas 👀"
+
+#: inc/elementor/blog_slider.php:45, inc/vc-addons/blog-slider/addon.php:10
+msgid "Blog Post Slider"
+msgstr ""
+
+#: inc/elementor/button.php:44, inc/elementor/job_resume_search.php:195,
+#: inc/elementor/job_resume_search.php:204, inc/vc-addons/buttons/addon.php:11,
+#: inc/vc-addons/job-resume-search/addon.php:131,
+#: inc/vc-addons/job-resume-search/addon.php:139,
+#: inc/vc-addons/pricing-tables/addon.php:85
+msgid "Button"
+msgstr ""
+
+#: inc/elementor/button.php:76, inc/elementor/company_board.php:75,
+#: inc/elementor/company_dashboard.php:75, inc/elementor/company_list.php:75,
+#: inc/elementor/company_slider.php:75, inc/elementor/contact_form7.php:75,
+#: inc/elementor/counter.php:75, inc/elementor/count_down.php:75,
+#: inc/elementor/job_board.php:134, inc/elementor/job_categories_slider.php:75,
+#: inc/elementor/job_dashboard.php:75, inc/elementor/job_resume_search.php:75,
+#: inc/elementor/job_search.php:75, inc/elementor/job_search_box.php:75,
+#: inc/elementor/job_slider.php:75,
+#: inc/elementor/listing_categories_grid.php:76,
+#: inc/elementor/listing_categories_list.php:75,
+#: inc/elementor/listing_map.php:75, inc/elementor/login_register.php:75,
+#: inc/elementor/logo_slider.php:75, inc/elementor/pricing_tables.php:75,
+#: inc/elementor/resumes.php:75, inc/elementor/resume_dashboard.php:75,
+#: inc/elementor/resume_search.php:75, inc/elementor/resume_slider.php:75,
+#: inc/elementor/submit_company.php:75, inc/elementor/submit_job.php:75,
+#: inc/elementor/submit_resume.php:75, inc/elementor/testimonials.php:75,
+#: inc/elementor/video_popup.php:75,
+#: inc/importer/importer/cariera-importer.php:85,
+#: inc/vc-addons/icon-box/addon.php:112, inc/vc-addons/icon-box/addon.php:118,
+#: inc/vc-addons/icon-box/addon.php:121, inc/vc-addons/icon-box/addon.php:131
+msgid "Content"
+msgstr ""
+
+#: inc/elementor/button.php:85
+msgid "Text"
+msgstr ""
+
+#: inc/elementor/button.php:94, inc/elementor/logo_slider.php:94,
+#: inc/vc-addons/logo/addon.php:70, inc/widgets/social-media-widget.php:111
+msgid "URL"
+msgstr ""
+
+#: inc/elementor/button.php:107, inc/vc-addons/buttons/addon.php:29
+msgid "Button Style"
+msgstr ""
+
+#: inc/elementor/button.php:110, inc/elementor/job_board.php:278,
+#: inc/elementor/job_board.php:292, inc/elementor/resumes.php:215,
+#: inc/vc-addons/company/addon.php:10, inc/vc-addons/job/addon.php:11,
+#: inc/vc-addons/resume/addon.php:11
+msgid "Default"
+msgstr ""
+
+#: inc/elementor/button.php:111
+msgid "Round"
+msgstr ""
+
+#: inc/elementor/button.php:112
+msgid "Bordered"
+msgstr ""
+
+#: inc/elementor/button.php:121
+msgid "Button Preset Color"
+msgstr ""
+
+#: inc/elementor/button.php:124
+msgid "Main Color"
+msgstr ""
+
+#: inc/elementor/button.php:125
+msgid "Secondary Color"
+msgstr ""
+
+#: inc/elementor/button.php:134, inc/vc-addons/buttons/addon.php:50
+msgid "Ripple Effect"
+msgstr ""
+
+#: inc/elementor/button.php:136, inc/elementor/button.php:151,
+#: inc/elementor/company_slider.php:119, inc/elementor/counter.php:112,
+#: inc/elementor/job_slider.php:106, inc/elementor/logo_slider.php:106,
+#: inc/elementor/pricing_tables.php:194, inc/elementor/resume_slider.php:119,
+#: inc/extensions/metabox/metaboxes.php:135,
+#: inc/extensions/metabox/metaboxes.php:144,
+#: inc/extensions/metabox/metaboxes.php:153
+msgid "Enable"
+msgstr ""
+
+#: inc/elementor/button.php:137, inc/elementor/button.php:152,
+#: inc/elementor/company_slider.php:120, inc/elementor/counter.php:113,
+#: inc/elementor/job_slider.php:107, inc/elementor/logo_slider.php:107,
+#: inc/elementor/pricing_tables.php:195, inc/elementor/resume_slider.php:120,
+#: inc/extensions/metabox/metaboxes.php:136,
+#: inc/extensions/metabox/metaboxes.php:145,
+#: inc/extensions/metabox/metaboxes.php:154
+msgid "Disable"
+msgstr ""
+
+#: inc/elementor/button.php:149, inc/vc-addons/buttons/addon.php:75
+msgid "Full Width"
+msgstr ""
+
+#: inc/elementor/button.php:161, inc/vc-addons/buttons/addon.php:85
+msgid "Align"
+msgstr ""
+
+#: inc/elementor/button.php:165
+msgid "Left"
+msgstr ""
+
+#: inc/elementor/button.php:169
+msgid "Center"
+msgstr ""
+
+#: inc/elementor/button.php:173
+msgid "Right"
+msgstr ""
+
+#: inc/elementor/button.php:183, inc/vc-addons/icon-box/addon.php:100,
+#: inc/vc-addons/job-resume-map/addon.php:38
+msgid "Custom Class"
+msgstr ""
+
+#: inc/elementor/company_board.php:43, inc/vc-addons/company/addon.php:23
+msgid "Company Board"
+msgstr ""
+
+#: inc/elementor/company_board.php:84, inc/vc-addons/company/addon.php:33
+msgid "Company Layout"
+msgstr ""
+
+#: inc/elementor/company_board.php:87, inc/elementor/job_board.php:146,
+#: inc/elementor/resumes.php:87, inc/vc-addons/pricing-tables/addon.php:79
+msgid "List"
+msgstr ""
+
+#: inc/elementor/company_board.php:88, inc/elementor/job_board.php:147,
+#: inc/elementor/resumes.php:88
+msgid "Grid"
+msgstr ""
+
+#: inc/elementor/company_board.php:91, inc/vc-addons/company/addon.php:39,
+#: inc/vc-addons/resume/addon.php:73
+msgid "Choose the layout style for your companies."
+msgstr ""
+
+#: inc/elementor/company_board.php:97
+msgid "Company List Styles"
+msgstr ""
+
+#: inc/elementor/company_board.php:100, inc/elementor/company_board.php:116,
+#: inc/elementor/company_slider.php:87, inc/elementor/job_board.php:159,
+#: inc/elementor/job_board.php:178, inc/elementor/job_resume_search.php:100,
+#: inc/elementor/resumes.php:100, inc/elementor/resumes.php:116,
+#: inc/elementor/resume_slider.php:87
+msgid "Version 1"
+msgstr ""
+
+#: inc/elementor/company_board.php:101, inc/elementor/company_board.php:117,
+#: inc/elementor/company_slider.php:88, inc/elementor/job_board.php:160,
+#: inc/elementor/job_board.php:179, inc/elementor/job_resume_search.php:101,
+#: inc/elementor/resumes.php:101, inc/elementor/resumes.php:117,
+#: inc/elementor/resume_slider.php:88
+msgid "Version 2"
+msgstr ""
+
+#: inc/elementor/company_board.php:113
+msgid "Company Grid Styles"
+msgstr ""
+
+#: inc/elementor/company_board.php:129, inc/elementor/job_board.php:192,
+#: inc/elementor/resumes.php:129
+msgid "Items per Page"
+msgstr ""
+
+#: inc/elementor/company_board.php:132
+msgid "How many items to show in the company board."
+msgstr ""
+
+#: inc/elementor/company_board.php:141, inc/elementor/company_slider.php:131,
+#: inc/elementor/job_board.php:204, inc/elementor/job_board.php:275,
+#: inc/elementor/job_slider.php:118, inc/elementor/job_slider.php:146,
+#: inc/elementor/resumes.php:141, inc/elementor/resumes.php:212,
+#: inc/elementor/resume_slider.php:131, inc/elementor/resume_slider.php:159,
+#: inc/vc-addons/company-carousel/addon.php:78,
+#: inc/vc-addons/company/addon.php:112,
+#: inc/vc-addons/job-spotlight/addon.php:84, inc/vc-addons/job/addon.php:165,
+#: inc/vc-addons/resume-carousel/addon.php:85,
+#: inc/vc-addons/resume/addon.php:171
+msgid "Featured"
+msgstr ""
+
+#: inc/elementor/company_board.php:156, inc/elementor/company_slider.php:146,
+#: inc/elementor/job_board.php:219,
+#: inc/elementor/job_categories_slider.php:146,
+#: inc/elementor/job_slider.php:133,
+#: inc/elementor/listing_categories_grid.php:201,
+#: inc/elementor/listing_categories_list.php:180,
+#: inc/elementor/resumes.php:156, inc/elementor/resume_slider.php:146,
+#: inc/vc-addons/blog-slider/addon.php:45,
+#: inc/vc-addons/company-carousel/addon.php:69,
+#: inc/vc-addons/company/addon.php:94,
+#: inc/vc-addons/job-categories/slider.php:95,
+#: inc/vc-addons/job-spotlight/addon.php:55, inc/vc-addons/job/addon.php:98,
+#: inc/vc-addons/listing-categories/grid.php:130,
+#: inc/vc-addons/listing-categories/list.php:110,
+#: inc/vc-addons/resume-carousel/addon.php:66,
+#: inc/vc-addons/resume/addon.php:130
+msgid "Order"
+msgstr ""
+
+#: inc/elementor/company_board.php:169, inc/elementor/job_board.php:232,
+#: inc/elementor/resumes.php:169, inc/vc-addons/company/addon.php:105,
+#: inc/vc-addons/job/addon.php:109, inc/vc-addons/resume/addon.php:142
+msgid "Show Filters"
+msgstr ""
+
+#: inc/elementor/company_board.php:181, inc/elementor/job_board.php:244,
+#: inc/elementor/resumes.php:181
+msgid "Hide Pagination"
+msgstr ""
+
+#: inc/elementor/company_board.php:196, inc/elementor/job_board.php:259
+msgid "Pagination Style"
+msgstr ""
+
+#: inc/elementor/company_board.php:199, inc/elementor/job_board.php:262,
+#: inc/elementor/resumes.php:199
+msgid "Load More"
+msgstr "Load More"
+
+#: inc/elementor/company_board.php:200, inc/elementor/job_board.php:263,
+#: inc/elementor/resumes.php:200
+msgid "Numeric"
+msgstr ""
+
+#: inc/elementor/company_dashboard.php:43, inc/vc-addons/company/addon.php:146
+msgid "Company Dashboard"
+msgstr "Panel de control de la empresa"
+
+#: inc/elementor/company_list.php:43
+msgid "Company List"
+msgstr ""
+
+#: inc/elementor/company_slider.php:43
+msgid "Company Slider"
+msgstr ""
+
+#: inc/elementor/company_slider.php:84, inc/elementor/job_resume_search.php:97,
+#: inc/elementor/resume_slider.php:84,
+#: inc/vc-addons/company-carousel/addon.php:23,
+#: inc/vc-addons/job-resume-search/addon.php:32,
+#: inc/vc-addons/resume-carousel/addon.php:20
+msgid "Layout Version"
+msgstr ""
+
+#: inc/elementor/company_slider.php:97, inc/elementor/counter.php:169
+msgid "Total Companies"
+msgstr ""
+
+#: inc/elementor/company_slider.php:100,
+#: inc/vc-addons/company-carousel/addon.php:36
+msgid "Leave it blank to display all companies."
+msgstr ""
+
+#: inc/elementor/company_slider.php:106,
+#: inc/vc-addons/company-carousel/addon.php:40
+msgid "Visible Companies"
+msgstr ""
+
+#: inc/elementor/company_slider.php:111, inc/elementor/job_slider.php:98,
+#: inc/vc-addons/job-spotlight/addon.php:29
+msgid "This will change how many jobs will be visible per slide."
+msgstr ""
+
+#: inc/elementor/company_slider.php:117, inc/elementor/job_slider.php:104,
+#: inc/elementor/logo_slider.php:104, inc/elementor/resume_slider.php:117,
+#: inc/vc-addons/company-carousel/addon.php:47,
+#: inc/vc-addons/job-spotlight/addon.php:33, inc/vc-addons/logo/addon.php:24,
+#: inc/vc-addons/resume-carousel/addon.php:44
+msgid "Autoplay"
+msgstr ""
+
+#: inc/elementor/contact_form7.php:43
+msgid "Contact Form 7"
+msgstr ""
+
+#: inc/elementor/contact_form7.php:84
+msgid "Select a form"
+msgstr ""
+
+#: inc/elementor/contact_form7.php:93
+msgid "Form Title"
+msgstr ""
+
+#: inc/elementor/contact_form7.php:96
+msgid "(Optional) Title to search if no ID selected or cannot find by ID."
+msgstr ""
+
+#: inc/elementor/counter.php:43
+msgid "Counter"
+msgstr ""
+
+#: inc/elementor/counter.php:84
+msgid "Theme"
+msgstr ""
+
+#: inc/elementor/counter.php:87, inc/elementor/job_categories_slider.php:88,
+#: inc/elementor/job_resume_search.php:87, inc/elementor/testimonials.php:101,
+#: inc/vc-addons/job-resume-search/addon.php:24
+msgid "Light"
+msgstr ""
+
+#: inc/elementor/counter.php:88, inc/elementor/job_categories_slider.php:87,
+#: inc/elementor/job_resume_search.php:88, inc/elementor/testimonials.php:102,
+#: inc/vc-addons/job-resume-search/addon.php:25
+msgid "Dark"
+msgstr ""
+
+#: inc/elementor/counter.php:97
+msgid "Layout"
+msgstr ""
+
+#: inc/elementor/counter.php:110
+msgid "Counter Icon"
+msgstr ""
+
+#: inc/elementor/counter.php:122
+msgid "Icon Type"
+msgstr ""
+
+#: inc/elementor/counter.php:125, inc/elementor/counter.php:138,
+#: inc/vc-addons/icon-box/addon.php:33
+msgid "Icon"
+msgstr ""
+
+#: inc/elementor/counter.php:126
+msgid "Custom Image"
+msgstr ""
+
+#: inc/elementor/counter.php:149, inc/elementor/video_popup.php:96,
+#: inc/extensions/testimonials/testimonials.php:110,
+#: inc/vc-addons/video-modal/addon.php:38
+msgid "Image"
+msgstr ""
+
+#: inc/elementor/counter.php:154
+msgid "Recommended image size is 94x94 px."
+msgstr ""
+
+#: inc/elementor/counter.php:164, inc/vc-addons/counterup/addon.php:42
+msgid "Value"
+msgstr ""
+
+#: inc/elementor/counter.php:167
+msgid "Custom Number"
+msgstr ""
+
+#: inc/elementor/counter.php:168, inc/elementor/job_slider.php:84
+msgid "Total Jobs"
+msgstr ""
+
+#: inc/elementor/counter.php:170, inc/elementor/resume_slider.php:97
+msgid "Total Resumes"
+msgstr ""
+
+#: inc/elementor/counter.php:171
+msgid "Registered Users"
+msgstr ""
+
+#: inc/elementor/counter.php:180
+msgid "Counter Number"
+msgstr ""
+
+#: inc/elementor/counter.php:192
+msgid "Counter Suffix"
+msgstr ""
+
+#: inc/elementor/counter.php:195
+msgid "Put any text or symbol after Counter Number eg. +"
+msgstr ""
+
+#: inc/elementor/counter.php:219, inc/vc-addons/blog-posts/addon.php:19,
+#: inc/vc-addons/icon-box/addon.php:83, inc/vc-addons/newsletter/addon.php:30
+msgid "Style"
+msgstr ""
+
+#: inc/elementor/counter.php:227
+msgid "Icon Color"
+msgstr ""
+
+#: inc/elementor/counter.php:237
+msgid "Counter Color"
+msgstr ""
+
+#: inc/elementor/counter.php:247
+msgid "Counter Font Size"
+msgstr ""
+
+#: inc/elementor/counter.php:268
+msgid "Title Color"
+msgstr ""
+
+#: inc/elementor/counter.php:278
+msgid "Title Font Size"
+msgstr ""
+
+#: inc/elementor/count_down.php:43
+msgid "Count Down"
+msgstr ""
+
+#: inc/elementor/count_down.php:84
+msgid "Select Date"
+msgstr ""
+
+#: inc/elementor/count_down.php:93
+msgid "Days Text"
+msgstr ""
+
+#: inc/elementor/count_down.php:101
+msgid "Hours Text"
+msgstr ""
+
+#: inc/elementor/count_down.php:109
+msgid "Minutes Text"
+msgstr ""
+
+#: inc/elementor/count_down.php:117
+msgid "Seconds Text"
+msgstr ""
+
+#: inc/elementor/count_down.php:125, inc/vc-addons/buttons/addon.php:40
+msgid "Color"
+msgstr ""
+
+#: inc/elementor/job_board.php:44, inc/vc-addons/job/addon.php:22
+msgid "Job Board"
+msgstr ""
+
+#: inc/elementor/job_board.php:143, inc/vc-addons/job/addon.php:33
+msgid "Job Layout"
+msgstr ""
+
+#: inc/elementor/job_board.php:150, inc/vc-addons/job/addon.php:39
+msgid "Choose the layout style for your jobs."
+msgstr ""
+
+#: inc/elementor/job_board.php:156, inc/vc-addons/job/addon.php:43
+msgid "Job List Styles"
+msgstr ""
+
+#: inc/elementor/job_board.php:161, inc/elementor/job_board.php:180
+msgid "Version 3"
+msgstr ""
+
+#: inc/elementor/job_board.php:162
+msgid "Version 4"
+msgstr ""
+
+#: inc/elementor/job_board.php:163
+msgid "Version 5"
+msgstr ""
+
+#: inc/elementor/job_board.php:175, inc/vc-addons/job/addon.php:60
+msgid "Job Grid Styles"
+msgstr ""
+
+#: inc/elementor/job_board.php:195, inc/vc-addons/job/addon.php:78
+msgid "How many items to show in the job board."
+msgstr ""
+
+#: inc/elementor/job_board.php:283, inc/elementor/resumes.php:220
+msgid ""
+"Set to \"Show\" to show only featured jobs, \"Hide\" to hide the featured "
+"jobs, or default show both (featured first)."
+msgstr ""
+
+#: inc/elementor/job_board.php:289, inc/elementor/job_slider.php:159,
+#: inc/vc-addons/job-spotlight/addon.php:94, inc/vc-addons/job/addon.php:172
+msgid "Filled"
+msgstr ""
+
+#: inc/elementor/job_board.php:297
+msgid ""
+"Set to \"Show\" to show only filled jobs, \"Hide\" to hide the filled jobs, "
+"or default show everything."
+msgstr ""
+
+#: inc/elementor/job_board.php:303
+msgid "Keyword"
+msgstr ""
+
+#: inc/elementor/job_board.php:306
+msgid "Enter a default keyword to search"
+msgstr ""
+
+#: inc/elementor/job_board.php:315
+msgid "Enter default location to search"
+msgstr ""
+
+#: inc/elementor/job_board.php:327
+msgid "Limit the jobs to certain categories"
+msgstr ""
+
+#: inc/elementor/job_board.php:334, inc/vc-addons/job/addon.php:137
+msgid "Job Types"
+msgstr ""
+
+#: inc/elementor/job_board.php:339
+msgid "Limit the jobs to certain job types"
+msgstr ""
+
+#: inc/elementor/job_categories_slider.php:43,
+#: inc/vc-addons/job-categories/slider.php:23
+msgid "Job Categories Slider"
+msgstr ""
+
+#: inc/elementor/job_categories_slider.php:84,
+#: inc/vc-addons/job-categories/slider.php:31
+msgid "Category Box Style"
+msgstr ""
+
+#: inc/elementor/job_categories_slider.php:97,
+#: inc/elementor/listing_categories_grid.php:113,
+#: inc/vc-addons/job-categories/slider.php:43,
+#: inc/vc-addons/listing-categories/grid.php:44
+msgid "Category Icon"
+msgstr ""
+
+#: inc/elementor/job_categories_slider.php:108
+msgid "Visible Items per Slide"
+msgstr ""
+
+#: inc/elementor/job_categories_slider.php:113,
+#: inc/vc-addons/job-categories/slider.php:57
+msgid "This will change how many categories will be visible per slide."
+msgstr ""
+
+#: inc/elementor/job_categories_slider.php:119,
+#: inc/elementor/listing_categories_grid.php:173,
+#: inc/elementor/listing_categories_list.php:152
+msgid "Hide Empty"
+msgstr ""
+
+#: inc/elementor/job_categories_slider.php:135,
+#: inc/elementor/listing_categories_grid.php:190,
+#: inc/elementor/listing_categories_list.php:169
+msgid "Count"
+msgstr ""
+
+#: inc/elementor/job_categories_slider.php:136,
+#: inc/elementor/listing_categories_grid.php:191,
+#: inc/elementor/listing_categories_list.php:170
+msgid "Slug"
+msgstr ""
+
+#: inc/elementor/job_categories_slider.php:137,
+#: inc/elementor/listing_categories_grid.php:192,
+#: inc/elementor/listing_categories_list.php:171
+msgid "None"
+msgstr ""
+
+#: inc/elementor/job_categories_slider.php:159,
+#: inc/elementor/listing_categories_grid.php:214,
+#: inc/elementor/listing_categories_list.php:193
+msgid "Total Items"
+msgstr ""
+
+#: inc/elementor/job_categories_slider.php:163,
+#: inc/elementor/listing_categories_grid.php:217,
+#: inc/elementor/listing_categories_list.php:196,
+#: inc/vc-addons/job-categories/slider.php:107,
+#: inc/vc-addons/listing-categories/grid.php:142,
+#: inc/vc-addons/listing-categories/list.php:122
+msgid "Set max limit for items (limited to 1000)."
+msgstr ""
+
+#: inc/elementor/job_dashboard.php:43, inc/vc-addons/job/addon.php:227
+msgid "Job Dashboard"
+msgstr ""
+"\n"
+"Panel de trabajo"
+
+#: inc/elementor/job_resume_search.php:43
+msgid "Job & Resume Tab Search"
+msgstr ""
+
+#: inc/elementor/job_resume_search.php:84, inc/elementor/testimonials.php:98,
+#: inc/vc-addons/job-resume-search/addon.php:21
+msgid "Layout Color"
+msgstr ""
+
+#: inc/elementor/job_resume_search.php:140, inc/elementor/listing_map.php:89,
+#: inc/elementor/resumes.php:43, inc/extensions/dashboard/my-dashboard.php:134,
+#: inc/extensions/dashboard/reports.php:281,
+#: inc/vc-addons/job-resume-map/addon.php:26,
+#: inc/vc-addons/job-resume-search/addon.php:72,
+#: inc/vc-addons/resume/addon.php:56
+msgid "Resumes"
+msgstr "Currículum"
+
+#: inc/elementor/job_resume_search.php:155,
+#: inc/elementor/job_resume_search.php:176, inc/elementor/job_search.php:186,
+#: inc/elementor/job_search_box.php:196, inc/elementor/resume_search.php:186,
+#: inc/functions.php:3002, inc/vc-addons/job-resume-search/addon.php:89,
+#: inc/vc-addons/job-resume-search/addon.php:112,
+#: inc/vc-addons/job-search-box/addon.php:129,
+#: inc/vc-addons/resume-search/addon.php:115,
+#: inc/widgets/company-search-widget.php:74,
+#: inc/widgets/job-search-widget.php:96,
+#: inc/widgets/resume-search-widget.php:94
+msgid "Any category"
+msgstr ""
+
+#: inc/elementor/job_resume_search.php:193,
+#: inc/elementor/job_resume_search.php:193,
+#: inc/elementor/job_resume_search.php:202,
+#: inc/elementor/job_resume_search.php:202, inc/elementor/job_search.php:205,
+#: inc/elementor/job_search_box.php:139, inc/elementor/job_search_box.php:140,
+#: inc/elementor/resume_search.php:205, inc/functions.php:3021,
+#: inc/vc-addons/job-resume-search/addon.php:129,
+#: inc/vc-addons/job-resume-search/addon.php:129,
+#: inc/vc-addons/job-resume-search/addon.php:137,
+#: inc/vc-addons/job-resume-search/addon.php:137,
+#: inc/vc-addons/job-search-box/addon.php:72,
+#: inc/vc-addons/job-search-box/addon.php:73, inc/vc-addons/job/addon.php:158,
+#: inc/vc-addons/resume-search/addon.php:134,
+#: inc/widgets/company-search-widget.php:49,
+#: inc/widgets/company-search-widget.php:50,
+#: inc/widgets/job-search-widget.php:49, inc/widgets/job-search-widget.php:50,
+#: inc/widgets/resume-search-widget.php:49
+msgid "Keywords"
+msgstr ""
+
+#: inc/elementor/job_resume_search.php:195,
+#: inc/elementor/job_resume_search.php:204, inc/elementor/job_search.php:205,
+#: inc/elementor/resume_search.php:205, inc/functions.php:3021,
+#: inc/vc-addons/job-resume-search/addon.php:131,
+#: inc/vc-addons/job-resume-search/addon.php:139,
+#: inc/vc-addons/resume-search/addon.php:134
+msgid "Search"
+msgstr ""
+
+#: inc/elementor/job_search.php:43, inc/vc-addons/job-search/addon.php:11
+msgid "Job Search Form"
+msgstr ""
+
+#: inc/elementor/job_search.php:84, inc/elementor/resume_search.php:84,
+#: inc/vc-addons/job-search/addon.php:20,
+#: inc/vc-addons/resume-search/addon.php:20
+msgid "Search Layout"
+msgstr ""
+
+#: inc/elementor/job_search.php:87, inc/elementor/resume_search.php:87,
+#: inc/vc-addons/job-search/addon.php:24,
+#: inc/vc-addons/newsletter/addon.php:33,
+#: inc/vc-addons/resume-search/addon.php:24
+msgid "Style 1"
+msgstr ""
+
+#: inc/elementor/job_search.php:88, inc/elementor/resume_search.php:88,
+#: inc/vc-addons/job-search/addon.php:25,
+#: inc/vc-addons/newsletter/addon.php:34,
+#: inc/vc-addons/resume-search/addon.php:25
+msgid "Style 2"
+msgstr ""
+
+#: inc/elementor/job_search.php:91, inc/elementor/resume_search.php:91,
+#: inc/vc-addons/job-search/addon.php:22,
+#: inc/vc-addons/resume-search/addon.php:22
+msgid "Choose the layout version that you want your search to have."
+msgstr ""
+
+#: inc/elementor/job_search.php:108, inc/elementor/job_search_box.php:103,
+#: inc/elementor/job_search_box.php:163, inc/elementor/resume_search.php:108,
+#: inc/vc-addons/job-search-box/addon.php:36,
+#: inc/vc-addons/job-search-box/addon.php:93,
+#: inc/vc-addons/job-search/addon.php:38,
+#: inc/vc-addons/resume-search/addon.php:38
+msgid "Region"
+msgstr ""
+
+#: inc/elementor/job_search.php:158, inc/elementor/job_search_box.php:166,
+#: inc/elementor/resume_search.php:158, inc/functions.php:2973,
+#: inc/vc-addons/job-search-box/addon.php:96,
+#: inc/vc-addons/resume-search/addon.php:86
+msgid "All Regions"
+msgstr ""
+
+#: inc/elementor/job_search_box.php:43
+msgid "Job Search Box Form"
+msgstr ""
+
+#: inc/elementor/job_search_box.php:84,
+#: inc/vc-addons/job-search-box/addon.php:22
+msgid "Search Box Title"
+msgstr ""
+
+#: inc/elementor/job_search_box.php:219,
+#: inc/vc-addons/job-search-box/addon.php:151
+msgid "search"
+msgstr ""
+
+#: inc/elementor/job_slider.php:43
+msgid "Job Slider"
+msgstr ""
+
+#: inc/elementor/job_slider.php:87, inc/vc-addons/job-spotlight/addon.php:22
+msgid "Leave it blank to display all featured jobs."
+msgstr ""
+
+#: inc/elementor/job_slider.php:93
+msgid "Visible Jobs"
+msgstr ""
+
+#: inc/elementor/job_slider.php:149, inc/elementor/resume_slider.php:162
+msgid "Show only featured"
+msgstr ""
+
+#: inc/elementor/job_slider.php:150, inc/elementor/job_slider.php:162,
+#: inc/elementor/resume_slider.php:163
+msgid "Show all"
+msgstr ""
+
+#: inc/elementor/job_slider.php:163
+msgid "Show only filled"
+msgstr ""
+
+#: inc/elementor/job_slider.php:164
+msgid "Hide filled"
+msgstr ""
+
+#: inc/elementor/job_slider.php:251, inc/vc-addons/job-spotlight/addon.php:200
+msgid "Apply For This Job"
+msgstr "Postular al trabajo "
+
+#: inc/elementor/listing_categories_grid.php:44,
+#: inc/vc-addons/listing-categories/grid.php:12
+msgid "Listing Categories Grid"
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:88,
+#: inc/elementor/listing_categories_list.php:87
+msgid "Job Listing"
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:89,
+#: inc/elementor/listing_categories_list.php:88
+msgid "Resume"
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:98
+msgid "Category Grid Layout"
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:104
+msgid "Layout 4"
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:128,
+#: inc/vc-addons/listing-categories/grid.php:60
+msgid "Category Background"
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:143,
+#: inc/elementor/listing_categories_list.php:122
+msgid "Job Counter"
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:149,
+#: inc/elementor/listing_categories_list.php:128,
+#: inc/vc-addons/listing-categories/grid.php:82,
+#: inc/vc-addons/listing-categories/grid.php:98,
+#: inc/vc-addons/listing-categories/list.php:62,
+#: inc/vc-addons/listing-categories/list.php:78
+msgid "Show number of jobs inside of category"
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:158,
+#: inc/elementor/listing_categories_list.php:137,
+#: inc/vc-addons/listing-categories/grid.php:91,
+#: inc/vc-addons/listing-categories/list.php:71
+msgid "Resume Counter"
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:164,
+#: inc/elementor/listing_categories_list.php:143
+msgid "Show number of resumes inside of the category."
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:179,
+#: inc/elementor/listing_categories_list.php:158
+msgid "Hides categories that doesn't have any listings."
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:223,
+#: inc/elementor/listing_categories_list.php:202
+msgid "Exclude Job Categories"
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:236,
+#: inc/elementor/listing_categories_list.php:215
+msgid "Exclude Resume Categories"
+msgstr ""
+
+#: inc/elementor/listing_categories_grid.php:440,
+#: inc/elementor/listing_categories_grid.php:401,
+#: inc/elementor/listing_categories_grid.php:363,
+#: inc/elementor/listing_categories_grid.php:322,
+#: inc/elementor/listing_categories_list.php:323,
+#: inc/elementor/listing_categories_list.php:290,
+#: inc/vc-addons/listing-categories/grid.php:311,
+#: inc/vc-addons/listing-categories/grid.php:272,
+#: inc/vc-addons/listing-categories/grid.php:230,
+#: inc/vc-addons/listing-categories/list.php:232,
+#: inc/vc-addons/listing-categories/list.php:198
+msgid " Resumes"
+msgstr "Currículum"
+
+#: inc/elementor/listing_categories_grid.php:436,
+#: inc/elementor/listing_categories_grid.php:397,
+#: inc/elementor/listing_categories_grid.php:359,
+#: inc/elementor/listing_categories_grid.php:318,
+#: inc/elementor/listing_categories_list.php:319,
+#: inc/elementor/listing_categories_list.php:286,
+#: inc/vc-addons/listing-categories/grid.php:307,
+#: inc/vc-addons/listing-categories/grid.php:268,
+#: inc/vc-addons/listing-categories/grid.php:226,
+#: inc/vc-addons/listing-categories/list.php:228,
+#: inc/vc-addons/listing-categories/list.php:194
+msgid " open positions"
+msgstr ""
+
+#: inc/elementor/listing_categories_list.php:43,
+#: inc/vc-addons/listing-categories/list.php:12
+msgid "Listing Categories List"
+msgstr ""
+
+#: inc/elementor/listing_categories_list.php:97,
+#: inc/vc-addons/listing-categories/grid.php:31,
+#: inc/vc-addons/listing-categories/list.php:31
+msgid "Category List Layout"
+msgstr ""
+
+#: inc/elementor/listing_categories_list.php:111,
+#: inc/vc-addons/blog-posts/addon.php:41,
+#: inc/vc-addons/listing-categories/list.php:43
+msgid "Columns"
+msgstr ""
+
+#: inc/elementor/listing_map.php:43
+msgid "Listing Map"
+msgstr ""
+
+#: inc/elementor/listing_map.php:84
+msgid "Listing Type"
+msgstr ""
+
+#: inc/elementor/listing_map.php:87, inc/vc-addons/job-resume-map/addon.php:24
+msgid "Job Listings"
+msgstr ""
+
+#: inc/elementor/listing_map.php:92
+msgid ""
+"The page must have listings from your selected listing type so that the map "
+"can grab their locations and add them into the map."
+msgstr ""
+
+#: inc/elementor/listing_map.php:98
+msgid "Map Height"
+msgstr ""
+
+#: inc/elementor/listing_map.php:101
+msgid "Insert the height of the map. For example: 450px."
+msgstr ""
+
+#: inc/elementor/login_register.php:43
+msgid "Login & Register Form"
+msgstr ""
+"Formulario de inicio de sesión y registro\n"
+
+#: inc/elementor/login_register.php:84
+msgid "Choose Form"
+msgstr ""
+
+#: inc/elementor/login_register.php:87
+msgid "Login Form"
+msgstr ""
+
+#: inc/elementor/login_register.php:88
+msgid "Register Form"
+msgstr ""
+
+#: inc/elementor/logo_slider.php:43
+msgid "Logo Slider"
+msgstr ""
+
+#: inc/elementor/logo_slider.php:84, inc/vc-addons/logo/addon.php:54
+msgid "Logo Item"
+msgstr ""
+
+#: inc/elementor/pricing_tables.php:43
+msgid "Pricing Tables"
+msgstr ""
+
+#: inc/elementor/pricing_tables.php:84
+msgid "Pricing Table Layout"
+msgstr ""
+
+#: inc/elementor/pricing_tables.php:107,
+#: inc/vc-addons/pricing-tables/addon.php:39
+msgid "Price"
+msgstr ""
+
+#: inc/elementor/pricing_tables.php:116, inc/vc-addons/newsletter/addon.php:45,
+#: inc/vc-addons/pricing-tables/addon.php:45
+msgid "Description"
+msgstr ""
+
+#: inc/elementor/pricing_tables.php:128,
+#: inc/vc-addons/pricing-tables/addon.php:57
+msgid "Background Image"
+msgstr ""
+
+#: inc/elementor/pricing_tables.php:142,
+#: inc/vc-addons/pricing-tables/addon.php:69
+msgid "Pricing Header Overlay Color"
+msgstr ""
+
+#: inc/elementor/pricing_tables.php:154
+msgid "Pricing Details"
+msgstr ""
+
+#: inc/elementor/pricing_tables.php:159
+msgid "Detail"
+msgstr ""
+
+#: inc/elementor/pricing_tables.php:169
+msgid "Button Text"
+msgstr ""
+
+#: inc/elementor/pricing_tables.php:178
+msgid "Button Link"
+msgstr ""
+
+#: inc/elementor/pricing_tables.php:192,
+#: inc/vc-addons/pricing-tables/addon.php:90
+msgid "Highlight"
+msgstr ""
+
+#: inc/elementor/resumes.php:84, inc/vc-addons/resume/addon.php:67
+msgid "Resume Layout"
+msgstr ""
+
+#: inc/elementor/resumes.php:91
+msgid "Choose the layout style for your resumes."
+msgstr ""
+
+#: inc/elementor/resumes.php:97, inc/vc-addons/resume/addon.php:77
+msgid "Resume List Styles"
+msgstr ""
+
+#: inc/elementor/resumes.php:113
+msgid "Resume Grid Styles"
+msgstr ""
+
+#: inc/elementor/resumes.php:132
+msgid "How many items to show in the resumes list."
+msgstr ""
+
+#: inc/elementor/resumes.php:196, inc/vc-addons/job/addon.php:116,
+#: inc/vc-addons/resume/addon.php:164
+msgid "Show Pagination"
+msgstr ""
+
+#: inc/elementor/resume_dashboard.php:43
+msgid "Resume Dashboard"
+msgstr "Tablero de Currículum"
+
+#: inc/elementor/resume_search.php:43, inc/vc-addons/resume-search/addon.php:11
+msgid "Resume Search Form"
+msgstr ""
+
+#: inc/elementor/resume_slider.php:43
+msgid "Resume Slider"
+msgstr ""
+
+#: inc/elementor/resume_slider.php:100,
+#: inc/vc-addons/resume-carousel/addon.php:33
+msgid "Leave it blank to display all featured resumes."
+msgstr ""
+
+#: inc/elementor/resume_slider.php:106
+msgid "Visible Resumes"
+msgstr ""
+
+#: inc/elementor/resume_slider.php:111
+msgid "This will change how many resumes will be visible per slide."
+msgstr ""
+"Esto cambiará la cantidad de currículums visibles por diapositiva.\n"
+
+#: inc/elementor/submit_company.php:43, inc/vc-addons/company/addon.php:128
+msgid "Submit Company Form"
+msgstr ""
+
+#: inc/elementor/submit_job.php:43
+msgid "Post Job Form"
+msgstr ""
+
+#: inc/elementor/submit_resume.php:43, inc/vc-addons/resume/addon.php:24
+msgid "Submit Resume Form"
+msgstr ""
+
+#: inc/elementor/testimonials.php:43,
+#: inc/extensions/testimonials/testimonials.php:36,
+#: inc/extensions/testimonials/testimonials.php:38,
+#: inc/extensions/testimonials/testimonials.php:39,
+#: inc/extensions/testimonials/testimonials.php:40,
+#: inc/extensions/testimonials/testimonials.php:42,
+#: inc/vc-addons/testimonial/addon.php:11
+msgid "Testimonials"
+msgstr ""
+
+#: inc/elementor/testimonials.php:84, inc/vc-addons/testimonial/addon.php:24
+msgid "Testimonial Style"
+msgstr ""
+
+#: inc/elementor/testimonials.php:114
+msgid "Show Testimonials"
+msgstr ""
+
+#: inc/elementor/testimonials.php:118
+msgid "Latest"
+msgstr ""
+
+#: inc/elementor/testimonials.php:119
+msgid "Selected IDs"
+msgstr ""
+
+#: inc/elementor/testimonials.php:132
+msgid "Enter Post ID's separated by a comma. Leave empty to show all."
+msgstr ""
+
+#: inc/elementor/testimonials.php:144
+msgid "Number of testimonials to show (-1 for all)."
+msgstr ""
+
+#: inc/elementor/video_popup.php:43
+msgid "Video Popup"
+msgstr ""
+
+#: inc/elementor/video_popup.php:83
+msgid "Video Link"
+msgstr ""
+
+#: inc/elementor/video_popup.php:106, inc/functions.php:72
+msgid "Overlay Color"
+msgstr ""
+
+#: inc/elementor/video_popup.php:114
+msgid "Open Video in"
+msgstr ""
+
+#: inc/elementor/video_popup.php:118
+msgid "New Window"
+msgstr ""
+
+#: inc/extensions/account/user.php:105
+msgid "Please wait..."
+msgstr ""
+"Espere por favor...\n"
+
+#: inc/extensions/account/user.php:133
+msgid "Username or Email"
+msgstr ""
+"Nombre de usuario o correo electrónico\n"
+
+#: inc/extensions/account/user.php:134
+msgid "Your Username or Email"
+msgstr "Su nombre de usuario o correo electrónico"
+
+#: inc/extensions/account/user.php:140, inc/extensions/account/user.php:245
+msgid "Your Password"
+msgstr "Tu contraseña "
+
+#: inc/extensions/account/user.php:158
+msgid "Keep me signed in"
+msgstr ""
+"\n"
+"Mantenerme registrado"
+
+#: inc/extensions/account/user.php:163,
+#: inc/extensions/dashboard/my-account.php:363,
+#: inc/extensions/dashboard/my-dashboard.php:108
+msgid "Sign in"
+msgstr ""
+
+#: inc/extensions/account/user.php:281
+msgid "Registration is currently disabled."
+msgstr ""
+
+#: inc/extensions/account/user.php:209,
+#: inc/extensions/dashboard/my-account.php:418
+msgid "Candidate"
+msgstr "Candidat@"
+
+#: inc/extensions/account/user.php:210
+msgid "Register as a Candidate"
+msgstr "Registrarse como candidat@"
+
+#: inc/extensions/account/user.php:223,
+#: inc/extensions/dashboard/my-account.php:430
+msgid "Employer"
+msgstr "Empleador"
+
+#: inc/extensions/account/user.php:224
+msgid "Register as an Employer"
+msgstr "Registrarse como empleador"
+
+#: inc/extensions/account/user.php:234
+msgid "Your Username"
+msgstr ""
+"\n"
+"Su nombre de usuario"
+
+#: inc/extensions/account/user.php:239
+msgid "Your Email"
+msgstr ""
+"Tu correo electrónico\n"
+
+#: inc/extensions/account/user.php:274
+msgid "Register"
+msgstr "Registrarse"
+
+#: inc/extensions/account/user.php:303
+msgid "Username or Email Address *"
+msgstr ""
+"Nombre de usuario o dirección de correo electrónico *\n"
+
+#: inc/extensions/account/user.php:304
+msgid "Your Username or Email Address"
+msgstr "Tu nombre de usuario o dirección de correo electrónico"
+
+#: inc/extensions/account/user.php:308
+msgid "Reset Password"
+msgstr "Cambiar clave "
+
+#: inc/extensions/account/user.php:330, inc/extensions/account/user.php:338
+msgid "Or connect with"
+msgstr ""
+
+#: inc/extensions/account/user.php:454
+msgid "Please provide captcha information"
+msgstr ""
+
+#: inc/extensions/account/user.php:425
+msgid "Your account has been denied and you can not login."
+msgstr ""
+
+#: inc/extensions/account/user.php:447
+msgid "Login successful, redirecting..."
+msgstr "Inicio de sesión exitoso, ingresando..."
+
+#: inc/extensions/account/user.php:441
+msgid "Wrong username or password."
+msgstr ""
+"Nombre de usuario o contraseña incorrectos.\n"
+
+#: inc/extensions/account/user.php:479
+msgid "Your account has to been activated yet."
+msgstr ""
+
+#: inc/extensions/account/user.php:477
+msgid ""
+"Your account has not been activate yet, please be patient until an admin "
+"activates your account."
+msgstr ""
+
+#: inc/extensions/account/user.php:475
+msgid ""
+"Your account has not been verified yet, you must active your account with "
+"the link sent to your email address. If you did not receive an email, please "
+"check your junk/spam folder or you can <a href=\"javascript:void(0);\" "
+"class=\"cariera-resend-approval-mail\" data-login=\"%s\">click here</a> to "
+"resend the activation email."
+msgstr ""
+
+#: inc/extensions/account/user.php:501,
+#: inc/extensions/recaptcha/recaptcha.php:77
+msgid "reCAPTCHA is a required field"
+msgstr ""
+
+#: inc/extensions/account/user.php:506
+msgid "Required form field is missing"
+msgstr ""
+"Falta el campo del formulario obligatorio\n"
+
+#: inc/extensions/account/user.php:510
+msgid "Username too short, it should be at least 4 characters."
+msgstr ""
+"El nombre de usuario es demasiado corto, debe tener al menos 4 caracteres.\n"
+
+#: inc/extensions/account/user.php:514
+msgid "This Username already exists"
+msgstr ""
+"Este nombre de usuario ya existe\n"
+
+#: inc/extensions/account/user.php:518
+msgid "The Username you entered is not valid"
+msgstr ""
+"El nombre de usuario que ingresó no es válido\n"
+
+#: inc/extensions/account/user.php:522
+msgid "Password length must be greater than 4"
+msgstr ""
+"La longitud de la contraseña debe ser superior a 4 dígitos \n"
+
+#: inc/extensions/account/user.php:526
+msgid "Email is not valid, please provide a correct email address."
+msgstr ""
+"El correo electrónico de contraseña no es válido, proporcione una dirección "
+"de correo electrónico correcta.\n"
+
+#: inc/extensions/account/user.php:530
+msgid "This Email already exists."
+msgstr ""
+"Ya existe Este email.\n"
+
+#: inc/extensions/account/user.php:534
+msgid "Please accept our Privacy Policy."
+msgstr ""
+"Acepte nuestra Política de privacidad.\n"
+
+#: inc/extensions/account/user.php:672
+msgid "Registration Error!"
+msgstr ""
+
+#: inc/extensions/account/user.php:651
+msgid "You have been successfully registered, you can login now."
+msgstr "Se ha registrado correctamente, puede iniciar sesión ahora."
+
+#: inc/extensions/account/user.php:643
+msgid "You have been successfully registered, you will be logged in shortly."
+msgstr ""
+
+#: inc/extensions/account/user.php:705
+msgid "Your account has to be activated."
+msgstr ""
+
+#: inc/extensions/account/user.php:703
+msgid ""
+"Registration complete! Your account has to be activated by an admin before "
+"you can login."
+msgstr ""
+
+#: inc/extensions/account/user.php:701
+msgid ""
+"Registration complete! Before you can login you must activate your account "
+"via the email sent to you."
+msgstr ""
+"¡Registro completo! Antes de poder iniciar sesión, debe activar su cuenta a "
+"través del correo electrónico que se le envió.\n"
+
+#: inc/extensions/account/user.php:743
+msgid "Invalid username or e-mail address."
+msgstr ""
+
+#: inc/extensions/account/user.php:740
+msgid "There is no user registered with that Username."
+msgstr ""
+"No hay ningún usuario registrado con ese nombre de usuario.\n"
+
+#: inc/extensions/account/user.php:734
+msgid "There is no user registered with that Email address."
+msgstr ""
+"No hay ningún usuario registrado con esa dirección de correo electrónico.\n"
+
+#: inc/extensions/account/user.php:728
+msgid "Enter a Username or Email address."
+msgstr ""
+"Ingrese un nombre de usuario o una dirección de correo electrónico.\n"
+
+#: inc/extensions/account/user.php:775
+msgid "Something went wrong while updating your account."
+msgstr ""
+
+#: inc/extensions/account/user.php:757
+msgid "Password Reset"
+msgstr ""
+
+#: inc/extensions/account/user.php:763
+msgid ""
+"Your password has been resetted successfully. You can log in on your account "
+"with the newly generated password provided below."
+msgstr ""
+
+#: inc/extensions/account/user.php:764
+msgid "Your new password is: %s"
+msgstr ""
+
+#: inc/extensions/account/user.php:773
+msgid "Go to your inbox or spam/junk and get your new generated password."
+msgstr ""
+"Vaya a su bandeja de entrada o spam / basura y obtenga su nueva contraseña "
+"generada.\n"
+
+#: inc/extensions/account/user.php:825
+msgid "Deny"
+msgstr ""
+
+#: inc/extensions/account/user.php:849
+msgid "Status"
+msgstr ""
+
+#: inc/extensions/account/user.php:876
+msgid "pending"
+msgstr ""
+
+#: inc/extensions/account/user.php:874
+msgid "denied"
+msgstr ""
+
+#: inc/extensions/account/user.php:872
+msgid "approved"
+msgstr ""
+
+#: inc/extensions/account/user.php:1073
+msgid "Username or Email not correct."
+msgstr ""
+"El nombre de usuario o el correo electrónico no son correctos.\n"
+
+#: inc/extensions/account/user.php:1111
+msgid "Email has been sent successfully."
+msgstr ""
+"El correo electrónico ha sido enviado con éxito.\n"
+
+#: inc/extensions/account/user.php:1120
+msgid "Your account is not available."
+msgstr ""
+
+#: inc/extensions/account/user.php:1147, inc/extensions/account/user.php:1155
+msgid "The user does not exist."
+msgstr ""
+
+#: inc/extensions/account/user.php:1162
+msgid "Activation code is not the same."
+msgstr ""
+
+#: inc/extensions/account/user.php:1171
+msgid "Congratulations, your account has been approved!"
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:34
+msgid "Cariera Avatar"
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:39
+msgid "Avatar"
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:48
+msgid "Upload Image"
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:49
+msgid "This avatar will be displayed instead of default one"
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:327
+msgid "Your profile has been updated."
+msgstr ""
+"Tu perfil ha sido actualizado.\n"
+
+#: inc/extensions/dashboard/my-account.php:337
+msgid "The Email you entered is not valid or empty. Please try again..."
+msgstr ""
+"El correo electrónico que ingresó no es válido o está vacío. Inténtalo de "
+"nuevo...\n"
+
+#: inc/extensions/dashboard/my-account.php:340
+msgid "This email is already used by another user, please try a different one."
+msgstr ""
+"Otro usuario ya está utilizando este correo electrónico, pruebe con otro.\n"
+
+#: inc/extensions/dashboard/my-account.php:377
+msgid "Profile Details"
+msgstr ""
+"detalles del perfil\n"
+
+#: inc/extensions/dashboard/my-account.php:390
+msgid "Your Avatar"
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:401
+msgid ""
+"Update your photo manually, if the photo is not set the default Gravatar "
+"will be the same as your login email account. Please make sure that your "
+"uploaded image is a square size image."
+msgstr ""
+"Actualice su foto manualmente, si la foto no está configurada, el Avatar "
+"predeterminado será el mismo que su cuenta de correo electrónico de inicio "
+"de sesión. Asegúrese de que su imagen cargada sea una imagen de tamaño "
+"cuadrado.\n"
+
+#: inc/extensions/dashboard/my-account.php:417
+msgid "Registered as a"
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:429
+msgid "Registered as an"
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:439
+msgid "First Name"
+msgstr ""
+"Primer nombre\n"
+
+#: inc/extensions/dashboard/my-account.php:444
+msgid "Last Name"
+msgstr ""
+"Apellido\n"
+
+#: inc/extensions/dashboard/my-account.php:449
+msgid "E-mail"
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:455
+msgid "Submit"
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:471
+msgid "Change Password"
+msgstr ""
+"Cambiar la contraseña\n"
+
+#: inc/extensions/dashboard/my-account.php:475
+msgid "Your password has been updated."
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:483,
+#: inc/extensions/dashboard/my-account.php:543
+msgid "Your current password does not match. Please try again..."
+msgstr ""
+"Tu contraseña actual no coincide. Inténtalo de nuevo...\n"
+
+#: inc/extensions/dashboard/my-account.php:486
+msgid "The passwords do not match. Please try again..."
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:489
+msgid "The password is too short. Please try a longer password."
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:492
+msgid "Password may not contain the character \"\" (backslash)."
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:495
+msgid "An error occurred while updating your profile. Please try again..."
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:506,
+#: inc/extensions/dashboard/my-account.php:556
+msgid "Current Password"
+msgstr ""
+"Contraseña actual\n"
+
+#: inc/extensions/dashboard/my-account.php:511
+msgid "New Password"
+msgstr ""
+"Nueva contraseña\n"
+
+#: inc/extensions/dashboard/my-account.php:516
+msgid "Confirm New Password"
+msgstr ""
+"Confirmar nueva contraseña\n"
+
+#: inc/extensions/dashboard/my-account.php:535,
+#: inc/extensions/dashboard/my-account.php:563
+msgid "Delete Account"
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:553
+msgid ""
+"Before you delete your account, remember that all of your data will also be "
+"deleted. This action can not be undone!"
+msgstr ""
+
+#: inc/extensions/dashboard/my-account.php:350
+msgid "You must be logged in to edit your profile."
+msgstr ""
+
+#: inc/extensions/dashboard/my-dashboard.php:70
+msgid "No packages have been bought or all packages have been used."
+msgstr ""
+
+#: inc/extensions/dashboard/my-dashboard.php:48
+msgid "You have %s job listings left that you can post."
+msgstr ""
+
+#: inc/extensions/dashboard/my-dashboard.php:48,
+#: inc/extensions/dashboard/my-dashboard.php:63
+msgid "Unlimited"
+msgstr ""
+
+#: inc/extensions/dashboard/my-dashboard.php:50
+msgid "Job listing duration: %s"
+msgstr ""
+
+#: inc/extensions/dashboard/my-dashboard.php:50,
+#: inc/extensions/dashboard/my-dashboard.php:65
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/extensions/dashboard/my-dashboard.php:63
+msgid "You have %s resumes left that you can post."
+msgstr ""
+
+#: inc/extensions/dashboard/my-dashboard.php:65
+msgid "Resume listing duration: %s"
+msgstr ""
+
+#: inc/extensions/dashboard/my-dashboard.php:128,
+#: inc/extensions/dashboard/my-dashboard.php:113
+msgid "Listings"
+msgstr ""
+
+#: inc/extensions/dashboard/my-dashboard.php:153
+msgid "Published %s"
+msgstr "%S publicado"
+
+#: inc/extensions/dashboard/my-dashboard.php:166
+msgid "Pending %s"
+msgstr ""
+"\n"
+"Pendiente"
+
+#: inc/extensions/dashboard/my-dashboard.php:179
+msgid "Expired %s"
+msgstr ""
+"\n"
+"Caducó"
+
+#: inc/extensions/dashboard/my-dashboard.php:192,
+#: inc/extensions/dashboard/my-dashboard.php:212
+msgid "Monthly Views"
+msgstr "Vistas mensuales "
+
+#: inc/extensions/dashboard/my-dashboard.php:226
+msgid "Active Packages"
+msgstr ""
+
+#: inc/extensions/dashboard/my-dashboard.php:95
+msgid "You need to be signed in to access your dashboard."
+msgstr ""
+"\n"
+"Debe iniciar sesión para acceder a su panel de control."
+
+#: inc/extensions/dashboard/reports.php:101
+msgid "Redirected to external job application link."
+msgstr ""
+
+#: inc/extensions/dashboard/reports.php:151
+msgid "My Job Reports:"
+msgstr ""
+"Mis informes de trabajo:\n"
+
+#: inc/extensions/dashboard/reports.php:158,
+#: inc/extensions/dashboard/reports.php:282
+msgid "Posted Date"
+msgstr ""
+"fecha de publicación\n"
+
+#: inc/extensions/dashboard/reports.php:159,
+#: inc/extensions/dashboard/reports.php:283
+msgid "Views"
+msgstr "vistas"
+
+#: inc/extensions/dashboard/reports.php:160
+msgid "External Clicks"
+msgstr ""
+"Clics externos\n"
+
+#: inc/extensions/dashboard/reports.php:167,
+#: inc/extensions/dashboard/reports.php:290
+msgid "You do not have any active listings."
+msgstr ""
+
+#: inc/extensions/dashboard/reports.php:275
+msgid "My Resume Reports:"
+msgstr ""
+"Mis informes de currículum:\n"
+
+#: inc/extensions/dashboard/reports.php:369
+msgid "Listing Reports"
+msgstr ""
+
+#: inc/extensions/dashboard/reports.php:388
+msgid ""
+"Please activate at least WP Job Manager Plugin in order to access your "
+"listing reports."
+msgstr ""
+
+#: inc/extensions/dashboard/reports.php:361
+msgid "You need to be signed in to access your listing reports."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:49
+msgid "Main"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:52,
+#: inc/extensions/metabox/metaboxes.php:112
+msgid "Header"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:55,
+#: inc/extensions/metabox/metaboxes.php:160
+msgid "Footer"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:66
+msgid "Page Title"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:75
+msgid "Enable or disable the Page Header on this Page."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:79
+msgid "Banner Image"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:80
+msgid "The header image size should be at least 1600x200px"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:87
+msgid "Page Layout"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:91
+msgid "Fullwidth"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:92
+msgid "With Sidebar"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:96
+msgid "Choose the layout of your page."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:101
+msgid "Select Sidebar"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:102
+msgid ""
+"The sidebar will be shown only if you have chose a sidebar layout for the "
+"page in the \"Page Layout\" option."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:121
+msgid "Enable or disable the Header on this Page."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:126
+msgid "Header 1 - Extras"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:131
+msgid "Header Fixed Top"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:140
+msgid "Header Transparent"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:149
+msgid "Header White"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:169
+msgid "Enable or disable the Footer on this Page."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:173
+msgid "Footer Widgets"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:182
+msgid "Enable or disable the Footer Widgets on this Page."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:196
+msgid "Testimonial Details"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:205
+msgid ""
+"Enter in an e-mail address, to use a Gravatar, instead of using the "
+"\"Featured Image\"."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:212
+msgid ""
+"Enter a byline for the customer giving this testimonial (for example: \"CEO "
+"of Cariera\")."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:219
+msgid ""
+"Enter a URL that applies to this customer (for example: http://cariera.co/)."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:236
+msgid "Audio Settings"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:244
+msgid "Audio Embed Code"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:246
+msgid "Please enter the Audio Embed Code here."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:259
+msgid "Gallery Settings"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:267
+msgid "Gallery"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:268
+msgid "You can upload up to 10 gallery images for a slideshow"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:281
+msgid "Quote Settings"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:290
+msgid "Quote Author"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:292
+msgid "Please enter the Authors Name of the Quote here."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:298
+msgid "Quote Source"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:300
+msgid "Please enter the Source of the Quote here."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:306
+msgid "Quote"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:308
+msgid "Please enter the text for your quote here."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:321
+msgid "Video Settings"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:329
+msgid "Video Embed Code"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:331
+msgid ""
+"If you choose Video URL you can just insert the URL of the <a href=\"http:"
+"//codex.wordpress.org/Embeds#Okay.2C_So_What_Sites_Can_I_Embed_From.3F\" "
+"target=\"_blank\">Supported Video Site</a>. Otherwise insert the full embed "
+"code."
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:347
+msgid "Featured Job Image"
+msgstr ""
+
+#: inc/extensions/metabox/metaboxes.php:356
+msgid ""
+"The featured image size should be at least 1600x200px. (Featured images that "
+"are uploaded from the front-end can not be viewed here.)"
+msgstr ""
+
+#: inc/extensions/social-share/social.php:32
+msgid "share"
+msgstr "Compartir "
+
+#: inc/extensions/social-share/social.php:52
+msgid "Share"
+msgstr "Compartir "
+
+#: inc/extensions/social-share/social.php:139
+msgid "Telegram"
+msgstr ""
+
+#: inc/extensions/social-share/social.php:155,
+#: inc/widgets/social-media-widget.php:28
+msgid "Tumblr"
+msgstr ""
+
+#: inc/extensions/social-share/social.php:166
+msgid "WhatsApp"
+msgstr ""
+
+#: inc/extensions/social-share/social.php:183
+msgid "VK"
+msgstr ""
+
+#: inc/extensions/social-share/social.php:194
+msgid "Mail"
+msgstr ""
+
+#: inc/extensions/testimonials/testimonials.php:30
+msgctxt "post type general name"
+msgid "Testimonials"
+msgstr ""
+
+#: inc/extensions/testimonials/testimonials.php:31
+msgctxt "post type singular name"
+msgid "Testimonial"
+msgstr ""
+
+#: inc/extensions/testimonials/testimonials.php:32
+msgctxt "testimonial"
+msgid "Add New"
+msgstr ""
+
+#: inc/extensions/testimonials/testimonials.php:33,
+#: inc/extensions/testimonials/testimonials.php:34,
+#: inc/extensions/testimonials/testimonials.php:35,
+#: inc/extensions/testimonials/testimonials.php:37
+msgid "Testimonial"
+msgstr ""
+
+#: inc/extensions/testimonials/testimonials.php:38
+msgid "Search %a"
+msgstr ""
+
+#: inc/extensions/testimonials/testimonials.php:39
+msgid "No %s Found"
+msgstr ""
+
+#: inc/extensions/testimonials/testimonials.php:40
+msgid "No %s Found In Trash"
+msgstr ""
+
+#: inc/extensions/testimonials/testimonials.php:46
+msgctxt "single post url slug"
+msgid "testimonial"
+msgstr ""
+
+#: inc/extensions/testimonials/testimonials.php:47
+msgctxt "post archive url slug"
+msgid "testimonials"
+msgstr ""
+
+#: inc/functions.php:78
+msgid "Background Gradient - Left."
+msgstr ""
+
+#: inc/functions.php:84
+msgid "Background Gradient - Right"
+msgstr ""
+
+#: inc/functions.php:85
+msgid ""
+"Notice: If you want to use Background Gradient, both Background Gradient "
+"Left and Background Gradient Right are required. This setting will override "
+"the Overlay Color setting above."
+msgstr ""
+
+#: inc/functions.php:144
+msgid "Choose a category&hellip;"
+msgstr "Escoge la categoría..."
+
+#: inc/functions.php:145
+msgid "No results match"
+msgstr ""
+"resultados no encontrados\n"
+
+#: inc/functions.php:146
+msgid "Select Some Options"
+msgstr ""
+
+#: inc/functions.php:2586
+msgid ".د.ب"
+msgstr ""
+
+#: inc/functions.php:2589
+msgid "د.إ"
+msgstr ""
+
+#: inc/functions.php:2601
+msgid "&#36;"
+msgstr ""
+
+#: inc/functions.php:2604
+msgid "&#2547;&nbsp;"
+msgstr ""
+
+#: inc/functions.php:2607
+msgid "&#3515;&#3540;&nbsp;"
+msgstr ""
+
+#: inc/functions.php:2610
+msgid "&#1083;&#1074;."
+msgstr ""
+
+#: inc/functions.php:2613
+msgid "&#82;&#36;"
+msgstr ""
+
+#: inc/functions.php:2616
+msgid "&#67;&#72;&#70;"
+msgstr ""
+
+#: inc/functions.php:2621
+msgid "&yen;"
+msgstr ""
+
+#: inc/functions.php:2624
+msgid "&#75;&#269;"
+msgstr ""
+
+#: inc/functions.php:2627
+msgid "DKK"
+msgstr ""
+
+#: inc/functions.php:2630
+msgid "RD&#36;"
+msgstr ""
+
+#: inc/functions.php:2633
+msgid "EGP"
+msgstr ""
+
+#: inc/functions.php:2636
+msgid "&euro;"
+msgstr ""
+
+#: inc/functions.php:2639
+msgid "&pound;"
+msgstr ""
+
+#: inc/functions.php:2642
+msgid "Kn"
+msgstr ""
+
+#: inc/functions.php:2645
+msgid "&#70;&#116;"
+msgstr ""
+
+#: inc/functions.php:2648
+msgid "Rp"
+msgstr ""
+
+#: inc/functions.php:2651
+msgid "&#8362;"
+msgstr ""
+
+#: inc/functions.php:2654, inc/functions.php:2675
+msgid "Rs."
+msgstr ""
+
+#: inc/functions.php:2657
+msgid "Kr."
+msgstr ""
+
+#: inc/functions.php:2660
+msgid "&#8365;"
+msgstr ""
+
+#: inc/functions.php:2663
+msgid "&#8361;"
+msgstr ""
+
+#: inc/functions.php:2666
+msgid "&#82;&#77;"
+msgstr ""
+
+#: inc/functions.php:2669
+msgid "&#8358;"
+msgstr ""
+
+#: inc/functions.php:2672, inc/functions.php:2693
+msgid "&#107;&#114;"
+msgstr ""
+
+#: inc/functions.php:2678
+msgid "&#8369;"
+msgstr ""
+
+#: inc/functions.php:2681
+msgid "&#122;&#322;"
+msgstr ""
+
+#: inc/functions.php:2684
+msgid "&#8370;"
+msgstr ""
+
+#: inc/functions.php:2687
+msgid "lei"
+msgstr ""
+
+#: inc/functions.php:2690
+msgid "&#1088;&#1091;&#1073;."
+msgstr ""
+
+#: inc/functions.php:2696
+msgid "&#3647;"
+msgstr ""
+
+#: inc/functions.php:2699
+msgid "&#8378;"
+msgstr ""
+
+#: inc/functions.php:2702
+msgid "&#78;&#84;&#36;"
+msgstr ""
+
+#: inc/functions.php:2705
+msgid "&#8372;"
+msgstr ""
+
+#: inc/functions.php:2708
+msgid "&#8363;"
+msgstr ""
+
+#: inc/functions.php:2711
+msgid "&#82;"
+msgstr ""
+
+#: inc/functions.php:3048
+msgid "--Choose page--"
+msgstr ""
+
+#: inc/importer/importer/cariera-importer.php:74
+msgid "Choose the contents"
+msgstr ""
+
+#: inc/importer/importer/cariera-importer.php:96
+msgid "Options Panel Settings"
+msgstr ""
+
+#: inc/importer/importer/cariera-importer.php:107
+msgid "Widgets"
+msgstr ""
+
+#: inc/importer/importer/cariera-importer.php:118
+msgid "Slider Data"
+msgstr ""
+
+#: inc/importer/importer/cariera-importer.php:129
+msgid "After Import"
+msgstr ""
+
+#: inc/importer/importer/cariera-importer.php:133
+msgid "Import data"
+msgstr ""
+
+#: inc/vc-addons/blog-posts/addon.php:11
+msgid "Latest Blog Posts"
+msgstr ""
+
+#: inc/vc-addons/blog-posts/addon.php:33
+msgid "Number of Posts"
+msgstr ""
+
+#: inc/vc-addons/blog-posts/addon.php:36
+msgid "Number of Posts you want to display."
+msgstr ""
+
+#: inc/vc-addons/blog-posts/addon.php:83,
+#: inc/vc-addons/blog-slider/addon.php:20
+msgid "Show Date"
+msgstr ""
+
+#: inc/vc-addons/blog-posts/addon.php:96
+msgid "Category Slugs - For example: sports, business, all"
+msgstr ""
+
+#: inc/vc-addons/blog-slider/addon.php:11
+msgid "Blog Slider Element"
+msgstr ""
+
+#: inc/vc-addons/blog-slider/addon.php:32, inc/vc-addons/company/addon.php:78,
+#: inc/vc-addons/job/addon.php:82, inc/vc-addons/resume/addon.php:113
+msgid "Order By"
+msgstr ""
+
+#: inc/vc-addons/blog-slider/addon.php:39,
+#: inc/vc-addons/blog-slider/addon.php:52,
+#: inc/vc-addons/blog-slider/addon.php:63,
+#: inc/vc-addons/blog-slider/addon.php:73,
+#: inc/vc-addons/blog-slider/addon.php:83
+msgid "Post Options"
+msgstr ""
+
+#: inc/vc-addons/blog-slider/addon.php:58, inc/vc-addons/counterup/addon.php:54
+msgid "Number"
+msgstr ""
+
+#: inc/vc-addons/blog-slider/addon.php:62
+msgid "Number of blog posts (-1 for all)"
+msgstr ""
+
+#: inc/vc-addons/blog-slider/addon.php:72
+msgid "Category Slug (leave empty for all)"
+msgstr ""
+
+#: inc/vc-addons/blog-slider/addon.php:79
+msgid "Selected Posts"
+msgstr ""
+
+#: inc/vc-addons/blog-slider/addon.php:82
+msgid "Selected Posts (leave empty for all, delimit by comma)"
+msgstr ""
+
+#: inc/vc-addons/blog-slider/addon.php:173
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: inc/vc-addons/buttons/addon.php:23
+msgid "Link & Title"
+msgstr ""
+
+#: inc/vc-addons/buttons/addon.php:64
+msgid "Size"
+msgstr ""
+
+#: inc/vc-addons/buttons/addon.php:95, inc/vc-addons/counterup/addon.php:24,
+#: inc/vc-addons/logo/addon.php:45, inc/vc-addons/newsletter/addon.php:57,
+#: inc/vc-addons/testimonial/addon.php:66,
+#: inc/vc-addons/video-modal/addon.php:95
+msgid "Extra class name"
+msgstr ""
+
+#: inc/vc-addons/buttons/addon.php:98
+msgid ""
+"You can add an extra class name to the button and refer to it in custom CSS."
+msgstr ""
+
+#: inc/vc-addons/company-carousel/addon.php:14
+msgid "Company Carousel"
+msgstr ""
+
+#: inc/vc-addons/company-carousel/addon.php:15
+msgid "Shows carousel with selected companies"
+msgstr ""
+
+#: inc/vc-addons/company-carousel/addon.php:33,
+#: inc/vc-addons/job-categories/slider.php:104,
+#: inc/vc-addons/job-spotlight/addon.php:19,
+#: inc/vc-addons/listing-categories/grid.php:139,
+#: inc/vc-addons/listing-categories/list.php:119,
+#: inc/vc-addons/resume-carousel/addon.php:30
+msgid "Total items"
+msgstr ""
+
+#: inc/vc-addons/company-carousel/addon.php:43
+msgid "This will change how many companies will be visible per slider."
+msgstr ""
+
+#: inc/vc-addons/company-carousel/addon.php:89
+msgid "Companies with Jobs"
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:11, inc/vc-addons/job/addon.php:12,
+#: inc/vc-addons/resume/addon.php:12
+msgid "Yes"
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:12, inc/vc-addons/job/addon.php:13,
+#: inc/vc-addons/resume/addon.php:13
+msgid "No"
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:25
+msgid "Adds a company board"
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:43
+msgid "Companies List Styles"
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:49, inc/vc-addons/company/addon.php:63
+msgid "Choose a style for your companies."
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:57
+msgid "Companies Grid Styles"
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:71, inc/vc-addons/job/addon.php:75,
+#: inc/vc-addons/resume/addon.php:105
+msgid "Items Per Page"
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:74
+msgid "How many companies will be shown per page."
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:90, inc/vc-addons/job/addon.php:94,
+#: inc/vc-addons/resume/addon.php:125
+msgid "Choose order parameter."
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:101, inc/vc-addons/job/addon.php:105,
+#: inc/vc-addons/resume/addon.php:137
+msgid "Choose sorting order."
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:108
+msgid "Whether show filters by keyword, location, category, type or not..."
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:115
+msgid ""
+"Set to Yes to show only featured companies, No to not show featured "
+"companies, or Both show both (featured first)."
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:130
+msgid "Form to post a new company"
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:148
+msgid "Company dashboard used by logged in users"
+msgstr ""
+"\n"
+"Panel de control de la empresa utilizado por usuarios registrados"
+
+#: inc/vc-addons/company/addon.php:163
+msgid "Companies List"
+msgstr ""
+
+#: inc/vc-addons/company/addon.php:165
+msgid "Adds a list of all companies"
+msgstr ""
+
+#: inc/vc-addons/counterup/addon.php:11
+msgid "Counter Up"
+msgstr ""
+
+#: inc/vc-addons/counterup/addon.php:13
+msgid "Stat counter with animation"
+msgstr ""
+
+#: inc/vc-addons/counterup/addon.php:26, inc/vc-addons/logo/addon.php:47,
+#: inc/vc-addons/newsletter/addon.php:59,
+#: inc/vc-addons/video-modal/addon.php:98
+msgid ""
+"If you wish to style particular content element differently, then use this "
+"field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: inc/vc-addons/counterup/addon.php:33
+msgid "Counter Up Item"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:11
+msgid "Google Maps"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:21
+msgid "Address"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:24
+msgid "Insert valid address string"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:30
+msgid "Latitude"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:33, inc/vc-addons/gmaps/addon.php:42
+msgid ""
+"For exact positioning you can use Lat & Long INSTEAD OF the address field."
+"<br />Note: Does not work with a custom Marker Image"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:39
+msgid "Longitude"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:48
+msgid "Map Style"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:59
+msgid "Height"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:62
+msgid "Height of the Map in px (leave the 'px' out)"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:68
+msgid "Map ID"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:71
+msgid "Unique Map ID (map1, map2,.. if you use multiple maps on one page)"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:77
+msgid "Zoom Level"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:80
+msgid "Value between 1-21. Higher number = more zoomed in."
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:81, inc/vc-addons/gmaps/addon.php:96,
+#: inc/vc-addons/gmaps/addon.php:155, inc/vc-addons/gmaps/addon.php:168,
+#: inc/vc-addons/gmaps/addon.php:178
+msgid "Options"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:87
+msgid "Map Type"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:95
+msgid "Desired map type"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:102, inc/vc-addons/gmaps/addon.php:109,
+#: inc/vc-addons/gmaps/addon.php:119, inc/vc-addons/gmaps/addon.php:129,
+#: inc/vc-addons/gmaps/addon.php:142
+msgid "Marker"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:108
+msgid "Select if you want to show a marker"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:115
+msgid "Marker Image"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:118
+msgid "If you want to use a Marker Image you can upload it here."
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:125
+msgid "Infowindow"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:128
+msgid "Text to add to the Infowindow"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:135
+msgid "Show Infowindow"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:141
+msgid ""
+"Choose to have the infowindow show or not show automatically when the page "
+"loads"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:148
+msgid "Scrollwheel Zoom"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:154
+msgid "Allow scroll wheel zooming"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:161
+msgid "Controls"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:167
+msgid "Show / Hide Map Controls"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:174
+msgid "Color Scheme Code"
+msgstr ""
+
+#: inc/vc-addons/gmaps/addon.php:177
+msgid ""
+"<strong>For advanced users:</strong> Paste your snazzymaps.com styles here."
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:12
+msgid "Icon Box"
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:13
+msgid "Box with Icon and Content."
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:21
+msgid "Display icon"
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:29
+msgid "Select icon source."
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:43
+msgid "Select icon from library."
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:47
+msgid "Icon color"
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:54
+msgid ""
+"Choose icon color. If none selected, the default theme color will be used."
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:58
+msgid "Icon size"
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:65
+msgid "Enter icon size. (eg. 10px, 1em, 1rem)"
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:69
+msgid "Upload image icon"
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:72
+msgid "Upload your own custom image."
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:103
+msgid "Use this field to add a custom class."
+msgstr ""
+
+#: inc/vc-addons/icon-box/addon.php:127
+msgid "Iconbox URL (links the complete iconbox to this url)"
+msgstr ""
+
+#: inc/vc-addons/job-categories/slider.php:24
+msgid "Dispays a slider with a list of job categories"
+msgstr ""
+
+#: inc/vc-addons/job-categories/slider.php:54
+msgid "Visible categories"
+msgstr ""
+
+#: inc/vc-addons/job-categories/slider.php:62,
+#: inc/vc-addons/listing-categories/grid.php:107,
+#: inc/vc-addons/listing-categories/list.php:87
+msgid "Hide empty"
+msgstr ""
+
+#: inc/vc-addons/job-categories/slider.php:69
+msgid "Hides categories that doesn't have any jobs"
+msgstr ""
+
+#: inc/vc-addons/job-categories/slider.php:73
+msgid "Parent id"
+msgstr ""
+
+#: inc/vc-addons/job-resume-map/addon.php:12
+msgid "Job - Resume Map"
+msgstr ""
+
+#: inc/vc-addons/job-resume-map/addon.php:13
+msgid "Display all your jobs and resumes on a map."
+msgstr ""
+
+#: inc/vc-addons/job-resume-map/addon.php:20
+msgid "Content source"
+msgstr ""
+
+#: inc/vc-addons/job-resume-map/addon.php:22
+msgid "Choose maps or resumes (if applicable)"
+msgstr ""
+
+#: inc/vc-addons/job-resume-map/addon.php:31
+msgid "Map height"
+msgstr ""
+
+#: inc/vc-addons/job-resume-map/addon.php:34
+msgid "Insert the height of the map. For example: 400px."
+msgstr ""
+
+#: inc/vc-addons/job-resume-map/addon.php:41
+msgid "Add your extra class for your map."
+msgstr ""
+
+#: inc/vc-addons/job-resume-search/addon.php:11
+msgid "Job - Resume Tab Search"
+msgstr ""
+
+#: inc/vc-addons/job-search-box/addon.php:11
+msgid "Job Search Box"
+msgstr ""
+
+#: inc/vc-addons/job-spotlight/addon.php:11
+msgid "Job Carousel"
+msgstr ""
+
+#: inc/vc-addons/job-spotlight/addon.php:12
+msgid "Shows carousel with selected jobs"
+msgstr ""
+
+#: inc/vc-addons/job-spotlight/addon.php:26
+msgid "Visible jobs"
+msgstr ""
+
+#: inc/vc-addons/job-spotlight/addon.php:64,
+#: inc/vc-addons/resume-carousel/addon.php:75
+msgid "From Categories only"
+msgstr ""
+
+#: inc/vc-addons/job-spotlight/addon.php:66
+msgid "Add job categories."
+msgstr ""
+
+#: inc/vc-addons/job-spotlight/addon.php:74
+msgid "From job types only"
+msgstr ""
+
+#: inc/vc-addons/job-spotlight/addon.php:76
+msgid "Add job types."
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:24
+msgid "Adds a job board"
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:52, inc/vc-addons/job/addon.php:67
+msgid "Choose a style for your jobs."
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:112
+msgid "Whether show filters by keyword, region, category, type or not..."
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:119, inc/vc-addons/resume/addon.php:167
+msgid ""
+"Enable this to show numbered pagination instead of the \"load more\" link."
+msgstr ""
+"Habilite esto para mostrar la paginación numerada en lugar del enlace "
+"\"cargar más\".\n"
+
+#: inc/vc-addons/job/addon.php:126
+msgid ""
+"If enabled, the filters will also show a dropdown letting the user choose a "
+"job category to filter by."
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:133
+msgid ""
+"Put one category slug per line to limit the jobs to certain categories. This "
+"option overrides \"show_categories\" if both are set."
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:140
+msgid ""
+"List of job type slugs (one per line) to limit the jobs to certain job types."
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:144
+msgid "Selected Job Types"
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:147
+msgid "List of job type slugs (one per line) to select by default."
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:154
+msgid "Enter a location keyword to search by default."
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:161
+msgid "Enter a keyword to search by default."
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:168
+msgid ""
+"Set to Yes to show only featured jobs, No to show no featured jobs, or Both "
+"show both (featured first)."
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:175
+msgid ""
+"Set to true to show only filled jobs, false to show no filled jobs, or leave "
+"out entirely to respect the default settings."
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:188
+msgid "Single job with details"
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:197
+msgid "Job ID"
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:200
+msgid ""
+"Outputs a single job by ID. You can find the id by viewing the list of jobs "
+"in admin."
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:211
+msgid "Submit Job Form"
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:213
+msgid "Form to post a new job"
+msgstr ""
+
+#: inc/vc-addons/job/addon.php:229
+msgid "Job dashboard used by logged in users"
+msgstr "Panel de control de la empresa utilizada por usuarios registrados"
+
+#: inc/vc-addons/listing-categories/grid.php:13
+msgid "Dispays list of job or resume categories in a grid layout."
+msgstr ""
+
+#: inc/vc-addons/listing-categories/grid.php:75,
+#: inc/vc-addons/listing-categories/list.php:55
+msgid "Jobs Counter"
+msgstr ""
+
+#: inc/vc-addons/listing-categories/grid.php:114,
+#: inc/vc-addons/listing-categories/list.php:94
+msgid "Hides categories that doesn't have any listings"
+msgstr ""
+
+#: inc/vc-addons/listing-categories/list.php:13
+msgid "Dispays list of job or resume categories in a list layout."
+msgstr ""
+
+#: inc/vc-addons/logo/addon.php:11
+msgid "Logo Carousel"
+msgstr ""
+
+#: inc/vc-addons/logo/addon.php:13
+msgid "Show brand logos in a nice carousel"
+msgstr ""
+
+#: inc/vc-addons/logo/addon.php:34
+msgid "Autoplay Speed"
+msgstr ""
+
+#: inc/vc-addons/logo/addon.php:37
+msgid ""
+"Add the speed of the slider in milliseconds like 5000, which will be 5 "
+"seconds."
+msgstr ""
+
+#: inc/vc-addons/logo/addon.php:72
+msgid "Optional."
+msgstr ""
+
+#: inc/vc-addons/newsletter/addon.php:21
+msgid "Newsletter"
+msgstr ""
+
+#: inc/vc-addons/newsletter/addon.php:22
+msgid "Add a Mailchimp Form."
+msgstr ""
+
+#: inc/vc-addons/newsletter/addon.php:51
+msgid "Mailchimp Form"
+msgstr ""
+
+#: inc/vc-addons/pricing-tables/addon.php:11
+msgid "Pricing Table"
+msgstr ""
+
+#: inc/vc-addons/pricing-tables/addon.php:12
+msgid "Fancy pricing tables"
+msgstr ""
+
+#: inc/vc-addons/pricing-tables/addon.php:24
+msgid "Pricing Table Version"
+msgstr ""
+
+#: inc/vc-addons/pricing-tables/addon.php:60
+msgid "Select a background image for your pricing table."
+msgstr ""
+
+#: inc/vc-addons/resume-carousel/addon.php:11
+msgid "Resume Carousel"
+msgstr ""
+
+#: inc/vc-addons/resume-carousel/addon.php:12
+msgid "Shows carousel with selected resumes"
+msgstr ""
+"Busca entre los currículums\n"
+
+#: inc/vc-addons/resume-carousel/addon.php:37
+msgid "Visible resumes"
+msgstr ""
+
+#: inc/vc-addons/resume-carousel/addon.php:40
+msgid "This will change how many resumes will be visible per slider."
+msgstr ""
+
+#: inc/vc-addons/resume-carousel/addon.php:77
+msgid "Add resume categories."
+msgstr ""
+
+#: inc/vc-addons/resume/addon.php:26
+msgid "Frontend resume submission form"
+msgstr ""
+
+#: inc/vc-addons/resume/addon.php:40
+msgid "Candidate Dashboard"
+msgstr ""
+"\n"
+"Panel de candidatos"
+
+#: inc/vc-addons/resume/addon.php:42
+msgid "Displays a users submitted resumes"
+msgstr ""
+
+#: inc/vc-addons/resume/addon.php:58
+msgid "Output resumes to a page"
+msgstr ""
+
+#: inc/vc-addons/resume/addon.php:83, inc/vc-addons/resume/addon.php:97
+msgid "Choose a style for your resumes."
+msgstr ""
+
+#: inc/vc-addons/resume/addon.php:91
+msgid "Resumes Grid Styles"
+msgstr ""
+
+#: inc/vc-addons/resume/addon.php:108
+msgid "How many items to show in the resume list."
+msgstr ""
+
+#: inc/vc-addons/resume/addon.php:145
+msgid ""
+"Show filters above the resume list (to allow searching by location etc)."
+msgstr ""
+
+#: inc/vc-addons/resume/addon.php:153
+msgid "Whether or not to show categories in the filters."
+msgstr ""
+
+#: inc/vc-addons/resume/addon.php:160
+msgid ""
+"List of category slugs (one per line). Only resumes in these categories will "
+"be displayed."
+msgstr ""
+
+#: inc/vc-addons/resume/addon.php:174
+msgid ""
+"Set to Yes to show only featured resumes, No to show no featured resumes, or "
+"Both show both (featured first)."
+msgstr ""
+
+#: inc/vc-addons/testimonial/addon.php:12
+msgid "Testimonials carousel"
+msgstr ""
+
+#: inc/vc-addons/testimonial/addon.php:44
+msgid "Posts"
+msgstr ""
+
+#: inc/vc-addons/testimonial/addon.php:47
+msgid "How many posts to get."
+msgstr ""
+
+#: inc/vc-addons/testimonial/addon.php:55
+msgid "Posts ID's"
+msgstr ""
+
+#: inc/vc-addons/testimonial/addon.php:58
+msgid "Testimonial posts ID's separated by comma, example: 14,95,164."
+msgstr ""
+
+#: inc/vc-addons/testimonial/addon.php:69
+msgid ""
+"Style particular content element differently - add a class name and refer to "
+"it in custom CSS."
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:9
+msgid "Video Modal"
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:10
+msgid "Video modal"
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:19
+msgid "Video link"
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:22
+msgid "Enter link to video."
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:27
+msgid "Cover image"
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:33
+msgid "Select video preview image source."
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:40
+msgid "Select image from media library."
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:49
+msgid "Image external link"
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:52
+msgid "Enter image external link."
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:61
+msgid "Image size"
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:64
+msgid "Enter image size in pixels. Example: 200x100 (Width x Height)."
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:73
+msgid "Play button align"
+msgstr ""
+
+#: inc/vc-addons/video-modal/addon.php:84
+msgid "Open video in"
+msgstr ""
+
+#: inc/widgets/company-search-widget.php:23
+msgid "Company search form."
+msgstr ""
+
+#: inc/widgets/company-search-widget.php:26
+msgid "Custom: Company Search Widget"
+msgstr ""
+
+#: inc/widgets/job-search-widget.php:23
+msgid "Job search form."
+msgstr ""
+
+#: inc/widgets/job-search-widget.php:26
+msgid "Custom: Job Search Widget"
+msgstr ""
+
+#: inc/widgets/job-search-widget.php:114
+msgid "Job Type"
+msgstr ""
+
+#: inc/widgets/recent-posts-widget.php:25
+msgid "Your site&#8217;s most recent Posts."
+msgstr ""
+
+#: inc/widgets/recent-posts-widget.php:28,
+#: inc/widgets/recent-posts-widget.php:60
+msgid "Recent Posts"
+msgstr "Publicaciones recientes"
+
+#: inc/widgets/recent-posts-widget.php:159
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/recent-posts-widget.php:162
+msgid "Number of posts to show:"
+msgstr ""
+
+#: inc/widgets/recent-posts-widget.php:166
+msgid "Display post date?"
+msgstr ""
+
+#: inc/widgets/resume-search-widget.php:23
+msgid "Resume search form."
+msgstr ""
+
+#: inc/widgets/resume-search-widget.php:26
+msgid "Custom: Resume Search Widget"
+msgstr ""
+
+#: inc/widgets/resume-search-widget.php:50
+msgid "All Resumes"
+msgstr ""
+"Todos los CV\n"
+
+#: inc/widgets/resume-search-widget.php:62
+msgid "Any Location"
+msgstr "¿Donde?"
+
+#: inc/widgets/social-media-widget.php:29
+msgid "Linkedin"
+msgstr ""
+
+#: inc/widgets/social-media-widget.php:30
+msgid "Pinterest"
+msgstr ""
+
+#: inc/widgets/social-media-widget.php:31
+msgid "Flickr"
+msgstr ""
+
+#: inc/widgets/social-media-widget.php:33
+msgid "Dribbble"
+msgstr ""
+
+#: inc/widgets/social-media-widget.php:45
+msgid "This widget displays social media icons."
+msgstr ""
+
+#: inc/widgets/social-media-widget.php:48
+msgid "Custom: Social Media Widget"
+msgstr ""

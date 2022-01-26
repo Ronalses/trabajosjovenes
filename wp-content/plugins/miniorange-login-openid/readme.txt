@@ -1,10 +1,10 @@
-﻿=== WordPress Social Login (Discord, Google, Twitter, LinkedIn) ===
+﻿=== WordPress Social Login and Register (Discord, Google, Twitter, LinkedIn) ===
 Contributors: sociallogin, vkontakte, cyberlord92
 Donate link: https://www.miniorange.com
-Tags: social login, facebook login, google login, social sharing, twitter login, linkedIn, user login, vkontakte login, social comments, social commenting, woocommerce login, facebook, twitter, google, social connect, social network login, social plugin, windows, microsoft, discord login. 
+Tags: social login, facebook login, google login, social sharing, twitter login, linkedIn, user login, vkontakte login, social comments, social commenting, woocommerce login, facebook, twitter, google, social connect, social network login, social plugin, windows, microsoft, discord login, openID, OAuth Login, User Login, social media login, user registration, social sign in.  
 Requires at least: 2.0.2
 Tested up to: 5.8
-Stable tag: 7.5.8
+Stable tag: 7.5.9
 License: GPLv2 or later
 License URI: http://miniorange.com/usecases/miniOrange_User_Agreement.pdf
 
@@ -29,8 +29,8 @@ We provide different display options with beautiful login button customizations 
 *   **One-click** activation for Login with Google, Amazon, Vkontakte, LinkedIn, Windows Live (Microsoft login), Yahoo, Salesforce, Snapchat and Dribbble.
 *   **Flexible display** - Display Social login icons anywhere on your websites.
 *   **Sync user data** - Sync user data from multiple social network providers like Facebook, Google, Microsoft into one social login account.
-*   **Secure Login** - Login with safe and secure authorization and authentication protocols like OAuth and OpenID.
-*   **Customizable social login icons** - Choose from multiple themes and shapes. Pick any size and color!
+*   **Secure Login** - User Login with safe and secure authorization and authentication protocols like OAuth and OpenID.
+*   **Customizable social login icons** - Choose from multiple themes, shapes and effects. Pick any size and color. Enable transform effect for social login icons.
 *   **User Redirection** - Redirect users to pages you desire after any user logs in or logs out. Custom login redirect URL and custom logout redirect URL.
 *   **Assign user roles** - Assign WordPress roles to users on registration through social login.
 *   **Shortcodes** - Use Shortcode anywhere on your website to display social login icons.
@@ -41,6 +41,7 @@ We provide different display options with beautiful login button customizations 
 *   **Enable/disable user registration** - Allow or restrict user registration using social login.
 *   **Social Share** - Social share with Facebook, Twitter, LinkedIn, Reddit, etc. 
 *   **Social Comments**
+*   **User friendly UI**
 *   Customizable Text For Social Login Icons.
 *   Display Social login icons on **WooCommerce Login Page**.
 *   **24 / Support** - Using email and in-plugin support form.
@@ -108,6 +109,7 @@ We provide different display options with beautiful login button customizations 
 * **Social Share** - Social share available with all the widely used applications. Users can share anything using Facebook social share, Twitter social share, etc.
 * **Social Comments** - Social comments allow users to post their comments with their social media accounts.
 * **Easy Integration** - Social Login is the easiest to configure and conveniently allows you to set up and start using the plugin in seconds. Easy integration with your website with options to add Social login on the login page, registration page, and comments section.
+* **User Login/Registration** - Enable Social Login/User Registration on WordPress Default Login, Register pages and comment form.
 
 = Social Share Providers =
 *   Facebook Social Share 
@@ -141,7 +143,7 @@ We provide different display options with beautiful login button customizations 
 = Paid Social Login Features =
 
 *   **40+ Social Login Providers** - Choose from 40+ applications (Facebook Login, Google Login, Discord Login etc.) for social login and user registration. Many social network providers added continuously.
-*   **One-click activation** - For Login with Discord, Apple, Facebook, Google, Amazon, Vkontakte, LinkedIn, Windows Live (Microsoft login), WordPress, Yahoo and Salesforce.
+*   **One-click activation** - For Login with Discord, Apple, Facebook, Google, Amazon, Vkontakte, LinkedIn, Windows Live (Microsoft login), WordPress, Yahoo, Salesforce, Stackoverflow, Mailchimp, Strava etc.
 *   **Social login Integrations** - Social integrations with popular WordPress plugins like <a href="https://plugins.miniorange.com/guide-to-configure-woocommerce-with-wordpress-social-login" target="_blank">WooCommerce</a>, <a href="https://plugins.miniorange.com/guide-to-configure-paid-membership-pro-with-wordpress-social-login" target="_blank">Paid Memberships Pro</a>, <a href="https://plugins.miniorange.com/guide-to-configure-buddypress-with-wordpress-social-login" target="_blank">BuddyPress</a>, <a href="https://plugins.miniorange.com/guide-to-configure-mailchimp-integration-with-wordpress-social-login" target="_blank">MailChimp</a> and HubSpot.
 *   **Social Login Integrations** - Social login icons on WooCommerce pages, BuddyPress pages, Paid Memberships Pro pages, MemberPress pages, Ultimate Member pages.
 *   **GDPR Compliance.**
@@ -156,7 +158,7 @@ We provide different display options with beautiful login button customizations 
 *   Take full control - Setup your social login application with APP ID and APP Secret for Facebook, Google, Twitter, Vkontakte, LinkedIn, Instagram, Amazon, Windows Live & Yahoo.
 *   Preview custom social login icons.
 *   Profile completion (username, email) - Prompt users for email-id & username if social login app doesn't return it. Verify Emails using verification code.
-*   **User Control** - Enable/disable user registration through social login.
+*   **User Control** - Enable/disable user registration through social media login.
 *   Customizable Text For Social Login Icons.
 *   Display Social login icons on WooCommerce Login Page.
 *   **24 / Support** using email and in-plugin support form.
@@ -276,6 +278,11 @@ Please email us at info@miniorange.com. You can also submit your query from the 
 16. Social Sharing icons without background.
 
 ==Changelog==
+= 7.5.9 =
+* Introduced a new Enterprise plan.
+* Added Skip button during plugin deactivation.
+* Added MailChimp and Strava in Premium and all-inclusive version.
+
 = 7.5.8 =
 *Removed banner
 *UI Changes
@@ -978,6 +985,11 @@ SECURITY FIXES
 * First version of Social Login, Social Sharing plugin.
 
 == Upgrade Notice ==
+= 7.5.9 =
+* Introduced a new Enterprise plan.
+* Added Skip button during plugin deactivation.
+* Added MailChimp and Strava in Premium and all-inclusive version.
+
 = 7.5.8 =
 *Removed banner
 *UI Changes
